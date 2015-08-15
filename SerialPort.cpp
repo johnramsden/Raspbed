@@ -22,7 +22,6 @@ bool SerialPort::portExists(string port){
    DIR *directory = nullptr;
     struct dirent *entry = nullptr; // directory entry
     vector<string> devices;            // List of devices
-    bool portFound = false;           // Return value
     
     // The directory /sys/class/tty contains all serial devices
     string portPath = "/sys/class/tty";
@@ -42,31 +41,47 @@ bool SerialPort::portExists(string port){
             cout << "ERROR! pdir could not be initialised correctly" << endl;
             exit(EXIT_FAILURE);
         } else {
-            cout << "Entry: " ;
-            cout << entry->d_name << endl;
+            // cout << "Entry: " ;
+            // cout << entry->d_name << endl;
             devices.push_back(entry->d_name);
         }
     }
     
-    struct stat *buf;
-    string devicepath;
+    string deviceDriverPath;
     for(auto device : devices){
-        cout << "Checking device " << device <<  ": ";
-        devicepath = portPath + "/" + device;
+        deviceDriverPath = portPath + "/" + device + "/device/driver";
+        
+        cout << "\Checking for match at " << deviceDriverPath << endl;
         
         // Check for active devices
-        if(lstat(devicepath.c_str(), buf) == 0){
-            cout << "ACTIVE" << endl;
-            if(port == devicepath){
-                portFound = true;
-            }
-        } else {
-            cout << "INACTIVE" << endl;
-            portFound = false;
+        DIR* driverDir = opendir(deviceDriverPath.c_str());
+        if(driverDir && (device == port)){
+            cout << "Driver " << device << " match at " << deviceDriverPath << endl;
+            closedir(driverDir);
+            return true;
         }
     }
-    
-    // Close the directory
-    closedir (directory);
-    return portFound;
+    closedir(directory);
+    return false;
 }
+
+
+//	struct serial_struct serinfo;
+//	int	fd;
+//
+//	if ((fd = open(devicepath.c_str(), O_RDONLY|O_NONBLOCK)) < 0) {
+//		cout << "Error opening " << devicepath << endl;
+//		portFound = false;
+//	} else {
+//            serinfo.reserved_char[0] = 0;
+//            if (ioctl(fd, TIOCGSERIAL, &serinfo) < 0) {
+//                    cout << "Cannot get serial info" << endl;
+//                    close(fd);
+//                    portFound = false;
+//            } else {
+//                if(port == device){
+//                    cout << "Port found" << endl;
+//                    portFound = true;
+//                }
+//            }
+//        }

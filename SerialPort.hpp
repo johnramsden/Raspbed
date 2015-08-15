@@ -8,6 +8,7 @@
 #ifndef SERIALPORT_HPP
 #define	SERIALPORT_HPP
 
+#include <linux/serial.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
