@@ -22,15 +22,18 @@ typedef std::shared_ptr<boost::asio::serial_port> serial_port_ptr;
 
 class SerialPort {
 public:
+    std::string com_port;
     //SerialPort();
     SerialPort(std::string name);
     // SerialPort(const SerialPort& orig);
     virtual ~SerialPort();
     bool portExists(std::string port);
+    bool connect();
+    
 private:
     boost::asio::io_service io;
     serial_port_ptr port;
-    std::string com_port;
+    
 //    boost::asio::serial_port_base::baud_rate baud_rate;
 //    boost::asio::serial_port_base::character_size character_size;
 //    boost::asio::serial_port_base::stop_bits stop_bits;

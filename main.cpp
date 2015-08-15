@@ -14,7 +14,7 @@ using namespace std;
  */
 int main(int argc, char** argv) {
     SerialPort serialPort("ttyS1");
-
+    serialPort.connect();
     return 0;
 }
 
