@@ -16,18 +16,21 @@
 #include <dirent.h>
 #include <iostream>
 #include <boost/asio.hpp>
+#include  <memory> 
+
+typedef std::shared_ptr<boost::asio::serial_port> serial_port_ptr;
 
 class SerialPort {
 public:
-    SerialPort();
-    SerialPort(const SerialPort& orig);
+    //SerialPort();
+    SerialPort(std::string name);
+    // SerialPort(const SerialPort& orig);
     virtual ~SerialPort();
     bool portExists(std::string port);
 private:
-
-//    boost::asio::io_service io_service;
-//    boost::asio::serial_port port;              // Should be pointer?
-//    std::string com_port;
+    boost::asio::io_service io;
+    serial_port_ptr port;
+    std::string com_port;
 //    boost::asio::serial_port_base::baud_rate baud_rate;
 //    boost::asio::serial_port_base::character_size character_size;
 //    boost::asio::serial_port_base::stop_bits stop_bits;

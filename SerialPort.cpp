@@ -8,12 +8,16 @@
 #include "SerialPort.hpp"
 
 using namespace std;
+using namespace boost::asio;
 
-SerialPort::SerialPort() {
+SerialPort::SerialPort(string name){
+    if(portExists(name)){
+        port = serial_port_ptr(new serial_port(io));
+    }
+    
 }
 
-SerialPort::SerialPort(const SerialPort& orig) {
-}
+// SerialPort::SerialPort(const SerialPort& orig) {}
 
 SerialPort::~SerialPort() {
 }
@@ -41,8 +45,6 @@ bool SerialPort::portExists(string port){
             cout << "ERROR! pdir could not be initialised correctly" << endl;
             exit(EXIT_FAILURE);
         } else {
-            // cout << "Entry: " ;
-            // cout << entry->d_name << endl;
             devices.push_back(entry->d_name);
         }
     }
@@ -50,38 +52,17 @@ bool SerialPort::portExists(string port){
     string deviceDriverPath;
     for(auto device : devices){
         deviceDriverPath = portPath + "/" + device + "/device/driver";
-        
-        cout << "\Checking for match at " << deviceDriverPath << endl;
+        //cout << "\nChecking for match at " << deviceDriverPath << endl;
         
         // Check for active devices
-        DIR* driverDir = opendir(deviceDriverPath.c_str());
+        DIR *driverDir = opendir(deviceDriverPath.c_str());
         if(driverDir && (device == port)){
-            cout << "Driver " << device << " match at " << deviceDriverPath << endl;
+            cout << "\nMATCH: Serial device '" << device << "' found" << endl;
             closedir(driverDir);
             return true;
         }
     }
     closedir(directory);
+    cout << "\nNo match found." << endl;
     return false;
 }
-
-
-//	struct serial_struct serinfo;
-//	int	fd;
-//
-//	if ((fd = open(devicepath.c_str(), O_RDONLY|O_NONBLOCK)) < 0) {
-//		cout << "Error opening " << devicepath << endl;
-//		portFound = false;
-//	} else {
-//            serinfo.reserved_char[0] = 0;
-//            if (ioctl(fd, TIOCGSERIAL, &serinfo) < 0) {
-//                    cout << "Cannot get serial info" << endl;
-//                    close(fd);
-//                    portFound = false;
-//            } else {
-//                if(port == device){
-//                    cout << "Port found" << endl;
-//                    portFound = true;
-//                }
-//            }
-//        }

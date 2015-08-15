@@ -13,15 +13,8 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    unique_ptr<SerialPort> port(new SerialPort);
-    
-    if(port->portExists("ttyUSB0")){
-        cout << "Port exists!" << endl;
-    } else {
-        cout << "No port found." << endl;
-    }
-    
-    
+    SerialPort serialPort("ttyS1");
+
     return 0;
 }
 
