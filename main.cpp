@@ -15,8 +15,10 @@ using namespace std;
 int main(int argc, char** argv) {
     unique_ptr<SerialPort> port(new SerialPort);
     
-    if(port->portExists("")){
+    if(port->portExists("USB0")){
         cout << "Port exists!" << endl;
+    } else {
+        cout << "No port found." << endl;
     }
     
     

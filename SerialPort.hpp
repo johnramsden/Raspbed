@@ -8,6 +8,9 @@
 #ifndef SERIALPORT_HPP
 #define	SERIALPORT_HPP
 
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 #include <cstdlib>
 #include <dirent.h>
 #include <iostream>
