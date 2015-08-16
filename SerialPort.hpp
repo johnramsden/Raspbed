@@ -25,16 +25,17 @@ public:
     // Constructors
     SerialPort(std::string name);
 //    SerialPort();
-//    SerialPort(std::string name,
-//                boost::asio::serial_port_base::baud_rate baudRate,
-//                boost::asio::serial_port_base::character_size characterSize,
-//                boost::asio::serial_port_base::stop_bits stopBits,
-//                boost::asio::serial_port_base::parity parity,
-//                boost::asio::serial_port_base::flow_control flowControl);
+    SerialPort(std::string name,
+                boost::asio::serial_port_base::baud_rate baudRate,
+                boost::asio::serial_port_base::character_size characterSize,
+                boost::asio::serial_port_base::stop_bits stopBits,
+                boost::asio::serial_port_base::parity parity,
+                boost::asio::serial_port_base::flow_control flowControl);
     virtual ~SerialPort();
     
     // Member functions
-    bool connect();
+    bool start();
+    void print();
     
     // Getters and Setters
     void setFlowControl(boost::asio::serial_port_base::flow_control flowControl);
@@ -47,8 +48,8 @@ public:
     boost::asio::serial_port_base::character_size getCharacterSize() const;
     void setBaudRate(boost::asio::serial_port_base::baud_rate baudRate);
     boost::asio::serial_port_base::baud_rate getBaudRate() const;
-    void setCom_port(std::string com_port);
-    std::string getCom_port() const;
+    void setPortName(std::string portName);
+    std::string getPortName() const;
     
 private:
     bool portExists(std::string port);
@@ -56,7 +57,7 @@ private:
     // Member variables
     boost::asio::io_service io;
     serial_port_ptr port;
-    std::string com_port;
+    std::string portName;
     
     // Port variables
     boost::asio::serial_port_base::baud_rate baudRate;

@@ -13,7 +13,10 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    SerialPort serialPort();
-    serialPort.connect();
+    SerialPort serialPort("ttyUSB0");
+    
+    serialPort.print();
+    
+    serialPort.start();
     return 0;
 }
