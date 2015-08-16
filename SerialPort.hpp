@@ -35,6 +35,7 @@ public:
     
     // Member functions
     bool start();
+    void setOptions();
     void print();
     
     // Getters and Setters

@@ -31,13 +31,6 @@ SerialPort::SerialPort(std::string name)
                                                                parity(com_parity),
                                                                flowControl(flow_control) {}
     
-	// option settings...
-//	port_->set_option(serial_port_base::baud_rate(baud_rate));
-//	port_->set_option(serial_port_base::character_size(8));
-//	port_->set_option(serial_port_base::stop_bits(serial_port_base::stop_bits::one));
-//	port_->set_option(serial_port_base::parity(serial_port_base::parity::none));
-//	port_->set_option(serial_port_base::flow_control(serial_port_base::flow_control::none));
-
 bool SerialPort::start() {
     if (port) {
         std::cout << "error : port is already opened..." << std::endl;
@@ -45,12 +38,36 @@ bool SerialPort::start() {
     }
     if(portExists(portName)){
         port = serial_port_ptr(new serial_port(io));
-        std::cout << "Success : connected to " << portName << std::endl;
+        std::cout << "\nConnecting to " << portName << std::endl;
+        boost::system::error_code ec;
+        
+        std::string fullName = "/dev/" + portName;
+        
+        port->open(fullName.c_str(), ec);
+        
+        setOptions();
+        
+        if (ec) {
+            std::cout << "\nerror : port_->open() failed...com_port_name="
+                    << portName << ", e=" << ec.message() << std::endl;
+            return false;
+        }
         return true;
     } else {
         std::cout << "error : port doesn't exist..." << std::endl;
         return false;
     }
+    
+}
+
+void SerialPort::setOptions(){
+    // option settings...
+    port->set_option(baudRate);
+    port->set_option(characterSize);
+    port->set_option(stopBits);
+    port->set_option(parity);
+    port->set_option(flowControl);
+    std::cout << "Options set" << std::endl;
 }
 
 void SerialPort::setFlowControl(serial_port_base::flow_control flowControl) {
