@@ -11,6 +11,40 @@ using namespace boost::asio;
 
 SerialPort::SerialPort(std::string name) : com_port(name) {}
 
+// Default Constructor calls workhorse constructor
+//SerialPort::SerialPort()
+//    : SerialPort::SerialPort("ttyUSB0", 
+//            boost::asio::serial_port_base::baud_rate(19200),
+//            boost::asio::serial_port_base::character_size(8),
+//            boost::asio::serial_port_base::stop_bits(boost::asio::serial_port_base::stop_bits::two),
+//            boost::asio::serial_port_base::parity(boost::asio::serial_port_base::parity::none),
+//            boost::asio::serial_port_base::flow_control(boost::asio::serial_port_base::flow_control::none))
+//{}
+//
+//
+//    SerialPort::SerialPort(std::string name,
+//                boost::asio::serial_port_base::baud_rate baud_rate,
+//                boost::asio::serial_port_base::character_size character_size,
+//                boost::asio::serial_port_base::stop_bits stop_bits,
+//                boost::asio::serial_port_base::parity com_parity,
+//                boost::asio::serial_port_base::flow_control flow_control)
+//    
+//    : com_port(name),
+//      baudRate(baud_rate),
+//      characterSize(character_size),
+//      stopBits(stop_bits),
+//      parity(com_parity),
+//      flowControl(flow_control) {}
+    
+
+    
+	// option settings...
+//	port_->set_option(boost::asio::serial_port_base::baud_rate(baud_rate));
+//	port_->set_option(boost::asio::serial_port_base::character_size(8));
+//	port_->set_option(boost::asio::serial_port_base::stop_bits(boost::asio::serial_port_base::stop_bits::one));
+//	port_->set_option(boost::asio::serial_port_base::parity(boost::asio::serial_port_base::parity::none));
+//	port_->set_option(boost::asio::serial_port_base::flow_control(boost::asio::serial_port_base::flow_control::none));
+
 bool SerialPort::connect() {
     if (port) {
         std::cout << "error : port is already opened..." << std::endl;
@@ -24,6 +58,54 @@ bool SerialPort::connect() {
         std::cout << "error : port doesn't exist..." << std::endl;
         return false;
     }
+}
+
+void SerialPort::setFlowControl(serial_port_base::flow_control flowControl) {
+    this->flowControl = flowControl;
+}
+
+serial_port_base::flow_control SerialPort::getFlowControl() const {
+    return flowControl;
+}
+
+void SerialPort::setParity(serial_port_base::parity parity) {
+    this->parity = parity;
+}
+
+serial_port_base::parity SerialPort::getParity() const {
+    return parity;
+}
+
+void SerialPort::setStopBits(serial_port_base::stop_bits stopBits) {
+    this->stopBits = stopBits;
+}
+
+serial_port_base::stop_bits SerialPort::getStopBits() const {
+    return stopBits;
+}
+
+void SerialPort::setCharacterSize(serial_port_base::character_size characterSize) {
+    this->characterSize = characterSize;
+}
+
+serial_port_base::character_size SerialPort::getCharacterSize() const {
+    return characterSize;
+}
+
+void SerialPort::setBaudRate(serial_port_base::baud_rate baudRate) {
+    this->baudRate = baudRate;
+}
+
+serial_port_base::baud_rate SerialPort::getBaudRate() const {
+    return baudRate;
+}
+
+void SerialPort::setCom_port(std::string com_port) {
+    this->com_port = com_port;
+}
+
+std::string SerialPort::getCom_port() const {
+    return com_port;
 }
 
 // SerialPort::SerialPort(const SerialPort& orig) {}

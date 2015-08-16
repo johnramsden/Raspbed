@@ -13,8 +13,7 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    SerialPort serialPort("ttyS1");
+    SerialPort serialPort();
     serialPort.connect();
     return 0;
 }
-

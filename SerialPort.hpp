@@ -22,23 +22,48 @@ typedef std::shared_ptr<boost::asio::serial_port> serial_port_ptr;
 
 class SerialPort {
 public:
-    std::string com_port;
-    //SerialPort();
+    // Constructors
     SerialPort(std::string name);
-    // SerialPort(const SerialPort& orig);
+//    SerialPort();
+//    SerialPort(std::string name,
+//                boost::asio::serial_port_base::baud_rate baudRate,
+//                boost::asio::serial_port_base::character_size characterSize,
+//                boost::asio::serial_port_base::stop_bits stopBits,
+//                boost::asio::serial_port_base::parity parity,
+//                boost::asio::serial_port_base::flow_control flowControl);
     virtual ~SerialPort();
-    bool portExists(std::string port);
+    
+    // Member functions
     bool connect();
     
+    // Getters and Setters
+    void setFlowControl(boost::asio::serial_port_base::flow_control flowControl);
+    boost::asio::serial_port_base::flow_control getFlowControl() const;
+    void setParity(boost::asio::serial_port_base::parity parity);
+    boost::asio::serial_port_base::parity getParity() const;
+    void setStopBits(boost::asio::serial_port_base::stop_bits stopBits);
+    boost::asio::serial_port_base::stop_bits getStopBits() const;
+    void setCharacterSize(boost::asio::serial_port_base::character_size characterSize);
+    boost::asio::serial_port_base::character_size getCharacterSize() const;
+    void setBaudRate(boost::asio::serial_port_base::baud_rate baudRate);
+    boost::asio::serial_port_base::baud_rate getBaudRate() const;
+    void setCom_port(std::string com_port);
+    std::string getCom_port() const;
+    
 private:
+    bool portExists(std::string port);
+    
+    // Member variables
     boost::asio::io_service io;
     serial_port_ptr port;
+    std::string com_port;
     
-//    boost::asio::serial_port_base::baud_rate baud_rate;
-//    boost::asio::serial_port_base::character_size character_size;
-//    boost::asio::serial_port_base::stop_bits stop_bits;
-//    boost::asio::serial_port_base::parity parity;
-//    boost::asio::serial_port_base::flow_control flow_control;
+    // Port variables
+    boost::asio::serial_port_base::baud_rate baudRate;
+    boost::asio::serial_port_base::character_size characterSize;
+    boost::asio::serial_port_base::stop_bits stopBits;
+    boost::asio::serial_port_base::parity parity;
+    boost::asio::serial_port_base::flow_control flowControl;
 };
 
 #endif	/* SERIALPORT_HPP */
