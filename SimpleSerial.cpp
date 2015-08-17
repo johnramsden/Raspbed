@@ -76,12 +76,12 @@ void SimpleSerial::write(const char *data, std::size_t size){
 
 
 void SimpleSerial::print(){
-//    std::cout << "\nPort: " << getPortName() << std::endl;
-//    std::cout << "Baud rate: " << getBaudRate().value() << std::endl;
-//    std::cout << "Character size: " << getCharacterSize().value() << std::endl;
-//    std::cout << "Flow control: " << getFlowControl().value() << std::endl;
-//    std::cout << "Parity: " << getParity().value() << std::endl;
-//    std::cout << "Stop bits: " << getStopBits().value() << std::endl;
+    std::cout << "\nPort: " << getPortName() << std::endl;
+    std::cout << "Baud rate: " << getBaudRate().value() << std::endl;
+    std::cout << "Character size: " << getCharacterSize().value() << std::endl;
+    std::cout << "Flow control: " << getFlowControl().value() << std::endl;
+    std::cout << "Parity: " << getParity().value() << std::endl;
+    std::cout << "Stop bits: " << getStopBits().value() << std::endl;
 }
 
 bool SimpleSerial::portExists(std::string port){

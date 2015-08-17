@@ -28,13 +28,8 @@ int main(int argc, char** argv) {
         serialPort.print();
         serialPort.open();
 
-//        SerialPort serialPort("ttyUSB0");
-//        serialPort.print();
-//        serialPort.start();
+
         
-        //Binary test
-        // char values[] = {1, 0, 1};
-        char values[] = {101};
         serialPort.write(values, sizeof(values));
         sleep(2);
         
