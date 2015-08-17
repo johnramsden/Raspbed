@@ -1,6 +1,6 @@
 /* 
  * File:   SerialPort.cpp
- * Author: john
+ * Author: John Ramsden
  * 
  * Created on August 13, 2015, 11:11 PM
  */
@@ -32,32 +32,32 @@ SerialPort::SerialPort(std::string name)
                                                                flowControl(flow_control) {}
     
 bool SerialPort::start() {
-    if (port) {
-        std::cout << "error : port is already opened..." << std::endl;
-        return false;
-    }
-    if(portExists(portName)){
-        port = serial_port_ptr(new serial_port(io));
-        std::cout << "\nConnecting to " << portName << std::endl;
-        boost::system::error_code ec;
-        
-        std::string fullName = "/dev/" + portName;
-        
-        port->open(fullName.c_str(), ec);
-        
-        setOptions();
-        
-        if (ec) {
-            std::cout << "\nerror : port_->open() failed...com_port_name="
-                    << portName << ", e=" << ec.message() << std::endl;
-            return false;
-        }
-        return true;
-    } else {
-        std::cout << "error : port doesn't exist..." << std::endl;
-        return false;
-    }
-    
+//    if (port) {
+//        std::cout << "error : port is already opened..." << std::endl;
+//        return false;
+//    }
+//    if(portExists(portName)){
+//        port = serial_port_ptr(new serial_port(io));
+//        std::cout << "\nConnecting to " << portName << std::endl;
+//        boost::system::error_code ec;
+//        
+//        std::string fullName = "/dev/" + portName;
+//        
+//        port->open(fullName.c_str(), ec);
+//        
+//        setOptions();
+//        
+//        if (ec) {
+//            std::cout << "\nerror : port_->open() failed...com_port_name="
+//                    << portName << ", e=" << ec.message() << std::endl;
+//            return false;
+//        }
+//        return true;
+//    } else {
+//        std::cout << "error : port doesn't exist..." << std::endl;
+//        return false;
+//    }
+    return true;
 }
 
 void SerialPort::stop() {
@@ -82,54 +82,6 @@ void SerialPort::setOptions(){
     port->set_option(parity);
     port->set_option(flowControl);
     std::cout << "Options set" << std::endl;
-}
-
-void SerialPort::setFlowControl(serial_port_base::flow_control flowControl) {
-    this->flowControl = flowControl;
-}
-
-serial_port_base::flow_control SerialPort::getFlowControl() const {
-    return flowControl;
-}
-
-void SerialPort::setParity(serial_port_base::parity parity) {
-    this->parity = parity;
-}
-
-serial_port_base::parity SerialPort::getParity() const {
-    return parity;
-}
-
-void SerialPort::setStopBits(serial_port_base::stop_bits stopBits) {
-    this->stopBits = stopBits;
-}
-
-serial_port_base::stop_bits SerialPort::getStopBits() const {
-    return stopBits;
-}
-
-void SerialPort::setCharacterSize(serial_port_base::character_size characterSize) {
-    this->characterSize = characterSize;
-}
-
-serial_port_base::character_size SerialPort::getCharacterSize() const {
-    return characterSize;
-}
-
-void SerialPort::setBaudRate(serial_port_base::baud_rate baudRate) {
-    this->baudRate = baudRate;
-}
-
-serial_port_base::baud_rate SerialPort::getBaudRate() const {
-    return baudRate;
-}
-
-void SerialPort::setPortName(std::string portName) {
-    this->portName = portName;
-}
-
-std::string SerialPort::getPortName() const {
-    return portName;
 }
 
 void SerialPort::print(){
@@ -187,4 +139,52 @@ bool SerialPort::portExists(std::string port){
     closedir(directory);
     std::cout << "\nNo match found." << std::endl;
     return false;
+}
+
+void SerialPort::setFlowControl(serial_port_base::flow_control flowControl) {
+    this->flowControl = flowControl;
+}
+
+serial_port_base::flow_control SerialPort::getFlowControl() const {
+    return flowControl;
+}
+
+void SerialPort::setParity(serial_port_base::parity parity) {
+    this->parity = parity;
+}
+
+serial_port_base::parity SerialPort::getParity() const {
+    return parity;
+}
+
+void SerialPort::setStopBits(serial_port_base::stop_bits stopBits) {
+    this->stopBits = stopBits;
+}
+
+serial_port_base::stop_bits SerialPort::getStopBits() const {
+    return stopBits;
+}
+
+void SerialPort::setCharacterSize(serial_port_base::character_size characterSize) {
+    this->characterSize = characterSize;
+}
+
+serial_port_base::character_size SerialPort::getCharacterSize() const {
+    return characterSize;
+}
+
+void SerialPort::setBaudRate(serial_port_base::baud_rate baudRate) {
+    this->baudRate = baudRate;
+}
+
+serial_port_base::baud_rate SerialPort::getBaudRate() const {
+    return baudRate;
+}
+
+void SerialPort::setPortName(std::string portName) {
+    this->portName = portName;
+}
+
+std::string SerialPort::getPortName() const {
+    return portName;
 }
