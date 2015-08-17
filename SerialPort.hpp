@@ -35,6 +35,10 @@ public:
     
     // Member functions
     bool start();
+    void stop();
+    
+    void write(const char *data, size_t size);
+
     void setOptions();
     void print();
     

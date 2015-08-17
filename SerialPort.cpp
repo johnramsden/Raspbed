@@ -60,6 +60,20 @@ bool SerialPort::start() {
     
 }
 
+void SerialPort::stop() {
+    if (port) {
+        port->cancel();
+        port->close();
+    }
+    io.stop();
+    io.reset();
+    std::cout << "\nPort closed." << std::endl;
+}
+
+void SerialPort::write(const char *data, std::size_t size){
+    boost::asio::write(*port, boost::asio::buffer(data, size));
+}
+
 void SerialPort::setOptions(){
     // option settings...
     port->set_option(baudRate);
