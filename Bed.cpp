@@ -7,15 +7,11 @@
 
 #include "Bed.hpp"
 
-Bed::Bed(){
-    relay.print();
-}
+Bed::Bed(){}
 
-Bed::Bed(const Bed& orig) {
-}
+Bed::Bed(const Bed& orig) {}
 
-Bed::~Bed() {
-}
+Bed::~Bed() {}
 
 void Bed::Relay::print(){
     std::cout << "Relays: " << std::endl;

@@ -49,8 +49,6 @@ bool SerialPort::open() {
         port.set_option(stopBits);
         port.set_option(parity);
         port.set_option(flowControl);
-        std::cout << "Options set" << std::endl;
-
         return false;
     } else {
         std::cout << "error : port isn't open..." << std::endl;
@@ -73,12 +71,13 @@ void SerialPort::write(const char *data, std::size_t size){
 }
 
 void SerialPort::print(){
-    std::cout << "\nPort: " << getPortName() << std::endl;
+    std::cout << "###################\nPort: " << getPortName() << std::endl;
     std::cout << "Baud rate: " << getBaudRate().value() << std::endl;
     std::cout << "Character size: " << getCharacterSize().value() << std::endl;
     std::cout << "Flow control: " << getFlowControl().value() << std::endl;
     std::cout << "Parity: " << getParity().value() << std::endl;
     std::cout << "Stop bits: " << getStopBits().value() << std::endl;
+    std::cout << "###################" << std::endl;
 }
 
 bool SerialPort::portExists(std::string port){

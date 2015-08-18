@@ -21,7 +21,6 @@ public:
     
     struct Relay {
         void print();
-        
         const char close_all = 0;
         const char head_up = 1;
         const char head_down = 2;
