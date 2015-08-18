@@ -37,7 +37,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Bed.o \
 	${OBJECTDIR}/SerialPort.o \
-	${OBJECTDIR}/SimpleSerial.o \
 	${OBJECTDIR}/main.o
 
 
@@ -74,11 +73,6 @@ ${OBJECTDIR}/SerialPort.o: SerialPort.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SerialPort.o SerialPort.cpp
-
-${OBJECTDIR}/SimpleSerial.o: SimpleSerial.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SimpleSerial.o SimpleSerial.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

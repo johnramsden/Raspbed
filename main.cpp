@@ -7,8 +7,8 @@
 
 #include <cstdlib>
 #include "SerialPort.hpp"
-#include "SimpleSerial.hpp"
-
+#include "SerialPort.hpp"
+#include "Bed.hpp"
 using namespace std;
 
 
@@ -24,19 +24,34 @@ using namespace std;
 
 int main(int argc, char** argv) {
     try {
-        SimpleSerial serialPort("ttyUSB0");
+        SerialPort serialPort("ttyUSB0");
+        Bed bed{};
         serialPort.print();
         serialPort.open();
-
-
         
-        serialPort.write(values, sizeof(values));
-        sleep(2);
-        
-        values[0] = {111};
-        serialPort.write(values, sizeof(values));
-        
+        int input;
+        while(true){
+            bed.relay.print();
+            cout << "-------------------\nEnter command (-1 to exit): ";
+            cin >> input;
+            
+            if((input >= 0) && (input <= 8)){
+                char comm = static_cast<char>(input);
+                char values[1];
+                values[0] = bed.command(comm, true);
+                serialPort.write(values, sizeof(values));
+                sleep(2);
+                values[0] = bed.command(comm, false);
+                serialPort.write(values, sizeof(values));
+            } else if(input == -1){
+                cout << "Exiting..." << endl;
+                break;
+            } else {
+                cout << "Not supported, try again." << endl;
+            }
+        }
         serialPort.stop();
+        
     } catch (boost::system::system_error& e) {
         cout << "Error: " << e.what() << endl;
         return 1;

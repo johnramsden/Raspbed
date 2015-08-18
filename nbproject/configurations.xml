@@ -6,7 +6,6 @@
                    projectFiles="true">
       <itemPath>Bed.hpp</itemPath>
       <itemPath>SerialPort.hpp</itemPath>
-      <itemPath>SimpleSerial.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -17,7 +16,6 @@
                    projectFiles="true">
       <itemPath>Bed.cpp</itemPath>
       <itemPath>SerialPort.cpp</itemPath>
-      <itemPath>SimpleSerial.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -54,10 +52,6 @@
       </item>
       <item path="SerialPort.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="SimpleSerial.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="SimpleSerial.hpp" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -88,10 +82,6 @@
       <item path="SerialPort.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="SerialPort.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="SimpleSerial.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="SimpleSerial.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

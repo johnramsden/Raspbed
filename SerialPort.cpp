@@ -1,69 +1,67 @@
 /* 
  * File:   SerialPort.cpp
- * Author: John Ramsden
+ * Author: john
  * 
- * Created on August 13, 2015, 11:11 PM
+ * Created on August 16, 2015, 10:56 PM
  */
 
 #include "SerialPort.hpp"
+#include <boost/asio.hpp>
+
 
 using namespace boost::asio;
 
 // Default Constructor calls workhorse constructor
 SerialPort::SerialPort(std::string name)
-    : SerialPort::SerialPort(name, 
-            serial_port_base::baud_rate(19200),
+    : SerialPort::SerialPort(
+            name, 
+            19200,
             serial_port_base::character_size(8),
             serial_port_base::stop_bits(serial_port_base::stop_bits::two),
             serial_port_base::parity(serial_port_base::parity::none),
             serial_port_base::flow_control(serial_port_base::flow_control::none)) {}
 
 
-    SerialPort::SerialPort(std::string name,
-                serial_port_base::baud_rate baud_rate,
-                serial_port_base::character_size character_size,
-                serial_port_base::stop_bits stop_bits,
-                serial_port_base::parity com_parity,
-                serial_port_base::flow_control flow_control) : portName(name),
-                                                               baudRate(baud_rate),
-                                                               characterSize(character_size),
-                                                               stopBits(stop_bits),
-                                                               parity(com_parity),
-                                                               flowControl(flow_control) {}
+SerialPort::SerialPort(std::string name, unsigned int baud_rate,
+        serial_port_base::character_size character_size,
+        serial_port_base::stop_bits stop_bits,
+        serial_port_base::parity com_parity,
+        serial_port_base::flow_control flow_control) 
+        : portName(name), baudRate(serial_port_base::baud_rate(baud_rate)),
+          characterSize(character_size), stopBits(stop_bits),
+          parity(com_parity), flowControl(flow_control), io(), port(io) {
+}
+
+SerialPort::~SerialPort() {
+}
+
+bool SerialPort::open() {
+    if (port.is_open()) {
+        std::cout << "Port is already opened, closing..." << std::endl;
+        port.close();
+    }
+    std::string fullName = "/dev/" + portName;
+    port.open(fullName);
     
-bool SerialPort::start() {
-//    if (port) {
-//        std::cout << "error : port is already opened..." << std::endl;
-//        return false;
-//    }
-//    if(portExists(portName)){
-//        port = serial_port_ptr(new serial_port(io));
-//        std::cout << "\nConnecting to " << portName << std::endl;
-//        boost::system::error_code ec;
-//        
-//        std::string fullName = "/dev/" + portName;
-//        
-//        port->open(fullName.c_str(), ec);
-//        
-//        setOptions();
-//        
-//        if (ec) {
-//            std::cout << "\nerror : port_->open() failed...com_port_name="
-//                    << portName << ", e=" << ec.message() << std::endl;
-//            return false;
-//        }
-//        return true;
-//    } else {
-//        std::cout << "error : port doesn't exist..." << std::endl;
-//        return false;
-//    }
-    return true;
+    if (port.is_open()) {
+        port.set_option(baudRate);
+        port.set_option(characterSize);
+        port.set_option(stopBits);
+        port.set_option(parity);
+        port.set_option(flowControl);
+        std::cout << "Options set" << std::endl;
+
+        return false;
+    } else {
+        std::cout << "error : port isn't open..." << std::endl;
+        return true;
+    }
 }
 
 void SerialPort::stop() {
-    if (port) {
-        port->cancel();
-        port->close();
+    if (port.is_open()) {
+        port.cancel();
+        port.close();
     }
     io.stop();
     io.reset();
@@ -71,17 +69,7 @@ void SerialPort::stop() {
 }
 
 void SerialPort::write(const char *data, std::size_t size){
-    boost::asio::write(*port, boost::asio::buffer(data, size));
-}
-
-void SerialPort::setOptions(){
-    // option settings...
-    port->set_option(baudRate);
-    port->set_option(characterSize);
-    port->set_option(stopBits);
-    port->set_option(parity);
-    port->set_option(flowControl);
-    std::cout << "Options set" << std::endl;
+    boost::asio::write(port, boost::asio::buffer(data, size));
 }
 
 void SerialPort::print(){
@@ -91,9 +79,6 @@ void SerialPort::print(){
     std::cout << "Flow control: " << getFlowControl().value() << std::endl;
     std::cout << "Parity: " << getParity().value() << std::endl;
     std::cout << "Stop bits: " << getStopBits().value() << std::endl;
-}
-
-SerialPort::~SerialPort() {
 }
 
 bool SerialPort::portExists(std::string port){
@@ -141,43 +126,43 @@ bool SerialPort::portExists(std::string port){
     return false;
 }
 
-void SerialPort::setFlowControl(serial_port_base::flow_control flowControl) {
+void SerialPort::setFlowControl(boost::asio::serial_port_base::flow_control flowControl) {
     this->flowControl = flowControl;
 }
 
-serial_port_base::flow_control SerialPort::getFlowControl() const {
+boost::asio::serial_port_base::flow_control SerialPort::getFlowControl() const {
     return flowControl;
 }
 
-void SerialPort::setParity(serial_port_base::parity parity) {
+void SerialPort::setParity(boost::asio::serial_port_base::parity parity) {
     this->parity = parity;
 }
 
-serial_port_base::parity SerialPort::getParity() const {
+boost::asio::serial_port_base::parity SerialPort::getParity() const {
     return parity;
 }
 
-void SerialPort::setStopBits(serial_port_base::stop_bits stopBits) {
+void SerialPort::setStopBits(boost::asio::serial_port_base::stop_bits stopBits) {
     this->stopBits = stopBits;
 }
 
-serial_port_base::stop_bits SerialPort::getStopBits() const {
+boost::asio::serial_port_base::stop_bits SerialPort::getStopBits() const {
     return stopBits;
 }
 
-void SerialPort::setCharacterSize(serial_port_base::character_size characterSize) {
+void SerialPort::setCharacterSize(boost::asio::serial_port_base::character_size characterSize) {
     this->characterSize = characterSize;
 }
 
-serial_port_base::character_size SerialPort::getCharacterSize() const {
+boost::asio::serial_port_base::character_size SerialPort::getCharacterSize() const {
     return characterSize;
 }
 
-void SerialPort::setBaudRate(serial_port_base::baud_rate baudRate) {
+void SerialPort::setBaudRate(boost::asio::serial_port_base::baud_rate baudRate) {
     this->baudRate = baudRate;
 }
 
-serial_port_base::baud_rate SerialPort::getBaudRate() const {
+boost::asio::serial_port_base::baud_rate SerialPort::getBaudRate() const {
     return baudRate;
 }
 
