@@ -2,6 +2,7 @@
 #define RASPBED_HPP
 
 #include <QMainWindow>
+#include "Bed.hpp"
 
 namespace Ui {
 class Raspbed;
@@ -18,10 +19,41 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-private:
-    void runTestCli();
+    void on_headDownButton_pressed();
 
+    void on_headUpButton_pressed();
+
+    void on_headUpButton_released();
+
+    void on_headDownButton_released();
+
+    void on_feetUpButton_pressed();
+
+    void on_feetUpButton_released();
+
+    void on_feetDownButton_pressed();
+
+    void on_feetDownButton_released();
+
+    void on_trendButton_pressed();
+
+    void on_trendButton_released();
+
+    void on_bedUpButton_pressed();
+
+    void on_bedUpButton_released();
+
+    void on_bedDownButton_pressed();
+
+    void on_bedDownButton_released();
+
+    void on_lowerWheelsButton_pressed();
+
+    void on_lowerWheelsButton_released();
+
+private:
     Ui::Raspbed *ui;
+    Bed::Bed bed;
 };
 
 #endif // RASPBED_HPP

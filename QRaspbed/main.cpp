@@ -8,8 +8,7 @@
 #include "Raspbed.hpp"
 #include <QApplication>
 #include <cstdlib>
-#include "SerialPort.hpp"
-#include "SerialPort.hpp"
+
 #include "Bed.hpp"
 using namespace std;
 

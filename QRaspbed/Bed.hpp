@@ -10,6 +10,7 @@
 #define	BED_HPP
 
 #include <iostream>
+#include "SerialPort.hpp"
 
 class Bed {
 public:
@@ -18,6 +19,14 @@ public:
      * Default bed constructor
      */
     Bed();
+
+    /**
+     * Bed takes a
+     * @brief Bed
+     * @param port
+     */
+    Bed(SerialPort &serialPort);
+
     Bed(const Bed& orig);
     virtual ~Bed();
 
@@ -50,6 +59,7 @@ public:
     } relay;
     // Relay bedCommand;
 private:
+    SerialPort serialPort;
 };
 
 #endif	/* BED_HPP */

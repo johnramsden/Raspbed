@@ -8,7 +8,11 @@
 
 #include "Bed.hpp"
 
-Bed::Bed(){}
+Bed::Bed() : serialPort("ttyUSB0"){}
+
+Bed::Bed(SerialPort &serialPort){
+    this->serialPort = serialPort;
+}
 
 Bed::Bed(const Bed& orig) {}
 
