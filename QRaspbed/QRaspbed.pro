@@ -29,3 +29,5 @@ CONFIG += c++11
 
 LIBS += \
        -lboost_system\
+
+DISTFILES += uncrustify.cfg

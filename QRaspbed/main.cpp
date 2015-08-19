@@ -12,8 +12,7 @@
 #include "Bed.hpp"
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     Raspbed w;
     w.show();

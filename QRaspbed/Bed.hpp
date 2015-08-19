@@ -7,27 +7,20 @@
  */
 
 #ifndef BED_HPP
-#define	BED_HPP
+#define BED_HPP
 
 #include <iostream>
 #include "SerialPort.hpp"
 
 class Bed {
-public:
+  public:
     /**
      * @brief Bed
      * Default bed constructor
      */
     Bed();
 
-    /**
-     * Bed takes a
-     * @brief Bed
-     * @param port
-     */
-    Bed(SerialPort &serialPort);
-
-    Bed(const Bed& orig);
+    Bed(const Bed &orig);
     virtual ~Bed();
 
     /**
@@ -39,28 +32,28 @@ public:
      * @param on
      * @return
      */
-    char command(const char relay, bool on);
+    void command(const char relay, bool on);
 
+    std::shared_ptr<SerialPort> getSerialPort();
     /**
      * Struct containing the relay values and a print to command.
      * @brief The Relay struct
      */
     struct Relay {
         void print();
-        const char close_all =    0;
-        const char head_up =      1;
-        const char head_down =    2;
-        const char feet_up =      3;
-        const char feet_down =    4;
-        const char trend_up =     5;
-        const char bed_up =       6;
-        const char bed_down =     7;
+        const char close_all = 0;
+        const char head_up = 1;
+        const char head_down = 2;
+        const char feet_up = 3;
+        const char feet_down = 4;
+        const char trend_up = 5;
+        const char bed_up = 6;
+        const char bed_down = 7;
         const char lower_wheels = 8;
     } relay;
-    // Relay bedCommand;
-private:
-    SerialPort serialPort;
+
+  private:
+    std::shared_ptr<SerialPort> serialPort;
 };
 
-#endif	/* BED_HPP */
-
+#endif /* BED_HPP */
