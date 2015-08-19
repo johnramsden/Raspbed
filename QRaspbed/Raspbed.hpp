@@ -15,7 +15,12 @@ public:
     explicit Raspbed(QWidget *parent = 0);
     ~Raspbed();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
+    void runTestCli();
+
     Ui::Raspbed *ui;
 };
 

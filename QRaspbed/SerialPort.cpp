@@ -3,7 +3,7 @@
  * Author: John Ramsden
  * Email: ramsdenj@shaw.ca
  *
- * Created on August 16, 2015, 10:56 PM
+ * Created on August 18, 2015, 10:56 PM
  */
 
 #include "SerialPort.hpp"

@@ -3,7 +3,7 @@
  * Author: John Ramsden
  * Email: ramsdenj@shaw.ca
  *
- * Created on August 17, 2015, 1:30 PM
+ * Created on August 18, 2015, 1:30 PM
  */
 
 #ifndef BED_HPP

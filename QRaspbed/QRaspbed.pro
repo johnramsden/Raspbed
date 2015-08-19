@@ -24,3 +24,8 @@ HEADERS  += \
 
 FORMS    += \
     raspbed.ui
+
+CONFIG += c++11
+
+LIBS += \
+       -lboost_system\
