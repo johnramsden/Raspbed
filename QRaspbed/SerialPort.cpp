@@ -13,7 +13,7 @@ using namespace boost::asio;
 
 SerialPort::SerialPort()
     : SerialPort::SerialPort(
-          "ttyUSB0", 19200, serial_port_base::character_size(8),
+          "ttyUSB1", 19200, serial_port_base::character_size(8),
           serial_port_base::stop_bits(serial_port_base::stop_bits::two),
           serial_port_base::parity(serial_port_base::parity::none),
           serial_port_base::flow_control(

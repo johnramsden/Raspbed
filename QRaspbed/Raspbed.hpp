@@ -50,6 +50,8 @@ class Raspbed : public QMainWindow {
 
 //    void on_headUpButton_clicked();
 
+    void on_flattenBedButton_clicked();
+
 private:
     Ui::Raspbed *ui;
     Bed bed;

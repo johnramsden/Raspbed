@@ -68,6 +68,7 @@ Raspbed::Raspbed(QWidget *parent) : QMainWindow(parent), ui(new Ui::Raspbed), be
     ui->lowerWheelsButton->setIconSize(lowerWheelsPixmap.rect().size());
     QSize lowerWheelsButtonSize(lowerWheelsPixmap.rect().size().width() + 15,
                            lowerWheelsPixmap.rect().size().height() + 15);
+
     ui->lowerWheelsButton->setFixedSize(lowerWheelsButtonSize);
 }
 
@@ -137,4 +138,13 @@ void Raspbed::on_lowerWheelsButton_pressed() {
 void Raspbed::on_lowerWheelsButton_released() {
     bed.command(bed.relay.lower_wheels, false);
     bed.command(bed.relay.bed_down, false);
+}
+
+void Raspbed::on_flattenBedButton_clicked()
+{
+    bed.command(bed.relay.head_down, true);
+    bed.command(bed.relay.feet_down, true);
+    sleep(20);
+    bed.command(bed.relay.head_down, false);
+    bed.command(bed.relay.feet_down, false);
 }
