@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="flatten-icon.svg"
+   inkscape:export-filename="/home/john/workspace/Raspbed/QRaspbed/images/flatten-icon1.png"
+   inkscape:export-xdpi="24.849876"
+   inkscape:export-ydpi="24.849876">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2742761"
+     inkscape:cx="372.04724"
+     inkscape:cy="526.1811"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer3"
+     showgrid="false"
+     showborder="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="2762"
+     inkscape:window-height="1572"
+     inkscape:window-x="566"
+     inkscape:window-y="446"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4318" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <g
+       inkscape:groupmode="layer"
+       id="layer4"
+       inkscape:label="Border"
+       style="display:inline" />
+    <g
+       inkscape:groupmode="layer"
+       id="layer2"
+       inkscape:label="bed up"
+       style="display:none" />
+    <g
+       inkscape:label="bed trend"
+       id="g4273"
+       inkscape:groupmode="layer"
+       style="display:none" />
+    <g
+       inkscape:groupmode="layer"
+       id="g4279"
+       inkscape:label="bed feet"
+       style="display:none" />
+    <g
+       inkscape:label="bed flat"
+       id="g4267"
+       inkscape:groupmode="layer"
+       style="display:none" />
+    <g
+       inkscape:groupmode="layer"
+       id="layer3"
+       inkscape:label="arrow"
+       style="display:inline">
+      <path
+         inkscape:connector-curvature="0"
+         id="ellipse4306"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.49935579;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 611.04829,563.71599 A 281.74939,177.92321 0 0 1 329.29891,741.6392 281.74939,177.92321 0 0 1 47.549523,563.71599 281.74939,177.92321 0 0 1 329.29891,385.79278 281.74939,177.92321 0 0 1 611.04829,563.71599 Z M 329.29928,349.92206 c -79.05931,8e-5 -157.73693,20.00758 -216.60277,57.18079 -58.865845,37.1732 -99.049714,94.29817 -99.050549,156.61197 -5.55e-4,62.31435 40.18215,119.44064 99.048169,156.61448 58.86603,37.17384 137.54512,57.18071 216.60515,57.18079 79.06002,-8e-5 157.73911,-20.00695 216.60514,-57.18079 58.86602,-37.17384 99.04874,-94.30013 99.04818,-156.61448 -8.4e-4,-62.3138 -40.18471,-119.43877 -99.05056,-156.61197 C 487.03621,369.92964 408.3586,349.92213 329.29928,349.92206 Z"
+         inkscape:export-xdpi="24.849876"
+         inkscape:export-ydpi="24.849876"
+         inkscape:export-filename="/home/john/workspace/Raspbed/QRaspbed/images/flatten-icon.png" />
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 243.1134,523.81826 c -10.51682,0 -18.98339,8.95772 -18.98339,20.08457 0,11.12685 8.46657,20.08458 18.98339,20.08458 10.51678,0 18.98337,-8.95773 18.98337,-20.08458 0,-11.12685 -8.46659,-20.08457 -18.98337,-20.08457 z"
+         id="path4184"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/john/workspace/Raspbed/QRaspbed/images/flatten-icon.png"
+         inkscape:export-xdpi="24.849876"
+         inkscape:export-ydpi="24.849876" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 238.3972,565.9101 c -7.90394,0 -14.26719,6.73237 -14.26719,15.09481 l 0,8.27546 c 0,8.36244 6.36326,15.09481 14.26719,15.09481 l 86.75109,0 c 7.90393,0 14.2672,-6.73237 14.2672,-15.09481 l 0,-8.27546 c 0,-8.36244 -6.36327,-15.09481 -14.2672,-15.09481 l -86.75109,0 z"
+         id="path4271"
+         inkscape:export-filename="/home/john/workspace/Raspbed/QRaspbed/images/flatten-icon.png"
+         inkscape:export-xdpi="24.849876"
+         inkscape:export-ydpi="24.849876" />
+      <path
+         id="path4186"
+         d="m 354.63967,565.9101 c -7.90394,0 -14.26718,6.73237 -14.26718,15.09481 l 0,8.27546 c 0,8.36244 6.36326,15.09481 14.26718,15.09481 l 86.75109,0 c 7.90394,0 14.2672,-6.73237 14.2672,-15.09481 l 0,-8.27546 c 0,-8.36244 -6.36326,-15.09481 -14.2672,-15.09481 l -86.75109,0 z"
+         style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/john/workspace/Raspbed/QRaspbed/images/flatten-icon.png"
+         inkscape:export-xdpi="24.849876"
+         inkscape:export-ydpi="24.849876" />
+    </g>
+  </g>
+</svg>

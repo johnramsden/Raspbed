@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="lower-wheels-icon.svg"
+   inkscape:export-filename="/home/john/workspace/Raspbed/QRaspbed/images/feet-up-icon2.png"
+   inkscape:export-xdpi="24.849876"
+   inkscape:export-ydpi="24.849876">
+  <defs
+     id="defs4">
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect5455"
+       is_visible="true"
+       offset_points="0,0.5"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="round"
+       miter_limit="4"
+       end_linecap_type="zerowidth"
+       cusp_linecap_type="round" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#e7e7e5"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2742761"
+     inkscape:cx="372.04724"
+     inkscape:cy="526.1811"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer5"
+     showgrid="false"
+     showborder="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="2762"
+     inkscape:window-height="1572"
+     inkscape:window-x="880"
+     inkscape:window-y="415"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4318" />
+    <sodipodi:guide
+       position="330.98448,485.25148"
+       orientation="-0.70710678,0.70710678"
+       id="guide5449" />
+    <sodipodi:guide
+       position="330.98448,485.25148"
+       orientation="0.70710678,0.70710678"
+       id="guide5451" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <g
+       inkscape:groupmode="layer"
+       id="layer4"
+       inkscape:label="Border"
+       style="display:inline" />
+    <g
+       inkscape:groupmode="layer"
+       id="layer3"
+       inkscape:label="arrow"
+       style="display:inline">
+      <path
+         inkscape:connector-curvature="0"
+         id="ellipse4306"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.49935579;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 611.04829,563.71599 A 281.74939,177.92321 0 0 1 329.29891,741.6392 281.74939,177.92321 0 0 1 47.549523,563.71599 281.74939,177.92321 0 0 1 329.29891,385.79278 281.74939,177.92321 0 0 1 611.04829,563.71599 Z M 329.29928,349.92206 c -79.05931,8e-5 -157.73693,20.00758 -216.60277,57.18079 -58.865845,37.1732 -99.049714,94.29817 -99.050549,156.61197 -5.55e-4,62.31435 40.18215,119.44064 99.048169,156.61448 58.86603,37.17384 137.54512,57.18071 216.60515,57.18079 79.06002,-8e-5 157.73911,-20.00695 216.60514,-57.18079 58.86602,-37.17384 99.04874,-94.30013 99.04818,-156.61448 -8.4e-4,-62.3138 -40.18471,-119.43877 -99.05056,-156.61197 C 487.03621,369.92964 408.3586,349.92213 329.29928,349.92206 Z"
+         inkscape:export-xdpi="24.849876"
+         inkscape:export-ydpi="24.849876"
+         inkscape:export-filename="/home/john/workspace/Raspbed/QRaspbed/images/lower-wheels-icon.png" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer6"
+       inkscape:label="wheel cut"
+       style="display:none">
+      <path
+         style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 403.46696,494.62838 c -19.07611,-19.0764 -44.91757,-31.38764 -71.97868,-31.38815 l 0,0 c -27.29978,-3.1e-4 -53.35832,12.52832 -72.48211,31.89237"
+         id="path5463"
+         inkscape:connector-curvature="0" />
+      <path
+         style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 259.50824 638.58746 C 278.58471 657.66393 304.42666 669.97492 331.48828 669.97461 C 358.31076 669.97411 383.93501 657.87903 402.96074 639.08954 "
+         id="path5472" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer5"
+       inkscape:label="wheel"
+       style="display:inline">
+      <g
+         id="g5479"
+         inkscape:export-filename="/home/john/workspace/Raspbed/QRaspbed/images/lower-wheels-icon1.png"
+         inkscape:export-xdpi="24.849876"
+         inkscape:export-ydpi="24.849876">
+        <path
+           id="path5474"
+           d="M 402.96074 639.08954 C 422.325 619.96572 434.85383 593.90715 434.85352 566.60742 C 434.85383 539.54632 422.54307 513.70477 403.46696 494.62838 "
+           style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stroke-linecap:round" />
+        <path
+           id="path5351"
+           d="M 259.00617 495.1326 C 240.21604 514.15879 228.12079 539.78396 228.12109 566.60742 C 228.12079 593.66904 240.43177 619.51099 259.50824 638.58746 "
+           style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stroke-linecap:round" />
+        <circle
+           r="65.200432"
+           cy="566.6073"
+           cx="331.48792"
+           id="path5349"
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>
