@@ -11,13 +11,23 @@
 
 using namespace boost::asio;
 
-SerialPort::SerialPort()
+//SerialPort::SerialPort()
+//    : SerialPort::SerialPort(
+//          "ttyUSB0", 19200, serial_port_base::character_size(8),
+//          serial_port_base::stop_bits(serial_port_base::stop_bits::two),
+//          serial_port_base::parity(serial_port_base::parity::none),
+//          serial_port_base::flow_control(
+//              serial_port_base::flow_control::none)) {
+
+//}
+
+SerialPort::SerialPort(std::string name)
     : SerialPort::SerialPort(
-          "ttyUSB0", 19200, serial_port_base::character_size(8),
-          serial_port_base::stop_bits(serial_port_base::stop_bits::two),
-          serial_port_base::parity(serial_port_base::parity::none),
-          serial_port_base::flow_control(
-              serial_port_base::flow_control::none)) {}
+              name, 19200, serial_port_base::character_size(8),
+              serial_port_base::stop_bits(serial_port_base::stop_bits::two),
+              serial_port_base::parity(serial_port_base::parity::none),
+              serial_port_base::flow_control(
+                  serial_port_base::flow_control::none)) {}
 
 SerialPort::SerialPort(std::string name, unsigned int baud_rate,
                        serial_port_base::character_size character_size,
@@ -35,19 +45,25 @@ bool SerialPort::open() {
         std::cout << "Port is already opened, closing..." << std::endl;
         port.close();
     }
-    std::string fullName = "/dev/" + portName;
-    port.open(fullName);
 
-    if (port.is_open()) {
-        port.set_option(baudRate);
-        port.set_option(characterSize);
-        port.set_option(stopBits);
-        port.set_option(parity);
-        port.set_option(flowControl);
-        return false;
+    if(portExists(portName)) {
+        std::string fullName = "/dev/" + portName;
+        port.open(fullName);
+
+        if (port.is_open()) {
+            port.set_option(baudRate);
+            port.set_option(characterSize);
+            port.set_option(stopBits);
+            port.set_option(parity);
+            port.set_option(flowControl);
+            return false;
+        } else {
+            std::cout << "error : port isn't open..." << std::endl;
+            return true;
+        }
     } else {
-        std::cout << "error : port isn't open..." << std::endl;
-        return true;
+        std::cout << "WARNING: Port '" << portName << "' does not exist." << std::endl;
+        return false;
     }
 }
 

@@ -27,7 +27,7 @@ class SerialPort {
          * Constructor. Default constructor.Creates and opens a serial device.
          * \param name serial device name, example "ttyUSB0"
          */
-    SerialPort();
+    SerialPort(std::string name = "ttyUSB0");
 
     /**
      * Constructor: Main constructor that takes serial port options

@@ -53,8 +53,23 @@ class Raspbed : public QMainWindow {
     void on_flattenBedButton_clicked();
 
 private:
+    void setupIcons();
+    void useIconBorders(bool border);
+
     Ui::Raspbed *ui;
     Bed bed;
+
+    // Bed Icons
+    QPixmap headUpPixmap;
+    QPixmap headDownPixmap;
+    QPixmap feetUpPixmap;
+    QPixmap feetDownPixmap;
+    QPixmap trendPixmap;
+    QPixmap bedUpPixmap;
+    QPixmap bedDownPixmap;
+    QPixmap lowerWheelsPixmap;
+    QPixmap flattenBedPixmap;
+    QPixmap callPixmap;
 };
 
 #endif // RASPBED_HPP
