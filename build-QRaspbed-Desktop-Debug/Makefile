@@ -658,8 +658,9 @@ compiler_rcc_clean:
 compiler_moc_header_make_all: moc_Raspbed.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_Raspbed.cpp
-moc_Raspbed.cpp: ../QRaspbed/Bed.hpp \
+moc_Raspbed.cpp: ui_raspbed.h \
 		../QRaspbed/SerialPort.hpp \
+		../QRaspbed/Bed.hpp \
 		../QRaspbed/Raspbed.hpp
 	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/john/workspace/Raspbed/QRaspbed -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/5.1.0 -I/usr/include/c++/5.1.0/x86_64-unknown-linux-gnu -I/usr/include/c++/5.1.0/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/5.1.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/5.1.0/include-fixed -I/usr/include ../QRaspbed/Raspbed.hpp -o moc_Raspbed.cpp
 
@@ -682,17 +683,18 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 ####### Compile
 
 main.o: ../QRaspbed/main.cpp ../QRaspbed/Raspbed.hpp \
-		../QRaspbed/Bed.hpp \
-		../QRaspbed/SerialPort.hpp
+		ui_raspbed.h \
+		../QRaspbed/SerialPort.hpp \
+		../QRaspbed/Bed.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../QRaspbed/main.cpp
 
 SerialPort.o: ../QRaspbed/SerialPort.cpp ../QRaspbed/SerialPort.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o SerialPort.o ../QRaspbed/SerialPort.cpp
 
 Raspbed.o: ../QRaspbed/Raspbed.cpp ../QRaspbed/Raspbed.hpp \
-		../QRaspbed/Bed.hpp \
+		ui_raspbed.h \
 		../QRaspbed/SerialPort.hpp \
-		ui_raspbed.h
+		../QRaspbed/Bed.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Raspbed.o ../QRaspbed/Raspbed.cpp
 
 Bed.o: ../QRaspbed/Bed.cpp ../QRaspbed/Bed.hpp \

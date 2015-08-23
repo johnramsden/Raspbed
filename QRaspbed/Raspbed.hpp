@@ -1,7 +1,8 @@
 #ifndef RASPBED_HPP
 #define RASPBED_HPP
 
-#include <QMainWindow>
+#include "ui_raspbed.h"
+#include "SerialPort.hpp"
 #include "Bed.hpp"
 
 namespace Ui {
@@ -48,13 +49,16 @@ class Raspbed : public QMainWindow {
 
     void on_lowerWheelsButton_released();
 
-//    void on_headUpButton_clicked();
-
     void on_flattenBedButton_clicked();
+
+    void on_flattenBedButton_pressed();
+
+    void on_callButton_clicked();
 
 private:
     void setupIcons();
     void useIconBorders(bool border);
+
 
     Ui::Raspbed *ui;
     Bed bed;

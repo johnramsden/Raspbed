@@ -51,6 +51,7 @@ bool SerialPort::open() {
         port.open(fullName);
 
         if (port.is_open()) {
+            connected = true;
             port.set_option(baudRate);
             port.set_option(characterSize);
             port.set_option(stopBits);
@@ -71,6 +72,7 @@ void SerialPort::stop() {
     if (port.is_open()) {
         port.cancel();
         port.close();
+        connected = false;
     }
     io.stop();
     io.reset();
@@ -191,3 +193,11 @@ void SerialPort::setPortName(std::string portName) {
 }
 
 std::string SerialPort::getPortName() const { return portName; }
+
+void SerialPort::setConnected(bool connected){
+    this->connected = connected;
+}
+
+bool SerialPort::isConnected(){
+    return connected;
+}

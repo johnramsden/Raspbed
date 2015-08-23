@@ -94,6 +94,9 @@ class SerialPort {
     void setPortName(std::string portName);
     std::string getPortName() const;
 
+    bool isConnected();
+    void setConnected(bool connected);
+
   private:
     /**
      * @brief portExists
@@ -103,6 +106,8 @@ class SerialPort {
     bool portExists(std::string port);
 
     // Member variables
+    bool connected;
+
     boost::asio::io_service io;
     boost::asio::serial_port port;
     std::string portName;
