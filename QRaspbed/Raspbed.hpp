@@ -4,7 +4,7 @@
 #include "ui_raspbed.h"
 #include "SerialPort.hpp"
 #include "Bed.hpp"
-#include <memory>
+#include <string>
 
 namespace Ui {
 class Raspbed;
@@ -52,8 +52,6 @@ class Raspbed : public QMainWindow {
 
     void on_flattenBedButton_clicked();
 
-    void on_flattenBedButton_pressed();
-
     void on_callButton_clicked();
 
 private:
@@ -63,7 +61,7 @@ private:
     Bed bed;
     Ui::Raspbed* ui;
     QMenu* settingsMenu;
-
+    QString contact;
     // Bed Icons
     QPixmap headUpPixmap;
     QPixmap headDownPixmap;

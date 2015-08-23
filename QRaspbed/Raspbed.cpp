@@ -201,21 +201,20 @@ void Raspbed::on_lowerWheelsButton_released() {
 
 void Raspbed::on_flattenBedButton_clicked(){
     if(bed.getSerialPort()->isConnected()){
+        ui->statusBar->showMessage("Flattening bed", 20000);
         bed.command(bed.relay.head_down, true);
         bed.command(bed.relay.feet_down, true);
         sleep(20);
         bed.command(bed.relay.head_down, false);
         bed.command(bed.relay.feet_down, false);
-        ui->statusBar->showMessage("");
     }
-}
-
-void Raspbed::on_flattenBedButton_pressed()
-{
-     ui->statusBar->showMessage("Flattening bed");
 }
 
 void Raspbed::on_callButton_clicked()
 {
-    system("skype --callto +16049263981 &");
+    contact = "echo123";
+    QString message = "Calling skype contact " + contact;
+    ui->statusBar->showMessage(message,10000);
+    std::string skypeCommand = "skype --callto " + contact.toStdString() + "&";
+    int ret = system(skypeCommand.c_str());
 }
