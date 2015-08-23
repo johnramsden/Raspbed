@@ -4,6 +4,7 @@
 #include "ui_raspbed.h"
 #include "SerialPort.hpp"
 #include "Bed.hpp"
+#include <memory>
 
 namespace Ui {
 class Raspbed;
@@ -59,9 +60,9 @@ private:
     void setupIcons();
     void useIconBorders(bool border);
 
-
-    Ui::Raspbed *ui;
     Bed bed;
+    Ui::Raspbed* ui;
+    QMenu* settingsMenu;
 
     // Bed Icons
     QPixmap headUpPixmap;

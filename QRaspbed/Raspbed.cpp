@@ -3,8 +3,15 @@
 Raspbed::Raspbed(QWidget *parent) : QMainWindow(parent), ui(new Ui::Raspbed), bed() {
     ui->setupUi(this);
     setupIcons();
-    QFont f( "Arial", 24, QFont::Bold);
-    ui->currentStatusLabel->setFont(f);
+
+//    QFont f( "Arial", 24, QFont::Bold);
+//    ui->currentStatusLabel->setFont(f);
+//    ui->currentStatusLabel->setAlignment(Qt::AlignCenter);
+
+    settingsMenu = ui->menuBar->addMenu("Settings");
+
+    //QString statmessage = tr("Connecting to port...");
+    ui->statusBar->showMessage("Connecting to port...");
 }
 
 Raspbed::~Raspbed() { delete ui; }
@@ -81,98 +88,98 @@ void Raspbed::useIconBorders(bool border){
 void Raspbed::on_headDownButton_pressed() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.head_down, true);
-        ui->currentStatusLabel->setText("Lowering head of bed...");
+        ui->statusBar->showMessage("Lowering head of bed...");
     }
 }
 
 void Raspbed::on_headDownButton_released() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.head_down, false);
-        ui->currentStatusLabel->setText("");
+        ui->statusBar->showMessage("");
     }
 }
 
 void Raspbed::on_headUpButton_pressed() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.head_up, true);
-        ui->currentStatusLabel->setText("Raising head of bed...");
+        ui->statusBar->showMessage("Raising head of bed...");
     }
 }
 
 void Raspbed::on_headUpButton_released() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.head_up, false);
-        ui->currentStatusLabel->setText("");
+        ui->statusBar->showMessage("");
     }
 }
 
 void Raspbed::on_feetUpButton_pressed() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.feet_up, true);
-        ui->currentStatusLabel->setText("Raising foot of bed...");
+        ui->statusBar->showMessage("Raising foot of bed...");
             }
 }
 
 void Raspbed::on_feetUpButton_released() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.feet_up, false);
-        ui->currentStatusLabel->setText("");
+        ui->statusBar->showMessage("");
     }
 }
 
 void Raspbed::on_feetDownButton_pressed() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.feet_down, true);
-        ui->currentStatusLabel->setText("Lowering foot of bed...");
+        ui->statusBar->showMessage("Lowering foot of bed...");
     }
 }
 
 void Raspbed::on_feetDownButton_released() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.feet_down, false);
-        ui->currentStatusLabel->setText("");
+        ui->statusBar->showMessage("");
     }
 }
 
 void Raspbed::on_trendButton_pressed() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.trend_up, true);
-        ui->currentStatusLabel->setText("Trending bed...");
+        ui->statusBar->showMessage("Trending bed...");
     }
 }
 
 void Raspbed::on_trendButton_released() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.trend_up, false);
-        ui->currentStatusLabel->setText("");
+        ui->statusBar->showMessage("");
     }
 }
 
 void Raspbed::on_bedUpButton_pressed() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.bed_up, true);
-        ui->currentStatusLabel->setText("Raising bed...");
+        ui->statusBar->showMessage("Raising bed...");
     }
 }
 
 void Raspbed::on_bedUpButton_released() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.bed_up, false);
-        ui->currentStatusLabel->setText("");
+        ui->statusBar->showMessage("");
     }
 }
 
 void Raspbed::on_bedDownButton_pressed() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.bed_down, true);
-        ui->currentStatusLabel->setText("Lowering bed...");
+        ui->statusBar->showMessage("Lowering bed...");
     }
 }
 
 void Raspbed::on_bedDownButton_released() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.bed_down, false);
-        ui->currentStatusLabel->setText("");
+        ui->statusBar->showMessage("");
     }
 }
 
@@ -180,7 +187,7 @@ void Raspbed::on_lowerWheelsButton_pressed() {
     if(bed.getSerialPort()->isConnected()){
     bed.command(bed.relay.lower_wheels, true);
     bed.command(bed.relay.bed_down, true);
-    ui->currentStatusLabel->setText("Lowering wheels...");
+    ui->statusBar->showMessage("Lowering wheels...");
     }
 }
 
@@ -188,7 +195,7 @@ void Raspbed::on_lowerWheelsButton_released() {
     if(bed.getSerialPort()->isConnected()){
         bed.command(bed.relay.lower_wheels, false);
         bed.command(bed.relay.bed_down, false);
-        ui->currentStatusLabel->setText("");
+        ui->statusBar->showMessage("");
     }
 }
 
@@ -199,13 +206,13 @@ void Raspbed::on_flattenBedButton_clicked(){
         sleep(20);
         bed.command(bed.relay.head_down, false);
         bed.command(bed.relay.feet_down, false);
-        ui->currentStatusLabel->setText("");
+        ui->statusBar->showMessage("");
     }
 }
 
 void Raspbed::on_flattenBedButton_pressed()
 {
-     ui->currentStatusLabel->setText("Flattening bed");
+     ui->statusBar->showMessage("Flattening bed");
 }
 
 void Raspbed::on_callButton_clicked()

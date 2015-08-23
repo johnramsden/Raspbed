@@ -15,7 +15,6 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -29,7 +28,6 @@ class Ui_Raspbed
 public:
     QWidget *centralWidget;
     QGridLayout *gridLayout;
-    QLabel *currentStatusLabel;
     QPushButton *flattenBedButton;
     QPushButton *callButton;
     QPushButton *headUpButton;
@@ -54,61 +52,56 @@ public:
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        currentStatusLabel = new QLabel(centralWidget);
-        currentStatusLabel->setObjectName(QStringLiteral("currentStatusLabel"));
-
-        gridLayout->addWidget(currentStatusLabel, 0, 1, 1, 2);
-
         flattenBedButton = new QPushButton(centralWidget);
         flattenBedButton->setObjectName(QStringLiteral("flattenBedButton"));
 
-        gridLayout->addWidget(flattenBedButton, 1, 1, 1, 1);
+        gridLayout->addWidget(flattenBedButton, 0, 1, 1, 1);
 
         callButton = new QPushButton(centralWidget);
         callButton->setObjectName(QStringLiteral("callButton"));
 
-        gridLayout->addWidget(callButton, 1, 2, 1, 1);
+        gridLayout->addWidget(callButton, 0, 2, 1, 1);
 
         headUpButton = new QPushButton(centralWidget);
         headUpButton->setObjectName(QStringLiteral("headUpButton"));
         headUpButton->setMinimumSize(QSize(0, 0));
 
-        gridLayout->addWidget(headUpButton, 2, 0, 1, 1);
+        gridLayout->addWidget(headUpButton, 1, 0, 1, 1);
 
         headDownButton = new QPushButton(centralWidget);
         headDownButton->setObjectName(QStringLiteral("headDownButton"));
 
-        gridLayout->addWidget(headDownButton, 2, 1, 1, 1);
+        gridLayout->addWidget(headDownButton, 1, 1, 1, 1);
 
         feetUpButton = new QPushButton(centralWidget);
         feetUpButton->setObjectName(QStringLiteral("feetUpButton"));
 
-        gridLayout->addWidget(feetUpButton, 2, 2, 1, 1);
+        gridLayout->addWidget(feetUpButton, 1, 2, 1, 1);
 
         feetDownButton = new QPushButton(centralWidget);
         feetDownButton->setObjectName(QStringLiteral("feetDownButton"));
 
-        gridLayout->addWidget(feetDownButton, 2, 3, 1, 1);
+        gridLayout->addWidget(feetDownButton, 1, 3, 1, 1);
 
         trendButton = new QPushButton(centralWidget);
         trendButton->setObjectName(QStringLiteral("trendButton"));
 
-        gridLayout->addWidget(trendButton, 3, 0, 1, 1);
+        gridLayout->addWidget(trendButton, 2, 0, 1, 1);
 
         bedUpButton = new QPushButton(centralWidget);
         bedUpButton->setObjectName(QStringLiteral("bedUpButton"));
 
-        gridLayout->addWidget(bedUpButton, 3, 1, 1, 1);
+        gridLayout->addWidget(bedUpButton, 2, 1, 1, 1);
 
         bedDownButton = new QPushButton(centralWidget);
         bedDownButton->setObjectName(QStringLiteral("bedDownButton"));
 
-        gridLayout->addWidget(bedDownButton, 3, 2, 1, 1);
+        gridLayout->addWidget(bedDownButton, 2, 2, 1, 1);
 
         lowerWheelsButton = new QPushButton(centralWidget);
         lowerWheelsButton->setObjectName(QStringLiteral("lowerWheelsButton"));
 
-        gridLayout->addWidget(lowerWheelsButton, 3, 3, 1, 1);
+        gridLayout->addWidget(lowerWheelsButton, 2, 3, 1, 1);
 
         Raspbed->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Raspbed);
@@ -127,7 +120,6 @@ public:
     void retranslateUi(QMainWindow *Raspbed)
     {
         Raspbed->setWindowTitle(QApplication::translate("Raspbed", "Raspbed", 0));
-        currentStatusLabel->setText(QApplication::translate("Raspbed", "<html><head/><body><p align=\"center\"><br/></p></body></html>", 0));
         flattenBedButton->setText(QString());
         callButton->setText(QString());
         headUpButton->setText(QString());
