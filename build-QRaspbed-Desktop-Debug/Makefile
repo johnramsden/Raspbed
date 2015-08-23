@@ -51,12 +51,16 @@ OBJECTS_DIR   = ./
 SOURCES       = ../QRaspbed/main.cpp \
 		../QRaspbed/SerialPort.cpp \
 		../QRaspbed/Raspbed.cpp \
-		../QRaspbed/Bed.cpp moc_Raspbed.cpp
+		../QRaspbed/Bed.cpp \
+		../QRaspbed/Settings.cpp moc_Raspbed.cpp \
+		moc_Settings.cpp
 OBJECTS       = main.o \
 		SerialPort.o \
 		Raspbed.o \
 		Bed.o \
-		moc_Raspbed.o
+		Settings.o \
+		moc_Raspbed.o \
+		moc_Settings.o
 DIST          = ../QRaspbed/uncrustify.cfg \
 		/usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/common/unix.conf \
@@ -231,10 +235,12 @@ DIST          = ../QRaspbed/uncrustify.cfg \
 		/usr/lib/qt/mkspecs/features/lex.prf \
 		../QRaspbed/QRaspbed.pro ../QRaspbed/SerialPort.hpp \
 		../QRaspbed/Raspbed.hpp \
-		../QRaspbed/Bed.hpp ../QRaspbed/main.cpp \
+		../QRaspbed/Bed.hpp \
+		../QRaspbed/Settings.hpp ../QRaspbed/main.cpp \
 		../QRaspbed/SerialPort.cpp \
 		../QRaspbed/Raspbed.cpp \
-		../QRaspbed/Bed.cpp
+		../QRaspbed/Bed.cpp \
+		../QRaspbed/Settings.cpp
 QMAKE_TARGET  = QRaspbed
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = QRaspbed
@@ -262,7 +268,7 @@ first: all
 
 ####### Build rules
 
-$(TARGET): ui_raspbed.h $(OBJECTS)  
+$(TARGET): ui_raspbed.h ui_settings.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../QRaspbed/QRaspbed.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/lib/qt/mkspecs/features/spec_pre.prf \
@@ -630,9 +636,9 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../QRaspbed/SerialPort.hpp ../QRaspbed/Raspbed.hpp ../QRaspbed/Bed.hpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../QRaspbed/main.cpp ../QRaspbed/SerialPort.cpp ../QRaspbed/Raspbed.cpp ../QRaspbed/Bed.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../QRaspbed/raspbed.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../QRaspbed/SerialPort.hpp ../QRaspbed/Raspbed.hpp ../QRaspbed/Bed.hpp ../QRaspbed/Settings.hpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../QRaspbed/main.cpp ../QRaspbed/SerialPort.cpp ../QRaspbed/Raspbed.cpp ../QRaspbed/Bed.cpp ../QRaspbed/Settings.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../QRaspbed/raspbed.ui ../QRaspbed/settings.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -655,22 +661,28 @@ check: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_Raspbed.cpp
+compiler_moc_header_make_all: moc_Raspbed.cpp moc_Settings.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_Raspbed.cpp
+	-$(DEL_FILE) moc_Raspbed.cpp moc_Settings.cpp
 moc_Raspbed.cpp: ui_raspbed.h \
 		../QRaspbed/SerialPort.hpp \
 		../QRaspbed/Bed.hpp \
 		../QRaspbed/Raspbed.hpp
 	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/john/workspace/Raspbed/QRaspbed -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/5.1.0 -I/usr/include/c++/5.1.0/x86_64-unknown-linux-gnu -I/usr/include/c++/5.1.0/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/5.1.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/5.1.0/include-fixed -I/usr/include ../QRaspbed/Raspbed.hpp -o moc_Raspbed.cpp
 
+moc_Settings.cpp: ../QRaspbed/Settings.hpp
+	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/john/workspace/Raspbed/QRaspbed -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/5.1.0 -I/usr/include/c++/5.1.0/x86_64-unknown-linux-gnu -I/usr/include/c++/5.1.0/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/5.1.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/5.1.0/include-fixed -I/usr/include ../QRaspbed/Settings.hpp -o moc_Settings.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_raspbed.h
+compiler_uic_make_all: ui_raspbed.h ui_settings.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_raspbed.h
+	-$(DEL_FILE) ui_raspbed.h ui_settings.h
 ui_raspbed.h: ../QRaspbed/raspbed.ui
 	/usr/lib/qt/bin/uic ../QRaspbed/raspbed.ui -o ui_raspbed.h
+
+ui_settings.h: ../QRaspbed/settings.ui
+	/usr/lib/qt/bin/uic ../QRaspbed/settings.ui -o ui_settings.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -701,8 +713,15 @@ Bed.o: ../QRaspbed/Bed.cpp ../QRaspbed/Bed.hpp \
 		../QRaspbed/SerialPort.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Bed.o ../QRaspbed/Bed.cpp
 
+Settings.o: ../QRaspbed/Settings.cpp ../QRaspbed/Settings.hpp \
+		ui_settings.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Settings.o ../QRaspbed/Settings.cpp
+
 moc_Raspbed.o: moc_Raspbed.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_Raspbed.o moc_Raspbed.cpp
+
+moc_Settings.o: moc_Settings.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_Settings.o moc_Settings.cpp
 
 ####### Install
 

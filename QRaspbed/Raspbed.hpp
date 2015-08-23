@@ -2,9 +2,12 @@
 #define RASPBED_HPP
 
 #include "ui_raspbed.h"
+#include "Settings.hpp"
 #include "SerialPort.hpp"
 #include "Bed.hpp"
 #include <string>
+
+
 
 namespace Ui {
 class Raspbed;
@@ -54,13 +57,17 @@ class Raspbed : public QMainWindow {
 
     void on_callButton_clicked();
 
+    void openSettings();
 private:
-    void setupIcons();
+
+
+    void setupDisplay();
     void useIconBorders(bool border);
 
     Bed bed;
     Ui::Raspbed* ui;
-    QMenu* settingsMenu;
+    QMenu * settingsMenu;
+    QAction* settings;
     QString contact;
     // Bed Icons
     QPixmap headUpPixmap;

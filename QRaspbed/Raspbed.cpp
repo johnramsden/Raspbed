@@ -2,21 +2,22 @@
 
 Raspbed::Raspbed(QWidget *parent) : QMainWindow(parent), ui(new Ui::Raspbed), bed() {
     ui->setupUi(this);
-    setupIcons();
+    setupDisplay();
 
-//    QFont f( "Arial", 24, QFont::Bold);
-//    ui->currentStatusLabel->setFont(f);
-//    ui->currentStatusLabel->setAlignment(Qt::AlignCenter);
+    settingsMenu = ui->menuBar->addMenu("Menu");
+    settings = settingsMenu->addAction("Settings");
 
-    settingsMenu = ui->menuBar->addMenu("Settings");
-
-    //QString statmessage = tr("Connecting to port...");
-    ui->statusBar->showMessage("Connecting to port...");
+    connect( settings, SIGNAL( triggered() ), this, SLOT( openSettings() ) );
 }
 
 Raspbed::~Raspbed() { delete ui; }
 
-void Raspbed::setupIcons(){
+void Raspbed::openSettings(){
+    Settings settingsDialog;
+    settingsDialog.exec();
+}
+
+void Raspbed::setupDisplay(){
 
     useIconBorders(true);
 
@@ -55,6 +56,13 @@ void Raspbed::setupIcons(){
     for(auto button : allPButtons){
         button->setIconSize(headUpPixmap.rect().size());
         button->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        if(!bed.getSerialPort()->isConnected()){
+            if(button != ui->callButton) { button->setEnabled(false); }
+            ui->statusBar->showMessage("WARNING: No serial port detected.");
+        } else {
+            button->setEnabled(true);
+            ui->statusBar->showMessage("Connected to port.");
+        }
     }
 
 }

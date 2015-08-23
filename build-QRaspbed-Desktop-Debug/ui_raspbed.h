@@ -107,6 +107,7 @@ public:
         menuBar = new QMenuBar(Raspbed);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 1183, 42));
+        menuBar->setNativeMenuBar(false);
         Raspbed->setMenuBar(menuBar);
         statusBar = new QStatusBar(Raspbed);
         statusBar->setObjectName(QStringLiteral("statusBar"));

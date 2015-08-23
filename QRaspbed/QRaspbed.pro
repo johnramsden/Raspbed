@@ -15,15 +15,18 @@ TEMPLATE = app
 SOURCES += main.cpp\
     SerialPort.cpp \
     Raspbed.cpp \
-    Bed.cpp
+    Bed.cpp \
+    Settings.cpp
 
 HEADERS  += \
     SerialPort.hpp \
     Raspbed.hpp \
-    Bed.hpp
+    Bed.hpp \
+    Settings.hpp
 
 FORMS    += \
-    raspbed.ui
+    raspbed.ui \
+    settings.ui
 
 CONFIG += c++11
 

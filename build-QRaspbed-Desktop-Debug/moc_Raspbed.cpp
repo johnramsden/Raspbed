@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Raspbed_t {
     QByteArrayData data[21];
-    char stringdata0[495];
+    char stringdata0[480];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -48,8 +48,8 @@ QT_MOC_LITERAL(15, 332, 25), // "on_bedDownButton_released"
 QT_MOC_LITERAL(16, 358, 28), // "on_lowerWheelsButton_pressed"
 QT_MOC_LITERAL(17, 387, 29), // "on_lowerWheelsButton_released"
 QT_MOC_LITERAL(18, 417, 27), // "on_flattenBedButton_clicked"
-QT_MOC_LITERAL(19, 445, 27), // "on_flattenBedButton_pressed"
-QT_MOC_LITERAL(20, 473, 21) // "on_callButton_clicked"
+QT_MOC_LITERAL(19, 445, 21), // "on_callButton_clicked"
+QT_MOC_LITERAL(20, 467, 12) // "openSettings"
 
     },
     "Raspbed\0on_headDownButton_pressed\0\0"
@@ -67,8 +67,7 @@ QT_MOC_LITERAL(20, 473, 21) // "on_callButton_clicked"
     "on_lowerWheelsButton_pressed\0"
     "on_lowerWheelsButton_released\0"
     "on_flattenBedButton_clicked\0"
-    "on_flattenBedButton_pressed\0"
-    "on_callButton_clicked"
+    "on_callButton_clicked\0openSettings"
 };
 #undef QT_MOC_LITERAL
 
@@ -153,8 +152,8 @@ void Raspbed::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         case 14: _t->on_lowerWheelsButton_pressed(); break;
         case 15: _t->on_lowerWheelsButton_released(); break;
         case 16: _t->on_flattenBedButton_clicked(); break;
-        case 17: _t->on_flattenBedButton_pressed(); break;
-        case 18: _t->on_callButton_clicked(); break;
+        case 17: _t->on_callButton_clicked(); break;
+        case 18: _t->openSettings(); break;
         default: ;
         }
     }
