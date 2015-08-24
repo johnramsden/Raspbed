@@ -14,12 +14,21 @@ Raspbed::~Raspbed() { delete ui; }
 
 void Raspbed::openSettings(){
     Settings settingsDialog;
+
+    QStringList serialPortOptions;
+    for(std::string device : bed.getSerialPort()->getDevices()) {
+        std::cout << "Serial option: " << device << std::endl;
+        serialPortOptions.push_back(QString::fromStdString(device));
+    }
+
+    settingsDialog.setSerialPorts(serialPortOptions);
+    settingsDialog.populateSettings();
     settingsDialog.exec();
 }
 
 void Raspbed::setupDisplay(){
 
-    useIconBorders(true);
+    setupIconBorders();
 
     QIcon headUpButtonIcon(headUpPixmap);
     ui->headUpButton->setIcon(headUpButtonIcon);
@@ -67,8 +76,8 @@ void Raspbed::setupDisplay(){
 
 }
 
-void Raspbed::useIconBorders(bool border){
-    if(border){
+void Raspbed::setupIconBorders(){
+    if(iconBorders){
         headUpPixmap =  QPixmap("images/border/headUpButton.png");
         headDownPixmap =  QPixmap("images/border/headDownButton.png");
         feetUpPixmap =  QPixmap("images/border/feetUpButton.png");
@@ -220,9 +229,15 @@ void Raspbed::on_flattenBedButton_clicked(){
 
 void Raspbed::on_callButton_clicked()
 {
-    contact = "echo123";
     QString message = "Calling skype contact " + contact;
     ui->statusBar->showMessage(message,10000);
     std::string skypeCommand = "skype --callto " + contact.toStdString() + "&";
-    int ret = system(skypeCommand.c_str());
+}
+
+void Raspbed::setContact(QString contact){
+    this->contact = contact;
+}
+
+QString Raspbed::getContact(){
+    return contact;
 }

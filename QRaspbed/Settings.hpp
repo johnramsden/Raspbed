@@ -15,8 +15,28 @@ public:
     explicit Settings(QWidget *parent = 0);
     ~Settings();
 
+    void populateSettings();
+
+    void setSerialPorts(QStringList serialPorts);
+    QStringList getSerialPorts();
+
+    QString getContact();
+
+    QString getPort();
+
+    bool isBordered();
+
+
+private slots:
+    void on_buttonBox_accepted();
+
 private:
+    QStringList serialPorts;
     Ui::Settings *ui;
+
+    QString contact;
+    bool bordered;
+    QString port;
 };
 
 #endif // SETTINGS_HPP

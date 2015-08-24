@@ -96,7 +96,7 @@ class SerialPort {
 
     bool isConnected();
     void setConnected(bool connected);
-
+    std::vector<std::string> getDevices();
   private:
     /**
      * @brief portExists
@@ -104,6 +104,8 @@ class SerialPort {
      * @return Returns true if port exists
      */
     bool portExists(std::string port);
+
+
 
     // Member variables
     bool connected;

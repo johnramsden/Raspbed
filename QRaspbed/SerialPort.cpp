@@ -95,19 +95,31 @@ void SerialPort::print() {
 }
 
 bool SerialPort::portExists(std::string port) {
+    std::vector<std::string> devices = getDevices();
+    for(auto device : devices){
+        if (device == port) {
+            std::cout << "\nMATCH: Serial device '" << device << "' found"
+                      << std::endl;
+            return true;
+        }
+    }
+    std::cout << "\nNo match found." << std::endl;
+    return false;
+}
+
+std::vector<std::string> SerialPort::getDevices(){
     DIR *directory = nullptr;
     struct dirent *entry = nullptr;   // directory entry
     std::vector<std::string> devices; // List of devices
 
     // The directory /sys/class/tty contains all serial devices
     std::string portPath = "/sys/class/tty";
-    std::cout << "Opening directory: " << portPath << std::endl;
+
     directory = opendir(portPath.c_str());
 
     // Make sure directory initialized
     if (directory == nullptr) {
-        std::cout << "ERROR! pdir could not be initialised correctly"
-                  << std::endl;
+        std::cout << "ERROR! pdir could not be initialised correctly" << std::endl;
         exit(EXIT_FAILURE);
     }
 
@@ -123,24 +135,21 @@ bool SerialPort::portExists(std::string port) {
         }
     }
 
+    std::vector<std::string> ports;
     std::string deviceDriverPath;
     for (auto device : devices) {
         deviceDriverPath = portPath + "/" + device + "/device/driver";
-        // std::cout << "\nChecking for match at " << deviceDriverPath <<
-        // std::endl;
 
         // Check for active devices
         DIR *driverDir = opendir(deviceDriverPath.c_str());
-        if (driverDir && (device == port)) {
-            std::cout << "\nMATCH: Serial device '" << device << "' found"
-                      << std::endl;
+        if (driverDir) {
+            ports.push_back(device);
             closedir(driverDir);
-            return true;
         }
     }
     closedir(directory);
-    std::cout << "\nNo match found." << std::endl;
-    return false;
+
+    return ports;
 }
 
 void SerialPort::setFlowControl(

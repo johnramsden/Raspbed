@@ -19,6 +19,8 @@ class Raspbed : public QMainWindow {
   public:
     explicit Raspbed(QWidget *parent = 0);
     ~Raspbed();
+    void setContact(QString contact);
+    QString getContact();
 
   private slots:
     void on_headDownButton_pressed();
@@ -59,16 +61,19 @@ class Raspbed : public QMainWindow {
 
     void openSettings();
 private:
-
-
     void setupDisplay();
-    void useIconBorders(bool border);
+    void setupIconBorders();
+
+    QMenu* settingsMenu;
+    QAction* settings;
+
+
+    QString contact;
+    bool iconBorders;
 
     Bed bed;
     Ui::Raspbed* ui;
-    QMenu * settingsMenu;
-    QAction* settings;
-    QString contact;
+
     // Bed Icons
     QPixmap headUpPixmap;
     QPixmap headDownPixmap;
