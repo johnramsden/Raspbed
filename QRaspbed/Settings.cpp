@@ -32,3 +32,27 @@ void Settings::on_buttonBox_accepted()
    // port = ui->serialPortComboBox->itemData(ui->serialPortComboBox->currentIndex());
     bordered = ui->iconStyleCheckBox->isChecked();
 }
+void Settings::setPort(const QString &value)
+{
+    port = value;
+}
+
+bool Settings::getBordered() const
+{
+    return bordered;
+}
+
+void Settings::setBordered(bool value)
+{
+    bordered = value;
+}
+
+void Settings::setContact(const QString &value)
+{
+    contact = value;
+}
+
+QString Settings::getContact()
+{
+    return contact;
+}

@@ -52,13 +52,15 @@ SOURCES       = ../QRaspbed/main.cpp \
 		../QRaspbed/SerialPort.cpp \
 		../QRaspbed/Raspbed.cpp \
 		../QRaspbed/Bed.cpp \
-		../QRaspbed/Settings.cpp moc_Raspbed.cpp \
+		../QRaspbed/Settings.cpp \
+		../QRaspbed/Data.cpp moc_Raspbed.cpp \
 		moc_Settings.cpp
 OBJECTS       = main.o \
 		SerialPort.o \
 		Raspbed.o \
 		Bed.o \
 		Settings.o \
+		Data.o \
 		moc_Raspbed.o \
 		moc_Settings.o
 DIST          = ../QRaspbed/uncrustify.cfg \
@@ -236,11 +238,13 @@ DIST          = ../QRaspbed/uncrustify.cfg \
 		../QRaspbed/QRaspbed.pro ../QRaspbed/SerialPort.hpp \
 		../QRaspbed/Raspbed.hpp \
 		../QRaspbed/Bed.hpp \
-		../QRaspbed/Settings.hpp ../QRaspbed/main.cpp \
+		../QRaspbed/Settings.hpp \
+		../QRaspbed/Data.hpp ../QRaspbed/main.cpp \
 		../QRaspbed/SerialPort.cpp \
 		../QRaspbed/Raspbed.cpp \
 		../QRaspbed/Bed.cpp \
-		../QRaspbed/Settings.cpp
+		../QRaspbed/Settings.cpp \
+		../QRaspbed/Data.cpp
 QMAKE_TARGET  = QRaspbed
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = QRaspbed
@@ -636,8 +640,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../QRaspbed/SerialPort.hpp ../QRaspbed/Raspbed.hpp ../QRaspbed/Bed.hpp ../QRaspbed/Settings.hpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../QRaspbed/main.cpp ../QRaspbed/SerialPort.cpp ../QRaspbed/Raspbed.cpp ../QRaspbed/Bed.cpp ../QRaspbed/Settings.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../QRaspbed/SerialPort.hpp ../QRaspbed/Raspbed.hpp ../QRaspbed/Bed.hpp ../QRaspbed/Settings.hpp ../QRaspbed/Data.hpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../QRaspbed/main.cpp ../QRaspbed/SerialPort.cpp ../QRaspbed/Raspbed.cpp ../QRaspbed/Bed.cpp ../QRaspbed/Settings.cpp ../QRaspbed/Data.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../QRaspbed/raspbed.ui ../QRaspbed/settings.ui $(DISTDIR)/
 
 
@@ -665,6 +669,7 @@ compiler_moc_header_make_all: moc_Raspbed.cpp moc_Settings.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_Raspbed.cpp moc_Settings.cpp
 moc_Raspbed.cpp: ui_raspbed.h \
+		../QRaspbed/Settings.hpp \
 		../QRaspbed/SerialPort.hpp \
 		../QRaspbed/Bed.hpp \
 		../QRaspbed/Raspbed.hpp
@@ -696,6 +701,7 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 
 main.o: ../QRaspbed/main.cpp ../QRaspbed/Raspbed.hpp \
 		ui_raspbed.h \
+		../QRaspbed/Settings.hpp \
 		../QRaspbed/SerialPort.hpp \
 		../QRaspbed/Bed.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../QRaspbed/main.cpp
@@ -705,6 +711,7 @@ SerialPort.o: ../QRaspbed/SerialPort.cpp ../QRaspbed/SerialPort.hpp
 
 Raspbed.o: ../QRaspbed/Raspbed.cpp ../QRaspbed/Raspbed.hpp \
 		ui_raspbed.h \
+		../QRaspbed/Settings.hpp \
 		../QRaspbed/SerialPort.hpp \
 		../QRaspbed/Bed.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Raspbed.o ../QRaspbed/Raspbed.cpp
@@ -716,6 +723,9 @@ Bed.o: ../QRaspbed/Bed.cpp ../QRaspbed/Bed.hpp \
 Settings.o: ../QRaspbed/Settings.cpp ../QRaspbed/Settings.hpp \
 		ui_settings.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Settings.o ../QRaspbed/Settings.cpp
+
+Data.o: ../QRaspbed/Data.cpp ../QRaspbed/Data.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Data.o ../QRaspbed/Data.cpp
 
 moc_Raspbed.o: moc_Raspbed.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_Raspbed.o moc_Raspbed.cpp

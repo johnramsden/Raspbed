@@ -2,18 +2,24 @@
 
 Raspbed::Raspbed(QWidget *parent) : QMainWindow(parent), ui(new Ui::Raspbed), bed() {
     ui->setupUi(this);
+
+    settings.setContact("+16049263981");
+    settings.setBordered(true);
+    settings.setPort("ttyUSB0");
+
+
     setupDisplay();
 
     settingsMenu = ui->menuBar->addMenu("Menu");
-    settings = settingsMenu->addAction("Settings");
+    settingsAction = settingsMenu->addAction("Settings");
 
-    connect( settings, SIGNAL( triggered() ), this, SLOT( openSettings() ) );
+    connect( settingsAction, SIGNAL( triggered() ), this, SLOT( openSettings() ) );
 }
 
 Raspbed::~Raspbed() { delete ui; }
 
 void Raspbed::openSettings(){
-    Settings settingsDialog;
+    Settings *settingsDialog = new Settings();
 
     QStringList serialPortOptions;
     for(std::string device : bed.getSerialPort()->getDevices()) {
@@ -21,9 +27,15 @@ void Raspbed::openSettings(){
         serialPortOptions.push_back(QString::fromStdString(device));
     }
 
-    settingsDialog.setSerialPorts(serialPortOptions);
-    settingsDialog.populateSettings();
-    settingsDialog.exec();
+    settingsDialog->setSerialPorts(serialPortOptions);
+    settingsDialog->populateSettings();
+    settingsDialog->exec();
+
+   if (settingsDialog->result() == QDialog::Accepted){
+       std::cout << settings.getContact().toStdString() << std::endl;
+       settings.setContact(settingsDialog->getContact());
+       std::cout << settings.getContact().toStdString() << std::endl;
+   }
 }
 
 void Raspbed::setupDisplay(){
@@ -77,7 +89,7 @@ void Raspbed::setupDisplay(){
 }
 
 void Raspbed::setupIconBorders(){
-    if(iconBorders){
+    if(settings.isBordered){
         headUpPixmap =  QPixmap("images/border/headUpButton.png");
         headDownPixmap =  QPixmap("images/border/headDownButton.png");
         feetUpPixmap =  QPixmap("images/border/feetUpButton.png");
@@ -229,15 +241,9 @@ void Raspbed::on_flattenBedButton_clicked(){
 
 void Raspbed::on_callButton_clicked()
 {
-    QString message = "Calling skype contact " + contact;
+    std::cout << "Calling...";
+    QString message = "Calling skype contact " + settings.getContact();
     ui->statusBar->showMessage(message,10000);
-    std::string skypeCommand = "skype --callto " + contact.toStdString() + "&";
-}
-
-void Raspbed::setContact(QString contact){
-    this->contact = contact;
-}
-
-QString Raspbed::getContact(){
-    return contact;
+    std::string skypeCommand = "skype --callto " + settings.getContact().toStdString() + " &";
+    system(skypeCommand.c_str());
 }

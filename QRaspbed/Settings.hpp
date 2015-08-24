@@ -2,6 +2,7 @@
 #define SETTINGS_HPP
 
 #include <QDialog>
+#include "Data.hpp"
 
 namespace Ui {
 class Settings;
@@ -18,6 +19,7 @@ public:
     void populateSettings();
 
     void setSerialPorts(QStringList serialPorts);
+
     QStringList getSerialPorts();
 
     QString getContact();
@@ -26,6 +28,13 @@ public:
 
     bool isBordered();
 
+
+    void setContact(const QString &value);
+
+    bool getBordered() const;
+    void setBordered(bool value);
+
+    void setPort(const QString &value);
 
 private slots:
     void on_buttonBox_accepted();

@@ -16,13 +16,15 @@ SOURCES += main.cpp\
     SerialPort.cpp \
     Raspbed.cpp \
     Bed.cpp \
-    Settings.cpp
+    Settings.cpp \
+    Data.cpp
 
 HEADERS  += \
     SerialPort.hpp \
     Raspbed.hpp \
     Bed.hpp \
-    Settings.hpp
+    Settings.hpp \
+    Data.hpp
 
 FORMS    += \
     raspbed.ui \

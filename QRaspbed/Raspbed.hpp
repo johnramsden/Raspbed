@@ -6,7 +6,7 @@
 #include "SerialPort.hpp"
 #include "Bed.hpp"
 #include <string>
-
+#include "Data.hpp"
 
 
 namespace Ui {
@@ -19,8 +19,6 @@ class Raspbed : public QMainWindow {
   public:
     explicit Raspbed(QWidget *parent = 0);
     ~Raspbed();
-    void setContact(QString contact);
-    QString getContact();
 
   private slots:
     void on_headDownButton_pressed();
@@ -61,15 +59,13 @@ class Raspbed : public QMainWindow {
 
     void openSettings();
 private:
+    void setupSettings();
     void setupDisplay();
     void setupIconBorders();
 
+    Data settings;
     QMenu* settingsMenu;
-    QAction* settings;
-
-
-    QString contact;
-    bool iconBorders;
+    QAction* settingsAction;
 
     Bed bed;
     Ui::Raspbed* ui;
