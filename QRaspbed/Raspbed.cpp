@@ -23,18 +23,28 @@ void Raspbed::openSettings(){
 
     QStringList serialPortOptions;
     for(std::string device : bed.getSerialPort()->getDevices()) {
-        std::cout << "Serial option: " << device << std::endl;
+        qDebug() << "Serial option: " << QString::fromStdString(device);
         serialPortOptions.push_back(QString::fromStdString(device));
     }
 
     settingsDialog->setSerialPorts(serialPortOptions);
+    settingsDialog->setPort(settings.getPort());
+    settingsDialog->setContact(settings.getContact());
+    settingsDialog->setBordered(settings.isBordered());
     settingsDialog->populateSettings();
     settingsDialog->exec();
 
    if (settingsDialog->result() == QDialog::Accepted){
-       std::cout << settings.getContact().toStdString() << std::endl;
        settings.setContact(settingsDialog->getContact());
-       std::cout << settings.getContact().toStdString() << std::endl;
+       settings.setPort(settingsDialog->getPort());
+       settings.setBordered(settingsDialog->isBordered());
+
+       qDebug() << "\nChanged Settings to:";
+       qDebug() << settings.getContact();
+       qDebug() << settings.getPort();
+       qDebug() << settings.isBordered();
+
+       setupDisplay();
    }
 }
 
@@ -89,7 +99,7 @@ void Raspbed::setupDisplay(){
 }
 
 void Raspbed::setupIconBorders(){
-    if(settings.isBordered){
+    if(settings.isBordered()){
         headUpPixmap =  QPixmap("images/border/headUpButton.png");
         headDownPixmap =  QPixmap("images/border/headDownButton.png");
         feetUpPixmap =  QPixmap("images/border/feetUpButton.png");
@@ -241,7 +251,7 @@ void Raspbed::on_flattenBedButton_clicked(){
 
 void Raspbed::on_callButton_clicked()
 {
-    std::cout << "Calling...";
+    qDebug() << "Calling " << settings.getContact();
     QString message = "Calling skype contact " + settings.getContact();
     ui->statusBar->showMessage(message,10000);
     std::string skypeCommand = "skype --callto " + settings.getContact().toStdString() + " &";

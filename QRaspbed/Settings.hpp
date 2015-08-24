@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include "Data.hpp"
+#include <QDebug>
+#include <iostream>
 
 namespace Ui {
 class Settings;
@@ -22,22 +24,17 @@ public:
 
     QStringList getSerialPorts();
 
-    QString getContact();
-
+    void setPort(const QString &value);
     QString getPort();
 
-    bool isBordered();
-
-
     void setContact(const QString &value);
+    QString getContact();
 
-    bool getBordered() const;
+    bool isBordered();
     void setBordered(bool value);
 
-    void setPort(const QString &value);
-
 private slots:
-    void on_buttonBox_accepted();
+    void updateData();
 
 private:
     QStringList serialPorts;

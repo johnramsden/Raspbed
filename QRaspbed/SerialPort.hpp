@@ -18,6 +18,7 @@
 #include <iostream>
 #include <boost/asio.hpp>
 #include <memory>
+#include <QDebug>
 
 class SerialPort {
   public:

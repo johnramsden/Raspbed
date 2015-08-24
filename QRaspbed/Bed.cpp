@@ -9,7 +9,7 @@
 #include "Bed.hpp"
 
 Bed::Bed() : serialPort(new SerialPort) {
-    std::cout << "Making new bed with serial port values: " << std::endl;
+    qDebug() << "Making new bed with serial port values: ";
     serialPort->print();
     serialPort->open();
 }
@@ -21,24 +21,19 @@ Bed::~Bed() {
 }
 
 void Bed::Relay::print() {
-    std::cout << "Relays: " << std::endl;
-    std::cout << "Close all:\t" << static_cast<unsigned>(close_all)
-              << std::endl;
-    std::cout << "Head up:\t" << static_cast<unsigned>(head_up) << std::endl;
-    std::cout << "Head down:\t" << static_cast<unsigned>(head_down)
-              << std::endl;
-    std::cout << "Feet up:\t" << static_cast<unsigned>(feet_up) << std::endl;
-    std::cout << "Feet down:\t" << static_cast<unsigned>(feet_down)
-              << std::endl;
-    std::cout << "Trend up:\t" << static_cast<unsigned>(trend_up) << std::endl;
-    std::cout << "Bed up: \t" << static_cast<unsigned>(bed_up) << std::endl;
-    std::cout << "Bed down:\t" << static_cast<unsigned>(bed_down) << std::endl;
-    std::cout << "Set wheels:\t" << static_cast<unsigned>(lower_wheels)
-              << std::endl;
+    qDebug() << "Relays: ";
+    qDebug() << "Close all:\t" << QString::number(static_cast<unsigned>(close_all));
+    qDebug() << "Head up:\t" << QString::number(static_cast<unsigned>(head_up));
+    qDebug() << "Head down:\t" << QString::number(static_cast<unsigned>(head_down));
+    qDebug() << "Feet up:\t" << QString::number(static_cast<unsigned>(feet_up));
+    qDebug() << "Feet down:\t" << QString::number(static_cast<unsigned>(feet_down));
+    qDebug() << "Trend up:\t" << QString::number(static_cast<unsigned>(trend_up) ) ;
+    qDebug() << "Bed up: \t" << QString::number(static_cast<unsigned>(bed_up) ) ;
+    qDebug() << "Bed down:\t" << QString::number(static_cast<unsigned>(bed_down) ) ;
+    qDebug() << "Set wheels:\t" << QString::number(static_cast<unsigned>(lower_wheels));
 }
 
 void Bed::command(const char relay, bool on) {
-    std::cout << "Sending " << relay << " to serial port" << std::endl;
     int val;
     // 1,0,{relay} is on
     if (on) {

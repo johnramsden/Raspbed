@@ -7,7 +7,7 @@
 #include "Bed.hpp"
 #include <string>
 #include "Data.hpp"
-
+#include <QDebug>
 
 namespace Ui {
 class Raspbed;

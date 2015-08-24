@@ -7,7 +7,6 @@
  */
 
 #include "SerialPort.hpp"
-#include <boost/asio.hpp>
 
 using namespace boost::asio;
 
@@ -42,7 +41,7 @@ SerialPort::~SerialPort() {}
 
 bool SerialPort::open() {
     if (port.is_open()) {
-        std::cout << "Port is already opened, closing..." << std::endl;
+        qDebug() << "Port is already opened, closing..." ;
         port.close();
     }
 
@@ -59,11 +58,11 @@ bool SerialPort::open() {
             port.set_option(flowControl);
             return false;
         } else {
-            std::cout << "error : port isn't open..." << std::endl;
+            qDebug() << "error : port isn't open..." ;
             return true;
         }
     } else {
-        std::cout << "WARNING: Port '" << portName << "' does not exist." << std::endl;
+        qDebug() << "WARNING: Port " << QString::fromStdString(portName) << " does not exist." ;
         return false;
     }
 }
@@ -76,7 +75,7 @@ void SerialPort::stop() {
     }
     io.stop();
     io.reset();
-    std::cout << "\nPort closed." << std::endl;
+    qDebug() << "\nPort closed."  ;
 }
 
 void SerialPort::write(const char *data) {
@@ -85,25 +84,24 @@ void SerialPort::write(const char *data) {
 }
 
 void SerialPort::print() {
-    std::cout << "###################\nPort: " << getPortName() << std::endl;
-    std::cout << "Baud rate: " << getBaudRate().value() << std::endl;
-    std::cout << "Character size: " << getCharacterSize().value() << std::endl;
-    std::cout << "Flow control: " << getFlowControl().value() << std::endl;
-    std::cout << "Parity: " << getParity().value() << std::endl;
-    std::cout << "Stop bits: " << getStopBits().value() << std::endl;
-    std::cout << "###################" << std::endl;
+    qDebug() << "###################\nPort: " << QString::fromStdString(getPortName());
+    qDebug() << "Baud rate: " << QString::number(getBaudRate().value());
+    qDebug() << "Character size: " << QString::number(getCharacterSize().value());
+    qDebug() << "Flow control: " << QString::number(getFlowControl().value());
+    qDebug() << "Parity: " << QString::number(getParity().value());
+    qDebug() << "Stop bits: " << QString::number(getStopBits().value());
+    qDebug() << "###################"  ;
 }
 
 bool SerialPort::portExists(std::string port) {
     std::vector<std::string> devices = getDevices();
     for(auto device : devices){
         if (device == port) {
-            std::cout << "\nMATCH: Serial device '" << device << "' found"
-                      << std::endl;
+            qDebug() << "\nMATCH: Serial device '" << QString::fromStdString(device) << "' found";
             return true;
         }
     }
-    std::cout << "\nNo match found." << std::endl;
+    qDebug() << "\nNo match found.";
     return false;
 }
 
@@ -119,7 +117,7 @@ std::vector<std::string> SerialPort::getDevices(){
 
     // Make sure directory initialized
     if (directory == nullptr) {
-        std::cout << "ERROR! pdir could not be initialised correctly" << std::endl;
+        qDebug() << "ERROR! pdir could not be initialised correctly"  ;
         exit(EXIT_FAILURE);
     }
 
@@ -127,8 +125,7 @@ std::vector<std::string> SerialPort::getDevices(){
     while (entry = readdir(directory)) {
         // Make sure directory initialized
         if (directory == nullptr) {
-            std::cout << "ERROR! pdir could not be initialised correctly"
-                      << std::endl;
+            qDebug() << "ERROR! pdir could not be initialised correctly";
             exit(EXIT_FAILURE);
         } else {
             devices.push_back(entry->d_name);

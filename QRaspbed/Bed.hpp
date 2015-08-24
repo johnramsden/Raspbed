@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "SerialPort.hpp"
+#include <QDebug>
 
 class Bed {
   public:

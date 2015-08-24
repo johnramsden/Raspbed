@@ -6,7 +6,8 @@ Settings::Settings(QWidget *parent) :
     ui(new Ui::Settings)
 {
     ui->setupUi(this);
-    ui->iconStyleCheckBox->setChecked(true);
+
+    connect(ui->buttonBox, SIGNAL(accepted()), this, SLOT(updateData()));
 }
 
 Settings::~Settings()
@@ -15,7 +16,12 @@ Settings::~Settings()
 }
 
 void Settings::populateSettings(){
+    ui->iconStyleCheckBox->setChecked(bordered);
+    ui->callContactLineEdit->setText(contact);
     ui->serialPortComboBox->addItems(serialPorts);
+    if(serialPorts.contains(port)){
+        ui->serialPortComboBox->setCurrentText(port);
+    }
 }
 
 void Settings::setSerialPorts(QStringList serialPorts){
@@ -26,18 +32,27 @@ QStringList Settings::getSerialPorts(){
     return serialPorts;
 }
 
-void Settings::on_buttonBox_accepted()
-{
-    contact = ui->callContactLineEdit->text();
-   // port = ui->serialPortComboBox->itemData(ui->serialPortComboBox->currentIndex());
+void Settings::updateData(){
     bordered = ui->iconStyleCheckBox->isChecked();
+    contact = ui->callContactLineEdit->text();
+    port = ui->serialPortComboBox->itemText(ui->serialPortComboBox->currentIndex());
+    qDebug() << "Settings results: Port " << port << ", Contact: " << contact << ", Icon" << bordered;
 }
+
 void Settings::setPort(const QString &value)
 {
     port = value;
 }
 
-bool Settings::getBordered() const
+QString Settings::getPort(){
+    return port;
+}
+QString Settings::getContact()
+{
+    return contact;
+}
+
+bool Settings::isBordered()
 {
     return bordered;
 }
@@ -52,7 +67,4 @@ void Settings::setContact(const QString &value)
     contact = value;
 }
 
-QString Settings::getContact()
-{
-    return contact;
-}
+
