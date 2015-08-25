@@ -3,12 +3,16 @@
 
 #include <QString>
 #include <string>
-
+#include <QSettings>
+#include <QCoreApplication>
+#include <QDebug>
 class Data {
 
 public:
    Data();
 
+   static void loadSettings();
+   static void saveSettings();
    static QString getContact();
    static void setContact(const QString &value);
 
@@ -26,6 +30,7 @@ private:
    static QString contact;
    static bool iconBorders;
    static QString port;
+   static QSettings settings;
 };
 
 

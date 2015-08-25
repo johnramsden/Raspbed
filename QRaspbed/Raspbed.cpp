@@ -2,6 +2,7 @@
 
 Raspbed::Raspbed(QWidget *parent) : QMainWindow(parent), ui(new Ui::Raspbed), bed() {
     ui->setupUi(this);
+    settings.loadSettings();
 
 //    settings.setContact("+16049263981");
 //    settings.setBordered(true);
@@ -39,6 +40,8 @@ void Raspbed::openSettings(){
        settings.setPort(settingsDialog->getPort());
        settings.setBordered(settingsDialog->isBordered());
 
+       settings.saveSettings();
+
        qDebug() << "\nChanged Settings to:";
        qDebug() << settings.getContact();
        qDebug() << settings.getPort();
@@ -57,7 +60,7 @@ void Raspbed::resetBed(){
     qDebug() << "Reopening port with " << settings.getPort();
     if(!bed.getSerialPort()->open()){
         setupButtons();
-        QString errorMessage = "WARNING: No Serial Port open. Failure opening " + settings.getPort();
+        QString errorMessage = "WARNING: No serial port open. Failure opening " + settings.getPort();
         ui->statusBar->showMessage(errorMessage);
     }
 }
