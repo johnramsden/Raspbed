@@ -62,6 +62,8 @@ private:
     void setupSettings();
     void setupDisplay();
     void setupIconBorders();
+    void setupButtons();
+    void resetBed();
 
     Data settings;
     QMenu* settingsMenu;

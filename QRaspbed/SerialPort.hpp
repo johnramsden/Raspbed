@@ -80,8 +80,7 @@ class SerialPort {
     void print();
 
     // setters and getters
-    void
-    setFlowControl(boost::asio::serial_port_base::flow_control flowControl);
+    void setFlowControl(boost::asio::serial_port_base::flow_control flowControl);
     boost::asio::serial_port_base::flow_control getFlowControl() const;
     void setParity(boost::asio::serial_port_base::parity parity);
     boost::asio::serial_port_base::parity getParity() const;

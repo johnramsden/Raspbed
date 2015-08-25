@@ -47,19 +47,30 @@ bool SerialPort::open() {
 
     if(portExists(portName)) {
         std::string fullName = "/dev/" + portName;
-        port.open(fullName);
+        qDebug() << "Opening " << QString::fromStdString(fullName);
+
+        try {
+            port.open(fullName);
+        }
+        catch (boost::system::system_error const& e)
+        {
+            qDebug() <<  "Warning: could not connect : " << e.what();
+
+        }
 
         if (port.is_open()) {
             connected = true;
+            qDebug() << "Connected";
             port.set_option(baudRate);
             port.set_option(characterSize);
             port.set_option(stopBits);
             port.set_option(parity);
             port.set_option(flowControl);
-            return false;
+            return true;
         } else {
             qDebug() << "error : port isn't open..." ;
-            return true;
+            connected = false;
+            return false;
         }
     } else {
         qDebug() << "WARNING: Port " << QString::fromStdString(portName) << " does not exist." ;

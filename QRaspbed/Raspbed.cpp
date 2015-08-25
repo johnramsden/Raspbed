@@ -3,9 +3,9 @@
 Raspbed::Raspbed(QWidget *parent) : QMainWindow(parent), ui(new Ui::Raspbed), bed() {
     ui->setupUi(this);
 
-    settings.setContact("+16049263981");
-    settings.setBordered(true);
-    settings.setPort("ttyUSB0");
+//    settings.setContact("+16049263981");
+//    settings.setBordered(true);
+//    settings.setPort("ttyUSB0");
 
 
     setupDisplay();
@@ -45,7 +45,21 @@ void Raspbed::openSettings(){
        qDebug() << settings.isBordered();
 
        setupDisplay();
+
+       resetBed();
    }
+}
+
+void Raspbed::resetBed(){
+    qDebug() << "Stopping serialport to change settings";
+    bed.getSerialPort()->stop();
+    bed.getSerialPort()->setPortName(settings.getPort().toStdString());
+    qDebug() << "Reopening port with " << settings.getPort();
+    if(!bed.getSerialPort()->open()){
+        setupButtons();
+        QString errorMessage = "WARNING: No Serial Port open. Failure opening " + settings.getPort();
+        ui->statusBar->showMessage(errorMessage);
+    }
 }
 
 void Raspbed::setupDisplay(){
@@ -82,6 +96,10 @@ void Raspbed::setupDisplay(){
     QIcon callButtonIcon(callPixmap);
     ui->callButton->setIcon(callButtonIcon);
 
+    setupButtons();
+}
+
+void Raspbed::setupButtons(){
     QList<QPushButton *> allPButtons = ui->centralWidget->findChildren<QPushButton *>();
 
     for(auto button : allPButtons){
@@ -95,7 +113,6 @@ void Raspbed::setupDisplay(){
             ui->statusBar->showMessage("Connected to port.");
         }
     }
-
 }
 
 void Raspbed::setupIconBorders(){
