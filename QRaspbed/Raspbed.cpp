@@ -42,11 +42,6 @@ void Raspbed::openSettings(){
 
        settings.saveSettings();
 
-       qDebug() << "\nChanged Settings to:";
-       qDebug() << settings.getContact();
-       qDebug() << settings.getPort();
-       qDebug() << settings.isBordered();
-
        setupDisplay();
 
        resetBed();

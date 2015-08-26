@@ -17,14 +17,16 @@ SOURCES += main.cpp\
     Raspbed.cpp \
     Bed.cpp \
     Settings.cpp \
-    Data.cpp
+    Data.cpp \
+    MouseFilter.cpp
 
 HEADERS  += \
     SerialPort.hpp \
     Raspbed.hpp \
     Bed.hpp \
     Settings.hpp \
-    Data.hpp
+    Data.hpp \
+    MouseFilter.hpp
 
 FORMS    += \
     raspbed.ui \

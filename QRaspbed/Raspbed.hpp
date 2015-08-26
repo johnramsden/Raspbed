@@ -8,6 +8,7 @@
 #include <string>
 #include "Data.hpp"
 #include <QDebug>
+#include <QMouseEvent>
 
 namespace Ui {
 class Raspbed;
