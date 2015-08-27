@@ -2,6 +2,7 @@
 
 QString Data::contact;
 bool Data::iconBorders;
+bool Data::buttonMode;
 QString Data::port;
 QSettings Data::settings;
 
@@ -11,11 +12,13 @@ Data::Data() {
 }
 
 void  Data::loadSettings(){
-    qDebug() << "Loading settings:";
+    qDebug() << "-------------------\nLoading settings:";
     port = settings.value("serialport").toString();
     iconBorders = settings.value("icons").toBool();
     contact = settings.value("contact").toString();
-    qDebug() << "Loaded " << port << ", " << iconBorders << ", and " << contact;
+    buttonMode = settings.value("buttonMode").toBool();
+    qDebug() << "Loaded: \nPort: " << port << "\nIcons:" << iconBorders
+             << "\nContact:" << contact << "\nButtons" << buttonMode;
 }
 
 void  Data::saveSettings(){
@@ -23,7 +26,9 @@ void  Data::saveSettings(){
     settings.setValue("serialport", port);
     settings.setValue("icons", iconBorders);
     settings.setValue("contact", contact);
-    qDebug() << "Saved " << port << ", " << iconBorders << ", and " << contact;
+    settings.setValue("buttonMode", buttonMode);
+    qDebug() << "Saved: \nPort: " << port << "\nIcons:" << iconBorders
+             << "\nContact:" << contact << "Buttons" << buttonMode;
 }
 
 QString Data::getContact()
@@ -54,4 +59,12 @@ void Data::setPort(const QString &value)
     port = value;
 }
 
+bool Data::isButtonMode()
+{
+    return buttonMode;
+}
 
+void Data::setButtonMode(bool value)
+{
+    buttonMode = value;
+}

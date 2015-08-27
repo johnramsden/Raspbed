@@ -33,6 +33,9 @@ public:
     bool isBordered();
     void setBordered(bool value);
 
+    bool isButtonMode();
+    void setButtonMode(bool value);
+
 private slots:
     void updateData();
 
@@ -42,6 +45,7 @@ private:
 
     QString contact;
     bool bordered;
+    bool buttonMode;
     QString port;
 };
 

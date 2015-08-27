@@ -17,6 +17,7 @@ Settings::~Settings()
 
 void Settings::populateSettings(){
     ui->iconStyleCheckBox->setChecked(bordered);
+    ui->buttonModeCheckBox->setChecked(buttonMode);
     ui->callContactLineEdit->setText(contact);
     ui->serialPortComboBox->addItems(serialPorts);
     if(serialPorts.contains(port)){
@@ -34,9 +35,12 @@ QStringList Settings::getSerialPorts(){
 
 void Settings::updateData(){
     bordered = ui->iconStyleCheckBox->isChecked();
+    buttonMode = ui->buttonModeCheckBox->isChecked();
     contact = ui->callContactLineEdit->text();
     port = ui->serialPortComboBox->itemText(ui->serialPortComboBox->currentIndex());
-    qDebug() << "Settings results: Port " << port << ", Contact: " << contact << ", Icon" << bordered;
+    qDebug() << "------------------\nSettings results: \nPort "
+             << port << "\nContact: " << contact << "\nIcon" << bordered
+             << "Button Mode:" << buttonMode;
 }
 
 void Settings::setPort(const QString &value)
@@ -67,4 +71,12 @@ void Settings::setContact(const QString &value)
     contact = value;
 }
 
+bool Settings::isButtonMode()
+{
+    return buttonMode;
+}
 
+void Settings::setButtonMode(bool value)
+{
+    buttonMode = value;
+}

@@ -16,6 +16,9 @@ public:
    static QString getContact();
    static void setContact(const QString &value);
 
+   static bool isButtonMode();
+   static void setButtonMode(bool value);
+
    static bool isBordered();
    static void setBordered(bool value);
 
@@ -31,6 +34,7 @@ private:
    static bool iconBorders;
    static QString port;
    static QSettings settings;
+   static bool buttonMode;
 };
 
 

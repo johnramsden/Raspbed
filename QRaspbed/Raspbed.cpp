@@ -19,6 +19,14 @@ Raspbed::Raspbed(QWidget *parent) : QMainWindow(parent), ui(new Ui::Raspbed), be
 
 Raspbed::~Raspbed() { delete ui; }
 
+void Raspbed::mousePressEvent(QMouseEvent * event){
+    if(!buttonMode){
+        if(event->button() == Qt::LeftButton){
+            qDebug() << "Right-o";
+        }
+    }
+}
+
 void Raspbed::openSettings(){
     Settings *settingsDialog = new Settings();
 
@@ -32,20 +40,21 @@ void Raspbed::openSettings(){
     settingsDialog->setPort(settings.getPort());
     settingsDialog->setContact(settings.getContact());
     settingsDialog->setBordered(settings.isBordered());
+    settingsDialog->setButtonMode(settings.isButtonMode());
     settingsDialog->populateSettings();
     settingsDialog->exec();
 
-   if (settingsDialog->result() == QDialog::Accepted){
-       settings.setContact(settingsDialog->getContact());
-       settings.setPort(settingsDialog->getPort());
-       settings.setBordered(settingsDialog->isBordered());
+    if (settingsDialog->result() == QDialog::Accepted){
+        settings.setContact(settingsDialog->getContact());
+        settings.setPort(settingsDialog->getPort());
+        settings.setBordered(settingsDialog->isBordered());
+        settings.setButtonMode(settingsDialog->isButtonMode());
+        settings.saveSettings();
 
-       settings.saveSettings();
+        setupDisplay();
 
-       setupDisplay();
-
-       resetBed();
-   }
+        resetBed();
+    }
 }
 
 void Raspbed::resetBed(){
@@ -104,7 +113,13 @@ void Raspbed::setupButtons(){
         button->setIconSize(headUpPixmap.rect().size());
         button->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
         if(!bed.getSerialPort()->isConnected()){
-            if(button != ui->callButton) { button->setEnabled(false); }
+            if(!buttonMode){
+                button->setEnabled(false);
+            } else { // Buttons Enabled turn leave skype enabled
+                if(button != ui->callButton) {
+                    button->setEnabled(false);
+                }
+            }
             ui->statusBar->showMessage("WARNING: No serial port detected.");
         } else {
             button->setEnabled(true);

@@ -21,6 +21,8 @@ class Raspbed : public QMainWindow {
     explicit Raspbed(QWidget *parent = 0);
     ~Raspbed();
 
+
+
   private slots:
     void on_headDownButton_pressed();
 
@@ -84,6 +86,12 @@ private:
     QPixmap lowerWheelsPixmap;
     QPixmap flattenBedPixmap;
     QPixmap callPixmap;
+
+    // Window state
+    bool buttonMode;
+
+protected:
+    virtual void mousePressEvent(QMouseEvent * event);
 };
 
 #endif // RASPBED_HPP

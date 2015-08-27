@@ -8,7 +8,6 @@
 #include "Raspbed.hpp"
 #include <QApplication>
 #include <cstdlib>
-#include "MouseFilter.hpp"
 #include "Bed.hpp"
 
 using namespace std;
@@ -16,7 +15,6 @@ using namespace std;
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     Raspbed w;
-    w.installEventFilter(new MouseFilter());
     w.show();
     return a.exec();
 }

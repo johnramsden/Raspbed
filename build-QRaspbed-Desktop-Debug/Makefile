@@ -53,20 +53,16 @@ SOURCES       = ../QRaspbed/main.cpp \
 		../QRaspbed/Raspbed.cpp \
 		../QRaspbed/Bed.cpp \
 		../QRaspbed/Settings.cpp \
-		../QRaspbed/Data.cpp \
-		../QRaspbed/MouseFilter.cpp moc_Raspbed.cpp \
-		moc_Settings.cpp \
-		moc_MouseFilter.cpp
+		../QRaspbed/Data.cpp moc_Raspbed.cpp \
+		moc_Settings.cpp
 OBJECTS       = main.o \
 		SerialPort.o \
 		Raspbed.o \
 		Bed.o \
 		Settings.o \
 		Data.o \
-		MouseFilter.o \
 		moc_Raspbed.o \
-		moc_Settings.o \
-		moc_MouseFilter.o
+		moc_Settings.o
 DIST          = ../QRaspbed/uncrustify.cfg \
 		/usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/common/unix.conf \
@@ -244,14 +240,12 @@ DIST          = ../QRaspbed/uncrustify.cfg \
 		../QRaspbed/Raspbed.hpp \
 		../QRaspbed/Bed.hpp \
 		../QRaspbed/Settings.hpp \
-		../QRaspbed/Data.hpp \
-		../QRaspbed/MouseFilter.hpp ../QRaspbed/main.cpp \
+		../QRaspbed/Data.hpp ../QRaspbed/main.cpp \
 		../QRaspbed/SerialPort.cpp \
 		../QRaspbed/Raspbed.cpp \
 		../QRaspbed/Bed.cpp \
 		../QRaspbed/Settings.cpp \
-		../QRaspbed/Data.cpp \
-		../QRaspbed/MouseFilter.cpp
+		../QRaspbed/Data.cpp
 QMAKE_TARGET  = QRaspbed
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = QRaspbed
@@ -649,8 +643,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../QRaspbed/SerialPort.hpp ../QRaspbed/Raspbed.hpp ../QRaspbed/Bed.hpp ../QRaspbed/Settings.hpp ../QRaspbed/Data.hpp ../QRaspbed/MouseFilter.hpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../QRaspbed/main.cpp ../QRaspbed/SerialPort.cpp ../QRaspbed/Raspbed.cpp ../QRaspbed/Bed.cpp ../QRaspbed/Settings.cpp ../QRaspbed/Data.cpp ../QRaspbed/MouseFilter.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../QRaspbed/SerialPort.hpp ../QRaspbed/Raspbed.hpp ../QRaspbed/Bed.hpp ../QRaspbed/Settings.hpp ../QRaspbed/Data.hpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../QRaspbed/main.cpp ../QRaspbed/SerialPort.cpp ../QRaspbed/Raspbed.cpp ../QRaspbed/Bed.cpp ../QRaspbed/Settings.cpp ../QRaspbed/Data.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../QRaspbed/raspbed.ui ../QRaspbed/settings.ui $(DISTDIR)/
 
 
@@ -674,9 +668,9 @@ check: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_Raspbed.cpp moc_Settings.cpp moc_MouseFilter.cpp
+compiler_moc_header_make_all: moc_Raspbed.cpp moc_Settings.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_Raspbed.cpp moc_Settings.cpp moc_MouseFilter.cpp
+	-$(DEL_FILE) moc_Raspbed.cpp moc_Settings.cpp
 moc_Raspbed.cpp: ui_raspbed.h \
 		../QRaspbed/Settings.hpp \
 		../QRaspbed/Data.hpp \
@@ -688,9 +682,6 @@ moc_Raspbed.cpp: ui_raspbed.h \
 moc_Settings.cpp: ../QRaspbed/Data.hpp \
 		../QRaspbed/Settings.hpp
 	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/john/workspace/Raspbed/QRaspbed -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/5.2.0 -I/usr/include/c++/5.2.0/x86_64-unknown-linux-gnu -I/usr/include/c++/5.2.0/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/5.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/5.2.0/include-fixed -I/usr/include ../QRaspbed/Settings.hpp -o moc_Settings.cpp
-
-moc_MouseFilter.cpp: ../QRaspbed/MouseFilter.hpp
-	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/john/workspace/Raspbed/QRaspbed -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/5.2.0 -I/usr/include/c++/5.2.0/x86_64-unknown-linux-gnu -I/usr/include/c++/5.2.0/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/5.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/5.2.0/include-fixed -I/usr/include ../QRaspbed/MouseFilter.hpp -o moc_MouseFilter.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -718,8 +709,7 @@ main.o: ../QRaspbed/main.cpp ../QRaspbed/Raspbed.hpp \
 		../QRaspbed/Settings.hpp \
 		../QRaspbed/Data.hpp \
 		../QRaspbed/SerialPort.hpp \
-		../QRaspbed/Bed.hpp \
-		../QRaspbed/MouseFilter.hpp
+		../QRaspbed/Bed.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../QRaspbed/main.cpp
 
 SerialPort.o: ../QRaspbed/SerialPort.cpp ../QRaspbed/SerialPort.hpp
@@ -745,17 +735,11 @@ Settings.o: ../QRaspbed/Settings.cpp ../QRaspbed/Settings.hpp \
 Data.o: ../QRaspbed/Data.cpp ../QRaspbed/Data.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Data.o ../QRaspbed/Data.cpp
 
-MouseFilter.o: ../QRaspbed/MouseFilter.cpp ../QRaspbed/MouseFilter.hpp
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o MouseFilter.o ../QRaspbed/MouseFilter.cpp
-
 moc_Raspbed.o: moc_Raspbed.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_Raspbed.o moc_Raspbed.cpp
 
 moc_Settings.o: moc_Settings.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_Settings.o moc_Settings.cpp
-
-moc_MouseFilter.o: moc_MouseFilter.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_MouseFilter.o moc_MouseFilter.cpp
 
 ####### Install
 
