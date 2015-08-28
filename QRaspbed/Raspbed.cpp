@@ -15,22 +15,79 @@ Raspbed::Raspbed(QWidget *parent) : QMainWindow(parent), ui(new Ui::Raspbed), be
     settingsAction = settingsMenu->addAction("Settings");
 
     connect( settingsAction, SIGNAL( triggered() ), this, SLOT( openSettings() ) );
+
+    selectedButton = ui->headUpButton;
 }
 
 Raspbed::~Raspbed() { delete ui; }
+
+//QPushButton* Raspbed::nextButton(){
+//    return ui->headUpButton;
+//}
+
+//void Raspbed::setCurrentButton(){
+//    switch (currentButton) { // Set correct button
+//    case HEAD_UP:
+//        currentButton = HEAD_DOWN;
+//        break;
+//    case HEAD_DOWN:
+//        currentButton = FEET_UP;
+//        break;
+//    case FEET_UP:
+//        currentButton = FEET_DOWN;
+//        break;
+//    case FEET_DOWN:
+//        currentButton = TREND;
+//        break;
+//    case TREND:
+//        currentButton = BED_UP;
+//        break;
+//    case BED_UP:
+//        currentButton = BED_DOWN;
+//        break;
+//    case BED_DOWN:
+//        currentButton = LOWER_WHEELS;
+//        break;
+//    case LOWER_WHEELS:
+//        currentButton = HEAD_UP;
+//        break;
+
+//    }
+//}
+
+QPushButton* Raspbed::nextButton(){
+    if(selectedButton == ui->headUpButton) { // Set correct button
+        return ui->headDownButton;
+    }else if(selectedButton == ui->headDownButton){
+        return ui->feetUpButton;
+    }else if(selectedButton == ui->feetUpButton){
+        return ui->feetDownButton;
+    }else if(selectedButton == ui->feetDownButton){
+        return ui->trendButton;
+    }else if(selectedButton == ui->trendButton){
+        return ui->bedUpButton;
+    }else if(selectedButton == ui->bedUpButton){
+        return ui->bedDownButton;
+    }else if(selectedButton == ui->bedDownButton){
+        return ui->lowerWheelsButton;
+    }else{
+        return ui->headUpButton;
+    }
+}
 
 /**
  * Common method called for button and window events when not in buttonmode.
  * @brief Raspbed::mouseEvent
  * @param event
  */
+// { HEAD_UP, HEAD_DOWN, FEET_UP, FEET_DOWN, TREND, BED_UP, BED_DOWN, LOWER_WHEELS };
 void Raspbed::mouseEvent(QMouseEvent *event){
     if(event->button() == Qt::LeftButton){
-        qDebug() << "Left Click";
-        ui->headUpButton->setStyleSheet("");
+        selectedButton->setStyleSheet("");
+        selectedButton = nextButton();
+        selectedButton->setStyleSheet("border: 3px solid white");
     } else if (event->button() == Qt::RightButton){
-        qDebug() << "Right Click";
-        ui->headUpButton->setStyleSheet("border: 3px solid white");
+        selectedButton->setStyleSheet("");
     }
 }
 
@@ -40,7 +97,7 @@ void Raspbed::mouseEvent(QMouseEvent *event){
  * @param event
  */
 void Raspbed::mousePressEvent(QMouseEvent * event){
-    if(!settings.isButtonMode()){
+    if(!settings.isButtonMode() /* &&  bed.getSerialPort()->isConnected()*/){
         mouseEvent(event);
     }
 }
@@ -54,7 +111,7 @@ void Raspbed::mousePressEvent(QMouseEvent * event){
  */
 bool Raspbed::eventFilter(QObject *object, QEvent *event)
 {
-    if(!settings.isButtonMode()){
+    if(!settings.isButtonMode() /* &&  bed.getSerialPort()->isConnected()*/){
         if (( event->type() == QEvent::MouseButtonPress)) {
             mouseEvent(static_cast<QMouseEvent *>(event));
             return true;
@@ -140,16 +197,15 @@ void Raspbed::setupDisplay(){
     ui->callButton->setIcon(callButtonIcon);
 
     setupButtons();
+
+    if(!settings.isButtonMode()){
+        selectedButton = ui->headUpButton;
+        selectedButton->setStyleSheet("border: 3px solid white");
+    }
 }
 
 void Raspbed::setupButtons(){
     QList<QPushButton *> allPButtons = ui->centralWidget->findChildren<QPushButton *>();
-
-    if(settings.isButtonMode()){
-        qDebug() << "Buttons are enabled!";
-    } else {
-        qDebug() << "Buttons are disabled!";
-    }
 
     for(auto button : allPButtons){
         button->setIconSize(headUpPixmap.rect().size());
