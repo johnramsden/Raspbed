@@ -19,12 +19,48 @@ Raspbed::Raspbed(QWidget *parent) : QMainWindow(parent), ui(new Ui::Raspbed), be
 
 Raspbed::~Raspbed() { delete ui; }
 
+/**
+ * Common method called for button and window events when not in buttonmode.
+ * @brief Raspbed::mouseEvent
+ * @param event
+ */
+void Raspbed::mouseEvent(QMouseEvent *event){
+    if(event->button() == Qt::LeftButton){
+        qDebug() << "Left Click";
+        ui->headUpButton->setStyleSheet("");
+    } else if (event->button() == Qt::RightButton){
+        qDebug() << "Right Click";
+        ui->headUpButton->setStyleSheet("border: 3px solid white");
+    }
+}
+
+/**
+ * Event filter for window. Only applied if not in button mode
+ * @brief Raspbed::mousePressEvent
+ * @param event
+ */
 void Raspbed::mousePressEvent(QMouseEvent * event){
-    if(!buttonMode){
-        if(event->button() == Qt::LeftButton){
-            qDebug() << "Right-o";
+    if(!settings.isButtonMode()){
+        mouseEvent(event);
+    }
+}
+
+/**
+ * Event filter for buttons. Only applied if not in button mode.
+ * @brief Raspbed::eventFilter
+ * @param object
+ * @param event
+ * @return
+ */
+bool Raspbed::eventFilter(QObject *object, QEvent *event)
+{
+    if(!settings.isButtonMode()){
+        if (( event->type() == QEvent::MouseButtonPress)) {
+            mouseEvent(static_cast<QMouseEvent *>(event));
+            return true;
         }
     }
+    return QWidget::eventFilter(object,event);
 }
 
 void Raspbed::openSettings(){
@@ -109,23 +145,39 @@ void Raspbed::setupDisplay(){
 void Raspbed::setupButtons(){
     QList<QPushButton *> allPButtons = ui->centralWidget->findChildren<QPushButton *>();
 
+    if(settings.isButtonMode()){
+        qDebug() << "Buttons are enabled!";
+    } else {
+        qDebug() << "Buttons are disabled!";
+    }
+
     for(auto button : allPButtons){
         button->setIconSize(headUpPixmap.rect().size());
         button->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
         if(!bed.getSerialPort()->isConnected()){
-            if(!buttonMode){
+            if(!settings.isButtonMode()){// Buttons disabled, disable skype
                 button->setEnabled(false);
-            } else { // Buttons Enabled turn leave skype enabled
+                button->installEventFilter(this);
+            } else { // Buttons Enabled, leave skype enabled
                 if(button != ui->callButton) {
                     button->setEnabled(false);
+                } else {
+                    button->setEnabled(true);
                 }
             }
             ui->statusBar->showMessage("WARNING: No serial port detected.");
         } else {
-            button->setEnabled(true);
+            if(!settings.isButtonMode()){// Buttons disabled
+                button->setEnabled(false);
+                button->installEventFilter(this);
+            } else {
+                button->setEnabled(true);
+            }
             ui->statusBar->showMessage("Connected to port.");
         }
+
     }
+
 }
 
 void Raspbed::setupIconBorders(){

@@ -9,6 +9,7 @@
 #include "Data.hpp"
 #include <QDebug>
 #include <QMouseEvent>
+#include <QTimer>
 
 namespace Ui {
 class Raspbed;
@@ -87,9 +88,8 @@ private:
     QPixmap flattenBedPixmap;
     QPixmap callPixmap;
 
-    // Window state
-    bool buttonMode;
-
+    bool eventFilter(QObject *object, QEvent *event);
+    void mouseEvent(QMouseEvent *event);
 protected:
     virtual void mousePressEvent(QMouseEvent * event);
 };
