@@ -25,6 +25,9 @@ public:
    static QString getPort();
    static void setPort(const QString &value);
 
+   static int getButtonHoldTime();
+   static void setButtonHoldTime(int value);
+
 private:
    Data(Data const&) = delete;
    Data& operator=(Data const&) = delete;
@@ -35,6 +38,7 @@ private:
    static QString port;
    static QSettings settings;
    static bool buttonMode;
+   static int buttonHoldTime;
 };
 
 

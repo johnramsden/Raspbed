@@ -5,6 +5,7 @@ bool Data::iconBorders;
 bool Data::buttonMode;
 QString Data::port;
 QSettings Data::settings;
+int Data::buttonHoldTime;
 
 Data::Data() {
     QCoreApplication::setOrganizationName("RamsdenJ");
@@ -17,6 +18,7 @@ void  Data::loadSettings(){
     iconBorders = settings.value("icons").toBool();
     contact = settings.value("contact").toString();
     buttonMode = settings.value("buttonMode").toBool();
+    buttonHoldTime = settings.value("buttonHoldTime").toInt();
     qDebug() << "Loaded: \nPort: " << port << "\nIcons:" << iconBorders
              << "\nContact:" << contact << "\nButtons" << buttonMode;
 }
@@ -27,6 +29,7 @@ void  Data::saveSettings(){
     settings.setValue("icons", iconBorders);
     settings.setValue("contact", contact);
     settings.setValue("buttonMode", buttonMode);
+    settings.setValue("buttonHoldTime", buttonHoldTime);
     qDebug() << "Saved: \nPort: " << port << "\nIcons:" << iconBorders
              << "\nContact:" << contact << "Buttons" << buttonMode;
 }
@@ -57,6 +60,16 @@ QString Data::getPort()
 void Data::setPort(const QString &value)
 {
     port = value;
+}
+
+int Data::getButtonHoldTime()
+{
+    return buttonHoldTime;
+}
+
+void Data::setButtonHoldTime(int value)
+{
+    buttonHoldTime = value;
 }
 
 bool Data::isButtonMode()

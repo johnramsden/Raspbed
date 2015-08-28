@@ -88,19 +88,22 @@ private:
     QPixmap flattenBedPixmap;
     QPixmap callPixmap;
 
-//    void setCurrentButton();
-//    enum CurrentButton { HEAD_UP, HEAD_DOWN, FEET_UP, FEET_DOWN, TREND, BED_UP, BED_DOWN,
-//                         LOWER_WHEELS };
-
-//    CurrentButton currentButton;
-
     QPushButton* selectedButton;
     QPushButton* nextButton();
 
     // Event filtering
     bool eventFilter(QObject *object, QEvent *event);
-    void mouseEvent(QMouseEvent *event);
-    // QPushButton* nextButton();
+    void mouseSelectEvent(QMouseEvent *event);
+
+    // Held down button clicks for non button mode
+    void lowerWheelsHoldButton();
+    void bedDownHoldButton();
+    void bedUpHoldButton();
+    void trendHoldButton();
+    void feetDownHoldButton();
+    void feetUpHoldButton();
+    void headUpHoldButton();
+    void headDownHoldButton();
 protected:
     virtual void mousePressEvent(QMouseEvent * event);
 };
