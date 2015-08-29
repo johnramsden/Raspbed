@@ -12,11 +12,11 @@ using namespace boost::asio;
 
 SerialPort::SerialPort(std::string name)
     : SerialPort::SerialPort(
-              name, 19200, serial_port_base::character_size(8),
-              serial_port_base::stop_bits(serial_port_base::stop_bits::two),
-              serial_port_base::parity(serial_port_base::parity::none),
-              serial_port_base::flow_control(
-                  serial_port_base::flow_control::none)) {}
+          name, 19200, serial_port_base::character_size(8),
+          serial_port_base::stop_bits(serial_port_base::stop_bits::two),
+          serial_port_base::parity(serial_port_base::parity::none),
+          serial_port_base::flow_control(
+              serial_port_base::flow_control::none)) {}
 
 SerialPort::SerialPort(std::string name, unsigned int baud_rate,
                        serial_port_base::character_size character_size,
@@ -31,21 +31,18 @@ SerialPort::~SerialPort() {}
 
 bool SerialPort::open() {
     if (port.is_open()) {
-        qDebug() << "Port is already opened, closing..." ;
+        qDebug() << "Port is already opened, closing...";
         port.close();
     }
 
-    if(portExists(portName)) {
+    if (portExists(portName)) {
         std::string fullName = "/dev/" + portName;
         qDebug() << "Opening " << QString::fromStdString(fullName);
 
         try {
             port.open(fullName);
-        }
-        catch (boost::system::system_error const& e)
-        {
-            qDebug() <<  "Warning: could not connect : " << e.what();
-
+        } catch (boost::system::system_error const &e) {
+            qDebug() << "Warning: could not connect : " << e.what();
         }
 
         if (port.is_open()) {
@@ -58,12 +55,13 @@ bool SerialPort::open() {
             port.set_option(flowControl);
             return true;
         } else {
-            qDebug() << "error : port isn't open..." ;
+            qDebug() << "error : port isn't open...";
             connected = false;
             return false;
         }
     } else {
-        qDebug() << "WARNING: Port " << QString::fromStdString(portName) << " does not exist." ;
+        qDebug() << "WARNING: Port " << QString::fromStdString(portName)
+                 << " does not exist.";
         return false;
     }
 }
@@ -76,7 +74,7 @@ void SerialPort::stop() {
     }
     io.stop();
     io.reset();
-    qDebug() << "\nPort closed."  ;
+    qDebug() << "\nPort closed.";
 }
 
 void SerialPort::write(const char *data) {
@@ -85,20 +83,23 @@ void SerialPort::write(const char *data) {
 }
 
 void SerialPort::print() {
-    qDebug() << "###################\nPort: " << QString::fromStdString(getPortName());
+    qDebug() << "###################\nPort: "
+             << QString::fromStdString(getPortName());
     qDebug() << "Baud rate: " << QString::number(getBaudRate().value());
-    qDebug() << "Character size: " << QString::number(getCharacterSize().value());
+    qDebug() << "Character size: "
+             << QString::number(getCharacterSize().value());
     qDebug() << "Flow control: " << QString::number(getFlowControl().value());
     qDebug() << "Parity: " << QString::number(getParity().value());
     qDebug() << "Stop bits: " << QString::number(getStopBits().value());
-    qDebug() << "###################"  ;
+    qDebug() << "###################";
 }
 
 bool SerialPort::portExists(std::string port) {
     std::vector<std::string> devices = getDevices();
-    for(auto device : devices){
+    for (auto device : devices) {
         if (device == port) {
-            qDebug() << "\nMATCH: Serial device '" << QString::fromStdString(device) << "' found";
+            qDebug() << "\nMATCH: Serial device '"
+                     << QString::fromStdString(device) << "' found";
             return true;
         }
     }
@@ -106,7 +107,7 @@ bool SerialPort::portExists(std::string port) {
     return false;
 }
 
-std::vector<std::string> SerialPort::getDevices(){
+std::vector<std::string> SerialPort::getDevices() {
     DIR *directory = nullptr;
     struct dirent *entry = nullptr;   // directory entry
     std::vector<std::string> devices; // List of devices
@@ -118,12 +119,12 @@ std::vector<std::string> SerialPort::getDevices(){
 
     // Make sure directory initialized
     if (directory == nullptr) {
-        qDebug() << "ERROR! pdir could not be initialised correctly"  ;
+        qDebug() << "ERROR! pdir could not be initialised correctly";
         exit(EXIT_FAILURE);
     }
 
     // Get all devices in "/sys/class/tty"
-    while (entry = readdir(directory)) {
+    while ((entry = readdir(directory))) {
         // Make sure directory initialized
         if (directory == nullptr) {
             qDebug() << "ERROR! pdir could not be initialised correctly";
@@ -201,10 +202,6 @@ void SerialPort::setPortName(std::string portName) {
 
 std::string SerialPort::getPortName() const { return portName; }
 
-void SerialPort::setConnected(bool connected){
-    this->connected = connected;
-}
+void SerialPort::setConnected(bool connected) { this->connected = connected; }
 
-bool SerialPort::isConnected(){
-    return connected;
-}
+bool SerialPort::isConnected() { return connected; }

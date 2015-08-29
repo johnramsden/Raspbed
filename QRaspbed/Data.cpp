@@ -12,7 +12,7 @@ Data::Data() {
     QCoreApplication::setApplicationName("Raspbed");
 }
 
-void  Data::loadSettings(){
+void Data::loadSettings() {
     qDebug() << "-------------------\nLoading settings:";
     port = settings.value("serialport").toString();
     iconBorders = settings.value("icons").toBool();
@@ -23,7 +23,7 @@ void  Data::loadSettings(){
              << "\nContact:" << contact << "\nButtons" << buttonMode;
 }
 
-void  Data::saveSettings(){
+void Data::saveSettings() {
     qDebug() << "Saving settings:";
     settings.setValue("serialport", port);
     settings.setValue("icons", iconBorders);
@@ -34,50 +34,20 @@ void  Data::saveSettings(){
              << "\nContact:" << contact << "Buttons" << buttonMode;
 }
 
-QString Data::getContact()
-{
-    return contact;
-}
+QString Data::getContact() { return contact; }
 
-void Data::setContact(const QString &value)
-{
-    contact = value;
-}
-bool Data::isBordered()
-{
-    return iconBorders;
-}
+void Data::setContact(const QString &value) { contact = value; }
+bool Data::isBordered() { return iconBorders; }
 
-void Data::setBordered(bool value)
-{
-    iconBorders = value;
-}
-QString Data::getPort()
-{
-    return port;
-}
+void Data::setBordered(bool value) { iconBorders = value; }
+QString Data::getPort() { return port; }
 
-void Data::setPort(const QString &value)
-{
-    port = value;
-}
+void Data::setPort(const QString &value) { port = value; }
 
-int Data::getButtonHoldTime()
-{
-    return buttonHoldTime;
-}
+int Data::getButtonHoldTime() { return buttonHoldTime; }
 
-void Data::setButtonHoldTime(int value)
-{
-    buttonHoldTime = value;
-}
+void Data::setButtonHoldTime(int value) { buttonHoldTime = value; }
 
-bool Data::isButtonMode()
-{
-    return buttonMode;
-}
+bool Data::isButtonMode() { return buttonMode; }
 
-void Data::setButtonMode(bool value)
-{
-    buttonMode = value;
-}
+void Data::setButtonMode(bool value) { buttonMode = value; }

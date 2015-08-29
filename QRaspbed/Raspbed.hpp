@@ -22,8 +22,6 @@ class Raspbed : public QMainWindow {
     explicit Raspbed(QWidget *parent = 0);
     ~Raspbed();
 
-
-
   private slots:
     void on_headDownButton_pressed();
 
@@ -64,7 +62,8 @@ class Raspbed : public QMainWindow {
     void openSettings();
 
     void resetClicks();
-private:
+
+  private:
     void setupSettings();
     void setupDisplay();
     void setupIconBorders();
@@ -72,11 +71,10 @@ private:
     void resetBed();
 
     Data settings;
-    QMenu* settingsMenu;
-    QAction* settingsAction;
+    QMenu *settingsMenu;
+    QAction *settingsAction;
 
-
-    Ui::Raspbed* ui;
+    Ui::Raspbed *ui;
     Bed bed;
 
     // Bed Icons
@@ -91,9 +89,9 @@ private:
     QPixmap flattenBedPixmap;
     QPixmap callPixmap;
 
-    QPushButton* selectedButton;
+    QPushButton *selectedButton;
     bool selected;
-    QPushButton* nextButton();
+    QPushButton *nextButton();
 
     // Event filtering
     bool eventFilter(QObject *object, QEvent *event);
@@ -112,8 +110,8 @@ private:
     void headUpHoldButton();
     void headDownHoldButton();
 
-protected:
-    virtual void mousePressEvent(QMouseEvent * event);
+  protected:
+    virtual void mousePressEvent(QMouseEvent *event);
 };
 
 #endif // RASPBED_HPP

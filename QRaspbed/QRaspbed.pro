@@ -8,6 +8,12 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+# The application version
+VERSION = 1.0
+
+# Define the preprocessor macro to get the application version in our application.
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+
 TARGET = QRaspbed
 TEMPLATE = app
 
@@ -35,4 +41,5 @@ CONFIG += c++11
 LIBS += \
        -lboost_system\
 
-DISTFILES += uncrustify.cfg
+# For deployed version
+# DEFINES += QT_NO_DEBUG_OUTPUT

@@ -21,7 +21,6 @@ class Bed {
      */
     Bed();
 
-    Bed(const Bed &orig);
     virtual ~Bed();
 
     /**

@@ -80,7 +80,8 @@ class SerialPort {
     void print();
 
     // setters and getters
-    void setFlowControl(boost::asio::serial_port_base::flow_control flowControl);
+    void
+    setFlowControl(boost::asio::serial_port_base::flow_control flowControl);
     boost::asio::serial_port_base::flow_control getFlowControl() const;
     void setParity(boost::asio::serial_port_base::parity parity);
     boost::asio::serial_port_base::parity getParity() const;
@@ -97,6 +98,7 @@ class SerialPort {
     bool isConnected();
     void setConnected(bool connected);
     std::vector<std::string> getDevices();
+
   private:
     /**
      * @brief portExists
@@ -105,13 +107,9 @@ class SerialPort {
      */
     bool portExists(std::string port);
 
-
-
     // Member variables
     bool connected;
 
-    boost::asio::io_service io;
-    boost::asio::serial_port port;
     std::string portName;
 
     // Port variables
@@ -120,6 +118,9 @@ class SerialPort {
     boost::asio::serial_port_base::stop_bits stopBits;
     boost::asio::serial_port_base::parity parity;
     boost::asio::serial_port_base::flow_control flowControl;
+
+    boost::asio::io_service io;
+    boost::asio::serial_port port;
 };
 
 #endif /* SERIALPORT_HPP */

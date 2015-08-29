@@ -12,7 +12,7 @@ MAKEFILE      = Makefile
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
+DEFINES       = -DAPP_VERSION=\"1.0\" -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -std=c++0x -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 INCPATH       = -I../QRaspbed -I. -isystem /usr/include/qt -isystem /usr/include/qt/QtWidgets -isystem /usr/include/qt/QtGui -isystem /usr/include/qt/QtCore -I. -I. -I/usr/lib/qt/mkspecs/linux-g++
@@ -32,8 +32,8 @@ DEL_DIR       = rmdir
 MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
-DISTNAME      = QRaspbed1.0.0
-DISTDIR = /home/john/workspace/Raspbed/build-QRaspbed-Desktop-Debug/.tmp/QRaspbed1.0.0
+DISTNAME      = QRaspbed1.0
+DISTDIR = /home/john/workspace/Raspbed/build-QRaspbed-Desktop-Debug/.tmp/QRaspbed1.0
 LINK          = g++
 LFLAGS        = 
 LIBS          = $(SUBLIBS) -lboost_system -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
@@ -63,8 +63,7 @@ OBJECTS       = main.o \
 		Data.o \
 		moc_Raspbed.o \
 		moc_Settings.o
-DIST          = ../QRaspbed/uncrustify.cfg \
-		/usr/lib/qt/mkspecs/features/spec_pre.prf \
+DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/common/unix.conf \
 		/usr/lib/qt/mkspecs/common/linux.conf \
 		/usr/lib/qt/mkspecs/common/sanitize.conf \

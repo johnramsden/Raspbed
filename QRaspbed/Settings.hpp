@@ -10,11 +10,10 @@ namespace Ui {
 class Settings;
 }
 
-class Settings : public QDialog
-{
+class Settings : public QDialog {
     Q_OBJECT
 
-public:
+  public:
     explicit Settings(QWidget *parent = 0);
     ~Settings();
 
@@ -39,10 +38,10 @@ public:
     QString getButtonHoldTime() const;
     void setButtonHoldTime(const QString &value);
 
-private slots:
+  private slots:
     void updateData();
 
-private:
+  private:
     QStringList serialPorts;
     Ui::Settings *ui;
 

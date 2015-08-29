@@ -14,23 +14,25 @@ Bed::Bed() : serialPort(new SerialPort) {
     serialPort->open();
 }
 
-Bed::Bed(const Bed &orig) {}
-
-Bed::~Bed() {
-    serialPort->stop();
-}
+Bed::~Bed() { serialPort->stop(); }
 
 void Bed::Relay::print() {
     qDebug() << "Relays: ";
-    qDebug() << "Close all:\t" << QString::number(static_cast<unsigned>(close_all));
+    qDebug() << "Close all:\t"
+             << QString::number(static_cast<unsigned>(close_all));
     qDebug() << "Head up:\t" << QString::number(static_cast<unsigned>(head_up));
-    qDebug() << "Head down:\t" << QString::number(static_cast<unsigned>(head_down));
+    qDebug() << "Head down:\t"
+             << QString::number(static_cast<unsigned>(head_down));
     qDebug() << "Feet up:\t" << QString::number(static_cast<unsigned>(feet_up));
-    qDebug() << "Feet down:\t" << QString::number(static_cast<unsigned>(feet_down));
-    qDebug() << "Trend up:\t" << QString::number(static_cast<unsigned>(trend_up) ) ;
-    qDebug() << "Bed up: \t" << QString::number(static_cast<unsigned>(bed_up) ) ;
-    qDebug() << "Bed down:\t" << QString::number(static_cast<unsigned>(bed_down) ) ;
-    qDebug() << "Set wheels:\t" << QString::number(static_cast<unsigned>(lower_wheels));
+    qDebug() << "Feet down:\t"
+             << QString::number(static_cast<unsigned>(feet_down));
+    qDebug() << "Trend up:\t"
+             << QString::number(static_cast<unsigned>(trend_up));
+    qDebug() << "Bed up: \t" << QString::number(static_cast<unsigned>(bed_up));
+    qDebug() << "Bed down:\t"
+             << QString::number(static_cast<unsigned>(bed_down));
+    qDebug() << "Set wheels:\t"
+             << QString::number(static_cast<unsigned>(lower_wheels));
 }
 
 void Bed::command(const char relay, bool on) {
