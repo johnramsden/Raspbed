@@ -62,6 +62,8 @@ class Raspbed : public QMainWindow {
     void on_callButton_clicked();
 
     void openSettings();
+
+    void resetClicks();
 private:
     void setupSettings();
     void setupDisplay();
@@ -73,8 +75,9 @@ private:
     QMenu* settingsMenu;
     QAction* settingsAction;
 
-    Bed bed;
+
     Ui::Raspbed* ui;
+    Bed bed;
 
     // Bed Icons
     QPixmap headUpPixmap;
@@ -89,11 +92,15 @@ private:
     QPixmap callPixmap;
 
     QPushButton* selectedButton;
+    bool selected;
     QPushButton* nextButton();
 
     // Event filtering
     bool eventFilter(QObject *object, QEvent *event);
     void mouseSelectEvent(QMouseEvent *event);
+
+    int numRightClicks;
+    int numLeftClicks;
 
     // Held down button clicks for non button mode
     void lowerWheelsHoldButton();
@@ -104,6 +111,7 @@ private:
     void feetUpHoldButton();
     void headUpHoldButton();
     void headDownHoldButton();
+
 protected:
     virtual void mousePressEvent(QMouseEvent * event);
 };

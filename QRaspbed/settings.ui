@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>290</height>
+    <height>382</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -49,6 +49,20 @@
      </item>
      <item>
       <widget class="QLineEdit" name="callContactLineEdit"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="callContactHorizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="holdTimeLabel">
+       <property name="text">
+        <string>Sip n Puff Hold Time (s):</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="buttonHoldTimeEdit"/>
      </item>
     </layout>
    </item>

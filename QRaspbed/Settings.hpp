@@ -36,6 +36,9 @@ public:
     bool isButtonMode();
     void setButtonMode(bool value);
 
+    QString getButtonHoldTime() const;
+    void setButtonHoldTime(const QString &value);
+
 private slots:
     void updateData();
 
@@ -47,6 +50,7 @@ private:
     bool bordered;
     bool buttonMode;
     QString port;
+    QString buttonHoldTime;
 };
 
 #endif // SETTINGS_HPP

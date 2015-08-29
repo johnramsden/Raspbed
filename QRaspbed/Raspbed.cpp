@@ -4,9 +4,6 @@ Raspbed::Raspbed(QWidget *parent) : QMainWindow(parent), ui(new Ui::Raspbed), be
     ui->setupUi(this);
     settings.loadSettings();
 
-    settings.setButtonHoldTime(2); // Temp test val
-
-
     setupDisplay();
 
     settingsMenu = ui->menuBar->addMenu("Menu");
@@ -15,6 +12,10 @@ Raspbed::Raspbed(QWidget *parent) : QMainWindow(parent), ui(new Ui::Raspbed), be
     connect( settingsAction, SIGNAL( triggered() ), this, SLOT( openSettings() ) );
 
     selectedButton = ui->headUpButton;
+    selected = false;
+
+    numRightClicks = 0;
+    numLeftClicks = 0;
 }
 
 Raspbed::~Raspbed() { delete ui; }
@@ -38,6 +39,12 @@ QPushButton* Raspbed::nextButton(){
         return ui->headUpButton;
     }
 }
+void Raspbed::resetClicks(){
+    numRightClicks = 0;
+    numLeftClicks = 0;
+    qDebug() << "Reset Clicks";
+}
+
 
 /**
  * Common method called for button and window events when not in buttonmode.
@@ -46,29 +53,51 @@ QPushButton* Raspbed::nextButton(){
  */
 void Raspbed::mouseSelectEvent(QMouseEvent *event){
     if(event->button() == Qt::LeftButton){
+        if( numRightClicks > 0){
+            numLeftClicks++;
+            qDebug() << "Pressed Left Click, R=" << QString::number(numRightClicks)
+                << ", L=" << QString::number(numLeftClicks);
+        }
+
+        selected = false;
         selectedButton->setStyleSheet("");
         selectedButton = nextButton();
         selectedButton->setStyleSheet("border: 3px solid white");
     } else if (event->button() == Qt::RightButton){
-        if(selectedButton == ui->headUpButton) { // Set correct button
-            headDownHoldButton();
-        }else if(selectedButton == ui->headDownButton){
-            headDownHoldButton();
-        }else if(selectedButton == ui->feetUpButton){
-            feetUpHoldButton();
-        }else if(selectedButton == ui->feetDownButton){
-            feetDownHoldButton();
-        }else if(selectedButton == ui->trendButton){
-            trendHoldButton();
-        }else if(selectedButton == ui->bedUpButton){
-            bedUpHoldButton();
-        }else if(selectedButton == ui->bedDownButton){
-            bedDownHoldButton();
-        }else if(selectedButton == ui->lowerWheelsButton){
-            lowerWheelsHoldButton();
-        }else{
-            qDebug() << "Error, button doesn't exist.";
+        QTimer::singleShot(500, this, SLOT(resetClicks()));
+        numRightClicks++;
+
+        if( (numRightClicks >= 2) && (numLeftClicks >= 1) ){
+            on_callButton_clicked();
         }
+
+        if(selected){
+            if(selectedButton == ui->headUpButton) { // Set correct button
+                headUpHoldButton();
+            }else if(selectedButton == ui->headDownButton){
+                headDownHoldButton();
+            }else if(selectedButton == ui->feetUpButton){
+                feetUpHoldButton();
+            }else if(selectedButton == ui->feetDownButton){
+                feetDownHoldButton();
+            }else if(selectedButton == ui->trendButton){
+                trendHoldButton();
+            }else if(selectedButton == ui->bedUpButton){
+                bedUpHoldButton();
+            }else if(selectedButton == ui->bedDownButton){
+                bedDownHoldButton();
+            }else if(selectedButton == ui->lowerWheelsButton){
+                lowerWheelsHoldButton();
+            }else{
+                qDebug() << "Error, button doesn't exist.";
+            }
+        }
+
+        selectedButton->setStyleSheet("background-color: white");
+        selected = true;
+        qDebug() << "Pressed Right Click, R=" << QString::number(numRightClicks)
+               << ", L=" << QString::number(numLeftClicks);
+
     }
 }
 
@@ -115,6 +144,7 @@ void Raspbed::openSettings(){
     settingsDialog->setContact(settings.getContact());
     settingsDialog->setBordered(settings.isBordered());
     settingsDialog->setButtonMode(settings.isButtonMode());
+    settingsDialog->setButtonHoldTime(QString::number(settings.getButtonHoldTime()));
     settingsDialog->populateSettings();
     settingsDialog->exec();
 
@@ -123,6 +153,7 @@ void Raspbed::openSettings(){
         settings.setPort(settingsDialog->getPort());
         settings.setBordered(settingsDialog->isBordered());
         settings.setButtonMode(settingsDialog->isButtonMode());
+        settings.setButtonHoldTime(settingsDialog->getButtonHoldTime().toInt());
         settings.saveSettings();
 
         setupDisplay();

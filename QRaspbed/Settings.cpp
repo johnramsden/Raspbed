@@ -20,6 +20,7 @@ void Settings::populateSettings(){
     ui->buttonModeCheckBox->setChecked(buttonMode);
     ui->callContactLineEdit->setText(contact);
     ui->serialPortComboBox->addItems(serialPorts);
+    ui->buttonHoldTimeEdit->setText(buttonHoldTime);
     if(serialPorts.contains(port)){
         ui->serialPortComboBox->setCurrentText(port);
     }
@@ -37,10 +38,21 @@ void Settings::updateData(){
     bordered = ui->iconStyleCheckBox->isChecked();
     buttonMode = ui->buttonModeCheckBox->isChecked();
     contact = ui->callContactLineEdit->text();
+    buttonHoldTime = ui->buttonHoldTimeEdit->text();
     port = ui->serialPortComboBox->itemText(ui->serialPortComboBox->currentIndex());
     qDebug() << "------------------\nSettings results: \nPort "
              << port << "\nContact: " << contact << "\nIcon" << bordered
              << "Button Mode:" << buttonMode;
+}
+
+QString Settings::getButtonHoldTime() const
+{
+    return buttonHoldTime;
+}
+
+void Settings::setButtonHoldTime(const QString &value)
+{
+    buttonHoldTime = value;
 }
 
 void Settings::setPort(const QString &value)
