@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>QRaspbed: Data.hpp Source File</title>
+<title>QRaspbed: /home/john/workspace/Raspbed/QRaspbed/Data.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -49,6 +49,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,6 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -108,7 +110,7 @@ $(document).ready(function(){initNavTree('_data_8hpp_source.html','');});
 <div class="title">Data.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DATA_HPP</span></div>
+<a href="_data_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DATA_HPP</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DATA_HPP</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
@@ -119,46 +121,66 @@ $(document).ready(function(){initNavTree('_data_8hpp_source.html','');});
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_data.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_data.html">Data</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_data.html">Data</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_data.html#af11f741cb7f587e2e495452a8905a22a">Data</a>();</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> loadSettings();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> saveSettings();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">static</span> QString getContact();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> setContact(<span class="keyword">const</span> QString &amp;value);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_data.html#a3c745bcea3d6c8c9286364b6f97614f2">loadSettings</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_data.html#aa7d9ed93a7c1a54382e03eb0c23bcfc0">saveSettings</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="class_data.html#a558f532ce86fc7966c40fc0b721ea1c3">getContact</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_data.html#a85bfdc8991905828988862344d0674d3">setContact</a>(<span class="keyword">const</span> QString &amp;value);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> isButtonMode();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> setButtonMode(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_data.html#a838c0481ff54d605cef5dd9b6465dabd">isButtonMode</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_data.html#aa5a7191b715f23630a095841133f59c8">setButtonMode</a>(<span class="keywordtype">bool</span> value);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> isBordered();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> setBordered(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_data.html#a05a23cfd0e7b49d70a3df8a94ce7358f">isBordered</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_data.html#aa4cfbfd4f91a66c3e1199303c2e1d210">setBordered</a>(<span class="keywordtype">bool</span> value);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">static</span> QString getPort();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> setPort(<span class="keyword">const</span> QString &amp;value);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="class_data.html#a84d8d172583a7db3fe5373439382ff99">getPort</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_data.html#a405c105993ba38146ef655219e05ab96">setPort</a>(<span class="keyword">const</span> QString &amp;value);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> getButtonHoldTime();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> setButtonHoldTime(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_data.html#a2a8b467a33035659bd90190df94978f3">getButtonHoldTime</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_data.html#a47afbfde8c3817918de5235bb8c81c6e">setButtonHoldTime</a>(<span class="keywordtype">int</span> value);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_data.html">Data</a>(<a class="code" href="class_data.html">Data</a> <span class="keyword">const</span> &amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_data.html">Data</a> &amp;operator=(<a class="code" href="class_data.html">Data</a> <span class="keyword">const</span> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_data.html#af11f741cb7f587e2e495452a8905a22a">Data</a>(<a class="code" href="class_data.html">Data</a> <span class="keyword">const</span> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_data.html">Data</a> &amp;<a class="code" href="class_data.html#ad185f0295111c3f792e645eb9410298e">operator=</a>(<a class="code" href="class_data.html">Data</a> <span class="keyword">const</span> &amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// Instance variables</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">static</span> QString contact;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> iconBorders;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">static</span> QString port;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">static</span> QSettings settings;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> buttonMode;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> buttonHoldTime;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_data.html#aa38a318064795343c9358cfc58fa4f04">   36</a></span>&#160;    <span class="keyword">static</span> QString <a class="code" href="class_data.html#aa38a318064795343c9358cfc58fa4f04">contact</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_data.html#ae509e54e6876e1ca7683263d2d61c9fd">   37</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_data.html#ae509e54e6876e1ca7683263d2d61c9fd">iconBorders</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_data.html#ad19a95cadfd733efaabab55ccc156d34">   38</a></span>&#160;    <span class="keyword">static</span> QString <a class="code" href="class_data.html#ad19a95cadfd733efaabab55ccc156d34">port</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_data.html#a8143e0ec3ca7ab340da2484021ea6fa4">   39</a></span>&#160;    <span class="keyword">static</span> QSettings <a class="code" href="class_data.html#a8143e0ec3ca7ab340da2484021ea6fa4">settings</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_data.html#a993952bf6c0eff6a54afc273c0f5a72a">   40</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_data.html#a993952bf6c0eff6a54afc273c0f5a72a">buttonMode</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_data.html#a77730aeed3c116d423e40fbf7e7b65f3">   41</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_data.html#a77730aeed3c116d423e40fbf7e7b65f3">buttonHoldTime</a>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif // DATA_HPP</span></div>
+<div class="ttc" id="class_data_html_ae509e54e6876e1ca7683263d2d61c9fd"><div class="ttname"><a href="class_data.html#ae509e54e6876e1ca7683263d2d61c9fd">Data::iconBorders</a></div><div class="ttdeci">static bool iconBorders</div><div class="ttdef"><b>Definition:</b> Data.hpp:37</div></div>
 <div class="ttc" id="class_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>Definition:</b> Data.hpp:9</div></div>
+<div class="ttc" id="class_data_html_a8143e0ec3ca7ab340da2484021ea6fa4"><div class="ttname"><a href="class_data.html#a8143e0ec3ca7ab340da2484021ea6fa4">Data::settings</a></div><div class="ttdeci">static QSettings settings</div><div class="ttdef"><b>Definition:</b> Data.hpp:39</div></div>
+<div class="ttc" id="class_data_html_a77730aeed3c116d423e40fbf7e7b65f3"><div class="ttname"><a href="class_data.html#a77730aeed3c116d423e40fbf7e7b65f3">Data::buttonHoldTime</a></div><div class="ttdeci">static int buttonHoldTime</div><div class="ttdef"><b>Definition:</b> Data.hpp:41</div></div>
+<div class="ttc" id="class_data_html_ad19a95cadfd733efaabab55ccc156d34"><div class="ttname"><a href="class_data.html#ad19a95cadfd733efaabab55ccc156d34">Data::port</a></div><div class="ttdeci">static QString port</div><div class="ttdef"><b>Definition:</b> Data.hpp:38</div></div>
+<div class="ttc" id="class_data_html_aa7d9ed93a7c1a54382e03eb0c23bcfc0"><div class="ttname"><a href="class_data.html#aa7d9ed93a7c1a54382e03eb0c23bcfc0">Data::saveSettings</a></div><div class="ttdeci">static void saveSettings()</div><div class="ttdef"><b>Definition:</b> Data.cpp:26</div></div>
+<div class="ttc" id="class_data_html_aa38a318064795343c9358cfc58fa4f04"><div class="ttname"><a href="class_data.html#aa38a318064795343c9358cfc58fa4f04">Data::contact</a></div><div class="ttdeci">static QString contact</div><div class="ttdef"><b>Definition:</b> Data.hpp:36</div></div>
+<div class="ttc" id="class_data_html_a05a23cfd0e7b49d70a3df8a94ce7358f"><div class="ttname"><a href="class_data.html#a05a23cfd0e7b49d70a3df8a94ce7358f">Data::isBordered</a></div><div class="ttdeci">static bool isBordered()</div><div class="ttdef"><b>Definition:</b> Data.cpp:40</div></div>
+<div class="ttc" id="class_data_html_a47afbfde8c3817918de5235bb8c81c6e"><div class="ttname"><a href="class_data.html#a47afbfde8c3817918de5235bb8c81c6e">Data::setButtonHoldTime</a></div><div class="ttdeci">static void setButtonHoldTime(int value)</div><div class="ttdef"><b>Definition:</b> Data.cpp:49</div></div>
+<div class="ttc" id="class_data_html_aa4cfbfd4f91a66c3e1199303c2e1d210"><div class="ttname"><a href="class_data.html#aa4cfbfd4f91a66c3e1199303c2e1d210">Data::setBordered</a></div><div class="ttdeci">static void setBordered(bool value)</div><div class="ttdef"><b>Definition:</b> Data.cpp:42</div></div>
+<div class="ttc" id="class_data_html_a558f532ce86fc7966c40fc0b721ea1c3"><div class="ttname"><a href="class_data.html#a558f532ce86fc7966c40fc0b721ea1c3">Data::getContact</a></div><div class="ttdeci">static QString getContact()</div><div class="ttdef"><b>Definition:</b> Data.cpp:37</div></div>
+<div class="ttc" id="class_data_html_a838c0481ff54d605cef5dd9b6465dabd"><div class="ttname"><a href="class_data.html#a838c0481ff54d605cef5dd9b6465dabd">Data::isButtonMode</a></div><div class="ttdeci">static bool isButtonMode()</div><div class="ttdef"><b>Definition:</b> Data.cpp:51</div></div>
+<div class="ttc" id="class_data_html_a84d8d172583a7db3fe5373439382ff99"><div class="ttname"><a href="class_data.html#a84d8d172583a7db3fe5373439382ff99">Data::getPort</a></div><div class="ttdeci">static QString getPort()</div><div class="ttdef"><b>Definition:</b> Data.cpp:43</div></div>
+<div class="ttc" id="class_data_html_af11f741cb7f587e2e495452a8905a22a"><div class="ttname"><a href="class_data.html#af11f741cb7f587e2e495452a8905a22a">Data::Data</a></div><div class="ttdeci">Data()</div><div class="ttdef"><b>Definition:</b> Data.cpp:10</div></div>
+<div class="ttc" id="class_data_html_a3c745bcea3d6c8c9286364b6f97614f2"><div class="ttname"><a href="class_data.html#a3c745bcea3d6c8c9286364b6f97614f2">Data::loadSettings</a></div><div class="ttdeci">static void loadSettings()</div><div class="ttdef"><b>Definition:</b> Data.cpp:15</div></div>
+<div class="ttc" id="class_data_html_ad185f0295111c3f792e645eb9410298e"><div class="ttname"><a href="class_data.html#ad185f0295111c3f792e645eb9410298e">Data::operator=</a></div><div class="ttdeci">Data &amp; operator=(Data const &amp;)=delete</div></div>
+<div class="ttc" id="class_data_html_a405c105993ba38146ef655219e05ab96"><div class="ttname"><a href="class_data.html#a405c105993ba38146ef655219e05ab96">Data::setPort</a></div><div class="ttdeci">static void setPort(const QString &amp;value)</div><div class="ttdef"><b>Definition:</b> Data.cpp:45</div></div>
+<div class="ttc" id="class_data_html_a993952bf6c0eff6a54afc273c0f5a72a"><div class="ttname"><a href="class_data.html#a993952bf6c0eff6a54afc273c0f5a72a">Data::buttonMode</a></div><div class="ttdeci">static bool buttonMode</div><div class="ttdef"><b>Definition:</b> Data.hpp:40</div></div>
+<div class="ttc" id="class_data_html_aa5a7191b715f23630a095841133f59c8"><div class="ttname"><a href="class_data.html#aa5a7191b715f23630a095841133f59c8">Data::setButtonMode</a></div><div class="ttdeci">static void setButtonMode(bool value)</div><div class="ttdef"><b>Definition:</b> Data.cpp:53</div></div>
+<div class="ttc" id="class_data_html_a85bfdc8991905828988862344d0674d3"><div class="ttname"><a href="class_data.html#a85bfdc8991905828988862344d0674d3">Data::setContact</a></div><div class="ttdeci">static void setContact(const QString &amp;value)</div><div class="ttdef"><b>Definition:</b> Data.cpp:39</div></div>
+<div class="ttc" id="class_data_html_a2a8b467a33035659bd90190df94978f3"><div class="ttname"><a href="class_data.html#a2a8b467a33035659bd90190df94978f3">Data::getButtonHoldTime</a></div><div class="ttdeci">static int getButtonHoldTime()</div><div class="ttdef"><b>Definition:</b> Data.cpp:47</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Data.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_baf94c4f6cf3eaf89ea7d449f26da342.html">QRaspbed</a></li><li class="navelem"><a class="el" href="_data_8hpp.html">Data.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>

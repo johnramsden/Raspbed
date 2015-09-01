@@ -1,5 +1,6 @@
 #include "Raspbed.hpp"
 
+
 Raspbed::Raspbed(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::Raspbed), bed() {
     ui->setupUi(this);
@@ -21,6 +22,10 @@ Raspbed::Raspbed(QWidget *parent)
 
 Raspbed::~Raspbed() { delete ui; }
 
+/**
+ * @brief Raspbed::nextButton
+ * @return
+ */
 QPushButton *Raspbed::nextButton() {
     if (selectedButton == ui->headUpButton) { // Set correct button
         return ui->headDownButton;
@@ -46,11 +51,7 @@ void Raspbed::resetClicks() {
     qDebug() << "Reset Clicks";
 }
 
-/**
- * Common method called for button and window events when not in buttonmode.
- * @brief Raspbed::mouseEvent
- * @param event
- */
+
 void Raspbed::mouseSelectEvent(QMouseEvent *event) {
     if (event->button() == Qt::LeftButton) {
         if (numRightClicks > 0) {
@@ -101,24 +102,12 @@ void Raspbed::mouseSelectEvent(QMouseEvent *event) {
     }
 }
 
-/**
- * Event filter for window. Only applied if not in button mode
- * @brief Raspbed::mousePressEvent
- * @param event
- */
 void Raspbed::mousePressEvent(QMouseEvent *event) {
     if (!settings.isButtonMode()  &&  bed.getSerialPort()->isConnected()) {
         mouseSelectEvent(event);
     }
 }
 
-/**
- * Event filter for buttons. Only applied if not in button mode.
- * @brief Raspbed::eventFilter
- * @param object
- * @param event
- * @return
- */
 bool Raspbed::eventFilter(QObject *object, QEvent *event) {
     if (!settings.isButtonMode()  &&  bed.getSerialPort()->isConnected()) {
         if ((event->type() == QEvent::MouseButtonPress)) {
@@ -127,39 +116,6 @@ bool Raspbed::eventFilter(QObject *object, QEvent *event) {
         }
     }
     return QWidget::eventFilter(object, event);
-}
-
-void Raspbed::openSettings() {
-    std::unique_ptr<Settings> settingsDialog(new Settings);
-
-    QStringList serialPortOptions;
-    for (std::string device : bed.getSerialPort()->getDevices()) {
-        qDebug() << "Serial option: " << QString::fromStdString(device);
-        serialPortOptions.push_back(QString::fromStdString(device));
-    }
-
-    settingsDialog->setSerialPorts(serialPortOptions);
-    settingsDialog->setPort(settings.getPort());
-    settingsDialog->setContact(settings.getContact());
-    settingsDialog->setBordered(settings.isBordered());
-    settingsDialog->setButtonMode(settings.isButtonMode());
-    settingsDialog->setButtonHoldTime(
-        QString::number(settings.getButtonHoldTime()));
-    settingsDialog->populateSettings();
-    settingsDialog->exec();
-
-    if (settingsDialog->result() == QDialog::Accepted) {
-        settings.setContact(settingsDialog->getContact());
-        settings.setPort(settingsDialog->getPort());
-        settings.setBordered(settingsDialog->isBordered());
-        settings.setButtonMode(settingsDialog->isButtonMode());
-        settings.setButtonHoldTime(settingsDialog->getButtonHoldTime().toInt());
-        settings.saveSettings();
-
-        setupDisplay();
-
-        resetBed();
-    }
 }
 
 void Raspbed::resetBed() {
@@ -276,6 +232,44 @@ void Raspbed::setupIconBorders() {
         lowerWheelsPixmap = QPixmap("images/no-border/lowerWheelsButton.png");
         flattenBedPixmap = QPixmap("images/no-border/flattenButton.png");
         callPixmap = QPixmap("images/no-border/callButton.png");
+    }
+}
+
+/* ******************* Slots ********************/
+
+/**
+ * @brief Raspbed::openSettings
+ */
+void Raspbed::openSettings() {
+    std::unique_ptr<Settings> settingsDialog(new Settings);
+
+    QStringList serialPortOptions;
+    for (std::string device : bed.getSerialPort()->getDevices()) {
+        qDebug() << "Serial option: " << QString::fromStdString(device);
+        serialPortOptions.push_back(QString::fromStdString(device));
+    }
+
+    settingsDialog->setSerialPorts(serialPortOptions);
+    settingsDialog->setPort(settings.getPort());
+    settingsDialog->setContact(settings.getContact());
+    settingsDialog->setBordered(settings.isBordered());
+    settingsDialog->setButtonMode(settings.isButtonMode());
+    settingsDialog->setButtonHoldTime(
+        QString::number(settings.getButtonHoldTime()));
+    settingsDialog->populateSettings();
+    settingsDialog->exec();
+
+    if (settingsDialog->result() == QDialog::Accepted) {
+        settings.setContact(settingsDialog->getContact());
+        settings.setPort(settingsDialog->getPort());
+        settings.setBordered(settingsDialog->isBordered());
+        settings.setButtonMode(settingsDialog->isButtonMode());
+        settings.setButtonHoldTime(settingsDialog->getButtonHoldTime().toInt());
+        settings.saveSettings();
+
+        setupDisplay();
+
+        resetBed();
     }
 }
 

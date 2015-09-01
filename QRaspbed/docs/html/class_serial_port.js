@@ -12,6 +12,7 @@ var class_serial_port =
     [ "getStopBits", "class_serial_port.html#a681018ff4aadd5d420c60e99bc91f88a", null ],
     [ "isConnected", "class_serial_port.html#a73883aa801c1302297bf0e123bf90bc7", null ],
     [ "open", "class_serial_port.html#a8fd7bb55485ec0e209a8ac3a8599db49", null ],
+    [ "portExists", "class_serial_port.html#aae7baad0a20ca2c6739dd91a6df4af73", null ],
     [ "print", "class_serial_port.html#ae2b2d68b5c1fa01ded41260197c8e0f1", null ],
     [ "setBaudRate", "class_serial_port.html#aee409ccc7d01eb935c386dd3ac5c7c68", null ],
     [ "setCharacterSize", "class_serial_port.html#aad02d1d520822cdf3a506ee4dd383462", null ],
@@ -21,5 +22,14 @@ var class_serial_port =
     [ "setPortName", "class_serial_port.html#a4b8f4ff0c224baa897b297e8a4dbb96f", null ],
     [ "setStopBits", "class_serial_port.html#a084a7c28f336d8db7f0a412c2190a277", null ],
     [ "stop", "class_serial_port.html#ab97358bc322940b2b2372e20abe0d78f", null ],
-    [ "write", "class_serial_port.html#a8b07ae3732a79b9a5225ef00f86a4193", null ]
+    [ "write", "class_serial_port.html#a8b07ae3732a79b9a5225ef00f86a4193", null ],
+    [ "baudRate", "class_serial_port.html#acb09e7b512bd63fe6f71c9a2cf548207", null ],
+    [ "characterSize", "class_serial_port.html#afb78ac848dc521fd1ca2e7d4cb299053", null ],
+    [ "connected", "class_serial_port.html#a93a3839f2ed13ec4fa2bb32b5c292ec9", null ],
+    [ "flowControl", "class_serial_port.html#a064e4d53f296aa2966433cb7e031f4f9", null ],
+    [ "io", "class_serial_port.html#a07f1883f46a4fc7a1d243cc4bf7f092e", null ],
+    [ "parity", "class_serial_port.html#a813fda44f40397a4cfb894bc7ecba16d", null ],
+    [ "port", "class_serial_port.html#a5e844c03df70b9ac5547633364517064", null ],
+    [ "portName", "class_serial_port.html#a02edab1960817dfc20e04f3d53f2e291", null ],
+    [ "stopBits", "class_serial_port.html#a29a5bd0d22baab4204d6544dcbc4770b", null ]
 ];

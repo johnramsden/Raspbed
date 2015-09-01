@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['write',['write',['../class_serial_port.html#a8b07ae3732a79b9a5225ef00f86a4193',1,'SerialPort']]]
+  ['headdownholdbutton',['headDownHoldButton',['../class_raspbed.html#ac08642e8e682d593c70fa8acefd26617',1,'Raspbed']]],
+  ['headupholdbutton',['headUpHoldButton',['../class_raspbed.html#aa33635ab3f124c7ece69bb0d50222eae',1,'Raspbed']]]
 ];

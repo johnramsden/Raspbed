@@ -49,6 +49,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -109,11 +110,15 @@ $(document).ready(function(){initNavTree('class_settings.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-slots">Private Slots</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_settings-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Settings Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_settings_8hpp_source.html">Settings.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Settings:</div>
 <div class="dyncontent">
@@ -125,52 +130,516 @@ Inheritance diagram for Settings:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab17afd334db0af5f71c027b8eda8d514"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab17afd334db0af5f71c027b8eda8d514"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Settings</b> (QWidget *parent=0)</td></tr>
+<tr class="memitem:ab17afd334db0af5f71c027b8eda8d514"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#ab17afd334db0af5f71c027b8eda8d514">Settings</a> (QWidget *parent=0)</td></tr>
 <tr class="separator:ab17afd334db0af5f71c027b8eda8d514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc3653fec65c5a199e226455d12e0834"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc3653fec65c5a199e226455d12e0834"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>populateSettings</b> ()</td></tr>
+<tr class="memitem:a4a65be5921dfc9fddc476e5320541d89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a4a65be5921dfc9fddc476e5320541d89">~Settings</a> ()</td></tr>
+<tr class="separator:a4a65be5921dfc9fddc476e5320541d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc3653fec65c5a199e226455d12e0834"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#acc3653fec65c5a199e226455d12e0834">populateSettings</a> ()</td></tr>
 <tr class="separator:acc3653fec65c5a199e226455d12e0834"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab489ef7aa18f72ac9b9db4064f5516e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab489ef7aa18f72ac9b9db4064f5516e0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSerialPorts</b> (QStringList serialPorts)</td></tr>
+<tr class="memitem:ab489ef7aa18f72ac9b9db4064f5516e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#ab489ef7aa18f72ac9b9db4064f5516e0">setSerialPorts</a> (QStringList <a class="el" href="class_settings.html#a05ab288614776193c3398cac017ad7bd">serialPorts</a>)</td></tr>
 <tr class="separator:ab489ef7aa18f72ac9b9db4064f5516e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5b6b9b66af6aa3bf72003578105fd8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5b6b9b66af6aa3bf72003578105fd8c"></a>
-QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>getSerialPorts</b> ()</td></tr>
+<tr class="memitem:aa5b6b9b66af6aa3bf72003578105fd8c"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#aa5b6b9b66af6aa3bf72003578105fd8c">getSerialPorts</a> ()</td></tr>
 <tr class="separator:aa5b6b9b66af6aa3bf72003578105fd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b7d10179ad2fb05ffc276226a3d6ed6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b7d10179ad2fb05ffc276226a3d6ed6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPort</b> (const QString &amp;value)</td></tr>
+<tr class="memitem:a7b7d10179ad2fb05ffc276226a3d6ed6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a7b7d10179ad2fb05ffc276226a3d6ed6">setPort</a> (const QString &amp;value)</td></tr>
 <tr class="separator:a7b7d10179ad2fb05ffc276226a3d6ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58a731533433cf11efaaae03ec1ebf5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58a731533433cf11efaaae03ec1ebf5d"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>getPort</b> ()</td></tr>
+<tr class="memitem:a58a731533433cf11efaaae03ec1ebf5d"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a58a731533433cf11efaaae03ec1ebf5d">getPort</a> ()</td></tr>
 <tr class="separator:a58a731533433cf11efaaae03ec1ebf5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb71c84fc9809a233c8db2083638d390"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb71c84fc9809a233c8db2083638d390"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setContact</b> (const QString &amp;value)</td></tr>
+<tr class="memitem:abb71c84fc9809a233c8db2083638d390"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#abb71c84fc9809a233c8db2083638d390">setContact</a> (const QString &amp;value)</td></tr>
 <tr class="separator:abb71c84fc9809a233c8db2083638d390"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4876b759a0401cc7ccdeea9b1cd78906"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4876b759a0401cc7ccdeea9b1cd78906"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>getContact</b> ()</td></tr>
+<tr class="memitem:a4876b759a0401cc7ccdeea9b1cd78906"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a4876b759a0401cc7ccdeea9b1cd78906">getContact</a> ()</td></tr>
 <tr class="separator:a4876b759a0401cc7ccdeea9b1cd78906"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af06bc69f54583391a90051a881f7ceae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af06bc69f54583391a90051a881f7ceae"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isBordered</b> ()</td></tr>
+<tr class="memitem:af06bc69f54583391a90051a881f7ceae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#af06bc69f54583391a90051a881f7ceae">isBordered</a> ()</td></tr>
 <tr class="separator:af06bc69f54583391a90051a881f7ceae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bc525813c219b7bdd8c5c2513ecd1b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bc525813c219b7bdd8c5c2513ecd1b9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBordered</b> (bool value)</td></tr>
+<tr class="memitem:a2bc525813c219b7bdd8c5c2513ecd1b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a2bc525813c219b7bdd8c5c2513ecd1b9">setBordered</a> (bool value)</td></tr>
 <tr class="separator:a2bc525813c219b7bdd8c5c2513ecd1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9530a96922fd216114fa2c7e6d7b050"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9530a96922fd216114fa2c7e6d7b050"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isButtonMode</b> ()</td></tr>
+<tr class="memitem:af9530a96922fd216114fa2c7e6d7b050"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#af9530a96922fd216114fa2c7e6d7b050">isButtonMode</a> ()</td></tr>
 <tr class="separator:af9530a96922fd216114fa2c7e6d7b050"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a220e067ec8a54851f7c03d5832464f26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a220e067ec8a54851f7c03d5832464f26"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setButtonMode</b> (bool value)</td></tr>
+<tr class="memitem:a220e067ec8a54851f7c03d5832464f26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a220e067ec8a54851f7c03d5832464f26">setButtonMode</a> (bool value)</td></tr>
 <tr class="separator:a220e067ec8a54851f7c03d5832464f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07ea0ac1d16afca102033167e63eeff4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07ea0ac1d16afca102033167e63eeff4"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>getButtonHoldTime</b> () const </td></tr>
+<tr class="memitem:a07ea0ac1d16afca102033167e63eeff4"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a07ea0ac1d16afca102033167e63eeff4">getButtonHoldTime</a> () const </td></tr>
 <tr class="separator:a07ea0ac1d16afca102033167e63eeff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16ceb981ae799c11381e50529b69be27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16ceb981ae799c11381e50529b69be27"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setButtonHoldTime</b> (const QString &amp;value)</td></tr>
+<tr class="memitem:a16ceb981ae799c11381e50529b69be27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a16ceb981ae799c11381e50529b69be27">setButtonHoldTime</a> (const QString &amp;value)</td></tr>
 <tr class="separator:a16ceb981ae799c11381e50529b69be27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
+Private Slots</h2></td></tr>
+<tr class="memitem:a84a09ba8c45fc91c8d67dc1d7351e4b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a84a09ba8c45fc91c8d67dc1d7351e4b3">updateData</a> ()</td></tr>
+<tr class="separator:a84a09ba8c45fc91c8d67dc1d7351e4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a05ab288614776193c3398cac017ad7bd"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a05ab288614776193c3398cac017ad7bd">serialPorts</a></td></tr>
+<tr class="separator:a05ab288614776193c3398cac017ad7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98680be421d0ae7c34a57f2a159eacd4"><td class="memItemLeft" align="right" valign="top">Ui::Settings *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a98680be421d0ae7c34a57f2a159eacd4">ui</a></td></tr>
+<tr class="separator:a98680be421d0ae7c34a57f2a159eacd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd8f847e3efb2a502d955a5cc759866"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a7cd8f847e3efb2a502d955a5cc759866">contact</a></td></tr>
+<tr class="separator:a7cd8f847e3efb2a502d955a5cc759866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c1b006a2899d4dab98358d530dfe889"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a8c1b006a2899d4dab98358d530dfe889">bordered</a></td></tr>
+<tr class="separator:a8c1b006a2899d4dab98358d530dfe889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4753d8ff5456ff532ccec3e20c3289b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a4753d8ff5456ff532ccec3e20c3289b9">buttonMode</a></td></tr>
+<tr class="separator:a4753d8ff5456ff532ccec3e20c3289b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8093bcd2cdc276ad16c75c2de49cde9f"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#a8093bcd2cdc276ad16c75c2de49cde9f">port</a></td></tr>
+<tr class="separator:a8093bcd2cdc276ad16c75c2de49cde9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d7cfe794180f610b5a70ed02e474ae"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settings.html#aa1d7cfe794180f610b5a70ed02e474ae">buttonHoldTime</a></td></tr>
+<tr class="separator:aa1d7cfe794180f610b5a70ed02e474ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ab17afd334db0af5f71c027b8eda8d514"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Settings::Settings </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a98680be421d0ae7c34a57f2a159eacd4">ui</a>, and <a class="el" href="class_settings.html#a84a09ba8c45fc91c8d67dc1d7351e4b3">updateData()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a65be5921dfc9fddc476e5320541d89"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Settings::~Settings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a98680be421d0ae7c34a57f2a159eacd4">ui</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a07ea0ac1d16afca102033167e63eeff4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Settings::getButtonHoldTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#aa1d7cfe794180f610b5a70ed02e474ae">buttonHoldTime</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4876b759a0401cc7ccdeea9b1cd78906"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Settings::getContact </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a7cd8f847e3efb2a502d955a5cc759866">contact</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a58a731533433cf11efaaae03ec1ebf5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Settings::getPort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a8093bcd2cdc276ad16c75c2de49cde9f">port</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa5b6b9b66af6aa3bf72003578105fd8c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList Settings::getSerialPorts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a05ab288614776193c3398cac017ad7bd">serialPorts</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af06bc69f54583391a90051a881f7ceae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Settings::isBordered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a8c1b006a2899d4dab98358d530dfe889">bordered</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af9530a96922fd216114fa2c7e6d7b050"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Settings::isButtonMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a4753d8ff5456ff532ccec3e20c3289b9">buttonMode</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acc3653fec65c5a199e226455d12e0834"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Settings::populateSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a8c1b006a2899d4dab98358d530dfe889">bordered</a>, <a class="el" href="class_settings.html#aa1d7cfe794180f610b5a70ed02e474ae">buttonHoldTime</a>, <a class="el" href="class_settings.html#a4753d8ff5456ff532ccec3e20c3289b9">buttonMode</a>, <a class="el" href="class_settings.html#a7cd8f847e3efb2a502d955a5cc759866">contact</a>, <a class="el" href="class_settings.html#a8093bcd2cdc276ad16c75c2de49cde9f">port</a>, <a class="el" href="class_settings.html#a05ab288614776193c3398cac017ad7bd">serialPorts</a>, and <a class="el" href="class_settings.html#a98680be421d0ae7c34a57f2a159eacd4">ui</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2bc525813c219b7bdd8c5c2513ecd1b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Settings::setBordered </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a8c1b006a2899d4dab98358d530dfe889">bordered</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16ceb981ae799c11381e50529b69be27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Settings::setButtonHoldTime </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#aa1d7cfe794180f610b5a70ed02e474ae">buttonHoldTime</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a220e067ec8a54851f7c03d5832464f26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Settings::setButtonMode </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a4753d8ff5456ff532ccec3e20c3289b9">buttonMode</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abb71c84fc9809a233c8db2083638d390"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Settings::setContact </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a7cd8f847e3efb2a502d955a5cc759866">contact</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b7d10179ad2fb05ffc276226a3d6ed6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Settings::setPort </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a8093bcd2cdc276ad16c75c2de49cde9f">port</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab489ef7aa18f72ac9b9db4064f5516e0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Settings::setSerialPorts </td>
+          <td>(</td>
+          <td class="paramtype">QStringList&#160;</td>
+          <td class="paramname"><em>serialPorts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a05ab288614776193c3398cac017ad7bd">serialPorts</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a84a09ba8c45fc91c8d67dc1d7351e4b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Settings::updateData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_settings.html#a8c1b006a2899d4dab98358d530dfe889">bordered</a>, <a class="el" href="class_settings.html#aa1d7cfe794180f610b5a70ed02e474ae">buttonHoldTime</a>, <a class="el" href="class_settings.html#a4753d8ff5456ff532ccec3e20c3289b9">buttonMode</a>, <a class="el" href="class_settings.html#a7cd8f847e3efb2a502d955a5cc759866">contact</a>, <a class="el" href="class_settings.html#a8093bcd2cdc276ad16c75c2de49cde9f">port</a>, and <a class="el" href="class_settings.html#a98680be421d0ae7c34a57f2a159eacd4">ui</a>.</p>
+
+<p>Referenced by <a class="el" href="class_settings.html#ab17afd334db0af5f71c027b8eda8d514">Settings()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a8c1b006a2899d4dab98358d530dfe889"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Settings::bordered</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="class_settings.html#af06bc69f54583391a90051a881f7ceae">isBordered()</a>, <a class="el" href="class_settings.html#acc3653fec65c5a199e226455d12e0834">populateSettings()</a>, <a class="el" href="class_settings.html#a2bc525813c219b7bdd8c5c2513ecd1b9">setBordered()</a>, and <a class="el" href="class_settings.html#a84a09ba8c45fc91c8d67dc1d7351e4b3">updateData()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa1d7cfe794180f610b5a70ed02e474ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Settings::buttonHoldTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="class_settings.html#a07ea0ac1d16afca102033167e63eeff4">getButtonHoldTime()</a>, <a class="el" href="class_settings.html#acc3653fec65c5a199e226455d12e0834">populateSettings()</a>, <a class="el" href="class_settings.html#a16ceb981ae799c11381e50529b69be27">setButtonHoldTime()</a>, and <a class="el" href="class_settings.html#a84a09ba8c45fc91c8d67dc1d7351e4b3">updateData()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4753d8ff5456ff532ccec3e20c3289b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Settings::buttonMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="class_settings.html#af9530a96922fd216114fa2c7e6d7b050">isButtonMode()</a>, <a class="el" href="class_settings.html#acc3653fec65c5a199e226455d12e0834">populateSettings()</a>, <a class="el" href="class_settings.html#a220e067ec8a54851f7c03d5832464f26">setButtonMode()</a>, and <a class="el" href="class_settings.html#a84a09ba8c45fc91c8d67dc1d7351e4b3">updateData()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7cd8f847e3efb2a502d955a5cc759866"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Settings::contact</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="class_settings.html#a4876b759a0401cc7ccdeea9b1cd78906">getContact()</a>, <a class="el" href="class_settings.html#acc3653fec65c5a199e226455d12e0834">populateSettings()</a>, <a class="el" href="class_settings.html#abb71c84fc9809a233c8db2083638d390">setContact()</a>, and <a class="el" href="class_settings.html#a84a09ba8c45fc91c8d67dc1d7351e4b3">updateData()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8093bcd2cdc276ad16c75c2de49cde9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Settings::port</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="class_settings.html#a58a731533433cf11efaaae03ec1ebf5d">getPort()</a>, <a class="el" href="class_settings.html#acc3653fec65c5a199e226455d12e0834">populateSettings()</a>, <a class="el" href="class_settings.html#a7b7d10179ad2fb05ffc276226a3d6ed6">setPort()</a>, and <a class="el" href="class_settings.html#a84a09ba8c45fc91c8d67dc1d7351e4b3">updateData()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a05ab288614776193c3398cac017ad7bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList Settings::serialPorts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="class_settings.html#aa5b6b9b66af6aa3bf72003578105fd8c">getSerialPorts()</a>, <a class="el" href="class_settings.html#acc3653fec65c5a199e226455d12e0834">populateSettings()</a>, and <a class="el" href="class_settings.html#ab489ef7aa18f72ac9b9db4064f5516e0">setSerialPorts()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98680be421d0ae7c34a57f2a159eacd4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ui::Settings* Settings::ui</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="class_settings.html#acc3653fec65c5a199e226455d12e0834">populateSettings()</a>, <a class="el" href="class_settings.html#ab17afd334db0af5f71c027b8eda8d514">Settings()</a>, <a class="el" href="class_settings.html#a84a09ba8c45fc91c8d67dc1d7351e4b3">updateData()</a>, and <a class="el" href="class_settings.html#a4a65be5921dfc9fddc476e5320541d89">~Settings()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="_settings_8hpp_source.html">Settings.hpp</a></li>
-<li>Settings.cpp</li>
+<li>/home/john/workspace/Raspbed/QRaspbed/<a class="el" href="_settings_8hpp_source.html">Settings.hpp</a></li>
+<li>/home/john/workspace/Raspbed/QRaspbed/<a class="el" href="_settings_8cpp.html">Settings.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

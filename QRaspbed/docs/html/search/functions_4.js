@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['print',['print',['../class_serial_port.html#ae2b2d68b5c1fa01ded41260197c8e0f1',1,'SerialPort']]]
+  ['feetdownholdbutton',['feetDownHoldButton',['../class_raspbed.html#a3c2008545d393f0807dfbed373466fe9',1,'Raspbed']]],
+  ['feetupholdbutton',['feetUpHoldButton',['../class_raspbed.html#abadc3496995f2ade3cd43cddce5c5f83',1,'Raspbed']]]
 ];

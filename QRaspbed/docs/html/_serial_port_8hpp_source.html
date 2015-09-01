@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>QRaspbed: SerialPort.hpp Source File</title>
+<title>QRaspbed: /home/john/workspace/Raspbed/QRaspbed/SerialPort.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -49,6 +49,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,6 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -108,7 +110,7 @@ $(document).ready(function(){initNavTree('_serial_port_8hpp_source.html','');});
 <div class="title">SerialPort.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<a href="_serial_port_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * File:   SerialPort.hpp</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Author: John Ramsden</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Email: ramsdenj@shaw.ca</span></div>
@@ -133,80 +135,145 @@ $(document).ready(function(){initNavTree('_serial_port_8hpp_source.html','');});
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_serial_port.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_serial_port.html">SerialPort</a> {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">// Constructors</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">         * Constructor. Default constructor.Creates and opens a serial device.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">         * \param name serial device name, example &quot;ttyUSB0&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_serial_port.html#acfbfb2b7e48c5e6ea00dfd89d92bbd6f">SerialPort</a>(std::string name = <span class="stringliteral">&quot;ttyUSB0&quot;</span>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">     * Constructor: Main constructor that takes serial port options</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">         * Creates and opens a serial device.</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">         * \param devname serial device name, example ttyUSB0&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">         * \param baud_rate serial baud rate</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">         * \param opt_parity serial parity, default none</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">         * \param opt_csize serial character size, default 8bit</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">         * \param opt_flow serial flow control, default none</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">         * \param opt_stop serial stop bits, default 1</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">         * \throws boost::system::system_error if cannot open the</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">         * serial device</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_serial_port.html#acfbfb2b7e48c5e6ea00dfd89d92bbd6f">SerialPort</a>(std::string name, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> baud_rate,</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;               boost::asio::serial_port_base::character_size character_size,</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;               boost::asio::serial_port_base::stop_bits stop_bits,</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;               boost::asio::serial_port_base::parity com_parity,</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;               boost::asio::serial_port_base::flow_control flow_control);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">     * Destructor</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">     */</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_serial_port.html#a8e09f366ed9b26b0456b66ae7bd8c702">~SerialPort</a>();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// Member functions</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">     * Open serial port, and sets all options.</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">     * Returns true if port was successfully open</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">     */</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_serial_port.html#a8fd7bb55485ec0e209a8ac3a8599db49">open</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">     * Closes the port</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">     */</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serial_port.html#ab97358bc322940b2b2372e20abe0d78f">stop</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">     * Write data to serial port. Returns immediately.</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">     * \param data array of char to be sent through the serial device</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">     * \param size array size</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">     */</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serial_port.html#a8b07ae3732a79b9a5225ef00f86a4193">write</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *data);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">     * @brief print</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">     * Prints all of set options</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">     */</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serial_port.html#ae2b2d68b5c1fa01ded41260197c8e0f1">print</a>();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// setters and getters</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    setFlowControl(boost::asio::serial_port_base::flow_control flowControl);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    boost::asio::serial_port_base::flow_control getFlowControl() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> setParity(boost::asio::serial_port_base::parity parity);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    boost::asio::serial_port_base::parity getParity() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> setStopBits(boost::asio::serial_port_base::stop_bits stopBits);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    boost::asio::serial_port_base::stop_bits getStopBits() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> setCharacterSize(</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        boost::asio::serial_port_base::character_size characterSize);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    boost::asio::serial_port_base::character_size getCharacterSize() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> setBaudRate(boost::asio::serial_port_base::baud_rate baudRate);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    boost::asio::serial_port_base::baud_rate getBaudRate() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> setPortName(std::string portName);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    std::string getPortName() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="class_serial_port.html#a41c0797746bc155d94725f52646b3644">setFlowControl</a>(boost::asio::serial_port_base::flow_control <a class="code" href="class_serial_port.html#a064e4d53f296aa2966433cb7e031f4f9">flowControl</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    boost::asio::serial_port_base::flow_control <a class="code" href="class_serial_port.html#a0ca064e79cdcbb88f8b62886dbe0b65c">getFlowControl</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serial_port.html#a03dfaa7400b16e8765044a0c04d52c70">setParity</a>(boost::asio::serial_port_base::parity <a class="code" href="class_serial_port.html#a813fda44f40397a4cfb894bc7ecba16d">parity</a>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    boost::asio::serial_port_base::parity <a class="code" href="class_serial_port.html#af4ac026df56d6a0caa0b811291a4e620">getParity</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serial_port.html#a084a7c28f336d8db7f0a412c2190a277">setStopBits</a>(boost::asio::serial_port_base::stop_bits <a class="code" href="class_serial_port.html#a29a5bd0d22baab4204d6544dcbc4770b">stopBits</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    boost::asio::serial_port_base::stop_bits <a class="code" href="class_serial_port.html#a681018ff4aadd5d420c60e99bc91f88a">getStopBits</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serial_port.html#aad02d1d520822cdf3a506ee4dd383462">setCharacterSize</a>(</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        boost::asio::serial_port_base::character_size <a class="code" href="class_serial_port.html#afb78ac848dc521fd1ca2e7d4cb299053">characterSize</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    boost::asio::serial_port_base::character_size <a class="code" href="class_serial_port.html#a81251b2b8fd9c99cd67757fe43ca281d">getCharacterSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serial_port.html#aee409ccc7d01eb935c386dd3ac5c7c68">setBaudRate</a>(boost::asio::serial_port_base::baud_rate <a class="code" href="class_serial_port.html#acb09e7b512bd63fe6f71c9a2cf548207">baudRate</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    boost::asio::serial_port_base::baud_rate <a class="code" href="class_serial_port.html#a1f85a4f60fe5dca9fd35b657c2068b5a">getBaudRate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serial_port.html#a4b8f4ff0c224baa897b297e8a4dbb96f">setPortName</a>(std::string <a class="code" href="class_serial_port.html#a02edab1960817dfc20e04f3d53f2e291">portName</a>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    std::string <a class="code" href="class_serial_port.html#a00ae1664b2a5bb552a96319455afaf8f">getPortName</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">bool</span> isConnected();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> setConnected(<span class="keywordtype">bool</span> connected);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    std::vector&lt;std::string&gt; getDevices();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_serial_port.html#a73883aa801c1302297bf0e123bf90bc7">isConnected</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serial_port.html#a19b7a197649862f7831be3ed883d81b5">setConnected</a>(<span class="keywordtype">bool</span> <a class="code" href="class_serial_port.html#a93a3839f2ed13ec4fa2bb32b5c292ec9">connected</a>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="class_serial_port.html#a2769b976b80beb5270532f439cdc7e1d">getDevices</a>();</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">bool</span> portExists(std::string port);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">private</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">     * @brief portExists</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">     * @param port Name of port to check for. Given in format &quot;ttyUSB0&quot;</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">     * @return Returns true if port exists</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_serial_port.html#aae7baad0a20ca2c6739dd91a6df4af73">portExists</a>(std::string <a class="code" href="class_serial_port.html#a5e844c03df70b9ac5547633364517064">port</a>);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// Member variables</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">bool</span> connected;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_serial_port.html#a93a3839f2ed13ec4fa2bb32b5c292ec9">  111</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_serial_port.html#a93a3839f2ed13ec4fa2bb32b5c292ec9">connected</a>;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::string portName;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_serial_port.html#a02edab1960817dfc20e04f3d53f2e291">  113</a></span>&#160;    std::string <a class="code" href="class_serial_port.html#a02edab1960817dfc20e04f3d53f2e291">portName</a>;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">// Port variables</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    boost::asio::serial_port_base::baud_rate baudRate;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    boost::asio::serial_port_base::character_size characterSize;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    boost::asio::serial_port_base::stop_bits stopBits;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    boost::asio::serial_port_base::parity parity;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    boost::asio::serial_port_base::flow_control flowControl;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_serial_port.html#acb09e7b512bd63fe6f71c9a2cf548207">  116</a></span>&#160;    boost::asio::serial_port_base::baud_rate <a class="code" href="class_serial_port.html#acb09e7b512bd63fe6f71c9a2cf548207">baudRate</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_serial_port.html#afb78ac848dc521fd1ca2e7d4cb299053">  117</a></span>&#160;    boost::asio::serial_port_base::character_size <a class="code" href="class_serial_port.html#afb78ac848dc521fd1ca2e7d4cb299053">characterSize</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_serial_port.html#a29a5bd0d22baab4204d6544dcbc4770b">  118</a></span>&#160;    boost::asio::serial_port_base::stop_bits <a class="code" href="class_serial_port.html#a29a5bd0d22baab4204d6544dcbc4770b">stopBits</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_serial_port.html#a813fda44f40397a4cfb894bc7ecba16d">  119</a></span>&#160;    boost::asio::serial_port_base::parity <a class="code" href="class_serial_port.html#a813fda44f40397a4cfb894bc7ecba16d">parity</a>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_serial_port.html#a064e4d53f296aa2966433cb7e031f4f9">  120</a></span>&#160;    boost::asio::serial_port_base::flow_control <a class="code" href="class_serial_port.html#a064e4d53f296aa2966433cb7e031f4f9">flowControl</a>;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    boost::asio::io_service io;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    boost::asio::serial_port port;</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_serial_port.html#a07f1883f46a4fc7a1d243cc4bf7f092e">  122</a></span>&#160;    boost::asio::io_service <a class="code" href="class_serial_port.html#a07f1883f46a4fc7a1d243cc4bf7f092e">io</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_serial_port.html#a5e844c03df70b9ac5547633364517064">  123</a></span>&#160;    boost::asio::serial_port <a class="code" href="class_serial_port.html#a5e844c03df70b9ac5547633364517064">port</a>;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SERIALPORT_HPP */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="class_serial_port_html_ae2b2d68b5c1fa01ded41260197c8e0f1"><div class="ttname"><a href="class_serial_port.html#ae2b2d68b5c1fa01ded41260197c8e0f1">SerialPort::print</a></div><div class="ttdeci">void print()</div><div class="ttdoc">print Prints all of set options </div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:85</div></div>
+<div class="ttc" id="class_serial_port_html_afb78ac848dc521fd1ca2e7d4cb299053"><div class="ttname"><a href="class_serial_port.html#afb78ac848dc521fd1ca2e7d4cb299053">SerialPort::characterSize</a></div><div class="ttdeci">boost::asio::serial_port_base::character_size characterSize</div><div class="ttdef"><b>Definition:</b> SerialPort.hpp:117</div></div>
+<div class="ttc" id="class_serial_port_html_a73883aa801c1302297bf0e123bf90bc7"><div class="ttname"><a href="class_serial_port.html#a73883aa801c1302297bf0e123bf90bc7">SerialPort::isConnected</a></div><div class="ttdeci">bool isConnected()</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:207</div></div>
+<div class="ttc" id="class_serial_port_html_a2769b976b80beb5270532f439cdc7e1d"><div class="ttname"><a href="class_serial_port.html#a2769b976b80beb5270532f439cdc7e1d">SerialPort::getDevices</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getDevices()</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:110</div></div>
 <div class="ttc" id="class_serial_port_html"><div class="ttname"><a href="class_serial_port.html">SerialPort</a></div><div class="ttdef"><b>Definition:</b> SerialPort.hpp:23</div></div>
+<div class="ttc" id="class_serial_port_html_a81251b2b8fd9c99cd67757fe43ca281d"><div class="ttname"><a href="class_serial_port.html#a81251b2b8fd9c99cd67757fe43ca281d">SerialPort::getCharacterSize</a></div><div class="ttdeci">boost::asio::serial_port_base::character_size getCharacterSize() const </div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:186</div></div>
 <div class="ttc" id="class_serial_port_html_a8e09f366ed9b26b0456b66ae7bd8c702"><div class="ttname"><a href="class_serial_port.html#a8e09f366ed9b26b0456b66ae7bd8c702">SerialPort::~SerialPort</a></div><div class="ttdeci">virtual ~SerialPort()</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:30</div></div>
+<div class="ttc" id="class_serial_port_html_a29a5bd0d22baab4204d6544dcbc4770b"><div class="ttname"><a href="class_serial_port.html#a29a5bd0d22baab4204d6544dcbc4770b">SerialPort::stopBits</a></div><div class="ttdeci">boost::asio::serial_port_base::stop_bits stopBits</div><div class="ttdef"><b>Definition:</b> SerialPort.hpp:118</div></div>
+<div class="ttc" id="class_serial_port_html_a4b8f4ff0c224baa897b297e8a4dbb96f"><div class="ttname"><a href="class_serial_port.html#a4b8f4ff0c224baa897b297e8a4dbb96f">SerialPort::setPortName</a></div><div class="ttdeci">void setPortName(std::string portName)</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:199</div></div>
 <div class="ttc" id="class_serial_port_html_acfbfb2b7e48c5e6ea00dfd89d92bbd6f"><div class="ttname"><a href="class_serial_port.html#acfbfb2b7e48c5e6ea00dfd89d92bbd6f">SerialPort::SerialPort</a></div><div class="ttdeci">SerialPort(std::string name=&quot;ttyUSB0&quot;)</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:13</div></div>
+<div class="ttc" id="class_serial_port_html_af4ac026df56d6a0caa0b811291a4e620"><div class="ttname"><a href="class_serial_port.html#af4ac026df56d6a0caa0b811291a4e620">SerialPort::getParity</a></div><div class="ttdeci">boost::asio::serial_port_base::parity getParity() const </div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:167</div></div>
+<div class="ttc" id="class_serial_port_html_a07f1883f46a4fc7a1d243cc4bf7f092e"><div class="ttname"><a href="class_serial_port.html#a07f1883f46a4fc7a1d243cc4bf7f092e">SerialPort::io</a></div><div class="ttdeci">boost::asio::io_service io</div><div class="ttdef"><b>Definition:</b> SerialPort.hpp:122</div></div>
+<div class="ttc" id="class_serial_port_html_a03dfaa7400b16e8765044a0c04d52c70"><div class="ttname"><a href="class_serial_port.html#a03dfaa7400b16e8765044a0c04d52c70">SerialPort::setParity</a></div><div class="ttdeci">void setParity(boost::asio::serial_port_base::parity parity)</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:163</div></div>
+<div class="ttc" id="class_serial_port_html_a813fda44f40397a4cfb894bc7ecba16d"><div class="ttname"><a href="class_serial_port.html#a813fda44f40397a4cfb894bc7ecba16d">SerialPort::parity</a></div><div class="ttdeci">boost::asio::serial_port_base::parity parity</div><div class="ttdef"><b>Definition:</b> SerialPort.hpp:119</div></div>
 <div class="ttc" id="class_serial_port_html_a8fd7bb55485ec0e209a8ac3a8599db49"><div class="ttname"><a href="class_serial_port.html#a8fd7bb55485ec0e209a8ac3a8599db49">SerialPort::open</a></div><div class="ttdeci">bool open()</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:32</div></div>
+<div class="ttc" id="class_serial_port_html_a064e4d53f296aa2966433cb7e031f4f9"><div class="ttname"><a href="class_serial_port.html#a064e4d53f296aa2966433cb7e031f4f9">SerialPort::flowControl</a></div><div class="ttdeci">boost::asio::serial_port_base::flow_control flowControl</div><div class="ttdef"><b>Definition:</b> SerialPort.hpp:120</div></div>
+<div class="ttc" id="class_serial_port_html_a5e844c03df70b9ac5547633364517064"><div class="ttname"><a href="class_serial_port.html#a5e844c03df70b9ac5547633364517064">SerialPort::port</a></div><div class="ttdeci">boost::asio::serial_port port</div><div class="ttdef"><b>Definition:</b> SerialPort.hpp:123</div></div>
+<div class="ttc" id="class_serial_port_html_a41c0797746bc155d94725f52646b3644"><div class="ttname"><a href="class_serial_port.html#a41c0797746bc155d94725f52646b3644">SerialPort::setFlowControl</a></div><div class="ttdeci">void setFlowControl(boost::asio::serial_port_base::flow_control flowControl)</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:154</div></div>
+<div class="ttc" id="class_serial_port_html_a681018ff4aadd5d420c60e99bc91f88a"><div class="ttname"><a href="class_serial_port.html#a681018ff4aadd5d420c60e99bc91f88a">SerialPort::getStopBits</a></div><div class="ttdeci">boost::asio::serial_port_base::stop_bits getStopBits() const </div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:176</div></div>
+<div class="ttc" id="class_serial_port_html_a93a3839f2ed13ec4fa2bb32b5c292ec9"><div class="ttname"><a href="class_serial_port.html#a93a3839f2ed13ec4fa2bb32b5c292ec9">SerialPort::connected</a></div><div class="ttdeci">bool connected</div><div class="ttdef"><b>Definition:</b> SerialPort.hpp:111</div></div>
+<div class="ttc" id="class_serial_port_html_a19b7a197649862f7831be3ed883d81b5"><div class="ttname"><a href="class_serial_port.html#a19b7a197649862f7831be3ed883d81b5">SerialPort::setConnected</a></div><div class="ttdeci">void setConnected(bool connected)</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:205</div></div>
+<div class="ttc" id="class_serial_port_html_a084a7c28f336d8db7f0a412c2190a277"><div class="ttname"><a href="class_serial_port.html#a084a7c28f336d8db7f0a412c2190a277">SerialPort::setStopBits</a></div><div class="ttdeci">void setStopBits(boost::asio::serial_port_base::stop_bits stopBits)</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:171</div></div>
+<div class="ttc" id="class_serial_port_html_acb09e7b512bd63fe6f71c9a2cf548207"><div class="ttname"><a href="class_serial_port.html#acb09e7b512bd63fe6f71c9a2cf548207">SerialPort::baudRate</a></div><div class="ttdeci">boost::asio::serial_port_base::baud_rate baudRate</div><div class="ttdef"><b>Definition:</b> SerialPort.hpp:116</div></div>
+<div class="ttc" id="class_serial_port_html_a00ae1664b2a5bb552a96319455afaf8f"><div class="ttname"><a href="class_serial_port.html#a00ae1664b2a5bb552a96319455afaf8f">SerialPort::getPortName</a></div><div class="ttdeci">std::string getPortName() const </div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:203</div></div>
+<div class="ttc" id="class_serial_port_html_aad02d1d520822cdf3a506ee4dd383462"><div class="ttname"><a href="class_serial_port.html#aad02d1d520822cdf3a506ee4dd383462">SerialPort::setCharacterSize</a></div><div class="ttdeci">void setCharacterSize(boost::asio::serial_port_base::character_size characterSize)</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:180</div></div>
 <div class="ttc" id="class_serial_port_html_ab97358bc322940b2b2372e20abe0d78f"><div class="ttname"><a href="class_serial_port.html#ab97358bc322940b2b2372e20abe0d78f">SerialPort::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:69</div></div>
+<div class="ttc" id="class_serial_port_html_a0ca064e79cdcbb88f8b62886dbe0b65c"><div class="ttname"><a href="class_serial_port.html#a0ca064e79cdcbb88f8b62886dbe0b65c">SerialPort::getFlowControl</a></div><div class="ttdeci">boost::asio::serial_port_base::flow_control getFlowControl() const </div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:159</div></div>
+<div class="ttc" id="class_serial_port_html_a02edab1960817dfc20e04f3d53f2e291"><div class="ttname"><a href="class_serial_port.html#a02edab1960817dfc20e04f3d53f2e291">SerialPort::portName</a></div><div class="ttdeci">std::string portName</div><div class="ttdef"><b>Definition:</b> SerialPort.hpp:113</div></div>
 <div class="ttc" id="class_serial_port_html_a8b07ae3732a79b9a5225ef00f86a4193"><div class="ttname"><a href="class_serial_port.html#a8b07ae3732a79b9a5225ef00f86a4193">SerialPort::write</a></div><div class="ttdeci">void write(const char *data)</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:80</div></div>
+<div class="ttc" id="class_serial_port_html_aee409ccc7d01eb935c386dd3ac5c7c68"><div class="ttname"><a href="class_serial_port.html#aee409ccc7d01eb935c386dd3ac5c7c68">SerialPort::setBaudRate</a></div><div class="ttdeci">void setBaudRate(boost::asio::serial_port_base::baud_rate baudRate)</div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:190</div></div>
+<div class="ttc" id="class_serial_port_html_a1f85a4f60fe5dca9fd35b657c2068b5a"><div class="ttname"><a href="class_serial_port.html#a1f85a4f60fe5dca9fd35b657c2068b5a">SerialPort::getBaudRate</a></div><div class="ttdeci">boost::asio::serial_port_base::baud_rate getBaudRate() const </div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:195</div></div>
+<div class="ttc" id="class_serial_port_html_aae7baad0a20ca2c6739dd91a6df4af73"><div class="ttname"><a href="class_serial_port.html#aae7baad0a20ca2c6739dd91a6df4af73">SerialPort::portExists</a></div><div class="ttdeci">bool portExists(std::string port)</div><div class="ttdoc">portExists </div><div class="ttdef"><b>Definition:</b> SerialPort.cpp:97</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>SerialPort.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_baf94c4f6cf3eaf89ea7d449f26da342.html">QRaspbed</a></li><li class="navelem"><a class="el" href="_serial_port_8hpp.html">SerialPort.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>

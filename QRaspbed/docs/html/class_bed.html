@@ -49,6 +49,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -111,11 +112,14 @@ $(document).ready(function(){initNavTree('class_bed.html','');});
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_bed-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Bed Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_bed_8hpp_source.html">Bed.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -125,23 +129,72 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a396970bc14881c4aa049506bb1a8997c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a396970bc14881c4aa049506bb1a8997c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bed.html#a396970bc14881c4aa049506bb1a8997c">Bed</a> ()</td></tr>
-<tr class="memdesc:a396970bc14881c4aa049506bb1a8997c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_bed.html">Bed</a> Default bed constructor. <br /></td></tr>
+<tr class="memitem:a396970bc14881c4aa049506bb1a8997c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bed.html#a396970bc14881c4aa049506bb1a8997c">Bed</a> ()</td></tr>
+<tr class="memdesc:a396970bc14881c4aa049506bb1a8997c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_bed.html">Bed</a> Default bed constructor.  <a href="#a396970bc14881c4aa049506bb1a8997c">More...</a><br /></td></tr>
 <tr class="separator:a396970bc14881c4aa049506bb1a8997c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a331f41fc0f8c005938e3db29e91fe6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bed.html#a331f41fc0f8c005938e3db29e91fe6e4">command</a> (const char relay, bool on)</td></tr>
+<tr class="memitem:a627de9b0b89ac699c6977a08a8a59fb7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bed.html#a627de9b0b89ac699c6977a08a8a59fb7">~Bed</a> ()</td></tr>
+<tr class="separator:a627de9b0b89ac699c6977a08a8a59fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a331f41fc0f8c005938e3db29e91fe6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bed.html#a331f41fc0f8c005938e3db29e91fe6e4">command</a> (const char <a class="el" href="class_bed.html#a6be0e475858746f91eafb52137e4e388">relay</a>, bool on)</td></tr>
 <tr class="memdesc:a331f41fc0f8c005938e3db29e91fe6e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">command  <a href="#a331f41fc0f8c005938e3db29e91fe6e4">More...</a><br /></td></tr>
 <tr class="separator:a331f41fc0f8c005938e3db29e91fe6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60147d39e187813b709957c58c9f5f41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60147d39e187813b709957c58c9f5f41"></a>
-std::shared_ptr&lt; <a class="el" href="class_serial_port.html">SerialPort</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getSerialPort</b> ()</td></tr>
+<tr class="memitem:a60147d39e187813b709957c58c9f5f41"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_serial_port.html">SerialPort</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bed.html#a60147d39e187813b709957c58c9f5f41">getSerialPort</a> ()</td></tr>
 <tr class="separator:a60147d39e187813b709957c58c9f5f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a6be0e475858746f91eafb52137e4e388"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6be0e475858746f91eafb52137e4e388"></a>
-struct <a class="el" href="struct_bed_1_1_relay.html">Bed::Relay</a>&#160;</td><td class="memItemRight" valign="bottom"><b>relay</b></td></tr>
+<tr class="memitem:a6be0e475858746f91eafb52137e4e388"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_bed_1_1_relay.html">Bed::Relay</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bed.html#a6be0e475858746f91eafb52137e4e388">relay</a></td></tr>
 <tr class="separator:a6be0e475858746f91eafb52137e4e388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a53543531165e40a5696b73df9cfbcc84"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_serial_port.html">SerialPort</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bed.html#a53543531165e40a5696b73df9cfbcc84">serialPort</a></td></tr>
+<tr class="separator:a53543531165e40a5696b73df9cfbcc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a396970bc14881c4aa049506bb1a8997c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bed::Bed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_bed.html">Bed</a> Default bed constructor. </p>
+
+<p>References <a class="el" href="class_bed.html#a53543531165e40a5696b73df9cfbcc84">serialPort</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a627de9b0b89ac699c6977a08a8a59fb7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bed::~Bed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_bed.html#a53543531165e40a5696b73df9cfbcc84">serialPort</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a331f41fc0f8c005938e3db29e91fe6e4"></a>
 <div class="memitem">
@@ -177,11 +230,71 @@ struct <a class="el" href="struct_bed_1_1_relay.html">Bed::Relay</a>&#160;</td><
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
+<p>References <a class="el" href="class_bed.html#a6be0e475858746f91eafb52137e4e388">relay</a>, and <a class="el" href="class_bed.html#a53543531165e40a5696b73df9cfbcc84">serialPort</a>.</p>
+
+<p>Referenced by <a class="el" href="class_raspbed.html#afe73456b8d1744b63bf3f1f7f41f3a70">Raspbed::bedDownHoldButton()</a>, <a class="el" href="class_raspbed.html#a8340a6818478e86a79d4fef973d86de0">Raspbed::bedUpHoldButton()</a>, <a class="el" href="class_raspbed.html#a3c2008545d393f0807dfbed373466fe9">Raspbed::feetDownHoldButton()</a>, <a class="el" href="class_raspbed.html#abadc3496995f2ade3cd43cddce5c5f83">Raspbed::feetUpHoldButton()</a>, <a class="el" href="class_raspbed.html#ac08642e8e682d593c70fa8acefd26617">Raspbed::headDownHoldButton()</a>, <a class="el" href="class_raspbed.html#aa33635ab3f124c7ece69bb0d50222eae">Raspbed::headUpHoldButton()</a>, <a class="el" href="class_raspbed.html#ab97d21308946d88c4b47cf0e9eae38c1">Raspbed::lowerWheelsHoldButton()</a>, <a class="el" href="class_raspbed.html#af7d8ce312e356a28128f5a11caab5c6f">Raspbed::on_bedDownButton_pressed()</a>, <a class="el" href="class_raspbed.html#acb7ddd9794874db947d9d8e44085436e">Raspbed::on_bedDownButton_released()</a>, <a class="el" href="class_raspbed.html#a6ad3770463f3e720ef0f34c4f330c59e">Raspbed::on_bedUpButton_pressed()</a>, <a class="el" href="class_raspbed.html#a9ce5e69b913e46660d6f8b4e96365ab1">Raspbed::on_bedUpButton_released()</a>, <a class="el" href="class_raspbed.html#a661a08ea04e4b4e3a93c25f0d2d4a968">Raspbed::on_feetDownButton_pressed()</a>, <a class="el" href="class_raspbed.html#a883948d6578a4baf7d7b04dace012d5a">Raspbed::on_feetDownButton_released()</a>, <a class="el" href="class_raspbed.html#ab3895ccdac807d1f2c740a4619b72b21">Raspbed::on_feetUpButton_pressed()</a>, <a class="el" href="class_raspbed.html#ae7abfa083885ff9d1610e293b8fe5b8d">Raspbed::on_feetUpButton_released()</a>, <a class="el" href="class_raspbed.html#ae977186b63280a13b956bc4343fb7005">Raspbed::on_flattenBedButton_clicked()</a>, <a class="el" href="class_raspbed.html#af108ae66b3f78a91c2cb021a88cad5b3">Raspbed::on_headDownButton_pressed()</a>, <a class="el" href="class_raspbed.html#ad7301a2435187b6a37db3cd1833411a1">Raspbed::on_headDownButton_released()</a>, <a class="el" href="class_raspbed.html#a48d5e3894db7ff0f66912bdd98708572">Raspbed::on_headUpButton_pressed()</a>, <a class="el" href="class_raspbed.html#a1b669e2cfa25547f6fd50d458112ef62">Raspbed::on_headUpButton_released()</a>, <a class="el" href="class_raspbed.html#af632529320df786d8f96ad27d0e70b30">Raspbed::on_lowerWheelsButton_pressed()</a>, <a class="el" href="class_raspbed.html#aa6f621c35871e79ba8f1a32f8cdb13f7">Raspbed::on_lowerWheelsButton_released()</a>, <a class="el" href="class_raspbed.html#ad1a24a0558470ea339bacea5fb28251b">Raspbed::on_trendButton_pressed()</a>, <a class="el" href="class_raspbed.html#a2cd3d919ea0f135b30e752c285e55890">Raspbed::on_trendButton_released()</a>, and <a class="el" href="class_raspbed.html#a0b8b53165a1a55357b6e888e60f62139">Raspbed::trendHoldButton()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a60147d39e187813b709957c58c9f5f41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_serial_port.html">SerialPort</a> &gt; Bed::getSerialPort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_bed.html#a53543531165e40a5696b73df9cfbcc84">serialPort</a>.</p>
+
+<p>Referenced by <a class="el" href="class_raspbed.html#a060083cfc7959b0f9b575a1f0df23a31">Raspbed::eventFilter()</a>, <a class="el" href="class_raspbed.html#a34fa929f97e95a229296ca8890e70a34">Raspbed::mousePressEvent()</a>, <a class="el" href="class_raspbed.html#a8ac5a80b7b45c51b66c63cc97619876d">Raspbed::openSettings()</a>, <a class="el" href="class_raspbed.html#abe81545ff6464ee53a0aec5fb90b37a7">Raspbed::resetBed()</a>, and <a class="el" href="class_raspbed.html#aa6e5cf40e3713244ef709623125e2820">Raspbed::setupButtons()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a6be0e475858746f91eafb52137e4e388"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_bed_1_1_relay.html">Bed::Relay</a>  Bed::relay</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="class_raspbed.html#afe73456b8d1744b63bf3f1f7f41f3a70">Raspbed::bedDownHoldButton()</a>, <a class="el" href="class_raspbed.html#a8340a6818478e86a79d4fef973d86de0">Raspbed::bedUpHoldButton()</a>, <a class="el" href="class_bed.html#a331f41fc0f8c005938e3db29e91fe6e4">command()</a>, <a class="el" href="class_raspbed.html#a3c2008545d393f0807dfbed373466fe9">Raspbed::feetDownHoldButton()</a>, <a class="el" href="class_raspbed.html#abadc3496995f2ade3cd43cddce5c5f83">Raspbed::feetUpHoldButton()</a>, <a class="el" href="class_raspbed.html#ac08642e8e682d593c70fa8acefd26617">Raspbed::headDownHoldButton()</a>, <a class="el" href="class_raspbed.html#aa33635ab3f124c7ece69bb0d50222eae">Raspbed::headUpHoldButton()</a>, <a class="el" href="class_raspbed.html#ab97d21308946d88c4b47cf0e9eae38c1">Raspbed::lowerWheelsHoldButton()</a>, <a class="el" href="class_raspbed.html#af7d8ce312e356a28128f5a11caab5c6f">Raspbed::on_bedDownButton_pressed()</a>, <a class="el" href="class_raspbed.html#acb7ddd9794874db947d9d8e44085436e">Raspbed::on_bedDownButton_released()</a>, <a class="el" href="class_raspbed.html#a6ad3770463f3e720ef0f34c4f330c59e">Raspbed::on_bedUpButton_pressed()</a>, <a class="el" href="class_raspbed.html#a9ce5e69b913e46660d6f8b4e96365ab1">Raspbed::on_bedUpButton_released()</a>, <a class="el" href="class_raspbed.html#a661a08ea04e4b4e3a93c25f0d2d4a968">Raspbed::on_feetDownButton_pressed()</a>, <a class="el" href="class_raspbed.html#a883948d6578a4baf7d7b04dace012d5a">Raspbed::on_feetDownButton_released()</a>, <a class="el" href="class_raspbed.html#ab3895ccdac807d1f2c740a4619b72b21">Raspbed::on_feetUpButton_pressed()</a>, <a class="el" href="class_raspbed.html#ae7abfa083885ff9d1610e293b8fe5b8d">Raspbed::on_feetUpButton_released()</a>, <a class="el" href="class_raspbed.html#ae977186b63280a13b956bc4343fb7005">Raspbed::on_flattenBedButton_clicked()</a>, <a class="el" href="class_raspbed.html#af108ae66b3f78a91c2cb021a88cad5b3">Raspbed::on_headDownButton_pressed()</a>, <a class="el" href="class_raspbed.html#ad7301a2435187b6a37db3cd1833411a1">Raspbed::on_headDownButton_released()</a>, <a class="el" href="class_raspbed.html#a48d5e3894db7ff0f66912bdd98708572">Raspbed::on_headUpButton_pressed()</a>, <a class="el" href="class_raspbed.html#a1b669e2cfa25547f6fd50d458112ef62">Raspbed::on_headUpButton_released()</a>, <a class="el" href="class_raspbed.html#af632529320df786d8f96ad27d0e70b30">Raspbed::on_lowerWheelsButton_pressed()</a>, <a class="el" href="class_raspbed.html#aa6f621c35871e79ba8f1a32f8cdb13f7">Raspbed::on_lowerWheelsButton_released()</a>, <a class="el" href="class_raspbed.html#ad1a24a0558470ea339bacea5fb28251b">Raspbed::on_trendButton_pressed()</a>, <a class="el" href="class_raspbed.html#a2cd3d919ea0f135b30e752c285e55890">Raspbed::on_trendButton_released()</a>, and <a class="el" href="class_raspbed.html#a0b8b53165a1a55357b6e888e60f62139">Raspbed::trendHoldButton()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a53543531165e40a5696b73df9cfbcc84"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_serial_port.html">SerialPort</a>&gt; Bed::serialPort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="class_bed.html#a396970bc14881c4aa049506bb1a8997c">Bed()</a>, <a class="el" href="class_bed.html#a331f41fc0f8c005938e3db29e91fe6e4">command()</a>, <a class="el" href="class_bed.html#a60147d39e187813b709957c58c9f5f41">getSerialPort()</a>, and <a class="el" href="class_bed.html#a627de9b0b89ac699c6977a08a8a59fb7">~Bed()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="_bed_8hpp_source.html">Bed.hpp</a></li>
-<li>Bed.cpp</li>
+<li>/home/john/workspace/Raspbed/QRaspbed/<a class="el" href="_bed_8hpp_source.html">Bed.hpp</a></li>
+<li>/home/john/workspace/Raspbed/QRaspbed/<a class="el" href="_bed_8cpp.html">Bed.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
