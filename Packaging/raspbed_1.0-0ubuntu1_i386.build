@@ -1,0 +1,87 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: source package raspbed
+dpkg-buildpackage: source version 1.0-0ubuntu1
+dpkg-buildpackage: source distribution UNRELEASED
+dpkg-buildpackage: source changed by John Ramsden <RamsdenJ@shaw.ca>
+ dpkg-source --before-build raspbed-1.0
+dpkg-buildpackage: host architecture i386
+ fakeroot debian/rules clean
+dh clean 
+   dh_testdir
+   dh_auto_clean
+make[1]: Entering directory '/home/john/Raspbed/Packaging/raspbed-1.0'
+rm -f moc_Raspbed.cpp moc_Settings.cpp
+rm -f ui_raspbed.h ui_settings.h
+rm -f main.o SerialPort.o Raspbed.o Bed.o Settings.o Data.o moc_Raspbed.o moc_Settings.o
+rm -f *~ core *.core
+rm -f QRaspbed 
+rm -f Makefile
+make[1]: Leaving directory '/home/john/Raspbed/Packaging/raspbed-1.0'
+   dh_clean
+ dpkg-source -b raspbed-1.0
+dpkg-source: warning: native package version may not have a revision
+dpkg-source: warning: Version number suggests Ubuntu changes, but Maintainer: does not have Ubuntu address
+dpkg-source: warning: Version number suggests Ubuntu changes, but there is no XSBC-Original-Maintainer field
+dpkg-source: info: using source format `3.0 (native)'
+dpkg-source: info: building raspbed in raspbed_1.0-0ubuntu1.tar.xz
+dpkg-source: info: building raspbed in raspbed_1.0-0ubuntu1.dsc
+ debian/rules build
+dh build 
+   dh_testdir
+   dh_auto_configure
+   dh_auto_build
+make[1]: Entering directory '/home/john/Raspbed/Packaging/raspbed-1.0'
+/usr/lib/i386-linux-gnu/qt5/bin/uic raspbed.ui -o ui_raspbed.h
+/usr/lib/i386-linux-gnu/qt5/bin/uic settings.ui -o ui_settings.h
+g++ -c -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -std=c++0x -Wall -W -D_REENTRANT -fPIE -DAPP_VERSION=\"1.0\" -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -o main.o main.cpp
+g++ -c -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -std=c++0x -Wall -W -D_REENTRANT -fPIE -DAPP_VERSION=\"1.0\" -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -o SerialPort.o SerialPort.cpp
+g++ -c -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -std=c++0x -Wall -W -D_REENTRANT -fPIE -DAPP_VERSION=\"1.0\" -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -o Raspbed.o Raspbed.cpp
+Raspbed.cpp: In member function ‘void Raspbed::on_callButton_clicked()’:
+Raspbed.cpp:424:33: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     system(skypeCommand.c_str());
+                                 ^
+g++ -c -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -std=c++0x -Wall -W -D_REENTRANT -fPIE -DAPP_VERSION=\"1.0\" -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -o Bed.o Bed.cpp
+g++ -c -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -std=c++0x -Wall -W -D_REENTRANT -fPIE -DAPP_VERSION=\"1.0\" -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -o Settings.o Settings.cpp
+g++ -c -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -std=c++0x -Wall -W -D_REENTRANT -fPIE -DAPP_VERSION=\"1.0\" -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -o Data.o Data.cpp
+/usr/lib/i386-linux-gnu/qt5/bin/moc -DAPP_VERSION=\"1.0\" -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I/home/john/Raspbed/Packaging/raspbed-1.0 -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/i386-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/i686-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/4.9/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include Raspbed.hpp -o moc_Raspbed.cpp
+g++ -c -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -std=c++0x -Wall -W -D_REENTRANT -fPIE -DAPP_VERSION=\"1.0\" -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -o moc_Raspbed.o moc_Raspbed.cpp
+/usr/lib/i386-linux-gnu/qt5/bin/moc -DAPP_VERSION=\"1.0\" -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I/home/john/Raspbed/Packaging/raspbed-1.0 -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/i386-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/i686-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/4.9/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include Settings.hpp -o moc_Settings.cpp
+g++ -c -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -std=c++0x -Wall -W -D_REENTRANT -fPIE -DAPP_VERSION=\"1.0\" -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -o moc_Settings.o moc_Settings.cpp
+g++ -Wl,-Bsymbolic-functions -Wl,-z,relro -o QRaspbed main.o SerialPort.o Raspbed.o Bed.o Settings.o Data.o moc_Raspbed.o moc_Settings.o   -lboost_system -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
+make[1]: Leaving directory '/home/john/Raspbed/Packaging/raspbed-1.0'
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary 
+   dh_testroot
+   dh_prep
+   dh_auto_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_compress
+   dh_fixperms
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+   dh_installdeb
+   dh_gencontrol
+dpkg-gencontrol: warning: Depends field of package raspbed: unknown substitution variable ${shlibs:Depends}
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package `raspbed' in `../raspbed_1.0-0ubuntu1_i386.deb'.
+ dpkg-genchanges  >../raspbed_1.0-0ubuntu1_i386.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build raspbed-1.0
+dpkg-buildpackage: full upload; Debian-native package (full source is included)
+Now running lintian...
+W: raspbed source: native-package-with-dash-version
+E: raspbed source: build-depends-on-metapackage build-depends: qt5-default
+W: raspbed source: out-of-date-standards-version 3.9.5 (current is 3.9.6)
+E: raspbed: helper-templates-in-copyright
+W: raspbed: copyright-has-url-from-dh_make-boilerplate
+E: raspbed: copyright-contains-dh_make-todo-boilerplate
+E: raspbed: extended-description-is-empty
+E: raspbed: section-is-dh_make-template
+W: raspbed: empty-binary-package
+Finished running lintian.
