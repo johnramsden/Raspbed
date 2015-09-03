@@ -64,7 +64,7 @@ void Raspbed::mouseSelectEvent(QMouseEvent *event) {
         selected = false;
         selectedButton->setStyleSheet("");
         selectedButton = nextButton();
-        selectedButton->setStyleSheet("border: 3px solid white");
+        selectedButton->setStyleSheet("border: 3px black");
     } else if (event->button() == Qt::RightButton) {
         QTimer::singleShot(500, this, SLOT(resetClicks()));
         numRightClicks++;
@@ -95,7 +95,7 @@ void Raspbed::mouseSelectEvent(QMouseEvent *event) {
             }
         }
 
-        selectedButton->setStyleSheet("background-color: white");
+        selectedButton->setStyleSheet("background-color: rgb(61,61,61)");
         selected = true;
         qDebug() << "Pressed Right Click, R=" << QString::number(numRightClicks)
                  << ", L=" << QString::number(numLeftClicks);
@@ -172,7 +172,7 @@ void Raspbed::setupDisplay() {
 
     }else {
         selectedButton = ui->headUpButton;
-        selectedButton->setStyleSheet("border: 3px solid white");
+        selectedButton->setStyleSheet("border: 3px solid black");
     }
 }
 

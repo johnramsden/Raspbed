@@ -39,7 +39,10 @@ FORMS    += \
 CONFIG += c++11
 
 LIBS += \
-       -lboost_system\
+       -lboost_system
+
+RESOURCES += \
+    resources.qrc
 
 # For deployed version
 # DEFINES += QT_NO_DEBUG_OUTPUT
