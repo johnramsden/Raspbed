@@ -1,5 +1,5 @@
-raspbed (1.0-0ubuntu1) UNRELEASED; urgency=low
+raspbed (1.0) unstable; urgency=low
 
   * Initial Release.
 
- -- John Ramsden <RamsdenJ@shaw.ca>  Wed, 02 Sep 2015 15:06:25 -0700
+ -- John Ramsden <RamsdenJ@shaw.ca>  Wed, 02 Sep 2015 17:13:43 -0700

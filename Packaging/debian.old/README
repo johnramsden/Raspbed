@@ -1,0 +1,9 @@
+The Debian Package raspbed
+----------------------------
+
+Comments regarding the Package
+
+Add user to group dialout to use serialport without sudo.
+# sudo usermod -a -G dialout $USER
+
+ -- John Ramsden <RamsdenJ@shaw.ca>  Wed, 02 Sep 2015 15:06:25 -0700

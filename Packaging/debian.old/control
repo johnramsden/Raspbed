@@ -1,0 +1,13 @@
+Source: raspbed
+Section: unknown
+Priority: optional
+Maintainer: John Ramsden <RamsdenJ@shaw.ca>
+Build-Depends: debhelper (>= 9), libboost-all-dev, qt5-default
+Standards-Version: 3.9.5
+Homepage: https://github.com/Ramsdenj/Raspbed
+Vcs-Git: https://github.com/Ramsdenj/Raspbed.git
+
+Package: raspbed
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Controller and call bell for Volker hospital bed.

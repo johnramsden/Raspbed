@@ -1,9 +1,0 @@
-Package: raspbed
-Version: 1.0-0ubuntu1
-Architecture: i386
-Maintainer: John Ramsden <RamsdenJ@shaw.ca>
-Installed-Size: 26
-Section: unknown
-Priority: optional
-Homepage: https://github.com/Ramsdenj/Raspbed
-Description: Controller and call bell for Volker hospital bed.

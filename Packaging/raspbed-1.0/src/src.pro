@@ -39,7 +39,7 @@ FORMS    += \
 CONFIG += c++11
 
 LIBS += \
-       -lboost_system\
+       -lboost_system
 
 # For deployed version
-# DEFINES += QT_NO_DEBUG_OUTPUT
+DEFINES += QT_NO_DEBUG_OUTPUT
