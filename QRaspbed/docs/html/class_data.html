@@ -152,6 +152,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a2a8b467a33035659bd90190df94978f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47afbfde8c3817918de5235bb8c81c6e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data.html#a47afbfde8c3817918de5235bb8c81c6e">setButtonHoldTime</a> (int value)</td></tr>
 <tr class="separator:a47afbfde8c3817918de5235bb8c81c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe32c8f520b68117e7906e6d6f82d0e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data.html#abfe32c8f520b68117e7906e6d6f82d0e">isDarkHighlight</a> ()</td></tr>
+<tr class="separator:abfe32c8f520b68117e7906e6d6f82d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82b8ada2231d5e7aa59288e2f984c9f8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data.html#a82b8ada2231d5e7aa59288e2f984c9f8">setDarkHighlight</a> (bool value)</td></tr>
+<tr class="separator:a82b8ada2231d5e7aa59288e2f984c9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -174,6 +178,8 @@ Static Private Attributes</h2></td></tr>
 <tr class="separator:a993952bf6c0eff6a54afc273c0f5a72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77730aeed3c116d423e40fbf7e7b65f3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data.html#a77730aeed3c116d423e40fbf7e7b65f3">buttonHoldTime</a></td></tr>
 <tr class="separator:a77730aeed3c116d423e40fbf7e7b65f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8cf81c43b22466c0a88a653bfef562f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data.html#af8cf81c43b22466c0a88a653bfef562f">darkHighlight</a></td></tr>
+<tr class="separator:af8cf81c43b22466c0a88a653bfef562f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af11f741cb7f587e2e495452a8905a22a"></a>
@@ -351,6 +357,33 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abfe32c8f520b68117e7906e6d6f82d0e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Data::isDarkHighlight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_data.html#af8cf81c43b22466c0a88a653bfef562f">darkHighlight</a>.</p>
+
+<p>Referenced by <a class="el" href="class_raspbed.html#ac4cc35b82316043a437c7e30dd3879c9">Raspbed::mouseSelectEvent()</a>, <a class="el" href="class_raspbed.html#a8ac5a80b7b45c51b66c63cc97619876d">Raspbed::openSettings()</a>, and <a class="el" href="class_raspbed.html#ad1acd46aeec30c49476635ee24a23929">Raspbed::setupDisplay()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3c745bcea3d6c8c9286364b6f97614f2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -372,7 +405,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>References <a class="el" href="class_data.html#a77730aeed3c116d423e40fbf7e7b65f3">buttonHoldTime</a>, <a class="el" href="class_data.html#a993952bf6c0eff6a54afc273c0f5a72a">buttonMode</a>, <a class="el" href="class_data.html#aa38a318064795343c9358cfc58fa4f04">contact</a>, <a class="el" href="class_data.html#ae509e54e6876e1ca7683263d2d61c9fd">iconBorders</a>, <a class="el" href="class_data.html#ad19a95cadfd733efaabab55ccc156d34">port</a>, and <a class="el" href="class_data.html#a8143e0ec3ca7ab340da2484021ea6fa4">settings</a>.</p>
+<p>References <a class="el" href="class_data.html#a77730aeed3c116d423e40fbf7e7b65f3">buttonHoldTime</a>, <a class="el" href="class_data.html#a993952bf6c0eff6a54afc273c0f5a72a">buttonMode</a>, <a class="el" href="class_data.html#aa38a318064795343c9358cfc58fa4f04">contact</a>, <a class="el" href="class_data.html#af8cf81c43b22466c0a88a653bfef562f">darkHighlight</a>, <a class="el" href="class_data.html#ae509e54e6876e1ca7683263d2d61c9fd">iconBorders</a>, <a class="el" href="class_data.html#ad19a95cadfd733efaabab55ccc156d34">port</a>, and <a class="el" href="class_data.html#a8143e0ec3ca7ab340da2484021ea6fa4">settings</a>.</p>
 
 <p>Referenced by <a class="el" href="class_raspbed.html#af92b4c4cf2af1be65453fb9fee80ee62">Raspbed::Raspbed()</a>.</p>
 
@@ -423,7 +456,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>References <a class="el" href="class_data.html#a77730aeed3c116d423e40fbf7e7b65f3">buttonHoldTime</a>, <a class="el" href="class_data.html#a993952bf6c0eff6a54afc273c0f5a72a">buttonMode</a>, <a class="el" href="class_data.html#aa38a318064795343c9358cfc58fa4f04">contact</a>, <a class="el" href="class_data.html#ae509e54e6876e1ca7683263d2d61c9fd">iconBorders</a>, <a class="el" href="class_data.html#ad19a95cadfd733efaabab55ccc156d34">port</a>, and <a class="el" href="class_data.html#a8143e0ec3ca7ab340da2484021ea6fa4">settings</a>.</p>
+<p>References <a class="el" href="class_data.html#a77730aeed3c116d423e40fbf7e7b65f3">buttonHoldTime</a>, <a class="el" href="class_data.html#a993952bf6c0eff6a54afc273c0f5a72a">buttonMode</a>, <a class="el" href="class_data.html#aa38a318064795343c9358cfc58fa4f04">contact</a>, <a class="el" href="class_data.html#af8cf81c43b22466c0a88a653bfef562f">darkHighlight</a>, <a class="el" href="class_data.html#ae509e54e6876e1ca7683263d2d61c9fd">iconBorders</a>, <a class="el" href="class_data.html#ad19a95cadfd733efaabab55ccc156d34">port</a>, and <a class="el" href="class_data.html#a8143e0ec3ca7ab340da2484021ea6fa4">settings</a>.</p>
 
 <p>Referenced by <a class="el" href="class_raspbed.html#a8ac5a80b7b45c51b66c63cc97619876d">Raspbed::openSettings()</a>.</p>
 
@@ -541,6 +574,34 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a82b8ada2231d5e7aa59288e2f984c9f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Data::setDarkHighlight </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>References <a class="el" href="class_data.html#af8cf81c43b22466c0a88a653bfef562f">darkHighlight</a>.</p>
+
+<p>Referenced by <a class="el" href="class_raspbed.html#a8ac5a80b7b45c51b66c63cc97619876d">Raspbed::openSettings()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a405c105993ba38146ef655219e05ab96"></a>
 <div class="memitem">
 <div class="memproto">
@@ -633,6 +694,28 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Referenced by <a class="el" href="class_data.html#a558f532ce86fc7966c40fc0b721ea1c3">getContact()</a>, <a class="el" href="class_data.html#a3c745bcea3d6c8c9286364b6f97614f2">loadSettings()</a>, <a class="el" href="class_data.html#aa7d9ed93a7c1a54382e03eb0c23bcfc0">saveSettings()</a>, and <a class="el" href="class_data.html#a85bfdc8991905828988862344d0674d3">setContact()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af8cf81c43b22466c0a88a653bfef562f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Data::darkHighlight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="class_data.html#abfe32c8f520b68117e7906e6d6f82d0e">isDarkHighlight()</a>, <a class="el" href="class_data.html#a3c745bcea3d6c8c9286364b6f97614f2">loadSettings()</a>, <a class="el" href="class_data.html#aa7d9ed93a7c1a54382e03eb0c23bcfc0">saveSettings()</a>, and <a class="el" href="class_data.html#a82b8ada2231d5e7aa59288e2f984c9f8">setDarkHighlight()</a>.</p>
 
 </div>
 </div>

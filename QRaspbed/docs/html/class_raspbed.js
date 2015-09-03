@@ -41,6 +41,7 @@ var class_raspbed =
     [ "bed", "class_raspbed.html#a9082c9521a6848f92db21ea7034ae24f", null ],
     [ "bedDownPixmap", "class_raspbed.html#ae5f50425e39a6cafe92588c613697ed0", null ],
     [ "bedUpPixmap", "class_raspbed.html#a0c3fd452638a62230945f5550c9f5f92", null ],
+    [ "callInProgress", "class_raspbed.html#acfaf3f3be3e777c6d68b7515dc06aefb", null ],
     [ "callPixmap", "class_raspbed.html#ab304d61f5e632ab9c494778c64fe2f43", null ],
     [ "feetDownPixmap", "class_raspbed.html#a511a4bf0626b2fd63c0f76256d7466ed", null ],
     [ "feetUpPixmap", "class_raspbed.html#ab561d894e5b09b68f167a02afa444ffe", null ],

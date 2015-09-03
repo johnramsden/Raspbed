@@ -12,6 +12,7 @@ Settings::~Settings() { delete ui; }
 void Settings::populateSettings() {
     ui->iconStyleCheckBox->setChecked(bordered);
     ui->buttonModeCheckBox->setChecked(buttonMode);
+    ui->darkHighlight->setChecked(darkHighlight);
     ui->callContactLineEdit->setText(contact);
     ui->serialPortComboBox->addItems(serialPorts);
     ui->buttonHoldTimeEdit->setText(buttonHoldTime);
@@ -29,13 +30,24 @@ QStringList Settings::getSerialPorts() { return serialPorts; }
 void Settings::updateData() {
     bordered = ui->iconStyleCheckBox->isChecked();
     buttonMode = ui->buttonModeCheckBox->isChecked();
+    darkHighlight = ui->darkHighlight->isChecked();
     contact = ui->callContactLineEdit->text();
     buttonHoldTime = ui->buttonHoldTimeEdit->text();
     port = ui->serialPortComboBox->itemText(
         ui->serialPortComboBox->currentIndex());
     qDebug() << "------------------\nSettings results: \nPort " << port
              << "\nContact: " << contact << "\nIcon" << bordered
-             << "Button Mode:" << buttonMode;
+             << "Button Mode:" << buttonMode << "\nButton Dark Highlight:" << darkHighlight;
+}
+
+bool Settings::isDarkHighlight() const
+{
+    return darkHighlight;
+}
+
+void Settings::setDarkHighlight(bool value)
+{
+    darkHighlight = value;
 }
 
 QString Settings::getButtonHoldTime() const { return buttonHoldTime; }

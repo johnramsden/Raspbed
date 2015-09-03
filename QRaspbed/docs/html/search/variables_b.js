@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ui',['ui',['../class_raspbed.html#a269fef50ea94cef8e79bdc53888632e1',1,'Raspbed::ui()'],['../class_settings.html#a98680be421d0ae7c34a57f2a159eacd4',1,'Settings::ui()']]]
+  ['trend_5fup',['trend_up',['../struct_bed_1_1_relay.html#a333bb50512a33ba4e74e817748b80dd3',1,'Bed::Relay']]],
+  ['trendpixmap',['trendPixmap',['../class_raspbed.html#a681b0f4ab09a6be9073e8c241876e317',1,'Raspbed']]]
 ];

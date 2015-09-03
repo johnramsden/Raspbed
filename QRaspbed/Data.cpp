@@ -1,10 +1,11 @@
 #include "Data.hpp"
 
 QString Data::contact;
-bool Data::iconBorders;
-bool Data::buttonMode;
 QString Data::port;
 QSettings Data::settings;
+bool Data::iconBorders;
+bool Data::buttonMode;
+bool Data::darkHighlight;
 int Data::buttonHoldTime;
 
 Data::Data() {
@@ -19,8 +20,10 @@ void Data::loadSettings() {
     contact = settings.value("contact").toString();
     buttonMode = settings.value("buttonMode").toBool();
     buttonHoldTime = settings.value("buttonHoldTime").toInt();
+    darkHighlight = settings.value("darkHighlight").toBool();
     qDebug() << "Loaded: \nPort: " << port << "\nIcons:" << iconBorders
-             << "\nContact:" << contact << "\nButtons" << buttonMode;
+             << "\nContact:" << contact << "\nButtons" << buttonMode
+             << "\nDark Highlight: " << darkHighlight;
 }
 
 void Data::saveSettings() {
@@ -30,8 +33,10 @@ void Data::saveSettings() {
     settings.setValue("contact", contact);
     settings.setValue("buttonMode", buttonMode);
     settings.setValue("buttonHoldTime", buttonHoldTime);
+    settings.setValue("darkHighlight", darkHighlight);
     qDebug() << "Saved: \nPort: " << port << "\nIcons:" << iconBorders
-             << "\nContact:" << contact << "Buttons" << buttonMode;
+             << "\nContact:" << contact << "Buttons" << buttonMode
+             << "\nDark Highlight: " << darkHighlight;
 }
 
 QString Data::getContact() { return contact; }
@@ -51,3 +56,13 @@ void Data::setButtonHoldTime(int value) { buttonHoldTime = value; }
 bool Data::isButtonMode() { return buttonMode; }
 
 void Data::setButtonMode(bool value) { buttonMode = value; }
+
+bool Data::isDarkHighlight()
+{
+    return darkHighlight;
+}
+
+void Data::setDarkHighlight(bool value)
+{
+    darkHighlight = value;
+}

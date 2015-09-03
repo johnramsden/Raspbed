@@ -38,18 +38,22 @@ class Settings : public QDialog {
     QString getButtonHoldTime() const;
     void setButtonHoldTime(const QString &value);
 
-  private slots:
+    bool isDarkHighlight() const;
+    void setDarkHighlight(bool value);
+
+private slots:
     void updateData();
 
-  private:
+private:
     QStringList serialPorts;
     Ui::Settings *ui;
 
     QString contact;
-    bool bordered;
-    bool buttonMode;
     QString port;
     QString buttonHoldTime;
+    bool bordered;
+    bool buttonMode;
+    bool darkHighlight;
 };
 
 #endif // SETTINGS_HPP

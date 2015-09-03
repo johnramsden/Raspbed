@@ -9,6 +9,7 @@ var searchData=
   ['setcharactersize',['setCharacterSize',['../class_serial_port.html#aad02d1d520822cdf3a506ee4dd383462',1,'SerialPort']]],
   ['setconnected',['setConnected',['../class_serial_port.html#a19b7a197649862f7831be3ed883d81b5',1,'SerialPort']]],
   ['setcontact',['setContact',['../class_data.html#a85bfdc8991905828988862344d0674d3',1,'Data::setContact()'],['../class_settings.html#abb71c84fc9809a233c8db2083638d390',1,'Settings::setContact()']]],
+  ['setdarkhighlight',['setDarkHighlight',['../class_data.html#a82b8ada2231d5e7aa59288e2f984c9f8',1,'Data::setDarkHighlight()'],['../class_settings.html#ae2a550b817e5eacb756757f34ec77038',1,'Settings::setDarkHighlight()']]],
   ['setflowcontrol',['setFlowControl',['../class_serial_port.html#a41c0797746bc155d94725f52646b3644',1,'SerialPort']]],
   ['setparity',['setParity',['../class_serial_port.html#a03dfaa7400b16e8765044a0c04d52c70',1,'SerialPort']]],
   ['setport',['setPort',['../class_data.html#a405c105993ba38146ef655219e05ab96',1,'Data::setPort()'],['../class_settings.html#a7b7d10179ad2fb05ffc276226a3d6ed6',1,'Settings::setPort()']]],

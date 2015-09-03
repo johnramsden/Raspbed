@@ -28,7 +28,10 @@ class Data {
     static int getButtonHoldTime();
     static void setButtonHoldTime(int value);
 
-  private:
+    static bool isDarkHighlight();
+    static void setDarkHighlight(bool value);
+
+private:
     Data(Data const &) = delete;
     Data &operator=(Data const &) = delete;
 
@@ -39,6 +42,7 @@ class Data {
     static QSettings settings;
     static bool buttonMode;
     static int buttonHoldTime;
+    static bool darkHighlight;
 };
 
 #endif // DATA_HPP

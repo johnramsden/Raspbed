@@ -64,7 +64,11 @@ void Raspbed::mouseSelectEvent(QMouseEvent *event) {
         selected = false;
         selectedButton->setStyleSheet("");
         selectedButton = nextButton();
-        selectedButton->setStyleSheet("border: 3px black");
+        if(settings.isDarkHighlight()){
+            selectedButton->setStyleSheet("border: 3px solid black");
+        } else {
+            selectedButton->setStyleSheet("border: 3px solid white");
+        }
     } else if (event->button() == Qt::RightButton) {
         QTimer::singleShot(500, this, SLOT(resetClicks()));
         numRightClicks++;
@@ -95,7 +99,12 @@ void Raspbed::mouseSelectEvent(QMouseEvent *event) {
             }
         }
 
-        selectedButton->setStyleSheet("background-color: rgb(61,61,61)");
+        if(settings.isDarkHighlight()){
+            selectedButton->setStyleSheet("background-color: black");
+        } else {
+            selectedButton->setStyleSheet("background-color: white");
+        }
+
         selected = true;
         qDebug() << "Pressed Right Click, R=" << QString::number(numRightClicks)
                  << ", L=" << QString::number(numLeftClicks);
@@ -168,11 +177,13 @@ void Raspbed::setupDisplay() {
 
     setupButtons();
 
-    if (settings.isButtonMode()) {
-
-    }else {
+    if (!settings.isButtonMode()) {
         selectedButton = ui->headUpButton;
-        selectedButton->setStyleSheet("border: 3px solid black");
+        if(settings.isDarkHighlight()){
+            selectedButton->setStyleSheet("border: 3px solid black");
+        } else {
+            selectedButton->setStyleSheet("border: 3px solid white");
+        }
     }
 }
 
@@ -211,27 +222,27 @@ void Raspbed::setupButtons() {
 
 void Raspbed::setupIconBorders() {
     if (settings.isBordered()) {
-        headUpPixmap = QPixmap("images/border/headUpButton.png");
-        headDownPixmap = QPixmap("images/border/headDownButton.png");
-        feetUpPixmap = QPixmap("images/border/feetUpButton.png");
-        feetDownPixmap = QPixmap("images/border/feetDownButton.png");
-        trendPixmap = QPixmap("images/border/trendButton.png");
-        bedUpPixmap = QPixmap("images/border/bedUpButton.png");
-        bedDownPixmap = QPixmap("images/border/bedDownButton.png");
-        lowerWheelsPixmap = QPixmap("images/border/lowerWheelsButton.png");
-        flattenBedPixmap = QPixmap("images/border/flattenButton.png");
-        callPixmap = QPixmap("images/border/callButton.png");
+        headUpPixmap = QPixmap(":/icons/border/headUp.png");
+        headDownPixmap = QPixmap(":/icons/border/headDown.png");
+        feetUpPixmap = QPixmap(":/icons/border/feetUp.png");
+        feetDownPixmap = QPixmap(":/icons/border/feetDown.png");
+        trendPixmap = QPixmap(":/icons/border/trend.png");
+        bedUpPixmap = QPixmap(":/icons/border/bedUp.png");
+        bedDownPixmap = QPixmap(":/icons/border/bedDown.png");
+        lowerWheelsPixmap = QPixmap(":/icons/border/lowerWheels.png");
+        flattenBedPixmap = QPixmap(":/icons/border/flatten.png");
+        callPixmap = QPixmap(":/icons/border/call.png");
     } else {
-        headUpPixmap = QPixmap("images/no-border/headUpButton.png");
-        headDownPixmap = QPixmap("images/no-border/headDownButton.png");
-        feetUpPixmap = QPixmap("images/no-border/feetUpButton.png");
-        feetDownPixmap = QPixmap("images/no-border/feetDownButton.png");
-        trendPixmap = QPixmap("images/no-border/trendButton.png");
-        bedUpPixmap = QPixmap("images/no-border/bedUpButton.png");
-        bedDownPixmap = QPixmap("images/no-border/bedDownButton.png");
-        lowerWheelsPixmap = QPixmap("images/no-border/lowerWheelsButton.png");
-        flattenBedPixmap = QPixmap("images/no-border/flattenButton.png");
-        callPixmap = QPixmap("images/no-border/callButton.png");
+        headUpPixmap = QPixmap(":/icons/no-border/headUp.png");
+        headDownPixmap = QPixmap(":/icons/no-border/headDown.png");
+        feetUpPixmap = QPixmap(":/icons/no-border/feetUp.png");
+        feetDownPixmap = QPixmap(":/icons/no-border/feetDown.png");
+        trendPixmap = QPixmap(":/icons/no-border/trend.png");
+        bedUpPixmap = QPixmap(":/icons/no-border/bedUp.png");
+        bedDownPixmap = QPixmap(":/icons/no-border/bedDown.png");
+        lowerWheelsPixmap = QPixmap(":/icons/no-border/lowerWheels.png");
+        flattenBedPixmap = QPixmap(":/icons/no-border/flatten.png");
+        callPixmap = QPixmap(":/icons/no-border/call.png");
     }
 }
 
@@ -254,6 +265,7 @@ void Raspbed::openSettings() {
     settingsDialog->setContact(settings.getContact());
     settingsDialog->setBordered(settings.isBordered());
     settingsDialog->setButtonMode(settings.isButtonMode());
+    settingsDialog->setDarkHighlight(settings.isDarkHighlight());
     settingsDialog->setButtonHoldTime(
         QString::number(settings.getButtonHoldTime()));
     settingsDialog->populateSettings();
@@ -263,6 +275,7 @@ void Raspbed::openSettings() {
         settings.setContact(settingsDialog->getContact());
         settings.setPort(settingsDialog->getPort());
         settings.setBordered(settingsDialog->isBordered());
+        settings.setDarkHighlight(settingsDialog->isDarkHighlight());
         settings.setButtonMode(settingsDialog->isButtonMode());
         settings.setButtonHoldTime(settingsDialog->getButtonHoldTime().toInt());
         settings.saveSettings();
@@ -421,5 +434,8 @@ void Raspbed::on_callButton_clicked() {
     ui->statusBar->showMessage(message, 10000);
     std::string skypeCommand =
         "skype --callto " + settings.getContact().toStdString() + " &";
-    system(skypeCommand.c_str());
+    if(system(skypeCommand.c_str()) == -1){
+        ui->statusBar->showMessage("Skype call error");
+    }
+
 }

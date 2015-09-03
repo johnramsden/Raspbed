@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>382</height>
+    <height>471</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -77,6 +77,13 @@
     <widget class="QCheckBox" name="buttonModeCheckBox">
      <property name="text">
       <string>Button Mode</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="darkHighlight">
+     <property name="text">
+      <string>Dark Button Highlight</string>
      </property>
     </widget>
    </item>

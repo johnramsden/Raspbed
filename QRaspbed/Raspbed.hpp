@@ -35,7 +35,7 @@ class Raspbed : public QMainWindow {
     explicit Raspbed(QWidget *parent = 0);
     ~Raspbed();
 
-  private slots:
+private slots:
     /**
      * @brief Slot called upon press of head up button.
      *        Causes a call to write the signal to the relay to raise
@@ -255,6 +255,11 @@ class Raspbed : public QMainWindow {
      * @brief selected is true when a button is selected
      */
     bool selected;
+    /**
+     * @brief callMade is true if a skype call is in progress
+     */
+    bool callInProgress;
+
     /**
      * @brief nextButton finds the next button selected when in sip'n puff mode
      * @return A QPushButton pointer to the next button.
