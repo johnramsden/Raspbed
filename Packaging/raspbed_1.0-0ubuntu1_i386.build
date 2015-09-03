@@ -19,9 +19,10 @@ dpkg-source: info: building raspbed in raspbed_1.0-0ubuntu1.dsc
 dpkg-genchanges: including full source code in upload
  dpkg-source --after-build raspbed-1.0
 dpkg-buildpackage: full upload (original source is included)
+W: Build-result Directory /home/john/pbuilder/result/ does not exist
 I: using fakeroot in build.
-I: Current time: Wed Sep  2 23:03:28 PDT 2015
-I: pbuilder-time-stamp: 1441260208
+I: Current time: Wed Sep  2 23:52:14 PDT 2015
+I: pbuilder-time-stamp: 1441263134
 I: Building the build Environment
 I: extracting base tarball [/home/john/pbuilder/base.tgz]
 I: creating local configuration
@@ -30,6 +31,7 @@ I: mounting /proc filesystem
 I: mounting /run/shm filesystem
 I: mounting /dev/pts filesystem
 I: policy-rc.d already exists
+I: created buildresult dir: /home/john/pbuilder/result/
 I: Obtaining the cached apt archive contents
 I: Installing the build-deps
  -> Attempting to satisfy build-dependencies
@@ -1414,7 +1416,7 @@ dpkg-source: info: extracting raspbed in raspbed-1.0
 dpkg-source: info: unpacking raspbed_1.0.orig.tar.gz
 dpkg-source: info: unpacking raspbed_1.0-0ubuntu1.debian.tar.xz
 I: Building the package
-I: Running cd tmp/buildd/*/ && env PATH="/usr/sbin:/usr/bin:/sbin:/bin" dpkg-buildpackage -us -uc "-eJohn Ramsdene <RamsdenJ@shaw.ca>" -sa -sa -rfakeroot
+I: Running cd tmp/buildd/*/ && env PATH="/usr/sbin:/usr/bin:/sbin:/bin" dpkg-buildpackage -us -uc "-eJohn Ramsden <RamsdenJ@shaw.ca>" -sa -sa -rfakeroot
 dpkg-buildpackage: source package raspbed
 dpkg-buildpackage: source version 1.0-0ubuntu1
 dpkg-buildpackage: source distribution UNRELEASED
@@ -1495,21 +1497,17 @@ dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is no
    dh_md5sums
    dh_builddeb
 dpkg-deb: building package `raspbed' in `../raspbed_1.0-0ubuntu1_i386.deb'.
- dpkg-genchanges -sa -sa -eJohn Ramsdene <RamsdenJ@shaw.ca> >../raspbed_1.0-0ubuntu1_i386.changes
+ dpkg-genchanges -sa -sa -eJohn Ramsden <RamsdenJ@shaw.ca> >../raspbed_1.0-0ubuntu1_i386.changes
 dpkg-genchanges: including full source code in upload
  dpkg-source --after-build raspbed-1.0
 dpkg-buildpackage: full upload (original source is included)
 I: Copying back the cached apt archive contents
 I: unmounting dev/pts filesystem
-W: Could not unmount dev/pts: umount: /home/john/pbuilder/build//16482/dev/pts: not mounted
+W: Could not unmount dev/pts: umount: /home/john/pbuilder/build//15460/dev/pts: not mounted
 W: Ignored error in unmount
 I: unmounting run/shm filesystem
 I: unmounting proc filesystem
 I: cleaning the build env 
-I: removing directory /home/john/pbuilder/build//16482 and its subdirectories
-I: Current time: Wed Sep  2 23:08:15 PDT 2015
-I: pbuilder-time-stamp: 1441260495
- signfile /home/john/pbuilder/result//raspbed_1.0-0ubuntu1.dsc John Ramsdene <RamsdenJ@shaw.ca>
-gpg: skipped "John Ramsdene <RamsdenJ@shaw.ca>": secret key not available
-gpg: /tmp/debsign.Y6Hr9bFB/raspbed_1.0-0ubuntu1.dsc: clearsign failed: secret key not available
-debsign: gpg error occurred!  Aborting....
+I: removing directory /home/john/pbuilder/build//15460 and its subdirectories
+I: Current time: Wed Sep  2 23:56:30 PDT 2015
+I: pbuilder-time-stamp: 1441263390
