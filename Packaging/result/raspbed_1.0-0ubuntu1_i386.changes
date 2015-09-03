@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Wed, 02 Sep 2015 15:06:25 -0700
+Source: raspbed
+Binary: raspbed
+Architecture: source i386
+Version: 1.0-0ubuntu1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: John Ramsden <Ramsdenj@shaw.ca>
+Changed-By: John Ramsden <RamsdenJ@shaw.ca>
+Description:
+ raspbed    - Controller and call bell for Volker hospital bed.
+Changes:
+ raspbed (1.0-0ubuntu1) UNRELEASED; urgency=low
+ .
+   * Initial Release.
+Checksums-Sha1:
+ 61955b530a96c3e682f266c57c3f3e81d10c531c 946 raspbed_1.0-0ubuntu1.dsc
+ 81a55295604cd9d4b44e1ec8d53bb1ae8a7ce698 141913 raspbed_1.0.orig.tar.gz
+ 24d9b83c85c46ffb29034d3f1c0f600fffea4414 1508 raspbed_1.0-0ubuntu1.debian.tar.xz
+ 42d621010931d9c35babb17cd28fc6b07cd8c6de 42376 raspbed_1.0-0ubuntu1_i386.deb
+Checksums-Sha256:
+ d94384059f693efc96583bc8fc4a2b11170d67a3047718282c16d445419590a2 946 raspbed_1.0-0ubuntu1.dsc
+ 42363d7e05b88bf01c8c8ccadd89ef93bcd3c135b09700150da7b2543d7b9b6a 141913 raspbed_1.0.orig.tar.gz
+ f124b5b30d9c620d29ee04ac58f93cc0db7fa5d97a34d63e4979aef21be52b78 1508 raspbed_1.0-0ubuntu1.debian.tar.xz
+ 146025e2cdb3588acf9320bc0f6e3294417787bf5be4b934e3b8ff39dd5b7704 42376 raspbed_1.0-0ubuntu1_i386.deb
+Files:
+ a3fe25849e0145c486e7cb8b1645c375 946 Accessibility optional raspbed_1.0-0ubuntu1.dsc
+ c05d2d8df5b98cb6878865d36add529e 141913 Accessibility optional raspbed_1.0.orig.tar.gz
+ 31a25e6e664a59c6d0d7b442ae67b118 1508 Accessibility optional raspbed_1.0-0ubuntu1.debian.tar.xz
+ 1ac96fd6daf363737e3af7d725976c56 42376 Accessibility optional raspbed_1.0-0ubuntu1_i386.deb
