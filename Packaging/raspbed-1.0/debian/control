@@ -1,15 +1,16 @@
 Source: raspbed
-Section: unknown
+Section: Accessibility
 Priority: optional
-Maintainer: John Ramsden <RamsdenJ@shaw.ca>
-Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.5
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://anonscm.debian.org/collab-maint/raspbed.git
-#Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/raspbed.git;a=summary
+Maintainer: John Ramsden <Ramsdenj@shaw.ca>
+Build-Depends: debhelper (>= 9), qtbase5-dev, qtbase5-dev-tools, qt5-qmake, libboost-all-dev
+Standards-Version: 3.9.6
+Homepage: https://github.com/Ramsdenj/Raspbed
+Vcs-Git: https://github.com/Ramsdenj/Raspbed.git
 
 Package: raspbed
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: libqt5gui5, libqt5widgets5, libqt5core5a, ${shlibs:Depends}, ${misc:Depends}
+Description: Controller and call bell for Volker hospital bed.
+ Raspbed is a sip'n puff controlled bed controller which based on Qt and C++.
+ It supports linux i386 and amd64.
+ It is licensed under GPL v3. See COPYING file for more information.
