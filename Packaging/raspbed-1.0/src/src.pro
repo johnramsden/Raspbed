@@ -17,6 +17,11 @@ DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 TARGET = QRaspbed
 TEMPLATE = app
 
+DESTDIR = ../bin
+MOC_DIR = ../build/moc
+RCC_DIR = ../build/rcc
+UI_DIR = ../build/ui
+unix:OBJECTS_DIR = ../build/o/unix
 
 SOURCES += main.cpp\
     SerialPort.cpp \
