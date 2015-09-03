@@ -1,2 +1,2 @@
-bin/GeneratedBinary usr/bin
+bin/raspbed usr/bin
 raspbed.desktop usr/share/applications

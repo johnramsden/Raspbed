@@ -20,8 +20,8 @@ dpkg-genchanges: including full source code in upload
  dpkg-source --after-build raspbed-1.0
 dpkg-buildpackage: full upload (original source is included)
 I: using fakeroot in build.
-I: Current time: Wed Sep  2 19:23:11 PDT 2015
-I: pbuilder-time-stamp: 1441246991
+I: Current time: Wed Sep  2 23:03:28 PDT 2015
+I: pbuilder-time-stamp: 1441260208
 I: Building the build Environment
 I: extracting base tarball [/home/john/pbuilder/base.tgz]
 I: creating local configuration
@@ -158,307 +158,8 @@ The following NEW packages will be installed:
   x11proto-kb-dev{a} x11proto-xext-dev{a} x11proto-xf86vidmode-dev{a} 
   xkb-data{a} xorg-sgml-doctools{a} xtrans-dev{a} zlib1g-dev{a} 
 0 packages upgraded, 298 newly installed, 0 to remove and 0 not upgraded.
-Need to get 102 MB of archives. After unpacking 491 MB will be used.
+Need to get 0 B/102 MB of archives. After unpacking 491 MB will be used.
 Writing extended state information...
-Get: 1 http://archive.ubuntu.com/ubuntu/ vivid/main libexpat1 i386 2.1.0-6ubuntu1 [74.0 kB]
-Get: 2 http://archive.ubuntu.com/ubuntu/ vivid/main libffi6 i386 3.2.1-2 [16.9 kB]
-Get: 3 http://archive.ubuntu.com/ubuntu/ vivid/main libnettle4 i386 2.7.1-5 [109 kB]
-Get: 4 http://archive.ubuntu.com/ubuntu/ vivid/main libhogweed2 i386 2.7.1-5 [126 kB]
-Get: 5 http://archive.ubuntu.com/ubuntu/ vivid/main libp11-kit0 i386 0.20.7-1 [79.3 kB]
-Get: 6 http://archive.ubuntu.com/ubuntu/ vivid/main libtasn1-6 i386 4.2-2ubuntu1 [44.3 kB]
-Get: 7 http://archive.ubuntu.com/ubuntu/ vivid/main libgnutls-deb0-28 i386 3.3.8-3ubuntu3 [531 kB]
-Get: 8 http://archive.ubuntu.com/ubuntu/ vivid/main libmagic1 i386 1:5.20-1ubuntu2 [213 kB]
-Get: 9 http://archive.ubuntu.com/ubuntu/ vivid/main libssl1.0.0 i386 1.0.1f-1ubuntu11 [862 kB]
-Get: 10 http://archive.ubuntu.com/ubuntu/ vivid/main libasprintf0c2 i386 0.19.2-2ubuntu1 [6332 B]
-Get: 11 http://archive.ubuntu.com/ubuntu/ vivid/main libdbus-1-3 i386 1.8.12-1ubuntu5 [160 kB]
-Get: 12 http://archive.ubuntu.com/ubuntu/ vivid/main libdrm2 i386 2.4.60-2 [26.4 kB]
-Get: 13 http://archive.ubuntu.com/ubuntu/ vivid/main libedit2 i386 3.1-20140620-2 [85.4 kB]
-Get: 14 http://archive.ubuntu.com/ubuntu/ vivid/main libelf1 i386 0.160-0ubuntu3 [43.9 kB]
-Get: 15 http://archive.ubuntu.com/ubuntu/ vivid/main libglib2.0-0 i386 2.44.0-1ubuntu3 [1165 kB]
-Get: 16 http://archive.ubuntu.com/ubuntu/ vivid/main libkrb5support0 i386 1.12.1+dfsg-18 [31.9 kB]
-Get: 17 http://archive.ubuntu.com/ubuntu/ vivid/main libk5crypto3 i386 1.12.1+dfsg-18 [83.4 kB]
-Get: 18 http://archive.ubuntu.com/ubuntu/ vivid/main libkeyutils1 i386 1.5.9-5ubuntu1 [9854 B]
-Get: 19 http://archive.ubuntu.com/ubuntu/ vivid/main libkrb5-3 i386 1.12.1+dfsg-18 [292 kB]
-Get: 20 http://archive.ubuntu.com/ubuntu/ vivid/main libgssapi-krb5-2 i386 1.12.1+dfsg-18 [128 kB]
-Get: 21 http://archive.ubuntu.com/ubuntu/ vivid/main libicu52 i386 52.1-8 [6878 kB]
-Get: 22 http://archive.ubuntu.com/ubuntu/ vivid/main libnuma1 i386 2.0.10-1ubuntu2 [22.3 kB]
-Get: 23 http://archive.ubuntu.com/ubuntu/ vivid/main libpipeline1 i386 1.4.0-1 [26.8 kB]
-Get: 24 http://archive.ubuntu.com/ubuntu/ vivid/main libpng12-0 i386 1.2.51-0ubuntu3 [124 kB]
-Get: 25 http://archive.ubuntu.com/ubuntu/ vivid/main libxau6 i386 1:1.0.8-1 [8352 B]
-Get: 26 http://archive.ubuntu.com/ubuntu/ vivid/main libxdmcp6 i386 1:1.1.1-1build1 [11.1 kB]
-Get: 27 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb1 i386 1.10-2ubuntu1 [40.6 kB]
-Get: 28 http://archive.ubuntu.com/ubuntu/ vivid/main libx11-data all 2:1.6.2-2ubuntu2 [112 kB]
-Get: 29 http://archive.ubuntu.com/ubuntu/ vivid/main libx11-6 i386 2:1.6.2-2ubuntu2 [589 kB]
-Get: 30 http://archive.ubuntu.com/ubuntu/ vivid/main libxext6 i386 2:1.3.3-1 [31.6 kB]
-Get: 31 http://archive.ubuntu.com/ubuntu/ vivid/main libxml2 i386 2.9.2+dfsg1-3 [739 kB]
-Get: 32 http://archive.ubuntu.com/ubuntu/ vivid/main groff-base i386 1.22.3-1 [1186 kB]
-Get: 33 http://archive.ubuntu.com/ubuntu/ vivid/main bsdmainutils i386 9.0.6ubuntu1 [175 kB]
-Get: 34 http://archive.ubuntu.com/ubuntu/ vivid/main man-db i386 2.7.0.2-5 [870 kB]
-Get: 35 http://archive.ubuntu.com/ubuntu/ vivid/main fonts-dejavu-core all 2.34-1ubuntu1 [1024 kB]
-Get: 36 http://archive.ubuntu.com/ubuntu/ vivid/main ucf all 3.0030 [55.5 kB]
-Get: 37 http://archive.ubuntu.com/ubuntu/ vivid/main fontconfig-config all 2.11.1-0ubuntu6 [48.7 kB]
-Get: 38 http://archive.ubuntu.com/ubuntu/ vivid/main libfreetype6 i386 2.5.2-2ubuntu3 [328 kB]
-Get: 39 http://archive.ubuntu.com/ubuntu/ vivid/main libfontconfig1 i386 2.11.1-0ubuntu6 [135 kB]
-Get: 40 http://archive.ubuntu.com/ubuntu/ vivid/main fontconfig i386 2.11.1-0ubuntu6 [176 kB]
-Get: 41 http://archive.ubuntu.com/ubuntu/ vivid/main libatk1.0-data all 2.14.0-1ubuntu1 [16.4 kB]
-Get: 42 http://archive.ubuntu.com/ubuntu/ vivid/main libatk1.0-0 i386 2.14.0-1ubuntu1 [57.5 kB]
-Get: 43 http://archive.ubuntu.com/ubuntu/ vivid/main libavahi-common-data i386 0.6.31-4ubuntu4 [20.9 kB]
-Get: 44 http://archive.ubuntu.com/ubuntu/ vivid/main libavahi-common3 i386 0.6.31-4ubuntu4 [23.9 kB]
-Get: 45 http://archive.ubuntu.com/ubuntu/ vivid/main libavahi-client3 i386 0.6.31-4ubuntu4 [27.5 kB]
-Get: 46 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-atomic1.55.0 i386 1.55.0+dfsg-3ubuntu2 [7972 B]
-Get: 47 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-system1.55.0 i386 1.55.0+dfsg-3ubuntu2 [10.1 kB]
-Get: 48 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-chrono1.55.0 i386 1.55.0+dfsg-3ubuntu2 [13.1 kB]
-Get: 49 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-context1.55.0 i386 1.55.0+dfsg-3ubuntu2 [7896 B]
-Get: 50 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-date-time1.55.0 i386 1.55.0+dfsg-3ubuntu2 [20.9 kB]
-Get: 51 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-filesystem1.55.0 i386 1.55.0+dfsg-3ubuntu2 [37.5 kB]
-Get: 52 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-serialization1.55.0 i386 1.55.0+dfsg-3ubuntu2 [136 kB]
-Get: 53 http://archive.ubuntu.com/ubuntu/ vivid/universe libcr0 i386 0.8.5-2.1 [18.3 kB]
-Get: 54 http://archive.ubuntu.com/ubuntu/ vivid/main libltdl7 i386 2.4.2-1.11 [36.8 kB]
-Get: 55 http://archive.ubuntu.com/ubuntu/ vivid/universe libhwloc5 i386 1.10.0-3 [81.9 kB]
-Get: 56 http://archive.ubuntu.com/ubuntu/ vivid/main libibverbs1 i386 1.1.8-1ubuntu1 [26.6 kB]
-Get: 57 http://archive.ubuntu.com/ubuntu/ vivid/universe libopenmpi1.6 i386 1.6.5-9.2 [1465 kB]
-Get: 58 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-mpi1.55.0 i386 1.55.0+dfsg-3ubuntu2 [49.3 kB]
-Get: 59 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-graph-parallel1.55.0 i386 1.55.0+dfsg-3ubuntu2 [72.5 kB]
-Get: 60 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-regex1.55.0 i386 1.55.0+dfsg-3ubuntu2 [281 kB]
-Get: 61 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-graph1.55.0 i386 1.55.0+dfsg-3ubuntu2 [101 kB]
-Get: 62 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-thread1.55.0 i386 1.55.0+dfsg-3ubuntu2 [32.0 kB]
-Get: 63 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-locale1.55.0 i386 1.55.0+dfsg-3ubuntu2 [237 kB]
-Get: 64 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-math1.55.0 i386 1.55.0+dfsg-3ubuntu2 [216 kB]
-Get: 65 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-python1.55.0 i386 1.55.0+dfsg-3ubuntu2 [124 kB]
-Get: 66 http://archive.ubuntu.com/ubuntu/ vivid/main libpython2.7-minimal i386 2.7.9-2ubuntu3 [337 kB]
-Get: 67 http://archive.ubuntu.com/ubuntu/ vivid/main python2.7-minimal i386 2.7.9-2ubuntu3 [1350 kB]
-Get: 68 http://archive.ubuntu.com/ubuntu/ vivid/main python-minimal i386 2.7.9-1 [28.3 kB]
-Get: 69 http://archive.ubuntu.com/ubuntu/ vivid/main mime-support all 3.58ubuntu1 [31.6 kB]
-Get: 70 http://archive.ubuntu.com/ubuntu/ vivid/main libpython2.7-stdlib i386 2.7.9-2ubuntu3 [1862 kB]
-Get: 71 http://archive.ubuntu.com/ubuntu/ vivid/main python2.7 i386 2.7.9-2ubuntu3 [210 kB]
-Get: 72 http://archive.ubuntu.com/ubuntu/ vivid/main libpython-stdlib i386 2.7.9-1 [7786 B]
-Get: 73 http://archive.ubuntu.com/ubuntu/ vivid/main python i386 2.7.9-1 [137 kB]
-Get: 74 http://archive.ubuntu.com/ubuntu/ vivid/universe openmpi-common all 1.6.5-9.2 [101 kB]
-Get: 75 http://archive.ubuntu.com/ubuntu/ vivid/universe openmpi-bin i386 1.6.5-9.2 [84.1 kB]
-Get: 76 http://archive.ubuntu.com/ubuntu/ vivid/universe mpi-default-bin i386 1.0.2+nmu2 [3390 B]
-Get: 77 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-mpi-python1.55.0 i386 1.55.0+dfsg-3ubuntu2 [218 kB]
-Get: 78 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-program-options1.55.0 i386 1.55.0+dfsg-3ubuntu2 [124 kB]
-Get: 79 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-random1.55.0 i386 1.55.0+dfsg-3ubuntu2 [9964 B]
-Get: 80 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-signals1.55.0 i386 1.55.0+dfsg-3ubuntu2 [33.7 kB]
-Get: 81 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-test1.55.0 i386 1.55.0+dfsg-3ubuntu2 [176 kB]
-Get: 82 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-timer1.55.0 i386 1.55.0+dfsg-3ubuntu2 [10.8 kB]
-Get: 83 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-wave1.55.0 i386 1.55.0+dfsg-3ubuntu2 [175 kB]
-Get: 84 http://archive.ubuntu.com/ubuntu/ vivid/main libpixman-1-0 i386 0.32.6-3 [233 kB]
-Get: 85 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-render0 i386 1.10-2ubuntu1 [11.9 kB]
-Get: 86 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-shm0 i386 1.10-2ubuntu1 [5622 B]
-Get: 87 http://archive.ubuntu.com/ubuntu/ vivid/main libxrender1 i386 1:0.9.8-1build1 [19.3 kB]
-Get: 88 http://archive.ubuntu.com/ubuntu/ vivid/main libcairo2 i386 1.14.2-1ubuntu1 [615 kB]
-Get: 89 http://archive.ubuntu.com/ubuntu/ vivid/main libcroco3 i386 0.6.8-3 [89.2 kB]
-Get: 90 http://archive.ubuntu.com/ubuntu/ vivid/main libcups2 i386 2.0.2-1ubuntu3 [208 kB]
-Get: 91 http://archive.ubuntu.com/ubuntu/ vivid/main libdatrie1 i386 0.2.8-1 [17.3 kB]
-Get: 92 http://archive.ubuntu.com/ubuntu/ vivid/main libpciaccess0 i386 0.13.2-3build1 [20.3 kB]
-Get: 93 http://archive.ubuntu.com/ubuntu/ vivid/main libdrm-intel1 i386 2.4.60-2 [60.4 kB]
-Get: 94 http://archive.ubuntu.com/ubuntu/ vivid/main libdrm-nouveau2 i386 2.4.60-2 [15.8 kB]
-Get: 95 http://archive.ubuntu.com/ubuntu/ vivid/main libdrm-radeon1 i386 2.4.60-2 [25.6 kB]
-Get: 96 http://archive.ubuntu.com/ubuntu/ vivid/main libwayland-client0 i386 1.7.0-0ubuntu1 [22.3 kB]
-Get: 97 http://archive.ubuntu.com/ubuntu/ vivid/main libwayland-server0 i386 1.7.0-0ubuntu1 [27.8 kB]
-Get: 98 http://archive.ubuntu.com/ubuntu/ vivid/main libllvm3.6 i386 1:3.6-2ubuntu1 [9049 kB]
-Get: 99 http://archive.ubuntu.com/ubuntu/ vivid/main libgl1-mesa-dri i386 10.5.2-0ubuntu1 [3698 kB]
-Get: 100 http://archive.ubuntu.com/ubuntu/ vivid/main libgbm1 i386 10.5.2-0ubuntu1 [25.8 kB]
-Get: 101 http://archive.ubuntu.com/ubuntu/ vivid/main libx11-xcb1 i386 2:1.6.2-2ubuntu2 [9298 B]
-Get: 102 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-dri2-0 i386 1.10-2ubuntu1 [7150 B]
-Get: 103 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-xfixes0 i386 1.10-2ubuntu1 [9064 B]
-Get: 104 http://archive.ubuntu.com/ubuntu/ vivid/main libegl1-mesa i386 10.5.2-0ubuntu1 [71.3 kB]
-Get: 105 http://archive.ubuntu.com/ubuntu/ vivid/main libjpeg-turbo8 i386 1.3.0-0ubuntu2 [107 kB]
-Get: 106 http://archive.ubuntu.com/ubuntu/ vivid/main libjpeg8 i386 8c-2ubuntu8 [2188 B]
-Get: 107 http://archive.ubuntu.com/ubuntu/ vivid/main libjasper1 i386 1.900.1-debian1-2.4 [135 kB]
-Get: 108 http://archive.ubuntu.com/ubuntu/ vivid/main libjbig0 i386 2.1-3.1 [27.0 kB]
-Get: 109 http://archive.ubuntu.com/ubuntu/ vivid/main libtiff5 i386 4.0.3-12.3ubuntu2 [154 kB]
-Get: 110 http://archive.ubuntu.com/ubuntu/ vivid/main libgdk-pixbuf2.0-common all 2.31.3-1 [10.3 kB]
-Get: 111 http://archive.ubuntu.com/ubuntu/ vivid/main libgdk-pixbuf2.0-0 i386 2.31.3-1 [175 kB]
-Get: 112 http://archive.ubuntu.com/ubuntu/ vivid/main libglapi-mesa i386 10.5.2-0ubuntu1 [22.4 kB]
-Get: 113 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-dri3-0 i386 1.10-2ubuntu1 [5292 B]
-Get: 114 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-glx0 i386 1.10-2ubuntu1 [21.6 kB]
-Get: 115 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-present0 i386 1.10-2ubuntu1 [5412 B]
-Get: 116 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-sync1 i386 1.10-2ubuntu1 [8418 B]
-Get: 117 http://archive.ubuntu.com/ubuntu/ vivid/main libxdamage1 i386 1:1.1.4-2 [6812 B]
-Get: 118 http://archive.ubuntu.com/ubuntu/ vivid/main libxfixes3 i386 1:5.0.1-2 [11.4 kB]
-Get: 119 http://archive.ubuntu.com/ubuntu/ vivid/main libxshmfence1 i386 1.1-4 [5030 B]
-Get: 120 http://archive.ubuntu.com/ubuntu/ vivid/main libxxf86vm1 i386 1:1.1.3-1 [11.8 kB]
-Get: 121 http://archive.ubuntu.com/ubuntu/ vivid/main libgl1-mesa-glx i386 10.5.2-0ubuntu1 [156 kB]
-Get: 122 http://archive.ubuntu.com/ubuntu/ vivid/main libgles2-mesa i386 10.5.2-0ubuntu1 [12.4 kB]
-Get: 123 http://archive.ubuntu.com/ubuntu/ vivid/main libgraphite2-3 i386 1.2.4-3ubuntu1 [57.5 kB]
-Get: 124 http://archive.ubuntu.com/ubuntu/ vivid/main libgtk2.0-common all 2.24.27-0ubuntu1 [121 kB]
-Get: 125 http://archive.ubuntu.com/ubuntu/ vivid/main libthai-data all 0.1.21-1 [131 kB]
-Get: 126 http://archive.ubuntu.com/ubuntu/ vivid/main libthai0 i386 0.1.21-1 [18.0 kB]
-Get: 127 http://archive.ubuntu.com/ubuntu/ vivid/main libpango-1.0-0 i386 1.36.8-3 [157 kB]
-Get: 128 http://archive.ubuntu.com/ubuntu/ vivid/main libharfbuzz0b i386 0.9.37-1 [139 kB]
-Get: 129 http://archive.ubuntu.com/ubuntu/ vivid/main libpangoft2-1.0-0 i386 1.36.8-3 [36.3 kB]
-Get: 130 http://archive.ubuntu.com/ubuntu/ vivid/main libpangocairo-1.0-0 i386 1.36.8-3 [22.3 kB]
-Get: 131 http://archive.ubuntu.com/ubuntu/ vivid/main libxcomposite1 i386 1:0.4.4-1 [7594 B]
-Get: 132 http://archive.ubuntu.com/ubuntu/ vivid/main libxcursor1 i386 1:1.1.14-1 [22.8 kB]
-Get: 133 http://archive.ubuntu.com/ubuntu/ vivid/main libxi6 i386 2:1.7.4-1 [29.9 kB]
-Get: 134 http://archive.ubuntu.com/ubuntu/ vivid/main libxinerama1 i386 2:1.1.3-1 [7900 B]
-Get: 135 http://archive.ubuntu.com/ubuntu/ vivid/main libxrandr2 i386 2:1.4.2-1 [16.1 kB]
-Get: 136 http://archive.ubuntu.com/ubuntu/ vivid/main shared-mime-info i386 1.3-1 [390 kB]
-Get: 137 http://archive.ubuntu.com/ubuntu/ vivid/main libgtk2.0-0 i386 2.24.27-0ubuntu1 [1904 kB]
-Get: 138 http://archive.ubuntu.com/ubuntu/ vivid/main x11-common all 1:7.7+7ubuntu4 [58.6 kB]
-Get: 139 http://archive.ubuntu.com/ubuntu/ vivid/main libice6 i386 2:1.0.9-1 [38.2 kB]
-Get: 140 http://archive.ubuntu.com/ubuntu/ vivid/main xkb-data all 2.12-1ubuntu1 [297 kB]
-Get: 141 http://archive.ubuntu.com/ubuntu/ vivid/main libxkbcommon0 i386 0.4.3-2 [96.5 kB]
-Get: 142 http://archive.ubuntu.com/ubuntu/ vivid/main libmircommon3 i386 0.12.1+15.04.20150324-0ubuntu1 [101 kB]
-Get: 143 http://archive.ubuntu.com/ubuntu/ vivid/main libprotobuf9 i386 2.6.1-1 [345 kB]
-Get: 144 http://archive.ubuntu.com/ubuntu/ vivid/main libmirprotobuf0 i386 0.12.1+15.04.20150324-0ubuntu1 [101 kB]
-Get: 145 http://archive.ubuntu.com/ubuntu/ vivid/main mir-client-platform-mesa2 i386 0.12.1+15.04.20150324-0ubuntu1 [24.5 kB]
-Get: 146 http://archive.ubuntu.com/ubuntu/ vivid/main libmirclient8 i386 0.12.1+15.04.20150324-0ubuntu1 [119 kB]
-Get: 147 http://archive.ubuntu.com/ubuntu/ vivid/main libmtdev1 i386 1.1.5-1ubuntu2 [14.5 kB]
-Get: 148 http://archive.ubuntu.com/ubuntu/ vivid/main libpython2.7 i386 2.7.9-2ubuntu3 [1099 kB]
-Get: 149 http://archive.ubuntu.com/ubuntu/ vivid/main libexpat1-dev i386 2.1.0-6ubuntu1 [115 kB]
-Get: 150 http://archive.ubuntu.com/ubuntu/ vivid/main libpython2.7-dev i386 2.7.9-2ubuntu3 [18.4 MB]
-Get: 151 http://archive.ubuntu.com/ubuntu/ vivid/main libqt5core5a i386 5.4.1+dfsg-2ubuntu4 [2372 kB]
-Get: 152 http://archive.ubuntu.com/ubuntu/ vivid/main libqt5concurrent5 i386 5.4.1+dfsg-2ubuntu4 [23.0 kB]
-Get: 153 http://archive.ubuntu.com/ubuntu/ vivid/main libqt5dbus5 i386 5.4.1+dfsg-2ubuntu4 [197 kB]
-Get: 154 http://archive.ubuntu.com/ubuntu/ vivid/main libsm6 i386 2:1.2.2-1 [14.8 kB]
-Get: 155 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-icccm4 i386 0.4.1-1ubuntu1 [10.8 kB]
-Get: 156 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-util0 i386 0.3.8-3 [12.4 kB]
-Get: 157 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-image0 i386 0.4.0-1 [12.8 kB]
-Get: 158 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-keysyms1 i386 0.4.0-1 [8562 B]
-Get: 159 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-randr0 i386 1.10-2ubuntu1 [15.2 kB]
-Get: 160 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-render-util0 i386 0.3.9-1 [9724 B]
-Get: 161 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-shape0 i386 1.10-2ubuntu1 [5864 B]
-Get: 162 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-xkb1 i386 1.10-2ubuntu1 [29.1 kB]
-Get: 163 http://archive.ubuntu.com/ubuntu/ vivid/main libxkbcommon-x11-0 i386 0.4.3-2 [14.2 kB]
-Get: 164 http://archive.ubuntu.com/ubuntu/ vivid/main libqt5gui5 i386 5.4.1+dfsg-2ubuntu4 [2278 kB]
-Get: 165 http://archive.ubuntu.com/ubuntu/ vivid/main libqt5network5 i386 5.4.1+dfsg-2ubuntu4 [620 kB]
-Get: 166 http://archive.ubuntu.com/ubuntu/ vivid/main libqt5widgets5 i386 5.4.1+dfsg-2ubuntu4 [2534 kB]
-Get: 167 http://archive.ubuntu.com/ubuntu/ vivid/main libqt5printsupport5 i386 5.4.1+dfsg-2ubuntu4 [185 kB]
-Get: 168 http://archive.ubuntu.com/ubuntu/ vivid/main libqt5sql5 i386 5.4.1+dfsg-2ubuntu4 [115 kB]
-Get: 169 http://archive.ubuntu.com/ubuntu/ vivid/main libqt5test5 i386 5.4.1+dfsg-2ubuntu4 [82.1 kB]
-Get: 170 http://archive.ubuntu.com/ubuntu/ vivid/main libqt5xml5 i386 5.4.1+dfsg-2ubuntu4 [104 kB]
-Get: 171 http://archive.ubuntu.com/ubuntu/ vivid/main libunistring0 i386 0.9.3-5.2ubuntu1 [277 kB]
-Get: 172 http://archive.ubuntu.com/ubuntu/ vivid/main libwayland-cursor0 i386 1.7.0-0ubuntu1 [10.7 kB]
-Get: 173 http://archive.ubuntu.com/ubuntu/ vivid/main libwayland-egl1-mesa i386 10.5.2-0ubuntu1 [6736 B]
-Get: 174 http://archive.ubuntu.com/ubuntu/ vivid/main libglu1-mesa i386 9.0.0-2 [195 kB]
-Get: 175 http://archive.ubuntu.com/ubuntu/ vivid/main file i386 1:5.20-1ubuntu2 [20.1 kB]
-Get: 176 http://archive.ubuntu.com/ubuntu/ vivid/main gettext-base i386 0.19.2-2ubuntu1 [48.8 kB]
-Get: 177 http://archive.ubuntu.com/ubuntu/ vivid/main gettext i386 0.19.2-2ubuntu1 [854 kB]
-Get: 178 http://archive.ubuntu.com/ubuntu/ vivid/main intltool-debian all 0.35.0+20060710.1 [31.6 kB]
-Get: 179 http://archive.ubuntu.com/ubuntu/ vivid/main po-debconf all 1.0.16+nmu3 [207 kB]
-Get: 180 http://archive.ubuntu.com/ubuntu/ vivid/main dh-apparmor all 2.9.1-0ubuntu9 [11.1 kB]
-Get: 181 http://archive.ubuntu.com/ubuntu/ vivid/main debhelper all 9.20150101ubuntu1 [727 kB]
-Get: 182 http://archive.ubuntu.com/ubuntu/ vivid/main icu-devtools i386 52.1-8 [168 kB]
-Get: 183 http://archive.ubuntu.com/ubuntu/ vivid/main libboost1.55-dev i386 1.55.0+dfsg-3ubuntu2 [5775 kB]
-Get: 184 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-dev i386 1.55.0.2 [3238 B]
-Get: 185 http://archive.ubuntu.com/ubuntu/ vivid/main libboost1.55-tools-dev i386 1.55.0+dfsg-3ubuntu2 [1116 kB]
-Get: 186 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-tools-dev i386 1.55.0.2 [3054 B]
-Get: 187 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-atomic1.55-dev i386 1.55.0+dfsg-3ubuntu2 [5058 B]
-Get: 188 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-atomic-dev i386 1.55.0.2 [3194 B]
-Get: 189 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-chrono1.55-dev i386 1.55.0+dfsg-3ubuntu2 [14.9 kB]
-Get: 190 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-chrono-dev i386 1.55.0.2 [3536 B]
-Get: 191 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-context1.55-dev i386 1.55.0+dfsg-3ubuntu2 [4912 B]
-Get: 192 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-context-dev i386 1.55.0.2 [3088 B]
-Get: 193 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-coroutine1.55-dev i386 1.55.0+dfsg-3ubuntu2 [9598 B]
-Get: 194 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-coroutine-dev i386 1.55.0.2 [3142 B]
-Get: 195 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-serialization1.55-dev i386 1.55.0+dfsg-3ubuntu2 [168 kB]
-Get: 196 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-date-time1.55-dev i386 1.55.0+dfsg-3ubuntu2 [26.5 kB]
-Get: 197 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-date-time-dev i386 1.55.0.2 [2890 B]
-Get: 198 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-exception1.55-dev i386 1.55.0+dfsg-3ubuntu2 [4544 B]
-Get: 199 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-exception-dev i386 1.55.0.2 [2884 B]
-Get: 200 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-system1.55-dev i386 1.55.0+dfsg-3ubuntu2 [9250 B]
-Get: 201 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-filesystem1.55-dev i386 1.55.0+dfsg-3ubuntu2 [45.8 kB]
-Get: 202 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-filesystem-dev i386 1.55.0.2 [2916 B]
-Get: 203 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-test1.55-dev i386 1.55.0+dfsg-3ubuntu2 [223 kB]
-Get: 204 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-graph1.55-dev i386 1.55.0+dfsg-3ubuntu2 [111 kB]
-Get: 205 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-graph-dev i386 1.55.0.2 [2978 B]
-Get: 206 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-graph-parallel1.55-dev i386 1.55.0+dfsg-3ubuntu2 [78.0 kB]
-Get: 207 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-graph-parallel-dev i386 1.55.0.2 [3010 B]
-Get: 208 http://archive.ubuntu.com/ubuntu/ vivid/main libicu-dev i386 52.1-8 [7753 kB]
-Get: 209 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-regex1.55-dev i386 1.55.0+dfsg-3ubuntu2 [330 kB]
-Get: 210 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-iostreams1.55-dev i386 1.55.0+dfsg-3ubuntu2 [33.7 kB]
-Get: 211 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-iostreams-dev i386 1.55.0.2 [2882 B]
-Get: 212 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-locale1.55-dev i386 1.55.0+dfsg-3ubuntu2 [324 kB]
-Get: 213 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-locale-dev i386 1.55.0.2 [3228 B]
-Get: 214 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-log1.55.0 i386 1.55.0+dfsg-3ubuntu2 [539 kB]
-Get: 215 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-thread1.55-dev i386 1.55.0+dfsg-3ubuntu2 [32.4 kB]
-Get: 216 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-log1.55-dev i386 1.55.0+dfsg-3ubuntu2 [662 kB]
-Get: 217 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-log-dev i386 1.55.0.2 [3088 B]
-Get: 218 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-math1.55-dev i386 1.55.0+dfsg-3ubuntu2 [526 kB]
-Get: 219 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-math-dev i386 1.55.0.2 [3090 B]
-Get: 220 http://archive.ubuntu.com/ubuntu/ vivid/main libibverbs-dev i386 1.1.8-1ubuntu1 [77.8 kB]
-Get: 221 http://archive.ubuntu.com/ubuntu/ vivid/main libnuma-dev i386 2.0.10-1ubuntu2 [32.1 kB]
-Get: 222 http://archive.ubuntu.com/ubuntu/ vivid/main libltdl-dev i386 2.4.2-1.11 [159 kB]
-Get: 223 http://archive.ubuntu.com/ubuntu/ vivid/universe libhwloc-dev i386 1.10.0-3 [138 kB]
-Get: 224 http://archive.ubuntu.com/ubuntu/ vivid/universe libopenmpi-dev i386 1.6.5-9.2 [381 kB]
-Get: 225 http://archive.ubuntu.com/ubuntu/ vivid/universe mpi-default-dev i386 1.0.2+nmu2 [4000 B]
-Get: 226 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-mpi1.55-dev i386 1.55.0+dfsg-3ubuntu2 [145 kB]
-Get: 227 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-mpi-dev i386 1.55.0.2 [2972 B]
-Get: 228 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-mpi-python1.55-dev i386 1.55.0+dfsg-3ubuntu2 [25.7 kB]
-Get: 229 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-mpi-python-dev i386 1.55.0.2 [3000 B]
-Get: 230 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-program-options1.55-dev i386 1.55.0+dfsg-3ubuntu2 [149 kB]
-Get: 231 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-program-options-dev i386 1.55.0.2 [2904 B]
-Get: 232 http://archive.ubuntu.com/ubuntu/ vivid/main libpython-dev i386 2.7.9-1 [7862 B]
-Get: 233 http://archive.ubuntu.com/ubuntu/ vivid/main python2.7-dev i386 2.7.9-2ubuntu3 [270 kB]
-Get: 234 http://archive.ubuntu.com/ubuntu/ vivid/main python-dev i386 2.7.9-1 [1226 B]
-Get: 235 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-python1.55-dev i386 1.55.0+dfsg-3ubuntu2 [152 kB]
-Get: 236 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-python-dev i386 1.55.0.2 [3284 B]
-Get: 237 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-random1.55-dev i386 1.55.0+dfsg-3ubuntu2 [6734 B]
-Get: 238 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-random-dev i386 1.55.0.2 [2884 B]
-Get: 239 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-regex-dev i386 1.55.0.2 [3148 B]
-Get: 240 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-serialization-dev i386 1.55.0.2 [3122 B]
-Get: 241 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-signals1.55-dev i386 1.55.0+dfsg-3ubuntu2 [35.8 kB]
-Get: 242 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-signals-dev i386 1.55.0.2 [2954 B]
-Get: 243 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-system-dev i386 1.55.0.2 [3030 B]
-Get: 244 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-test-dev i386 1.55.0.2 [2924 B]
-Get: 245 http://archive.ubuntu.com/ubuntu/ vivid/main libboost-thread-dev i386 1.55.0.2 [2922 B]
-Get: 246 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-timer1.55-dev i386 1.55.0+dfsg-3ubuntu2 [10.5 kB]
-Get: 247 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-timer-dev i386 1.55.0.2 [3014 B]
-Get: 248 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-wave1.55-dev i386 1.55.0+dfsg-3ubuntu2 [235 kB]
-Get: 249 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-wave-dev i386 1.55.0.2 [2914 B]
-Get: 250 http://archive.ubuntu.com/ubuntu/ vivid/universe libboost-all-dev i386 1.55.0.2 [2288 B]
-Get: 251 http://archive.ubuntu.com/ubuntu/ vivid/main libdrm-dev i386 2.4.60-2 [179 kB]
-Get: 252 http://archive.ubuntu.com/ubuntu/ vivid/main x11proto-dri2-dev all 2.8-2 [12.6 kB]
-Get: 253 http://archive.ubuntu.com/ubuntu/ vivid/main x11proto-gl-dev all 1.4.17-1 [17.9 kB]
-Get: 254 http://archive.ubuntu.com/ubuntu/ vivid/main xorg-sgml-doctools all 1:1.11-1 [12.9 kB]
-Get: 255 http://archive.ubuntu.com/ubuntu/ vivid/main x11proto-core-dev all 7.0.26-1 [700 kB]
-Get: 256 http://archive.ubuntu.com/ubuntu/ vivid/main libxau-dev i386 1:1.0.8-1 [10.2 kB]
-Get: 257 http://archive.ubuntu.com/ubuntu/ vivid/main libxdmcp-dev i386 1:1.1.1-1build1 [24.6 kB]
-Get: 258 http://archive.ubuntu.com/ubuntu/ vivid/main x11proto-input-dev all 2.3.1-1 [118 kB]
-Get: 259 http://archive.ubuntu.com/ubuntu/ vivid/main x11proto-kb-dev all 1.0.6-2 [269 kB]
-Get: 260 http://archive.ubuntu.com/ubuntu/ vivid/main xtrans-dev all 1.3.5-1 [70.5 kB]
-Get: 261 http://archive.ubuntu.com/ubuntu/ vivid/main libpthread-stubs0-dev i386 0.3-4 [4054 B]
-Get: 262 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb1-dev i386 1.10-2ubuntu1 [76.6 kB]
-Get: 263 http://archive.ubuntu.com/ubuntu/ vivid/main libx11-dev i386 2:1.6.2-2ubuntu2 [657 kB]
-Get: 264 http://archive.ubuntu.com/ubuntu/ vivid/main x11proto-xext-dev all 7.3.0-1 [212 kB]
-Get: 265 http://archive.ubuntu.com/ubuntu/ vivid/main libxext-dev i386 2:1.3.3-1 [82.8 kB]
-Get: 266 http://archive.ubuntu.com/ubuntu/ vivid/main x11proto-xf86vidmode-dev all 2.3.1-2 [6116 B]
-Get: 267 http://archive.ubuntu.com/ubuntu/ vivid/main libxxf86vm-dev i386 1:1.1.3-1 [14.3 kB]
-Get: 268 http://archive.ubuntu.com/ubuntu/ vivid/main x11proto-fixes-dev all 1:5.0-2ubuntu2 [14.2 kB]
-Get: 269 http://archive.ubuntu.com/ubuntu/ vivid/main libxfixes-dev i386 1:5.0.1-2 [11.2 kB]
-Get: 270 http://archive.ubuntu.com/ubuntu/ vivid/main x11proto-damage-dev all 1:1.2.1-2 [8286 B]
-Get: 271 http://archive.ubuntu.com/ubuntu/ vivid/main libxdamage-dev i386 1:1.1.4-2 [4900 B]
-Get: 272 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-glx0-dev i386 1.10-2ubuntu1 [31.5 kB]
-Get: 273 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-dri2-0-dev i386 1.10-2ubuntu1 [9060 B]
-Get: 274 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-dri3-dev i386 1.10-2ubuntu1 [6034 B]
-Get: 275 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-render0-dev i386 1.10-2ubuntu1 [16.9 kB]
-Get: 276 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-randr0-dev i386 1.10-2ubuntu1 [21.1 kB]
-Get: 277 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-shape0-dev i386 1.10-2ubuntu1 [7278 B]
-Get: 278 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-xfixes0-dev i386 1.10-2ubuntu1 [12.1 kB]
-Get: 279 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-sync-dev i386 1.10-2ubuntu1 [10.7 kB]
-Get: 280 http://archive.ubuntu.com/ubuntu/ vivid/main libxcb-present-dev i386 1.10-2ubuntu1 [6994 B]
-Get: 281 http://archive.ubuntu.com/ubuntu/ vivid/main libxshmfence-dev i386 1.1-4 [3606 B]
-Get: 282 http://archive.ubuntu.com/ubuntu/ vivid/main libx11-xcb-dev i386 2:1.6.2-2ubuntu2 [9802 B]
-Get: 283 http://archive.ubuntu.com/ubuntu/ vivid/main zlib1g-dev i386 1:1.2.8.dfsg-2ubuntu1 [168 kB]
-Get: 284 http://archive.ubuntu.com/ubuntu/ vivid/main libprotobuf-lite9 i386 2.6.1-1 [63.0 kB]
-Get: 285 http://archive.ubuntu.com/ubuntu/ vivid/main libprotobuf-dev i386 2.6.1-1 [486 kB]
-Get: 286 http://archive.ubuntu.com/ubuntu/ vivid/main libxkbcommon-dev i386 0.4.3-2 [137 kB]
-Get: 287 http://archive.ubuntu.com/ubuntu/ vivid/main libmircommon-dev i386 0.12.1+15.04.20150324-0ubuntu1 [20.8 kB]
-Get: 288 http://archive.ubuntu.com/ubuntu/ vivid/main libmirclient-dev i386 0.12.1+15.04.20150324-0ubuntu1 [11.8 kB]
-Get: 289 http://archive.ubuntu.com/ubuntu/ vivid/main libwayland-dev i386 1.7.0-0ubuntu1 [112 kB]
-Get: 290 http://archive.ubuntu.com/ubuntu/ vivid/main libegl1-mesa-dev i386 10.5.2-0ubuntu1 [17.9 kB]
-Get: 291 http://archive.ubuntu.com/ubuntu/ vivid/main libgles2-mesa-dev i386 10.5.2-0ubuntu1 [28.2 kB]
-Get: 292 http://archive.ubuntu.com/ubuntu/ vivid/main mesa-common-dev i386 10.5.2-0ubuntu1 [302 kB]
-Get: 293 http://archive.ubuntu.com/ubuntu/ vivid/main libgl1-mesa-dev i386 10.5.2-0ubuntu1 [5292 B]
-Get: 294 http://archive.ubuntu.com/ubuntu/ vivid/main libglu1-mesa-dev i386 9.0.0-2 [248 kB]
-Get: 295 http://archive.ubuntu.com/ubuntu/ vivid/main qtchooser i386 52-gae5eeef-1 [22.8 kB]
-Get: 296 http://archive.ubuntu.com/ubuntu/ vivid/main qt5-qmake i386 5.4.1+dfsg-2ubuntu4 [1267 kB]
-Get: 297 http://archive.ubuntu.com/ubuntu/ vivid/main qtbase5-dev-tools i386 5.4.1+dfsg-2ubuntu4 [1250 kB]
-Get: 298 http://archive.ubuntu.com/ubuntu/ vivid/main qtbase5-dev i386 5.4.1+dfsg-2ubuntu4 [883 kB]
-Fetched 102 MB in 1min 6s (1543 kB/s)
 debconf: delaying package configuration, since apt-utils is not installed
 E: Can not write log (Is /dev/pts mounted?) - posix_openpt (2: No such file or directory)
 Selecting previously unselected package libexpat1:i386.
@@ -1686,13 +1387,10 @@ The following extra packages will be installed:
   libfakeroot
 The following NEW packages will be installed:
   fakeroot libfakeroot
-0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
-Need to get 90.1 kB of archives.
-After this operation, 431 kB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu/ vivid/main libfakeroot i386 1.20.2-1ubuntu1 [27.0 kB]
-Get:2 http://archive.ubuntu.com/ubuntu/ vivid/main fakeroot i386 1.20.2-1ubuntu1 [63.1 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 90.1 kB in 0s (134 kB/s)
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/90.1 kB of archives.
+After this operation, 431 kB of additional disk space will be used.
 E: Can not write log (Is /dev/pts mounted?) - posix_openpt (2: No such file or directory)
 Selecting previously unselected package libfakeroot:i386.
 (Reading database ... 32189 files and directories currently installed.)
@@ -1706,306 +1404,6 @@ Setting up libfakeroot:i386 (1.20.2-1ubuntu1) ...
 Setting up fakeroot (1.20.2-1ubuntu1) ...
 update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
 I: Copying back the cached apt archive contents
-I: new cache content libcr0_0.8.5-2.1_i386.deb added
-I: new cache content libxrandr2_2%3a1.4.2-1_i386.deb added
-I: new cache content libboost-python1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content fontconfig_2.11.1-0ubuntu6_i386.deb added
-I: new cache content mesa-common-dev_10.5.2-0ubuntu1_i386.deb added
-I: new cache content libxcb-randr0-dev_1.10-2ubuntu1_i386.deb added
-I: new cache content libboost-chrono-dev_1.55.0.2_i386.deb added
-I: new cache content libboost-chrono1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libxcb-render0_1.10-2ubuntu1_i386.deb added
-I: new cache content libpango-1.0-0_1.36.8-3_i386.deb added
-I: new cache content libboost-locale1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libxcb-sync1_1.10-2ubuntu1_i386.deb added
-I: new cache content libboost-iostreams-dev_1.55.0.2_i386.deb added
-I: new cache content libx11-data_2%3a1.6.2-2ubuntu2_all.deb added
-I: new cache content libxxf86vm-dev_1%3a1.1.3-1_i386.deb added
-I: new cache content libice6_2%3a1.0.9-1_i386.deb added
-I: new cache content libgbm1_10.5.2-0ubuntu1_i386.deb added
-I: new cache content libmircommon3_0.12.1+15.04.20150324-0ubuntu1_i386.deb added
-I: new cache content libavahi-client3_0.6.31-4ubuntu4_i386.deb added
-I: new cache content libmircommon-dev_0.12.1+15.04.20150324-0ubuntu1_i386.deb added
-I: new cache content libxcb-dri3-0_1.10-2ubuntu1_i386.deb added
-I: new cache content libcroco3_0.6.8-3_i386.deb added
-I: new cache content debhelper_9.20150101ubuntu1_all.deb added
-I: new cache content libpython2.7-minimal_2.7.9-2ubuntu3_i386.deb added
-I: new cache content x11proto-kb-dev_1.0.6-2_all.deb added
-I: new cache content libxcb-render-util0_0.3.9-1_i386.deb added
-I: new cache content libboost-filesystem1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libboost-timer1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libatk1.0-data_2.14.0-1ubuntu1_all.deb added
-I: new cache content libboost-timer1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content x11proto-damage-dev_1%3a1.2.1-2_all.deb added
-I: new cache content libdbus-1-3_1.8.12-1ubuntu5_i386.deb added
-I: new cache content libnuma1_2.0.10-1ubuntu2_i386.deb added
-I: new cache content libxfixes-dev_1%3a5.0.1-2_i386.deb added
-I: new cache content libgtk2.0-0_2.24.27-0ubuntu1_i386.deb added
-I: new cache content libltdl-dev_2.4.2-1.11_i386.deb added
-I: new cache content libxext-dev_2%3a1.3.3-1_i386.deb added
-I: new cache content libboost-random1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content x11-common_1%3a7.7+7ubuntu4_all.deb added
-I: new cache content libtiff5_4.0.3-12.3ubuntu2_i386.deb added
-I: new cache content python2.7-minimal_2.7.9-2ubuntu3_i386.deb added
-I: new cache content libxcb-shape0-dev_1.10-2ubuntu1_i386.deb added
-I: new cache content libcups2_2.0.2-1ubuntu3_i386.deb added
-I: new cache content libnuma-dev_2.0.10-1ubuntu2_i386.deb added
-I: new cache content libboost-date-time1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content po-debconf_1.0.16+nmu3_all.deb added
-I: new cache content libxcb-util0_0.3.8-3_i386.deb added
-I: new cache content libboost-thread1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libqt5printsupport5_5.4.1+dfsg-2ubuntu4_i386.deb added
-I: new cache content gettext-base_0.19.2-2ubuntu1_i386.deb added
-I: new cache content libxdamage1_1%3a1.1.4-2_i386.deb added
-I: new cache content libboost-random-dev_1.55.0.2_i386.deb added
-I: new cache content libboost-graph1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libxcb-xfixes0-dev_1.10-2ubuntu1_i386.deb added
-I: new cache content libavahi-common3_0.6.31-4ubuntu4_i386.deb added
-I: new cache content bsdmainutils_9.0.6ubuntu1_i386.deb added
-I: new cache content libmirprotobuf0_0.12.1+15.04.20150324-0ubuntu1_i386.deb added
-I: new cache content libpthread-stubs0-dev_0.3-4_i386.deb added
-I: new cache content libxi6_2%3a1.7.4-1_i386.deb added
-I: new cache content man-db_2.7.0.2-5_i386.deb added
-I: new cache content libxkbcommon-x11-0_0.4.3-2_i386.deb added
-I: new cache content libxcb-shape0_1.10-2ubuntu1_i386.deb added
-I: new cache content fonts-dejavu-core_2.34-1ubuntu1_all.deb added
-I: new cache content libqt5gui5_5.4.1+dfsg-2ubuntu4_i386.deb added
-I: new cache content libcairo2_1.14.2-1ubuntu1_i386.deb added
-I: new cache content libboost-signals1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libxcb-dri3-dev_1.10-2ubuntu1_i386.deb added
-I: new cache content libboost-math-dev_1.55.0.2_i386.deb added
-I: new cache content libopenmpi1.6_1.6.5-9.2_i386.deb added
-I: new cache content libexpat1-dev_2.1.0-6ubuntu1_i386.deb added
-I: new cache content libmirclient8_0.12.1+15.04.20150324-0ubuntu1_i386.deb added
-I: new cache content libxcb-present0_1.10-2ubuntu1_i386.deb added
-I: new cache content libxdamage-dev_1%3a1.1.4-2_i386.deb added
-I: new cache content python2.7_2.7.9-2ubuntu3_i386.deb added
-I: new cache content libboost-exception1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libglu1-mesa_9.0.0-2_i386.deb added
-I: new cache content libwayland-egl1-mesa_10.5.2-0ubuntu1_i386.deb added
-I: new cache content icu-devtools_52.1-8_i386.deb added
-I: new cache content libegl1-mesa-dev_10.5.2-0ubuntu1_i386.deb added
-I: new cache content libxkbcommon-dev_0.4.3-2_i386.deb added
-I: new cache content libglu1-mesa-dev_9.0.0-2_i386.deb added
-I: new cache content libqt5xml5_5.4.1+dfsg-2ubuntu4_i386.deb added
-I: new cache content libxcb-keysyms1_0.4.0-1_i386.deb added
-I: new cache content libqt5network5_5.4.1+dfsg-2ubuntu4_i386.deb added
-I: new cache content libicu-dev_52.1-8_i386.deb added
-I: new cache content libgdk-pixbuf2.0-common_2.31.3-1_all.deb added
-I: new cache content mir-client-platform-mesa2_0.12.1+15.04.20150324-0ubuntu1_i386.deb added
-I: new cache content libwayland-cursor0_1.7.0-0ubuntu1_i386.deb added
-I: new cache content libgdk-pixbuf2.0-0_2.31.3-1_i386.deb added
-I: new cache content libboost-system1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libboost-all-dev_1.55.0.2_i386.deb added
-I: new cache content libboost1.55-tools-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libxcb-render0-dev_1.10-2ubuntu1_i386.deb added
-I: new cache content libboost-serialization-dev_1.55.0.2_i386.deb added
-I: new cache content libboost-log1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libboost-iostreams1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libgles2-mesa-dev_10.5.2-0ubuntu1_i386.deb added
-I: new cache content libxrender1_1%3a0.9.8-1build1_i386.deb added
-I: new cache content libxext6_2%3a1.3.3-1_i386.deb added
-I: new cache content groff-base_1.22.3-1_i386.deb added
-I: new cache content libboost-mpi-python1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libglapi-mesa_10.5.2-0ubuntu1_i386.deb added
-I: new cache content libxcursor1_1%3a1.1.14-1_i386.deb added
-I: new cache content libpython-dev_2.7.9-1_i386.deb added
-I: new cache content libxcb-shm0_1.10-2ubuntu1_i386.deb added
-I: new cache content libxcb-sync-dev_1.10-2ubuntu1_i386.deb added
-I: new cache content libdrm-radeon1_2.4.60-2_i386.deb added
-I: new cache content libboost-python1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libboost-timer-dev_1.55.0.2_i386.deb added
-I: new cache content libboost-regex-dev_1.55.0.2_i386.deb added
-I: new cache content libxshmfence1_1.1-4_i386.deb added
-I: new cache content libboost-graph-dev_1.55.0.2_i386.deb added
-I: new cache content libxcb-xkb1_1.10-2ubuntu1_i386.deb added
-I: new cache content libgraphite2-3_1.2.4-3ubuntu1_i386.deb added
-I: new cache content libnettle4_2.7.1-5_i386.deb added
-I: new cache content libprotobuf9_2.6.1-1_i386.deb added
-I: new cache content libgssapi-krb5-2_1.12.1+dfsg-18_i386.deb added
-I: new cache content libpython2.7-dev_2.7.9-2ubuntu3_i386.deb added
-I: new cache content libxcb-image0_0.4.0-1_i386.deb added
-I: new cache content libmirclient-dev_0.12.1+15.04.20150324-0ubuntu1_i386.deb added
-I: new cache content libboost-serialization1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libboost-coroutine-dev_1.55.0.2_i386.deb added
-I: new cache content libxcb-glx0_1.10-2ubuntu1_i386.deb added
-I: new cache content libboost-graph1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content openmpi-common_1.6.5-9.2_all.deb added
-I: new cache content libboost-locale-dev_1.55.0.2_i386.deb added
-I: new cache content libboost-coroutine1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content mpi-default-bin_1.0.2+nmu2_i386.deb added
-I: new cache content fontconfig-config_2.11.1-0ubuntu6_all.deb added
-I: new cache content libboost-test1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content python-minimal_2.7.9-1_i386.deb added
-I: new cache content libpython2.7-stdlib_2.7.9-2ubuntu3_i386.deb added
-I: new cache content libboost-graph-parallel1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libgl1-mesa-dri_10.5.2-0ubuntu1_i386.deb added
-I: new cache content libunistring0_0.9.3-5.2ubuntu1_i386.deb added
-I: new cache content libxshmfence-dev_1.1-4_i386.deb added
-I: new cache content libatk1.0-0_2.14.0-1ubuntu1_i386.deb added
-I: new cache content libxcb-dri2-0-dev_1.10-2ubuntu1_i386.deb added
-I: new cache content xtrans-dev_1.3.5-1_all.deb added
-I: new cache content libfakeroot_1.20.2-1ubuntu1_i386.deb added
-I: new cache content dh-apparmor_2.9.1-0ubuntu9_all.deb added
-I: new cache content libllvm3.6_1%3a3.6-2ubuntu1_i386.deb added
-I: new cache content libboost-locale1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libdrm-nouveau2_2.4.60-2_i386.deb added
-I: new cache content libboost-mpi1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content python-dev_2.7.9-1_i386.deb added
-I: new cache content python2.7-dev_2.7.9-2ubuntu3_i386.deb added
-I: new cache content xorg-sgml-doctools_1%3a1.11-1_all.deb added
-I: new cache content libpangocairo-1.0-0_1.36.8-3_i386.deb added
-I: new cache content libx11-xcb-dev_2%3a1.6.2-2ubuntu2_i386.deb added
-I: new cache content mpi-default-dev_1.0.2+nmu2_i386.deb added
-I: new cache content qtchooser_52-gae5eeef-1_i386.deb added
-I: new cache content libboost-regex1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libboost-filesystem-dev_1.55.0.2_i386.deb added
-I: new cache content libxml2_2.9.2+dfsg1-3_i386.deb added
-I: new cache content libboost-graph-parallel1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libicu52_52.1-8_i386.deb added
-I: new cache content libboost-log1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libxdmcp6_1%3a1.1.1-1build1_i386.deb added
-I: new cache content x11proto-core-dev_7.0.26-1_all.deb added
-I: new cache content libboost-serialization1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libx11-dev_2%3a1.6.2-2ubuntu2_i386.deb added
-I: new cache content libgl1-mesa-glx_10.5.2-0ubuntu1_i386.deb added
-I: new cache content libgnutls-deb0-28_3.3.8-3ubuntu3_i386.deb added
-I: new cache content qt5-qmake_5.4.1+dfsg-2ubuntu4_i386.deb added
-I: new cache content libedit2_3.1-20140620-2_i386.deb added
-I: new cache content libboost-date-time1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libboost-program-options-dev_1.55.0.2_i386.deb added
-I: new cache content libtasn1-6_4.2-2ubuntu1_i386.deb added
-I: new cache content libboost-context1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libffi6_3.2.1-2_i386.deb added
-I: new cache content libopenmpi-dev_1.6.5-9.2_i386.deb added
-I: new cache content shared-mime-info_1.3-1_i386.deb added
-I: new cache content libkrb5-3_1.12.1+dfsg-18_i386.deb added
-I: new cache content libboost-wave1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libqt5core5a_5.4.1+dfsg-2ubuntu4_i386.deb added
-I: new cache content libboost-wave1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libboost1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libboost-signals-dev_1.55.0.2_i386.deb added
-I: new cache content x11proto-xf86vidmode-dev_2.3.1-2_all.deb added
-I: new cache content libfontconfig1_2.11.1-0ubuntu6_i386.deb added
-I: new cache content libqt5dbus5_5.4.1+dfsg-2ubuntu4_i386.deb added
-I: new cache content libboost-signals1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libgles2-mesa_10.5.2-0ubuntu1_i386.deb added
-I: new cache content libboost-mpi-dev_1.55.0.2_i386.deb added
-I: new cache content qtbase5-dev_5.4.1+dfsg-2ubuntu4_i386.deb added
-I: new cache content openmpi-bin_1.6.5-9.2_i386.deb added
-I: new cache content libpipeline1_1.4.0-1_i386.deb added
-I: new cache content libpython-stdlib_2.7.9-1_i386.deb added
-I: new cache content libxcb-present-dev_1.10-2ubuntu1_i386.deb added
-I: new cache content libfreetype6_2.5.2-2ubuntu3_i386.deb added
-I: new cache content libglib2.0-0_2.44.0-1ubuntu3_i386.deb added
-I: new cache content libkeyutils1_1.5.9-5ubuntu1_i386.deb added
-I: new cache content libpython2.7_2.7.9-2ubuntu3_i386.deb added
-I: new cache content libdrm-dev_2.4.60-2_i386.deb added
-I: new cache content x11proto-dri2-dev_2.8-2_all.deb added
-I: new cache content libxinerama1_2%3a1.1.3-1_i386.deb added
-I: new cache content libboost-atomic1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libjpeg-turbo8_1.3.0-0ubuntu2_i386.deb added
-I: new cache content libxcb1-dev_1.10-2ubuntu1_i386.deb added
-I: new cache content libboost-dev_1.55.0.2_i386.deb added
-I: new cache content libboost-date-time-dev_1.55.0.2_i386.deb added
-I: new cache content libpangoft2-1.0-0_1.36.8-3_i386.deb added
-I: new cache content libp11-kit0_0.20.7-1_i386.deb added
-I: new cache content libboost-thread-dev_1.55.0.2_i386.deb added
-I: new cache content libharfbuzz0b_0.9.37-1_i386.deb added
-I: new cache content libboost-chrono1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libexpat1_2.1.0-6ubuntu1_i386.deb added
-I: new cache content libjpeg8_8c-2ubuntu8_i386.deb added
-I: new cache content libssl1.0.0_1.0.1f-1ubuntu11_i386.deb added
-I: new cache content libqt5sql5_5.4.1+dfsg-2ubuntu4_i386.deb added
-I: new cache content libboost-program-options1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libxau6_1%3a1.0.8-1_i386.deb added
-I: new cache content libboost-mpi1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content x11proto-input-dev_2.3.1-1_all.deb added
-I: new cache content x11proto-fixes-dev_1%3a5.0-2ubuntu2_all.deb added
-I: new cache content libdrm-intel1_2.4.60-2_i386.deb added
-I: new cache content ucf_3.0030_all.deb added
-I: new cache content libboost-filesystem1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libboost-wave-dev_1.55.0.2_i386.deb added
-I: new cache content libboost-test1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libboost-regex1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libjasper1_1.900.1-debian1-2.4_i386.deb added
-I: new cache content libboost-thread1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libhwloc5_1.10.0-3_i386.deb added
-I: new cache content libltdl7_2.4.2-1.11_i386.deb added
-I: new cache content libwayland-dev_1.7.0-0ubuntu1_i386.deb added
-I: new cache content libxcb-dri2-0_1.10-2ubuntu1_i386.deb added
-I: new cache content libdrm2_2.4.60-2_i386.deb added
-I: new cache content libavahi-common-data_0.6.31-4ubuntu4_i386.deb added
-I: new cache content python_2.7.9-1_i386.deb added
-I: new cache content libxxf86vm1_1%3a1.1.3-1_i386.deb added
-I: new cache content libthai0_0.1.21-1_i386.deb added
-I: new cache content libboost-math1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libelf1_0.160-0ubuntu3_i386.deb added
-I: new cache content libboost-mpi-python-dev_1.55.0.2_i386.deb added
-I: new cache content libxcb-glx0-dev_1.10-2ubuntu1_i386.deb added
-I: new cache content libk5crypto3_1.12.1+dfsg-18_i386.deb added
-I: new cache content libxfixes3_1%3a5.0.1-2_i386.deb added
-I: new cache content libxcomposite1_1%3a0.4.4-1_i386.deb added
-I: new cache content x11proto-gl-dev_1.4.17-1_all.deb added
-I: new cache content libxcb-xfixes0_1.10-2ubuntu1_i386.deb added
-I: new cache content libboost-mpi-python1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libmtdev1_1.1.5-1ubuntu2_i386.deb added
-I: new cache content libdatrie1_0.2.8-1_i386.deb added
-I: new cache content libboost-atomic1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libwayland-client0_1.7.0-0ubuntu1_i386.deb added
-I: new cache content intltool-debian_0.35.0+20060710.1_all.deb added
-I: new cache content fakeroot_1.20.2-1ubuntu1_i386.deb added
-I: new cache content file_1%3a5.20-1ubuntu2_i386.deb added
-I: new cache content libibverbs1_1.1.8-1ubuntu1_i386.deb added
-I: new cache content libgtk2.0-common_2.24.27-0ubuntu1_all.deb added
-I: new cache content libpixman-1-0_0.32.6-3_i386.deb added
-I: new cache content libkrb5support0_1.12.1+dfsg-18_i386.deb added
-I: new cache content libegl1-mesa_10.5.2-0ubuntu1_i386.deb added
-I: new cache content libx11-6_2%3a1.6.2-2ubuntu2_i386.deb added
-I: new cache content libboost-context1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libboost-atomic-dev_1.55.0.2_i386.deb added
-I: new cache content libxdmcp-dev_1%3a1.1.1-1build1_i386.deb added
-I: new cache content libboost-system-dev_1.55.0.2_i386.deb added
-I: new cache content libboost-tools-dev_1.55.0.2_i386.deb added
-I: new cache content libibverbs-dev_1.1.8-1ubuntu1_i386.deb added
-I: new cache content libboost-system1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content x11proto-xext-dev_7.3.0-1_all.deb added
-I: new cache content libxcb-icccm4_0.4.1-1ubuntu1_i386.deb added
-I: new cache content libboost-math1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libxcb-randr0_1.10-2ubuntu1_i386.deb added
-I: new cache content libboost-program-options1.55-dev_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libboost-random1.55.0_1.55.0+dfsg-3ubuntu2_i386.deb added
-I: new cache content libpng12-0_1.2.51-0ubuntu3_i386.deb added
-I: new cache content libmagic1_1%3a5.20-1ubuntu2_i386.deb added
-I: new cache content libboost-graph-parallel-dev_1.55.0.2_i386.deb added
-I: new cache content libboost-test-dev_1.55.0.2_i386.deb added
-I: new cache content libhogweed2_2.7.1-5_i386.deb added
-I: new cache content libsm6_2%3a1.2.2-1_i386.deb added
-I: new cache content libx11-xcb1_2%3a1.6.2-2ubuntu2_i386.deb added
-I: new cache content libasprintf0c2_0.19.2-2ubuntu1_i386.deb added
-I: new cache content libxkbcommon0_0.4.3-2_i386.deb added
-I: new cache content libprotobuf-dev_2.6.1-1_i386.deb added
-I: new cache content libqt5widgets5_5.4.1+dfsg-2ubuntu4_i386.deb added
-I: new cache content libqt5test5_5.4.1+dfsg-2ubuntu4_i386.deb added
-I: new cache content libqt5concurrent5_5.4.1+dfsg-2ubuntu4_i386.deb added
-I: new cache content libthai-data_0.1.21-1_all.deb added
-I: new cache content libxcb1_1.10-2ubuntu1_i386.deb added
-I: new cache content libhwloc-dev_1.10.0-3_i386.deb added
-I: new cache content zlib1g-dev_1%3a1.2.8.dfsg-2ubuntu1_i386.deb added
-I: new cache content libboost-python-dev_1.55.0.2_i386.deb added
-I: new cache content libjbig0_2.1-3.1_i386.deb added
-I: new cache content libgl1-mesa-dev_10.5.2-0ubuntu1_i386.deb added
-I: new cache content libwayland-server0_1.7.0-0ubuntu1_i386.deb added
-I: new cache content libxau-dev_1%3a1.0.8-1_i386.deb added
-I: new cache content libboost-exception-dev_1.55.0.2_i386.deb added
-I: new cache content libpciaccess0_0.13.2-3build1_i386.deb added
-I: new cache content libboost-context-dev_1.55.0.2_i386.deb added
-I: new cache content xkb-data_2.12-1ubuntu1_all.deb added
-I: new cache content libboost-log-dev_1.55.0.2_i386.deb added
-I: new cache content mime-support_3.58ubuntu1_all.deb added
-I: new cache content libprotobuf-lite9_2.6.1-1_i386.deb added
-I: new cache content qtbase5-dev-tools_5.4.1+dfsg-2ubuntu4_i386.deb added
-I: new cache content gettext_0.19.2-2ubuntu1_i386.deb added
 I: Copying source file
 I: copying [../raspbed_1.0-0ubuntu1.dsc]
 I: copying [../raspbed_1.0.orig.tar.gz]
@@ -2059,7 +1457,7 @@ g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIE -DAPP_VERSION=\"1.0\" -D
 g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIE -DAPP_VERSION=\"1.0\" -DQT_NO_DEBUG_OUTPUT -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -I../build/moc -I../build/ui -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -o ../build/o/unix/moc_Raspbed.o ../build/moc/moc_Raspbed.cpp
 /usr/lib/i386-linux-gnu/qt5/bin/moc -DAPP_VERSION=\"1.0\" -DQT_NO_DEBUG_OUTPUT -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I/tmp/buildd/raspbed-1.0/src -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/i386-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/i686-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/4.9/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include Settings.hpp -o ../build/moc/moc_Settings.cpp
 g++ -c -pipe -O2 -std=c++0x -Wall -W -D_REENTRANT -fPIE -DAPP_VERSION=\"1.0\" -DQT_NO_DEBUG_OUTPUT -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -I../build/moc -I../build/ui -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -o ../build/o/unix/moc_Settings.o ../build/moc/moc_Settings.cpp
-g++ -Wl,-O1 -o ../bin/QRaspbed ../build/o/unix/main.o ../build/o/unix/SerialPort.o ../build/o/unix/Raspbed.o ../build/o/unix/Bed.o ../build/o/unix/Settings.o ../build/o/unix/Data.o ../build/o/unix/moc_Raspbed.o ../build/o/unix/moc_Settings.o   -lboost_system -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
+g++ -Wl,-O1 -o ../bin/raspbed ../build/o/unix/main.o ../build/o/unix/SerialPort.o ../build/o/unix/Raspbed.o ../build/o/unix/Bed.o ../build/o/unix/Settings.o ../build/o/unix/Data.o ../build/o/unix/moc_Raspbed.o ../build/o/unix/moc_Settings.o   -lboost_system -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
 make[2]: Leaving directory '/tmp/buildd/raspbed-1.0/src'
 make[1]: Leaving directory '/tmp/buildd/raspbed-1.0'
    dh_auto_test
@@ -2082,16 +1480,36 @@ make[2]: Nothing to be done for 'install'.
 make[2]: Leaving directory '/tmp/buildd/raspbed-1.0/src'
 make[1]: Leaving directory '/tmp/buildd/raspbed-1.0'
    dh_install
-cp: cannot stat 'debian/tmp/bin/GeneratedBinary': No such file or directory
-dh_install: cp -a debian/tmp/bin/GeneratedBinary debian/raspbed/usr/bin/ returned exit code 1
-debian/rules:5: recipe for target 'binary' failed
-make: *** [binary] Error 2
-dpkg-buildpackage: error: fakeroot debian/rules binary gave error exit status 2
-E: Failed autobuilding of package
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_compress
+   dh_fixperms
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+   dh_installdeb
+   dh_gencontrol
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package `raspbed' in `../raspbed_1.0-0ubuntu1_i386.deb'.
+ dpkg-genchanges -sa -sa -eJohn Ramsdene <RamsdenJ@shaw.ca> >../raspbed_1.0-0ubuntu1_i386.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build raspbed-1.0
+dpkg-buildpackage: full upload (original source is included)
+I: Copying back the cached apt archive contents
 I: unmounting dev/pts filesystem
-W: Could not unmount dev/pts: umount: /home/john/pbuilder/build//32741/dev/pts: not mounted
+W: Could not unmount dev/pts: umount: /home/john/pbuilder/build//16482/dev/pts: not mounted
 W: Ignored error in unmount
 I: unmounting run/shm filesystem
 I: unmounting proc filesystem
 I: cleaning the build env 
-I: removing directory /home/john/pbuilder/build//32741 and its subdirectories
+I: removing directory /home/john/pbuilder/build//16482 and its subdirectories
+I: Current time: Wed Sep  2 23:08:15 PDT 2015
+I: pbuilder-time-stamp: 1441260495
+ signfile /home/john/pbuilder/result//raspbed_1.0-0ubuntu1.dsc John Ramsdene <RamsdenJ@shaw.ca>
+gpg: skipped "John Ramsdene <RamsdenJ@shaw.ca>": secret key not available
+gpg: /tmp/debsign.Y6Hr9bFB/raspbed_1.0-0ubuntu1.dsc: clearsign failed: secret key not available
+debsign: gpg error occurred!  Aborting....
