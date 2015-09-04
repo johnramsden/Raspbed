@@ -14,9 +14,14 @@ VERSION = 1.1
 # Define the preprocessor macro to get the application version in our application.
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 
-TARGET = QRaspbed
+TARGET = raspbed
 TEMPLATE = app
 
+DESTDIR = ../bin
+MOC_DIR = ../build/moc
+RCC_DIR = ../build/rcc
+UI_DIR = ../build/ui
+unix:OBJECTS_DIR = ../build/o/unix
 
 SOURCES += main.cpp\
     SerialPort.cpp \
@@ -45,4 +50,4 @@ RESOURCES += \
     resources.qrc
 
 # For deployed version
-# DEFINES += QT_NO_DEBUG_OUTPUT
+DEFINES += QT_NO_DEBUG_OUTPUT
