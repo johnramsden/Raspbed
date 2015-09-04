@@ -1,2 +1,3 @@
 bin/raspbed usr/bin
 raspbed.desktop usr/share/applications
+src/images/icon/raspbed-icon.svg usr/share/pixmaps
