@@ -15,6 +15,8 @@ var searchData=
   ['setport',['setPort',['../class_data.html#a405c105993ba38146ef655219e05ab96',1,'Data::setPort()'],['../class_settings.html#a7b7d10179ad2fb05ffc276226a3d6ed6',1,'Settings::setPort()']]],
   ['setportname',['setPortName',['../class_serial_port.html#a4b8f4ff0c224baa897b297e8a4dbb96f',1,'SerialPort']]],
   ['setserialports',['setSerialPorts',['../class_settings.html#ab489ef7aa18f72ac9b9db4064f5516e0',1,'Settings']]],
+  ['setskypepassword',['setSkypePassword',['../class_data.html#a04b982a50a7b90e7661968c5866c6c54',1,'Data::setSkypePassword()'],['../class_settings.html#a55318c4c735ad511a773304a5ff6c932',1,'Settings::setSkypePassword()']]],
+  ['setskypeusername',['setSkypeUsername',['../class_data.html#adef7b9c5295eef0232cfedc937b0d285',1,'Data::setSkypeUsername()'],['../class_settings.html#a9fdd92a208a172af203ddfd507997f79',1,'Settings::setSkypeUsername()']]],
   ['setstopbits',['setStopBits',['../class_serial_port.html#a084a7c28f336d8db7f0a412c2190a277',1,'SerialPort']]],
   ['settings',['Settings',['../class_settings.html#ab17afd334db0af5f71c027b8eda8d514',1,'Settings']]],
   ['setupbuttons',['setupButtons',['../class_raspbed.html#aa6e5cf40e3713244ef709623125e2820',1,'Raspbed']]],

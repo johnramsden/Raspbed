@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>471</height>
+    <height>577</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,6 +39,34 @@
     </layout>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="skypeUsernameHorizontalLayout">
+     <item>
+      <widget class="QLabel" name="skypeUsernameLabel">
+       <property name="text">
+        <string>Skype Username</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="skypeUsernameLineEdit"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="skypePasswordHorizontalLayout">
+     <item>
+      <widget class="QLabel" name="skypePasswordLabel">
+       <property name="text">
+        <string>Skype Password</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="skypePasswordLineEdit"/>
+     </item>
+    </layout>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="callContactHorizontalLayout">
      <item>
       <widget class="QLabel" name="callContactLabel">
@@ -53,7 +81,7 @@
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="callContactHorizontalLayout_2">
+    <layout class="QHBoxLayout" name="holdTimeHorizontalLayout">
      <item>
       <widget class="QLabel" name="holdTimeLabel">
        <property name="text">
@@ -98,6 +126,13 @@
     </widget>
    </item>
   </layout>
+  <zorder>iconStyleCheckBox</zorder>
+  <zorder>buttonModeCheckBox</zorder>
+  <zorder>buttonBox</zorder>
+  <zorder>darkHighlight</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>skypeUsernameLabel</zorder>
+  <zorder>layoutWidget_2</zorder>
  </widget>
  <resources/>
  <connections>

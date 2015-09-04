@@ -2,6 +2,8 @@
 
 QString Data::contact;
 QString Data::port;
+QString Data::skypeUsername;
+QString Data::skypePassword;
 QSettings Data::settings;
 bool Data::iconBorders;
 bool Data::buttonMode;
@@ -17,11 +19,14 @@ void Data::loadSettings() {
     qDebug() << "-------------------\nLoading settings:";
     port = settings.value("serialport").toString();
     iconBorders = settings.value("icons").toBool();
+    skypeUsername = settings.value("skypeUsername").toString();
+    skypePassword = settings.value("skypePassword").toString();
     contact = settings.value("contact").toString();
     buttonMode = settings.value("buttonMode").toBool();
     buttonHoldTime = settings.value("buttonHoldTime").toInt();
     darkHighlight = settings.value("darkHighlight").toBool();
     qDebug() << "Loaded: \nPort: " << port << "\nIcons:" << iconBorders
+             << "\nSkype User: " << skypeUsername << "\nSkype Pass: " << skypePassword
              << "\nContact:" << contact << "\nButtons" << buttonMode
              << "\nDark Highlight: " << darkHighlight;
 }
@@ -30,6 +35,8 @@ void Data::saveSettings() {
     qDebug() << "Saving settings:";
     settings.setValue("serialport", port);
     settings.setValue("icons", iconBorders);
+    settings.setValue("skypeUsername", skypeUsername);
+    settings.setValue("skypePassword", skypePassword);
     settings.setValue("contact", contact);
     settings.setValue("buttonMode", buttonMode);
     settings.setValue("buttonHoldTime", buttonHoldTime);
@@ -65,4 +72,24 @@ bool Data::isDarkHighlight()
 void Data::setDarkHighlight(bool value)
 {
     darkHighlight = value;
+}
+
+QString Data::getSkypeUsername()
+{
+    return skypeUsername;
+}
+
+void Data::setSkypeUsername(const QString &value)
+{
+    skypeUsername = value;
+}
+
+QString Data::getSkypePassword()
+{
+    return skypePassword;
+}
+
+void Data::setSkypePassword(const QString &value)
+{
+    skypePassword = value;
 }

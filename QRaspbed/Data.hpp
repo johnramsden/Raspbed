@@ -31,11 +31,19 @@ class Data {
     static bool isDarkHighlight();
     static void setDarkHighlight(bool value);
 
+    static QString getSkypeUsername();
+    static void setSkypeUsername(const QString &value);
+
+    static QString getSkypePassword();
+    static void setSkypePassword(const QString &value);
+
 private:
     Data(Data const &) = delete;
     Data &operator=(Data const &) = delete;
 
     // Instance variables
+    static QString skypeUsername;
+    static QString skypePassword;
     static QString contact;
     static bool iconBorders;
     static QString port;

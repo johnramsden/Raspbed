@@ -6,6 +6,8 @@ var class_settings =
     [ "getContact", "class_settings.html#a4876b759a0401cc7ccdeea9b1cd78906", null ],
     [ "getPort", "class_settings.html#a58a731533433cf11efaaae03ec1ebf5d", null ],
     [ "getSerialPorts", "class_settings.html#aa5b6b9b66af6aa3bf72003578105fd8c", null ],
+    [ "getSkypePassword", "class_settings.html#a8e1ee7db04507dbc1ebc22307420f3e4", null ],
+    [ "getSkypeUsername", "class_settings.html#a182ea070354b38809c038f0636c336aa", null ],
     [ "isBordered", "class_settings.html#af06bc69f54583391a90051a881f7ceae", null ],
     [ "isButtonMode", "class_settings.html#af9530a96922fd216114fa2c7e6d7b050", null ],
     [ "isDarkHighlight", "class_settings.html#a7e433294efe03f41c276500f5192a5cf", null ],
@@ -17,6 +19,8 @@ var class_settings =
     [ "setDarkHighlight", "class_settings.html#ae2a550b817e5eacb756757f34ec77038", null ],
     [ "setPort", "class_settings.html#a7b7d10179ad2fb05ffc276226a3d6ed6", null ],
     [ "setSerialPorts", "class_settings.html#ab489ef7aa18f72ac9b9db4064f5516e0", null ],
+    [ "setSkypePassword", "class_settings.html#a55318c4c735ad511a773304a5ff6c932", null ],
+    [ "setSkypeUsername", "class_settings.html#a9fdd92a208a172af203ddfd507997f79", null ],
     [ "updateData", "class_settings.html#a84a09ba8c45fc91c8d67dc1d7351e4b3", null ],
     [ "bordered", "class_settings.html#a8c1b006a2899d4dab98358d530dfe889", null ],
     [ "buttonHoldTime", "class_settings.html#aa1d7cfe794180f610b5a70ed02e474ae", null ],
@@ -25,5 +29,7 @@ var class_settings =
     [ "darkHighlight", "class_settings.html#a1681864172b3824d6e8d96b915c4db0f", null ],
     [ "port", "class_settings.html#a8093bcd2cdc276ad16c75c2de49cde9f", null ],
     [ "serialPorts", "class_settings.html#a05ab288614776193c3398cac017ad7bd", null ],
+    [ "skypePassword", "class_settings.html#ac1ac188d8c2dad2d86135d4188d7e4db", null ],
+    [ "skypeUsername", "class_settings.html#a06814474b0630ff4c33a2a2be0855047", null ],
     [ "ui", "class_settings.html#a98680be421d0ae7c34a57f2a159eacd4", null ]
 ];
