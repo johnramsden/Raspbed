@@ -4,6 +4,7 @@ var class_raspbed =
     [ "~Raspbed", "class_raspbed.html#a2f1990f87273dacc7f180abcc9b712f1", null ],
     [ "bedDownHoldButton", "class_raspbed.html#afe73456b8d1744b63bf3f1f7f41f3a70", null ],
     [ "bedUpHoldButton", "class_raspbed.html#a8340a6818478e86a79d4fef973d86de0", null ],
+    [ "callContact", "class_raspbed.html#a70669dede69d52c8b1d848aec381cb2a", null ],
     [ "eventFilter", "class_raspbed.html#a060083cfc7959b0f9b575a1f0df23a31", null ],
     [ "feetDownHoldButton", "class_raspbed.html#a3c2008545d393f0807dfbed373466fe9", null ],
     [ "feetUpHoldButton", "class_raspbed.html#abadc3496995f2ade3cd43cddce5c5f83", null ],

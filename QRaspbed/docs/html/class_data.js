@@ -5,8 +5,6 @@ var class_data =
     [ "getButtonHoldTime", "class_data.html#a2a8b467a33035659bd90190df94978f3", null ],
     [ "getContact", "class_data.html#a558f532ce86fc7966c40fc0b721ea1c3", null ],
     [ "getPort", "class_data.html#a84d8d172583a7db3fe5373439382ff99", null ],
-    [ "getSkypePassword", "class_data.html#ac24460f0eb6558321c5e00a39e8cc35a", null ],
-    [ "getSkypeUsername", "class_data.html#ad30abaa5a76ac8f83c090a1b8117e273", null ],
     [ "isBordered", "class_data.html#a05a23cfd0e7b49d70a3df8a94ce7358f", null ],
     [ "isButtonMode", "class_data.html#a838c0481ff54d605cef5dd9b6465dabd", null ],
     [ "isDarkHighlight", "class_data.html#abfe32c8f520b68117e7906e6d6f82d0e", null ],
@@ -19,15 +17,11 @@ var class_data =
     [ "setContact", "class_data.html#a85bfdc8991905828988862344d0674d3", null ],
     [ "setDarkHighlight", "class_data.html#a82b8ada2231d5e7aa59288e2f984c9f8", null ],
     [ "setPort", "class_data.html#a405c105993ba38146ef655219e05ab96", null ],
-    [ "setSkypePassword", "class_data.html#a04b982a50a7b90e7661968c5866c6c54", null ],
-    [ "setSkypeUsername", "class_data.html#adef7b9c5295eef0232cfedc937b0d285", null ],
     [ "buttonHoldTime", "class_data.html#a77730aeed3c116d423e40fbf7e7b65f3", null ],
     [ "buttonMode", "class_data.html#a993952bf6c0eff6a54afc273c0f5a72a", null ],
     [ "contact", "class_data.html#aa38a318064795343c9358cfc58fa4f04", null ],
     [ "darkHighlight", "class_data.html#af8cf81c43b22466c0a88a653bfef562f", null ],
     [ "iconBorders", "class_data.html#ae509e54e6876e1ca7683263d2d61c9fd", null ],
     [ "port", "class_data.html#ad19a95cadfd733efaabab55ccc156d34", null ],
-    [ "settings", "class_data.html#a8143e0ec3ca7ab340da2484021ea6fa4", null ],
-    [ "skypePassword", "class_data.html#aa9ece5fec3a9628ed33fdd700ca61c75", null ],
-    [ "skypeUsername", "class_data.html#a6963d94ab59372bc8f5cff6454a6a613", null ]
+    [ "settings", "class_data.html#a8143e0ec3ca7ab340da2484021ea6fa4", null ]
 ];

@@ -39,34 +39,6 @@
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="skypeUsernameHorizontalLayout">
-     <item>
-      <widget class="QLabel" name="skypeUsernameLabel">
-       <property name="text">
-        <string>Skype Username</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="skypeUsernameLineEdit"/>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="skypePasswordHorizontalLayout">
-     <item>
-      <widget class="QLabel" name="skypePasswordLabel">
-       <property name="text">
-        <string>Skype Password</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="skypePasswordLineEdit"/>
-     </item>
-    </layout>
-   </item>
-   <item>
     <layout class="QHBoxLayout" name="callContactHorizontalLayout">
      <item>
       <widget class="QLabel" name="callContactLabel">
@@ -130,9 +102,7 @@
   <zorder>buttonModeCheckBox</zorder>
   <zorder>buttonBox</zorder>
   <zorder>darkHighlight</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>skypeUsernameLabel</zorder>
-  <zorder>layoutWidget_2</zorder>
+  <zorder></zorder>
  </widget>
  <resources/>
  <connections>

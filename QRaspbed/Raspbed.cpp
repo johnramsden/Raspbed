@@ -262,8 +262,6 @@ void Raspbed::openSettings() {
 
     settingsDialog->setSerialPorts(serialPortOptions);
     settingsDialog->setPort(settings.getPort());
-    settingsDialog->setSkypeUsername(settings.getSkypeUsername());
-    settingsDialog->setSkypePassword(settings.getSkypePassword());
     settingsDialog->setContact(settings.getContact());
     settingsDialog->setBordered(settings.isBordered());
     settingsDialog->setButtonMode(settings.isButtonMode());
@@ -274,8 +272,6 @@ void Raspbed::openSettings() {
     settingsDialog->exec();
 
     if (settingsDialog->result() == QDialog::Accepted) {
-        settings.setSkypeUsername(settingsDialog->getSkypeUsername());
-        settings.setSkypePassword(settingsDialog->getSkypePassword());
         settings.setContact(settingsDialog->getContact());
         settings.setPort(settingsDialog->getPort());
         settings.setBordered(settingsDialog->isBordered());
@@ -434,20 +430,9 @@ void Raspbed::on_flattenBedButton_clicked() {
 
 void Raspbed::on_callButton_clicked() {
     // Kill skype if it's running
-    std::string killSkypeCommand = "kill $(ps -A | grep skype | awk '{ print $1; }')";
-    system(killSkypeCommand.c_str());
-    qDebug() << "Killed skype";
-
-    sleep(1);
-
-//    // Login to skype
-//    std::string loginSkypeCommand = "echo " + settings.getSkypeUsername().toStdString()
-//            + " " + settings.getSkypePassword().toStdString() + " | skype --pipelogin";
-//    system(loginSkypeCommand.c_str());
-//    ui->statusBar->showMessage("Logged in to skype");
-//    qDebug() << "Logged in to skype";
-
-    sleep(1);
+//    std::string killSkypeCommand = "kill $(ps -A | grep skype | awk '{ print $1; }')";
+//    system(killSkypeCommand.c_str());
+//    qDebug() << "Killed skype";
 
     qDebug() << "Calling " << settings.getContact();
     QString message = "Calling skype contact " + settings.getContact();
@@ -460,5 +445,4 @@ void Raspbed::on_callButton_clicked() {
     qDebug() << "skype --callto " + settings.getContact() + " &";
 
     system(skypeCommand.c_str());
-
 }

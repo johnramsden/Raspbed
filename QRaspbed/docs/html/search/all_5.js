@@ -11,7 +11,5 @@ var searchData=
   ['getportname',['getPortName',['../class_serial_port.html#a00ae1664b2a5bb552a96319455afaf8f',1,'SerialPort']]],
   ['getserialport',['getSerialPort',['../class_bed.html#a60147d39e187813b709957c58c9f5f41',1,'Bed']]],
   ['getserialports',['getSerialPorts',['../class_settings.html#aa5b6b9b66af6aa3bf72003578105fd8c',1,'Settings']]],
-  ['getskypepassword',['getSkypePassword',['../class_data.html#ac24460f0eb6558321c5e00a39e8cc35a',1,'Data::getSkypePassword()'],['../class_settings.html#a8e1ee7db04507dbc1ebc22307420f3e4',1,'Settings::getSkypePassword()']]],
-  ['getskypeusername',['getSkypeUsername',['../class_data.html#ad30abaa5a76ac8f83c090a1b8117e273',1,'Data::getSkypeUsername()'],['../class_settings.html#a182ea070354b38809c038f0636c336aa',1,'Settings::getSkypeUsername()']]],
   ['getstopbits',['getStopBits',['../class_serial_port.html#a681018ff4aadd5d420c60e99bc91f88a',1,'SerialPort']]]
 ];

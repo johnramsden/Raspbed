@@ -162,6 +162,11 @@ private slots:
 
   private:
     /**
+     * @brief callContact calls your contact using skype
+     * @param contact number you want to call in format +6041234567
+     */
+    void callContact(std::string contact);
+    /**
      * @brief setupDisplay sets up the icons by loading the pixmaps into the icons
      * sets them to enabled or disabled depending on settings and sets the styling
      * depending on button mode.

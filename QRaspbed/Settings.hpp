@@ -41,12 +41,6 @@ class Settings : public QDialog {
     bool isDarkHighlight() const;
     void setDarkHighlight(bool value);
 
-    QString getSkypeUsername() const;
-    void setSkypeUsername(const QString &value);
-
-    QString getSkypePassword() const;
-    void setSkypePassword(const QString &value);
-
 private slots:
     void updateData();
 
@@ -54,8 +48,6 @@ private:
     QStringList serialPorts;
     Ui::Settings *ui;
 
-    QString skypeUsername;
-    QString skypePassword;
     QString contact;
     QString port;
     QString buttonHoldTime;
