@@ -15,9 +15,11 @@ Raspbed::Raspbed(QWidget *parent)
 
     selectedButton = ui->headUpButton;
     selected = false;
-
+    callInProgress = false;
     numRightClicks = 0;
     numLeftClicks = 0;
+
+    resetBed();
 }
 
 Raspbed::~Raspbed() { delete ui; }
@@ -73,42 +75,43 @@ void Raspbed::mouseSelectEvent(QMouseEvent *event) {
         QTimer::singleShot(500, this, SLOT(resetClicks()));
         numRightClicks++;
 
-        if ((numRightClicks >= 2) && (numLeftClicks >= 1)) {
-            on_callButton_clicked();
-        }
-
-        if (selected) {
-            if (selectedButton == ui->headUpButton) { // Set correct button
-                headUpHoldButton();
-            } else if (selectedButton == ui->headDownButton) {
-                headDownHoldButton();
-            } else if (selectedButton == ui->feetUpButton) {
-                feetUpHoldButton();
-            } else if (selectedButton == ui->feetDownButton) {
-                feetDownHoldButton();
-            } else if (selectedButton == ui->trendButton) {
-                trendHoldButton();
-            } else if (selectedButton == ui->bedUpButton) {
-                bedUpHoldButton();
-            } else if (selectedButton == ui->bedDownButton) {
-                bedDownHoldButton();
-            } else if (selectedButton == ui->lowerWheelsButton) {
-                lowerWheelsHoldButton();
-            } else {
-                qDebug() << "Error, button doesn't exist.";
+            if ((numRightClicks >= 2) && (numLeftClicks >= 1)) {
+                on_callButton_clicked();
             }
+
+            if (bed.getSerialPort()->isConnected() && selected) {
+                if (selectedButton == ui->headUpButton) { // Set correct button
+                    headUpHoldButton();
+                } else if (selectedButton == ui->headDownButton) {
+                    headDownHoldButton();
+                } else if (selectedButton == ui->feetUpButton) {
+                    feetUpHoldButton();
+                } else if (selectedButton == ui->feetDownButton) {
+                    feetDownHoldButton();
+                } else if (selectedButton == ui->trendButton) {
+                    trendHoldButton();
+                } else if (selectedButton == ui->bedUpButton) {
+                    bedUpHoldButton();
+                } else if (selectedButton == ui->bedDownButton) {
+                    bedDownHoldButton();
+                } else if (selectedButton == ui->lowerWheelsButton) {
+                    lowerWheelsHoldButton();
+                } else {
+                    qDebug() << "Error, button doesn't exist.";
+                }
+            }
+
+            if(settings.isDarkHighlight()){
+                selectedButton->setStyleSheet("background-color: black");
+            } else {
+                selectedButton->setStyleSheet("background-color: white");
+            }
+
+            selected = true;
+            qDebug() << "Pressed Right Click, R=" << QString::number(numRightClicks)
+                     << ", L=" << QString::number(numLeftClicks);
         }
 
-        if(settings.isDarkHighlight()){
-            selectedButton->setStyleSheet("background-color: black");
-        } else {
-            selectedButton->setStyleSheet("background-color: white");
-        }
-
-        selected = true;
-        qDebug() << "Pressed Right Click, R=" << QString::number(numRightClicks)
-                 << ", L=" << QString::number(numLeftClicks);
-    }
 }
 
 void Raspbed::mousePressEvent(QMouseEvent *event) {
@@ -429,11 +432,6 @@ void Raspbed::on_flattenBedButton_clicked() {
 }
 
 void Raspbed::on_callButton_clicked() {
-    // Kill skype if it's running
-//    std::string killSkypeCommand = "kill $(ps -A | grep skype | awk '{ print $1; }')";
-//    system(killSkypeCommand.c_str());
-//    qDebug() << "Killed skype";
-
     qDebug() << "Calling " << settings.getContact();
     QString message = "Calling skype contact " + settings.getContact();
 
@@ -444,5 +442,7 @@ void Raspbed::on_callButton_clicked() {
 
     qDebug() << "skype --callto " + settings.getContact() + " &";
 
+    callInProgress = true;
     system(skypeCommand.c_str());
 }
+

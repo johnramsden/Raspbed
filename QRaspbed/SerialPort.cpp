@@ -79,7 +79,12 @@ void SerialPort::stop() {
 
 void SerialPort::write(const char *data) {
     std::size_t size = sizeof(data);
-    boost::asio::write(port, boost::asio::buffer(data, size));
+
+    try {
+        boost::asio::write(port, boost::asio::buffer(data, size));
+    } catch (boost::system::system_error const &e) {
+        qDebug() << "Warning: Write error,  : " << e.what();
+    }
 }
 
 void SerialPort::print() {

@@ -264,7 +264,6 @@ private slots:
      * @brief callMade is true if a skype call is in progress
      */
     bool callInProgress;
-
     /**
      * @brief nextButton finds the next button selected when in sip'n puff mode
      * @return A QPushButton pointer to the next button.
