@@ -115,13 +115,13 @@ void Raspbed::mouseSelectEvent(QMouseEvent *event) {
 }
 
 void Raspbed::mousePressEvent(QMouseEvent *event) {
-    if (!settings.isButtonMode()  &&  bed.getSerialPort()->isConnected()) {
+    if (!settings.isButtonMode()) {
         mouseSelectEvent(event);
     }
 }
 
 bool Raspbed::eventFilter(QObject *object, QEvent *event) {
-    if (!settings.isButtonMode()  &&  bed.getSerialPort()->isConnected()) {
+    if (!settings.isButtonMode()) {
         if ((event->type() == QEvent::MouseButtonPress)) {
             mouseSelectEvent(static_cast<QMouseEvent *>(event));
             return true;
