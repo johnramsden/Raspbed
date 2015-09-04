@@ -1,0 +1,391 @@
+    1  ip addr show
+    2  sudo apt-get openssh-client openssh-server
+    3  sudo apt-get install openssh-client openssh-server
+    4  vino-preferences
+    5  tightvncserver -nolisten :1
+    6  sudo apt-get install tightvncserver
+    7  tightvncserver -nolisten :1
+    8  nano  ~/.vnc/xstartup
+    9  ls -la
+   10  cd .vnc/
+   11  ls
+   12  vncserver
+   13  nano  ~/.vnc/xstartup
+   14  tightvncserver -nolisten :1
+   15  ls /usr/share/fonts/X11/
+   16  cat Tesla\:1.log 
+   17  sudo apt-get install xfonts-75dpi
+   18  sudo apt-get install xfonts-100dpi
+   19  tightvncserver -nolisten :1
+   20  cat Tesla\:2.log 
+   21  sudo apt-get install  xfonts-base
+   22  vncserver
+   23  sudo hostname Tesla
+   24  nano  ~/.vnc/xstartup
+   25  tightvncserver
+   26  vncserver -kill :1
+   27  vncserver -kill :2
+   28  vncserver -kill :3
+   29  tightvncserver
+   30  cat /etc/hosts
+   31  vncserver -kill :1
+   32  vncserver -kill :2
+   33  vncserver -kill :3
+   34  vncserver -kill :4
+   35  sudo reboot
+   36  cd .vnc/
+   37  ls -la
+   38  sudo chmod +x ~/.vnc/xstartup
+   39  ls -la
+   40  vncserver
+   41  vncserver -kill :1
+   42  vncserver -geometry 1920x1080
+   43  sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+   44  sudo apt-get update && sudo apt-get install skype pulseaudio:i386
+   45  exit
+   46  gconf-editor
+   47  sudo apt-get install gconf-editor
+   48  reboot
+   49  gconf-editor
+   50  sudo systemctl disable vncserver@\:1.service 
+   51  sudo rm /etc/systemd/system/vncserver@:1.service
+   52  vncserver -geometry 1920x1080
+   53  reboot
+   54  git
+   55  sudo apt-get install git
+   56  pwd
+   57  git clone https://github.com/Ramsdenj/Raspbed.git
+   58  sudo apt-get install gnupg pbuilder ubuntu-dev-tools
+   59  lsb_release -a
+   60  pbuilder-dist vivid create
+   61  sudo apt-get install pbuilder debootstrap devscripts
+   62  sudo rm -rf /var/cache/pbuilder 
+   63  sudo apt-get remove --auto-remove pbuilder
+   64  ls
+   65  rm pbuilder/
+   66  rm -rf pbuilder/
+   67  ls
+   68  cd Raspbed/
+   69  ls
+   70  cd Packaging/
+   71  ls
+   72  ls Raspbed-1.0/
+   73  ls Raspbed-1.0/src/
+   74  qt
+   75  vncserver
+   76  apt-get install synaptic
+   77  sudo apt-get install synaptic
+   78  sudo apt-get install qt5-default qt5-qmake
+   79  cd Raspbed-1.0/
+   80  cd src/
+   81  qmake
+   82  make
+   83  sudo apt-get libboost-dev libboost-asio-dev
+   84  make
+   85  locate lboost_system
+   86  locate libboost_system
+   87  sudo apt-get install libtool
+   88  make
+   89  sudo apt-get uninstall libtool
+   90  sudo apt-get remove libtool
+   91  exit
+   92  nano ~/.bashrc
+   93  sudo apt-get install build-essential
+   94  sudo apt-get install gnupg pbuilder ubuntu-dev-tools bzr-builddeb apt-file
+   95  sudo apt-file update
+   96  reboot
+   97  ip addr show
+   98  sudo systemctl start opensshd.service
+   99  systemctl start ssh
+  100  systemctl enable ssh
+  101  sudo systemctl enable ssh
+  102  ip addr show
+  103  cd Raspbed/Packaging/Raspbed-1.0/src/
+  104  qmake
+  105  make
+  106  reboot
+  107  cd Raspbed
+  108  cd ..
+  109  sudo apt-get install xvkbd
+  110  ./QRaspbed 
+  111  sudo ./QRaspbed 
+  112  ip addr show
+  113  cd Raspbed/Packaging/Raspbed-1.0/src/
+  114  sudo ./QRaspbed 
+  115  cd Raspbed/Packaging/Raspbed-1.0/src/
+  116  nano QRaspbed.pro
+  117  make clean
+  118  qmake
+  119  make
+  120  locate boost_system
+  121  sudo apt-get install libboost-all-dev
+  122  make clean
+  123  qmake
+  124  make
+  125  vncserver
+  126  apt --installed list
+  127  sudo apt-get install aptitude
+  128  aptitude search '~i!~M'
+  129  reboot
+  130  sudo reboot
+  131  cd Raspbed/Packaging/Raspbed-1.0/
+  132  cd src/
+  133  ls
+  134  make clean
+  135  ll
+  136  cd ..
+  137  tar -zcvf Raspbed-1.0.tar.gz src/
+  138  ll
+  139  man dh-make 
+  140  dh-make Raspbed 1.0 Raspbed-1.0.tar.gz 
+  141  dh_make Raspbed 1.0 Raspbed-1.0.tar.gz 
+  142  sudo apt-get install dh_make
+  143  exit
+  144  sudo dpkg --install raspbed_1.0-0ubuntu1_i386.deb 
+  145  raspbed
+  146  make clean
+  147  qmake
+  148  cd ..
+  149  nano raspbed.desktop 
+  150  ls
+  151  sudo apt-get install dh-make
+  152  cd Raspbed/Packaging/Raspbed-1.0/
+  153  ls
+  154  dh-make Raspbed 1.0 Raspbed-1.0.tar.gz
+  155  man dh_make
+  156  mv Raspbed-1.0.tar.gz raspbed-1.0.tar.gz
+  157  dh_make -c GPL -f raspbed-1.0.tar.gz 
+  158  ls
+  159  cd ..
+  160  mv Raspbed-1.0/ raspbed-1.0/
+  161  cd raspbed-1.0/
+  162  dh_make -c GPL -f raspbed-1.0.tar.gz 
+  163  ls
+  164  ls src/
+  165  mv src raspbed-1.0
+  166  man dh_make
+  167  dh_make --native -c GPL
+  168  ls
+  169  cd ..
+  170  mv raspbed-1.0/ src/
+  171  cd ..
+  172  ls
+  173  git reset --hard HEAD
+  174  ls
+  175  cd Packaging/
+  176  ls
+  177  ls Raspbed-1.0/
+  178  ls Raspbed-1.0/src/
+  179  ls src/
+  180  cd ..
+  181  rm Packaging/
+  182  rm -rf Packaging/
+  183  git reset --hard HEAD
+  184  ls Packaging/
+  185  ls Packaging/Raspbed-1.0/
+  186  mv Packaging/Raspbed-1.0/src/ Packaging/raspbed-1.0
+  187  rm Packaging/Raspbed-1.0/
+  188  cd Packaging/
+  189  ls
+  190  ls raspbed-1.0/
+  191  rm -rf Raspbed-1.0/
+  192  cd raspbed-1.0/
+  193  ls
+  194  qmake
+  195  make
+  196  vncserver
+  197  ls
+  198  make clean
+  199  dh_make --native -c GPL
+  200  ls
+  201  cd debian/
+  202  rm *ex *EX
+  203  ls
+  204  nano control 
+  205  cd ..
+  206  git status
+  207  git add -A
+  208  git status
+  209  git commit -m "Added debian files in Packaging using dh_make. Finished editing chlog and control."
+  210  git config --global user.email "RamsdenJ@shaw.ca"
+  211  git config --global user.name "John Ramsden"
+  212  git commit -m "Added debian files in Packaging using dh_make. Finished editing chlog and control."
+  213  cd raspbed-1.0/debian/
+  214  nano docs 
+  215  ls
+  216  nano README.source 
+  217  sudo usermod -a -G dialout $USER
+  218  $USER
+  219  echo $USER
+  220  nano README.Debian 
+  221  nano README.source 
+  222  rm README.source 
+  223  nano README.Debian 
+  224  ls
+  225  nano README
+  226  nano README.Debian 
+  227  rm README.Debian 
+  228  nano README
+  229  git add -A
+  230  git commit -m "Finished editing debian packaging files"
+  231  cd ..
+  232  debuild -us -uc
+  233  ls
+  234  cd ..
+  235  ls
+  236  cd raspbed-1.0/
+  237  debuild -us -uc
+  238  nano debian/control 
+  239  debuild -us -uc
+  240  nano debian/control 
+  241  nano debian/docs 
+  242  debuild -us -uc
+  243  cd ..
+  244  ls
+  245  git add -A
+  246  git commit -m "Successful build of .deb package"
+  247  lintian raspbed_1.0-0ubuntu1.dsc 
+  248  lintian raspbed_1.0-0ubuntu1_i386.deb 
+  249  lesspipe raspbed_1.0-0ubuntu1_i386.deb 
+  250  sudo apt-get remove raspbed 
+  251  git history
+  252  git log
+  253  history
+  254  cd raspbed-1.0/
+  255  dh_make --native -c GPL
+  256  ls
+  257  nano raspbed.desktop 
+  258  ls
+  259  git add -A
+  260  git commit "Remade project structure for package & added a few files"
+  261  git commit -m "Remade project structure for package & added a few files"
+  262  nano raspbed.pro 
+  263  nano COPYING 
+  264  nano debian/copyright 
+  265  nano COPYING 
+  266  cat COPYING 
+  267  nano raspbed.pro 
+  268  nano src/src.pro 
+  269  git add -A
+  270  git commit -m "Changed src.pro and added GPL"
+  271  ls
+  272  rm -rf debian/
+  273  mkdir debian
+  274  cd debian/
+  275  nano source/format 
+  276  nano control
+  277  nano rules
+  278  echo 9 > compat
+  279  ls
+  280  cat changelog 
+  281  nano dirs
+  282  nano raspbed.install
+  283  ls
+  284  ls ..
+  285  git add -A
+  286  git commit -m "Finished new packaging files"
+  287  cd ../..
+  288  tar -zcvf raspbed_1.0-0ubuntu1.orig.tar.gz raspbed-1.0/
+  289  ls
+  290  cd raspbed-1.0/
+  291  dh_make -e ramsdenj@shaw.ca -f ../raspbed_1.0-0ubuntu1.orig.tar.gz -s
+  292  cd ..
+  293  rm debian.old/
+  294  rm -rf debian.old/
+  295  cd raspbed-1.0/
+  296  dh_make -e ramsdenj@shaw.ca -f ../raspbed_1.0-0ubuntu1.orig.tar.gz -s
+  297  cd ..
+  298  ls
+  299  cd ..
+  300  ls
+  301  cd Packaging/raspbed-1.0/
+  302  ls debian/
+  303  ls /usr/share/doc/dh_make/
+  304  nano debian/copyright 
+  305  git add -A
+  306  git commit -m "Added copyright"
+  307  sudo apt-get install pdebuild
+  308  cd ~/
+  309  ls
+  310  sudo pbuilder --create
+  311  pbuilder
+  312  sudo apt-get install pbuilder
+  313  sudo pbuilder --create
+  314  ls -R /
+  315  sudo ls -R / && sudo ls -R / &&sudo ls -R / &&sudo ls -R / &&sudo ls -R / && sudo ls -R / &&
+  316  sudo ls -R / && sudo ls -R / && sudo ls -R / && sudo ls -R / && sudo ls -R / && sudo ls -R / && sudo ls -R / && sudo ls -R / 
+  317  cd Raspbed/Packaging/raspbed-1.0/
+  318  pdebuild --debbuildopts -sa
+  319  nano debian/rules 
+  320  pdebuild --debbuildopts -sa
+  321  sudo pbuilder update --other-mirror "deb http://archive.ubuntu.com/ubuntu hardy main restricted universe multiverse" --override-config
+  322  sudo pbuilder update --othermirror "deb http://archive.ubuntu.com/ubuntu hardy main restricted universe multiverse" --override-config
+  323  sudo pbuilder update --othermirror "deb http://archive.ubuntu.com/ubuntu vivid main restricted universe multiverse" --override-config
+  324  pdebuild --debbuildopts -sa
+  325  git status
+  326  git commit -m "Fixed rules"
+  327  git add -A
+  328  git commit -m "Fixed rules"
+  329  git push
+  330  nano Raspbed/Packaging/raspbed-1.0/src/src.pro 
+  331  nano Raspbed/Packaging/raspbed-1.0/raspbed.desktop 
+  332  nano Raspbed/Packaging/raspbed-1.0/debian/raspbed.install 
+  333  cd Raspbed/Packaging/raspbed-1.0/
+  334  ls ..
+  335  cd ..
+  336  tar -zcvf raspbed_1.0-0ubuntu1.orig.tar.gz raspbed-1.0/
+  337  cd raspbed-1.0/
+  338  dh_make -e Ramsdenj@shaw.ca -f ../raspbed_1.0-0ubuntu1.orig.tar.gz -s
+  339  dh_make -e Ramsdenj@shaw.ca -f ../raspbed_1.0-0ubuntu1.orig.tar.gz -s -c GPL
+  340  ls ..
+  341  hist
+  342  history
+  343  man dh_make
+  344  man pdebuild
+  345  ls
+  346  cd ..
+  347  ls
+  348  cd ..
+  349  ls
+  350  cd ..
+  351  ls
+  352  ls -la
+  353  ls pbuilder/
+  354  nano .pbuilderrc 
+  355  ls
+  356  ls pbuilder/
+  357  rm -rf pbuilder/
+  358  sudo rm -rf pbuilder/
+  359  mkdir pbuilder
+  360  sudo pbuilder --create --mirror "https://archive.ubuntu.com/ubuntu"
+  361  history
+  362  sudo pbuilder --create
+  363  ls pbuilder/
+  364  sudo rm -rf pbuilder/
+  365  mkdir pbuilder
+  366  reboot
+  367  cd Raspbed/
+  368  git add -A
+  369  git commit -m "Fixed src.pro target and setup new build"
+  370  git push
+  371  man gpg
+  372  sudo reboot
+  373  vncserver
+  374  killall skype -s 9
+  375  rm -rf .Skype/
+  376  killall skype -s 9
+  377  reboot
+  378  sudo EDITOR=nano visudo
+  379  echo RUa5a69J > skype
+  380  sudo reboot
+  381  cd Raspbed/
+  382  git pull
+  383  reboot
+  384  cd Raspbed/
+  385  git pull
+  386  cd Packages/
+  387  ls
+  388  cd raspbed-1.1-packaging/
+  389  tar -zcvf raspbed_1.1-0ubuntu2.orig.tar.gz raspbed-1.1/
+  390  ls
+  391  history > ~/Raspbed/Packages/Package-Process.txt
