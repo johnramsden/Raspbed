@@ -136,7 +136,7 @@ Inheritance diagram for Raspbed:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af92b4c4cf2af1be65453fb9fee80ee62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raspbed.html#af92b4c4cf2af1be65453fb9fee80ee62">Raspbed</a> (QWidget *parent=0)</td></tr>
-<tr class="memdesc:af92b4c4cf2af1be65453fb9fee80ee62"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_raspbed.html" title="The Raspbed class. Holds Main window gui logic. ">Raspbed</a> constructor. Loads settings from a <a class="el" href="class_data.html">Data</a> object, set's up display, and settingsmenu.  <a href="#af92b4c4cf2af1be65453fb9fee80ee62">More...</a><br /></td></tr>
+<tr class="memdesc:af92b4c4cf2af1be65453fb9fee80ee62"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_raspbed.html" title="The Raspbed class. Holds Main window gui logic. ">Raspbed</a> constructor. Loads settings from a <a class="el" href="class_data.html" title="The Data class contains all the settings data variables as well as the saving and loading of data tha...">Data</a> object, set's up display, and settingsmenu.  <a href="#af92b4c4cf2af1be65453fb9fee80ee62">More...</a><br /></td></tr>
 <tr class="separator:af92b4c4cf2af1be65453fb9fee80ee62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f1990f87273dacc7f180abcc9b712f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raspbed.html#a2f1990f87273dacc7f180abcc9b712f1">~Raspbed</a> ()</td></tr>
 <tr class="separator:a2f1990f87273dacc7f180abcc9b712f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,6 +263,12 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a269fef50ea94cef8e79bdc53888632e1"><td class="memItemLeft" align="right" valign="top">Ui::Raspbed *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raspbed.html#a269fef50ea94cef8e79bdc53888632e1">ui</a></td></tr>
+<tr class="memdesc:a269fef50ea94cef8e79bdc53888632e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">object pointing to our user interface  <a href="#a269fef50ea94cef8e79bdc53888632e1">More...</a><br /></td></tr>
+<tr class="separator:a269fef50ea94cef8e79bdc53888632e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9082c9521a6848f92db21ea7034ae24f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bed.html">Bed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raspbed.html#a9082c9521a6848f92db21ea7034ae24f">bed</a></td></tr>
+<tr class="memdesc:a9082c9521a6848f92db21ea7034ae24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class containing bed specific variables and commands.  <a href="#a9082c9521a6848f92db21ea7034ae24f">More...</a><br /></td></tr>
+<tr class="separator:a9082c9521a6848f92db21ea7034ae24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1b378d07c13e6cfa94ccdf5a08f3de5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raspbed.html#ad1b378d07c13e6cfa94ccdf5a08f3de5">settings</a></td></tr>
 <tr class="memdesc:ad1b378d07c13e6cfa94ccdf5a08f3de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static settings class containing all of our settings variables.  <a href="#ad1b378d07c13e6cfa94ccdf5a08f3de5">More...</a><br /></td></tr>
 <tr class="separator:ad1b378d07c13e6cfa94ccdf5a08f3de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -272,12 +278,6 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ae9f02d803bd6f63270348298634fb4c1"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raspbed.html#ae9f02d803bd6f63270348298634fb4c1">settingsAction</a></td></tr>
 <tr class="memdesc:ae9f02d803bd6f63270348298634fb4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">settingsAction is our signal that is triggered upon selecting settings in the tool bar menu.  <a href="#ae9f02d803bd6f63270348298634fb4c1">More...</a><br /></td></tr>
 <tr class="separator:ae9f02d803bd6f63270348298634fb4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a269fef50ea94cef8e79bdc53888632e1"><td class="memItemLeft" align="right" valign="top">Ui::Raspbed *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raspbed.html#a269fef50ea94cef8e79bdc53888632e1">ui</a></td></tr>
-<tr class="memdesc:a269fef50ea94cef8e79bdc53888632e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">object pointing to our user interface  <a href="#a269fef50ea94cef8e79bdc53888632e1">More...</a><br /></td></tr>
-<tr class="separator:a269fef50ea94cef8e79bdc53888632e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9082c9521a6848f92db21ea7034ae24f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bed.html">Bed</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raspbed.html#a9082c9521a6848f92db21ea7034ae24f">bed</a></td></tr>
-<tr class="memdesc:a9082c9521a6848f92db21ea7034ae24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class containing bed specific variables and commands.  <a href="#a9082c9521a6848f92db21ea7034ae24f">More...</a><br /></td></tr>
-<tr class="separator:a9082c9521a6848f92db21ea7034ae24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d31381fc115ae76d15799f33f1221b3"><td class="memItemLeft" align="right" valign="top">QPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raspbed.html#a2d31381fc115ae76d15799f33f1221b3">headUpPixmap</a></td></tr>
 <tr class="memdesc:a2d31381fc115ae76d15799f33f1221b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">headUpPixmap head up icon  <a href="#a2d31381fc115ae76d15799f33f1221b3">More...</a><br /></td></tr>
 <tr class="separator:a2d31381fc115ae76d15799f33f1221b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -349,7 +349,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_raspbed.html" title="The Raspbed class. Holds Main window gui logic. ">Raspbed</a> constructor. Loads settings from a <a class="el" href="class_data.html">Data</a> object, set's up display, and settingsmenu. </p>
+<p><a class="el" href="class_raspbed.html" title="The Raspbed class. Holds Main window gui logic. ">Raspbed</a> constructor. Loads settings from a <a class="el" href="class_data.html" title="The Data class contains all the settings data variables as well as the saving and loading of data tha...">Data</a> object, set's up display, and settingsmenu. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">parent</td><td></td></tr>

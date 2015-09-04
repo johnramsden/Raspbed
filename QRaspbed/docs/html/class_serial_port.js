@@ -2,7 +2,6 @@ var class_serial_port =
 [
     [ "SerialPort", "class_serial_port.html#acfbfb2b7e48c5e6ea00dfd89d92bbd6f", null ],
     [ "SerialPort", "class_serial_port.html#ada54fda7a4e6e46f03d61bdc8361ebb9", null ],
-    [ "~SerialPort", "class_serial_port.html#a8e09f366ed9b26b0456b66ae7bd8c702", null ],
     [ "getBaudRate", "class_serial_port.html#a1f85a4f60fe5dca9fd35b657c2068b5a", null ],
     [ "getCharacterSize", "class_serial_port.html#a81251b2b8fd9c99cd67757fe43ca281d", null ],
     [ "getDevices", "class_serial_port.html#a2769b976b80beb5270532f439cdc7e1d", null ],

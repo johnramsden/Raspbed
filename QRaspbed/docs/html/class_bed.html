@@ -119,6 +119,9 @@ $(document).ready(function(){initNavTree('class_bed.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>The <a class="el" href="class_bed.html" title="The Bed class contains the logic used to send relay specific commands to the serial port...">Bed</a> class contains the logic used to send relay specific commands to the serial port.  
+ <a href="class_bed.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_bed_8hpp_source.html">Bed.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -130,9 +133,10 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a396970bc14881c4aa049506bb1a8997c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bed.html#a396970bc14881c4aa049506bb1a8997c">Bed</a> ()</td></tr>
-<tr class="memdesc:a396970bc14881c4aa049506bb1a8997c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_bed.html">Bed</a> Default bed constructor.  <a href="#a396970bc14881c4aa049506bb1a8997c">More...</a><br /></td></tr>
+<tr class="memdesc:a396970bc14881c4aa049506bb1a8997c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_bed.html" title="The Bed class contains the logic used to send relay specific commands to the serial port...">Bed</a> Default bed constructor.  <a href="#a396970bc14881c4aa049506bb1a8997c">More...</a><br /></td></tr>
 <tr class="separator:a396970bc14881c4aa049506bb1a8997c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a627de9b0b89ac699c6977a08a8a59fb7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bed.html#a627de9b0b89ac699c6977a08a8a59fb7">~Bed</a> ()</td></tr>
+<tr class="memdesc:a627de9b0b89ac699c6977a08a8a59fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual bed destructor, stops serial port at end of life.  <a href="#a627de9b0b89ac699c6977a08a8a59fb7">More...</a><br /></td></tr>
 <tr class="separator:a627de9b0b89ac699c6977a08a8a59fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a331f41fc0f8c005938e3db29e91fe6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bed.html#a331f41fc0f8c005938e3db29e91fe6e4">command</a> (const char <a class="el" href="class_bed.html#a6be0e475858746f91eafb52137e4e388">relay</a>, bool on)</td></tr>
 <tr class="memdesc:a331f41fc0f8c005938e3db29e91fe6e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes a relay number from 0 to 7 and respose with the byte code to write to serial port. an on or off boolean value is given in order to give the appropriate code to turn the relay on or off.  <a href="#a331f41fc0f8c005938e3db29e91fe6e4">More...</a><br /></td></tr>
@@ -152,7 +156,9 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a53543531165e40a5696b73df9cfbcc84"><td class="mdescLeft">&#160;</td><td class="mdescRight">serialPort contains all of the serialport logic.  <a href="#a53543531165e40a5696b73df9cfbcc84">More...</a><br /></td></tr>
 <tr class="separator:a53543531165e40a5696b73df9cfbcc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_bed.html" title="The Bed class contains the logic used to send relay specific commands to the serial port...">Bed</a> class contains the logic used to send relay specific commands to the serial port. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a396970bc14881c4aa049506bb1a8997c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -166,7 +172,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_bed.html">Bed</a> Default bed constructor. </p>
+<p><a class="el" href="class_bed.html" title="The Bed class contains the logic used to send relay specific commands to the serial port...">Bed</a> Default bed constructor. </p>
 
 <p>References <a class="el" href="class_bed.html#a53543531165e40a5696b73df9cfbcc84">serialPort</a>.</p>
 
@@ -192,6 +198,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Virtual bed destructor, stops serial port at end of life. </p>
 
 <p>References <a class="el" href="class_bed.html#a53543531165e40a5696b73df9cfbcc84">serialPort</a>.</p>
 
@@ -251,7 +259,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>getter for serialPort. </p>
-<dl class="section return"><dt>Returns</dt><dd>Shared pointer to <a class="el" href="class_serial_port.html">SerialPort</a> object. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Shared pointer to <a class="el" href="class_serial_port.html" title="The SerialPort class represents the logic used for the connection, writing and disconnecting to seria...">SerialPort</a> object. </dd></dl>
 
 <p>References <a class="el" href="class_bed.html#a53543531165e40a5696b73df9cfbcc84">serialPort</a>.</p>
 
@@ -293,7 +301,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>serialPort contains all of the serialport logic. </p>
-<dl class="section return"><dt>Returns</dt><dd>Shared pointer to <a class="el" href="class_serial_port.html">SerialPort</a> object. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Shared pointer to <a class="el" href="class_serial_port.html" title="The SerialPort class represents the logic used for the connection, writing and disconnecting to seria...">SerialPort</a> object. </dd></dl>
 
 <p>Referenced by <a class="el" href="class_bed.html#a396970bc14881c4aa049506bb1a8997c">Bed()</a>, <a class="el" href="class_bed.html#a331f41fc0f8c005938e3db29e91fe6e4">command()</a>, <a class="el" href="class_bed.html#a60147d39e187813b709957c58c9f5f41">getSerialPort()</a>, and <a class="el" href="class_bed.html#a627de9b0b89ac699c6977a08a8a59fb7">~Bed()</a>.</p>
 

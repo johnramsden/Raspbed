@@ -20,40 +20,37 @@
 #include <memory>
 #include <QDebug>
 
+/**
+ * @brief The SerialPort class represents the logic used for the connection,
+ * writing and disconnecting to serial port
+ */
 class SerialPort {
   public:
-    // Constructors
-
     /**
-         * Constructor. Default constructor.Creates and opens a serial device.
-         * @param name serial device name, example "ttyUSB0"
-         */
+    * Constructor. Default constructor.Creates and opens a serial device.
+    * @param name serial device name, example "ttyUSB0"
+    */
     SerialPort(std::string name = "ttyUSB0");
 
     /**
      * Constructor: Main constructor that takes serial port options
-         * Creates and opens a serial device.
-         * @param devname serial device name, example ttyUSB0"
-         * @param baud_rate serial baud rate
-         * @param opt_parity serial parity, default none
-         * @param opt_csize serial character size, default 8bit
-         * @param opt_flow serial flow control, default none
-         * @param opt_stop serial stop bits, default 1
-         * @throws boost::system::system_error if cannot open the
-         * serial device
-         */
+    * Creates and opens a serial device.
+    * @param devname serial device name, example ttyUSB0"
+    * @param baud_rate serial baud rate
+    * @param opt_parity serial parity, default none
+    * @param opt_csize serial character size, default 8bit
+    * @param opt_flow serial flow control, default none
+    * @param opt_stop serial stop bits, default 1
+    * @throws boost::system::system_error if cannot open the
+    * serial device
+    */
     SerialPort(std::string name, unsigned int baud_rate,
                boost::asio::serial_port_base::character_size character_size,
                boost::asio::serial_port_base::stop_bits stop_bits,
                boost::asio::serial_port_base::parity com_parity,
                boost::asio::serial_port_base::flow_control flow_control);
 
-    /**
-     * Destructor
-     */
-    virtual ~SerialPort();
-
-    // Member functions
+    /* ************ Member functions ************ */
 
     /**
      * Open serial port, and sets all options.
@@ -74,12 +71,11 @@ class SerialPort {
     void write(const char *data);
 
     /**
-     * @brief print
-     * Prints all of set options
+     * @brief Prints all of set options
      */
     void print();
 
-    // setters and getters
+    /* ************ setters and getters ************ */
     void
     setFlowControl(boost::asio::serial_port_base::flow_control flowControl);
     boost::asio::serial_port_base::flow_control getFlowControl() const;
@@ -94,9 +90,15 @@ class SerialPort {
     boost::asio::serial_port_base::baud_rate getBaudRate() const;
     void setPortName(std::string portName);
     std::string getPortName() const;
-
     bool isConnected();
     void setConnected(bool connected);
+
+    /**
+     * @brief Returns all open serial devices by getting all devices in "/sys/class/tty"
+     * in cross referencing them with all the devices that have device drivers, if they do
+     * they're returned in a vector.
+     * @return A vector of strings of all the different active serial ports
+     */
     std::vector<std::string> getDevices();
 
   private:
@@ -107,19 +109,42 @@ class SerialPort {
      */
     bool portExists(std::string port);
 
-    // Member variables
+    /* ************ Member variables ************ */
+    /**
+     * @brief Represents weather or not the serail port is open and ready for writing.
+     */
     bool connected;
-
+    /**
+     * @brief The name of the serial port you wish to use, most likely ttyUSB0
+     */
     std::string portName;
-
-    // Port variables
+    /**
+     * @brief Baudrate of serial device
+     */
     boost::asio::serial_port_base::baud_rate baudRate;
+    /**
+     * @brief Number of bits to send through serial port
+     */
     boost::asio::serial_port_base::character_size characterSize;
+    /**
+     * @brief Number of bits to be sent at end of write
+     */
     boost::asio::serial_port_base::stop_bits stopBits;
+    /**
+     * @brief Represents weather error detection is use
+     */
     boost::asio::serial_port_base::parity parity;
+    /**
+     * @brief Used for hand shaking
+     */
     boost::asio::serial_port_base::flow_control flowControl;
-
+    /**
+     * @brief io service object
+     */
     boost::asio::io_service io;
+    /**
+     * @brief Represents your serial port.
+     */
     boost::asio::serial_port port;
 };
 

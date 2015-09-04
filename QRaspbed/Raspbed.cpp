@@ -47,12 +47,12 @@ QPushButton *Raspbed::nextButton() {
         return ui->headUpButton;
     }
 }
+
 void Raspbed::resetClicks() {
     numRightClicks = 0;
     numLeftClicks = 0;
     qDebug() << "Reset Clicks";
 }
-
 
 void Raspbed::mouseSelectEvent(QMouseEvent *event) {
     if (event->button() == Qt::LeftButton) {
