@@ -2,7 +2,7 @@
 
 QString Data::contact;
 QString Data::port;
-QSettings Data::settings;
+QSettings Data::settings("Ramsdenj", "Raspbed");
 bool Data::iconBorders;
 bool Data::buttonMode;
 bool Data::darkHighlight;
