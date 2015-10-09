@@ -142,6 +142,7 @@ void Raspbed::resetBed() {
             settings.getPort();
         ui->statusBar->showMessage(errorMessage);
     }
+
 }
 
 void Raspbed::setupDisplay() {

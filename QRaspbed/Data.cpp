@@ -8,10 +8,7 @@ bool Data::buttonMode;
 bool Data::darkHighlight;
 int Data::buttonHoldTime;
 
-Data::Data() {
-    QCoreApplication::setOrganizationName("RamsdenJ");
-    QCoreApplication::setApplicationName("Raspbed");
-}
+Data::Data() {}
 
 void Data::loadSettings() {
     qDebug() << "-------------------\nLoading settings:";
