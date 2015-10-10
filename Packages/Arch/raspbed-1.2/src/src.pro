@@ -9,12 +9,12 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 # The application version
-VERSION = 1.1
+VERSION = 1.2
 
 # Define the preprocessor macro to get the application version in our application.
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 
-TARGET = QRaspbed
+TARGET = raspbed
 TEMPLATE = app
 
 
@@ -45,4 +45,4 @@ RESOURCES += \
     resources.qrc
 
 # For deployed version
-# DEFINES += QT_NO_DEBUG_OUTPUT
+DEFINES += QT_NO_DEBUG_OUTPUT

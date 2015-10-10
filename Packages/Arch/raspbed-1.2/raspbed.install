@@ -5,4 +5,5 @@ post_install{
 
 post_remove() {
 	xdg-icon-resource uninstall --novendor --size 128 raspbed
+	rm /usr/share/applications/raspbed.desktop
 }

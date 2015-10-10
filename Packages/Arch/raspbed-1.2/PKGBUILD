@@ -8,22 +8,13 @@ url="https://github.com/Ramsdenj/Raspbed"
 license=('GPL3')
 depends=('qt5-base', 'boost')
 optdepends=('skype: Call bell support')
-install=${pkgname}.install
-changelog=
-source=("$pkgname-$pkgver.tar.gz"
-        "$pkgname-$pkgver.patch")
-noextract=()
-md5sums=()
-validpgpkeys=()
-
-prepare() {
-	cd "$pkgname-$pkgver"
-	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
-}
+install='${pkgname}.install'
+changelog=${pkgname}.Changelog
+source=("${url}Raspbed/tree/master/Packages/Arch/${pkgname}-${pkgver}.tar.gz")
 
 build() {
 	cd "$pkgname-$pkgver"
-	./configure --prefix=/usr
+	qmake
 	make
 }
 
