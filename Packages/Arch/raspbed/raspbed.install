@@ -1,0 +1,8 @@
+post_install{
+	install "raspbed.desktop" "/usr/share/applications/"
+    xdg-icon-resource install --novendor --size 128 "src/images/icon/icon-128.png" raspbed
+}
+
+post_remove() {
+	xdg-icon-resource uninstall --novendor --size 128 raspbed
+}

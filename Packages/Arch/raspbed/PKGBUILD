@@ -1,0 +1,41 @@
+# Maintainer: John Ramsden <RamsdenJ@shaw.ca>
+pkgname=raspbed
+pkgver=1.2
+pkgrel=1
+pkgdesc="Controller and call bell for Volker hospital bed."
+arch=('any')
+url="https://github.com/Ramsdenj/Raspbed"
+license=('GPL3')
+depends=('qt5-base', 'boost')
+optdepends=('skype: Call bell support')
+install=${pkgname}.install
+changelog=
+source=("$pkgname-$pkgver.tar.gz"
+        "$pkgname-$pkgver.patch")
+noextract=()
+md5sums=()
+validpgpkeys=()
+
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+package() {
+	cd "$pkgname-$pkgver"
+#bin/raspbed usr/bin
+#raspbed.desktop usr/share/applications
+#src/images/icon/raspbed-icon.svg usr/share/pixmaps
+	make DESTDIR="$pkgdir/" install
+}

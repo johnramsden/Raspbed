@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/icons/no-border">
+        <file alias="bedDown.png">images/no-border/bedDownButton.png</file>
+        <file alias="bedUp.png">images/no-border/bedUpButton.png</file>
+        <file alias="call.png">images/no-border/callButton.png</file>
+        <file alias="feetDown.png">images/no-border/feetDownButton.png</file>
+        <file alias="feetUp.png">images/no-border/feetUpButton.png</file>
+        <file alias="flatten.png">images/no-border/flattenButton.png</file>
+        <file alias="headDown.png">images/no-border/headDownButton.png</file>
+        <file alias="headUp.png">images/no-border/headUpButton.png</file>
+        <file alias="lowerWheels.png">images/no-border/lowerWheelsButton.png</file>
+        <file alias="trend.png">images/no-border/trendButton.png</file>
+    </qresource>
+    <qresource prefix="/icons/border">
+        <file alias="bedDown.png">images/border/bedDownButton.png</file>
+        <file alias="bedUp.png">images/border/bedUpButton.png</file>
+        <file alias="call.png">images/border/callButton.png</file>
+        <file alias="feetDown.png">images/border/feetDownButton.png</file>
+        <file alias="feetUp.png">images/border/feetUpButton.png</file>
+        <file alias="flatten.png">images/border/flattenButton.png</file>
+        <file alias="headDown.png">images/border/headDownButton.png</file>
+        <file alias="headUp.png">images/border/headUpButton.png</file>
+        <file alias="lowerWheels.png">images/border/lowerWheelsButton.png</file>
+        <file alias="trend.png">images/border/trendButton.png</file>
+    </qresource>
+</RCC>
