@@ -8,7 +8,7 @@ url="https://github.com/Ramsdenj/Raspbed"
 license=('GPL3')
 depends=('qt5-base', 'boost')
 optdepends=('skype: Call bell support')
-install='${pkgname}.install'
+install=${pkgname}.install
 changelog=${pkgname}.Changelog
 source=("${url}Raspbed/tree/master/Packages/Arch/${pkgname}-${pkgver}.tar.gz")
 
@@ -24,9 +24,6 @@ check() {
 }
 
 package() {
-	cd "$pkgname-$pkgver/src"
-#bin/raspbed usr/bin
-#raspbed.desktop usr/share/applications
-#src/images/icon/raspbed-icon.svg usr/share/pixmaps
-	make DESTDIR="$pkgdir/" install
+	cd "$pkgname-${pkgver}/src"
+	make DESTDIR="${pkgdir}/usr/bin" install
 }
