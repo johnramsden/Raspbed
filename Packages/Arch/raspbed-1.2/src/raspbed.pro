@@ -44,5 +44,9 @@ LIBS += \
 RESOURCES += \
     resources.qrc
 
+raspbed.path = /usr/bin
+raspbed.files = raspbed
+INSTALLS += raspbed
+
 # For deployed version
 DEFINES += QT_NO_DEBUG_OUTPUT

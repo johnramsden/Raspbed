@@ -13,18 +13,18 @@ changelog=${pkgname}.Changelog
 source=("${url}Raspbed/tree/master/Packages/Arch/${pkgname}-${pkgver}.tar.gz")
 
 build() {
-	cd "$pkgname-$pkgver"
+	cd "${pkgname}-${pkgver}/src"
 	qmake
 	make
 }
 
 check() {
-	cd "$pkgname-$pkgver"
+	cd "${pkgname}-${pkgver}/src"
 	make -k check
 }
 
 package() {
-	cd "$pkgname-$pkgver"
+	cd "$pkgname-$pkgver/src"
 #bin/raspbed usr/bin
 #raspbed.desktop usr/share/applications
 #src/images/icon/raspbed-icon.svg usr/share/pixmaps
