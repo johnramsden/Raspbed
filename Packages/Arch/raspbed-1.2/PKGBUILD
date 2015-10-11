@@ -17,7 +17,7 @@ _gitname="${pkgname}"
 _gitpackage="Packages/Arch"
 
 build() {
-	cd "${pkgname}-${pkgver}"
+	cd "${srcdir}"
 	git clone "${_gitroot}" "${_gitname}"
 	cd "${_gitname}/${_gitpackage}/${pkgname}-${pkgver}"
 	
