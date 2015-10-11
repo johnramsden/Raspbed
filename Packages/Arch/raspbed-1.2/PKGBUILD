@@ -1,4 +1,4 @@
-# Maintainer: John Ramsden <RamsdenJ@shaw.ca>
+	# Maintainer: John Ramsden <RamsdenJ@shaw.ca>
 pkgname=raspbed
 pkgver=1.2
 pkgrel=1
@@ -13,7 +13,7 @@ install=${pkgname}.install
 changelog=${pkgname}.Changelog
 
 _gitroot="https://github.com/Ramsdenj/Raspbed.git"
-_gitname="${pkgname}"
+_gitname="RaspbedGit"
 _gitpackage="Packages/Arch"
 
 build() {
@@ -25,11 +25,11 @@ build() {
 }
 
 check() {
-	cd "${pkgname}-${pkgver}/src"
+	cd "${srcdir}/${_gitname}/${_gitpackage}/${pkgname}-${pkgver}"
 	make -k check
 }
 
 package() {
-	cd "$pkgname-${pkgver}/src"
+	cd "${srcdir}/${_gitname}/${_gitpackage}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}/usr/bin" install
 }
