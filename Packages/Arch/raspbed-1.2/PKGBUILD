@@ -8,14 +8,20 @@ url="https://github.com/Ramsdenj/Raspbed"
 license=('GPL3')
 depends=('qt5-base' 'boost')
 optdepends=('skype: Call bell support')
+makedepends=('git')
 install=${pkgname}.install
 changelog=${pkgname}.Changelog
-source=("${url}Raspbed/tree/master/Packages/Arch/${pkgname}-${pkgver}.tar.gz")
+
+_gitroot="https://github.com/Ramsdenj/Raspbed.git"
+_gitname="${pkgname}"
+_gitpackage="Packages/Arch"
 
 build() {
-	cd "${pkgname}-${pkgver}/src"
-	qmake
-	make
+	cd "${pkgname}-${pkgver}"
+	git clone "${_gitroot}" "${_gitname}"
+	cd "${_gitname}/${_gitpackage}/${pkgname}-${pkgver}"
+	
+	qmake || return 1
 }
 
 check() {
