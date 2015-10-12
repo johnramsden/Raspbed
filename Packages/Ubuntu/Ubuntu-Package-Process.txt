@@ -1,0 +1,9 @@
+# Update pbuilder:
+    sudo pbuilder update
+
+# Compress Package:
+    tar -zcvf raspbed_1.0-0ubuntu1.orig.tar.gz raspbed-1.0/
+    
+# Run dh_make and pdebuild, sign .dsc and .changes file:
+    dh_make -e ramsdenj@shaw.ca -f ../raspbed_1.0-0ubuntu1.orig.tar.gz -s
+    pdebuild --debbuildopts -sa
