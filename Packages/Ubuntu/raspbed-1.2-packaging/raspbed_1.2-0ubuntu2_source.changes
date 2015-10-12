@@ -1,0 +1,30 @@
+Format: 1.8
+Date: Saturday, 10 Oct 2015 0:00:42 -0700
+Source: raspbed
+Binary: raspbed
+Architecture: source
+Version: 1.2-0ubuntu2
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: John Ramsden <Ramsdenj@shaw.ca>
+Changed-By: John Ramsden <RamsdenJ@shaw.ca>
+Description:
+ raspbed    - Controller and call bell for Volker hospital bed.
+Changes:
+ raspbed (1.2-0ubuntu2) UNRELEASED; urgency=low
+ .
+   * raspbed (1.2) Arch release
+   * Fixed problem with settings being saved as Unknown Organization.conf
+   * Removed unneccesary serial port options.
+Checksums-Sha1:
+ ae952d12fecb1c23f5300fa1a9e0bb6714bf8b09 946 raspbed_1.2-0ubuntu2.dsc
+ 0753f06235262ef2576b4687fa2e3a55f7c51114 156219 raspbed_1.2.orig.tar.gz
+ 5f4c3a01909e2fc46cd98f1923f61eca83b8b088 1756 raspbed_1.2-0ubuntu2.debian.tar.xz
+Checksums-Sha256:
+ 4bf4482b754b01520bec64ae04105c750f5bab9fa381dcc2aa3853766b90acad 946 raspbed_1.2-0ubuntu2.dsc
+ 623057e9ac9bc819d72a4779e221883b92b4045c25778598d4a12efa66d8ce6c 156219 raspbed_1.2.orig.tar.gz
+ 378fd442a046df7b28ff39880fd3559ddee5a619f40613efbb19ae7cf05b6241 1756 raspbed_1.2-0ubuntu2.debian.tar.xz
+Files:
+ 56eb6a6b84281d7a517c9a7a3fb67878 946 Accessibility optional raspbed_1.2-0ubuntu2.dsc
+ dbd1975a80bffe0aef01b143da9d54a0 156219 Accessibility optional raspbed_1.2.orig.tar.gz
+ 6b518eb43164168084f119555b35d508 1756 Accessibility optional raspbed_1.2-0ubuntu2.debian.tar.xz
