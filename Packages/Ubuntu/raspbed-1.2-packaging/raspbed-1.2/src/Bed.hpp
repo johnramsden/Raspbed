@@ -13,6 +13,10 @@
 #include "SerialPort.hpp"
 #include <QDebug>
 
+/**
+ * @brief The Bed class contains the logic used to send relay specific
+ * commands to the serial port.
+ */
 class Bed {
   public:
     /**
@@ -21,6 +25,9 @@ class Bed {
      */
     Bed();
 
+    /**
+     * @brief Virtual bed destructor, stops serial port at end of life.
+     */
     virtual ~Bed();
 
     /**

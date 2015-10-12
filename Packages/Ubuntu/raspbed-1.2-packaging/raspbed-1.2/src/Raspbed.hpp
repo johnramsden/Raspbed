@@ -36,6 +36,7 @@ class Raspbed : public QMainWindow {
     ~Raspbed();
 
 private slots:
+    /* ************ Slots ************ */
     /**
      * @brief Slot called upon press of head up button.
      *        Causes a call to write the signal to the relay to raise
@@ -161,6 +162,7 @@ private slots:
     void resetClicks();
 
   private:
+    /* ************ Member functions ************ */
     /**
      * @brief callContact calls your contact using skype
      * @param contact number you want to call in format +6041234567
@@ -188,6 +190,15 @@ private slots:
      */
     void resetBed();
 
+    /* ************ Member variables ************ */
+    /**
+     * @brief object pointing to our user interface
+     */
+    Ui::Raspbed *ui;
+    /**
+     * @brief Class containing bed specific variables and commands.
+     */
+    Bed bed;
     /**
      * @brief Static settings class containing all of our settings variables.
      */
@@ -202,16 +213,7 @@ private slots:
      */
     QAction *settingsAction;
 
-    /**
-     * @brief object pointing to our user interface
-     */
-    Ui::Raspbed *ui;
-    /**
-     * @brief Class containing bed specific variables and commands.
-     */
-    Bed bed;
-
-    // Bed Icons
+    /* ************ Bed Icons ************ */
     /**
      * @brief headUpPixmap head up icon
      */
@@ -270,6 +272,7 @@ private slots:
      */
     QPushButton *nextButton();
 
+    /* ************ Event filters ************ */
     /**
      * @brief Event filter for buttons. Only applied if not in button mode.
      * @param object pointer to the object on which the event occur.
@@ -295,7 +298,6 @@ private slots:
      */
     int numLeftClicks;
 
-    // Held down button clicks for non button mode
     /**
      * @brief command to hold down lower wheels button for the amount of time set in settings
      */

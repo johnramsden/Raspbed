@@ -1,9 +1,10 @@
 raspbed (1.2-0ubuntu2) UNRELEASED; urgency=low
 
+  * raspbed (1.2) Arch release
   * Fixed problem with settings being saved as Unknown Organization.conf
   * Removed unneccesary serial port options.
 
- -- John Ramsden <RamsdenJ@shaw.ca>  Thursday, 08 Oct 2015 0:16:12 -0700
+ -- John Ramsden <RamsdenJ@shaw.ca>  Saturday, 10 Oct 2015 0:00:42 -0700
 
 raspbed (1.1-0ubuntu2) UNRELEASED; urgency=low
 

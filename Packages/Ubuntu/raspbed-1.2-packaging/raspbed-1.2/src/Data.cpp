@@ -2,16 +2,13 @@
 
 QString Data::contact;
 QString Data::port;
-QSettings Data::settings;
+QSettings Data::settings("Ramsdenj", "Raspbed");
 bool Data::iconBorders;
 bool Data::buttonMode;
 bool Data::darkHighlight;
 int Data::buttonHoldTime;
 
-Data::Data() {
-    QCoreApplication::setOrganizationName("RamsdenJ");
-    QCoreApplication::setApplicationName("Raspbed");
-}
+Data::Data() {}
 
 void Data::loadSettings() {
     qDebug() << "-------------------\nLoading settings:";

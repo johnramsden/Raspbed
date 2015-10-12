@@ -27,8 +27,6 @@ SerialPort::SerialPort(std::string name, unsigned int baud_rate,
       characterSize(character_size), stopBits(stop_bits), parity(com_parity),
       flowControl(flow_control), io(), port(io) {}
 
-SerialPort::~SerialPort() {}
-
 bool SerialPort::open() {
     if (port.is_open()) {
         qDebug() << "Port is already opened, closing...";

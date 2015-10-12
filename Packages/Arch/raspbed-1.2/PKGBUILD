@@ -1,4 +1,4 @@
-	# Maintainer: John Ramsden <RamsdenJ@shaw.ca>
+# Maintainer: John Ramsden <RamsdenJ@shaw.ca>
 pkgname=raspbed
 pkgver=1.2
 pkgrel=1
@@ -21,7 +21,7 @@ build() {
 	git clone "${_gitroot}" "${_gitname}"
 	cd "${_gitname}/${_gitpackage}/${pkgname}-${pkgver}"
 	
-	qmake || return 1
+	qmake
 }
 
 check() {
@@ -31,5 +31,5 @@ check() {
 
 package() {
 	cd "${srcdir}/${_gitname}/${_gitpackage}/${pkgname}-${pkgver}"
-	make DESTDIR="${pkgdir}/usr/bin" install
+	make DESTDIR="$pkgdir/" install
 }

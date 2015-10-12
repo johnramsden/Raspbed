@@ -47,12 +47,12 @@ QPushButton *Raspbed::nextButton() {
         return ui->headUpButton;
     }
 }
+
 void Raspbed::resetClicks() {
     numRightClicks = 0;
     numLeftClicks = 0;
     qDebug() << "Reset Clicks";
 }
-
 
 void Raspbed::mouseSelectEvent(QMouseEvent *event) {
     if (event->button() == Qt::LeftButton) {
@@ -142,6 +142,7 @@ void Raspbed::resetBed() {
             settings.getPort();
         ui->statusBar->showMessage(errorMessage);
     }
+
 }
 
 void Raspbed::setupDisplay() {
@@ -218,7 +219,7 @@ void Raspbed::setupButtons() {
                 button->setStyleSheet("");
                 button->setEnabled(true);
             }
-            ui->statusBar->showMessage("Connected to port.");
+            ui->statusBar->showMessage("Connected: " + settings.getPort());
         }
     }
 }
@@ -260,7 +261,11 @@ void Raspbed::openSettings() {
     QStringList serialPortOptions;
     for (std::string device : bed.getSerialPort()->getDevices()) {
         qDebug() << "Serial option: " << QString::fromStdString(device);
-        serialPortOptions.push_back(QString::fromStdString(device));
+
+        if(device.find("USB") != std::string::npos){
+            qDebug() << "Found:  " << QString::fromStdString(device);
+            serialPortOptions.push_back(QString::fromStdString(device));
+        }
     }
 
     settingsDialog->setSerialPorts(serialPortOptions);
