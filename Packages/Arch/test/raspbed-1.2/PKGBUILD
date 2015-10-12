@@ -14,17 +14,12 @@ source=("${pkgname}::git://github.com/Ramsdenj/Raspbed.git")
 changelog=${pkgname}.Changelog
 sha256sums=('SKIP')
 _gitdir="raspbed/Packages/Arch"
-
 build() {
 	cd "${_gitdir}/${pkgname}-${pkgver}"
 	qmake
 }
 
 package() {
-	cd "${pkgname}/${_gitdir}/${pkgname}-${pkgver}"
-	make INSTALL_ROOT="${pkgdir}/" install
-	
-	# Install icon and desktop file.
-	install -Dm644 "src/images/icon/icon-128.png" "${pkgdir}/usr/share/pixmaps/raspbed.png"
-	install "raspbed.desktop" "${pkgdir}/usr/share/applications/"
+	cd "${_gitdir}/${pkgname}-${pkgver}"
+	make INSTALL_ROOT="$pkgdir/" install
 }
