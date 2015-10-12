@@ -21,10 +21,11 @@ build() {
 }
 
 package() {
-	cd "${pkgname}/${_gitdir}/${pkgname}-${pkgver}"
+	cd "${_gitdir}/${pkgname}-${pkgver}"
 	make INSTALL_ROOT="${pkgdir}/" install
 	
 	# Install icon and desktop file.
 	install -Dm644 "src/images/icon/icon-128.png" "${pkgdir}/usr/share/pixmaps/raspbed.png"
-	install "raspbed.desktop" "${pkgdir}/usr/share/applications/"
+	install -Dm644 "raspbed.desktop" "${pkgdir}/usr/share/applications/raspbed.desktop"
 }
+
