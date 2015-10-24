@@ -102,7 +102,6 @@
   <zorder>buttonModeCheckBox</zorder>
   <zorder>buttonBox</zorder>
   <zorder>darkHighlight</zorder>
-  <zorder></zorder>
  </widget>
  <resources/>
  <connections>
