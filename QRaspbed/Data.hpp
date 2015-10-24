@@ -64,7 +64,8 @@ private:
      */
     static QString port;
     /**
-     * @brief QSettings object that is used to persist settings between runs
+     * @brief QSettings object that is used to persist settings between runs, makes Raspbed
+     * folder containing settings file.
      */
     static QSettings settings;
     /**
