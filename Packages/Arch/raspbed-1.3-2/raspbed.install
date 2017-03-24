@@ -1,0 +1,18 @@
+post_install() {
+    echo "Installing icon..."
+    xdg-icon-resource install --novendor --size 128 "/usr/share/pixmaps/raspbed.png" raspbed
+    echo
+    echo" Accessing serial:"
+    echo" The bed communicates with the computer via a serial connection or a"
+    echo" serial over usb, so the user needs read/write access to the serial"
+    echo" device file. Adding the user to the uucp group to give the required"
+    echo" read/write access. The lock group may also be required."
+    echo
+    echo'# gpasswd -a $USER uucp'
+    echo'# gpasswd -a $USER lock'
+}
+
+post_remove() {
+    echo "Unstalling icon..."
+    xdg-icon-resource uninstall --novendor --size 128 raspbed
+}
